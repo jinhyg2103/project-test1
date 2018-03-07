@@ -3,6 +3,7 @@
 /node_modules
 /server
 /server/
+server
 /typings
 /tsd_typings/
 npm-debug.log
