@@ -7,7 +7,7 @@ import { withRouter } from 'react-router';
 
 // CSS
 import styles from '../App/App.css';
-import stylesSignup from './Signup.css';fdgdg
+import stylesSignup from './Signup.css';
 
 
 class SignupView extends React.Component {
