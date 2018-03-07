@@ -1,7 +1,11 @@
 const async = require('async');
 const fs = require('fs');
 const ejs = require('ejs');
-const Firebase = require(__base + 'lib/firebase');
+/*const firebaseAdmin = require('firebase-admin');
+firebaseAdmin.initializeApp({
+    credential: firebaseAdmin.applicationDefault(),
+    databaseURL: 'https://Jivida.firebaseio.com',
+});*/
 
 // Config
 const c = require('../config/const.json');
@@ -110,37 +114,6 @@ const Notification = {
         /////////////////////////////////////////////
         send: {
             /*
-            * @params {String} query.cId
-            * @params {String} query.uId
-            * @params {Number} query.text
-            */
-            chat: (query, callback) => {
-                dbConnectionHelper.getConnection((err, connection) => {
-                    let sqlQuery = 'SELECT user.* FROM chat';
-                    sqlQuery += ' LEFT JOIN user ON (user.id = chat.uIdA AND ? = chat.uIdB) OR (? = chat.uIdA AND user.id = chat.uIdB)';
-                    sqlQuery += ' WHERE chat.id=?';
-                    connection.query(sqlQuery, [query.uId, query.uId, query.cId], (err, results) => {
-                        connection.release();
-                        if (!err && results[0] && (results[0].androidToken || results[0].iphoneToken)) {
-                            if (query.text) {
-                                Firebase.send(results[0].androidToken || results[0].iphoneToken, results[0].name, query.text);
-                            } else if (query.url) {
-                                Firebase.send(results[0].androidToken || results[0].iphoneToken, results[0].name, "사진");
-                            }
-
-                        }
-                    });
-                });
-            },
-            /*
-            * @params {Object} query.user
-            */
-            request: (query) => {
-                if (query.user && (query.user.androidToken || query.user.iphoneToken)) {
-                    Firebase.send(query.user.androidToken || query.user.iphoneToken, '집찾기 요청', query.user.name + '님이 집찾기를 요청하였습니다.');
-                }
-            },
-            /*
             * @params {String} query.text
             * @params {Number} query.uIdTo
             */
@@ -148,23 +121,22 @@ const Notification = {
 
             },
             /*
-            * @params {String} query.title
-            * @params {String} query.body
+            * @params {String} query.description
             * @params {Number} query.uId
             */
             all: (query, callback) => {
-                if (!query.body || !query.uId) {
+                if (!query.description || !query.uId) {
                     callback('InvalidQueryParameterValue', null);
                     return null;
                 } else {
                     dbConnectionHelper.getConnection((err, connection) => {
-                        connection.query('SELECT * FROM user WHERE (androidToken IS NOT NULL OR iphoneToken IS NOT NULL) AND id=6', (err, results) => {
+                        connection.query('SELECT * FROM user WHERE androidToken IS NOT NULL OR iphoneToken IS NOT NULL', (err, results) => {
                             connection.release();
                             async.each(results, (user, callback) => {
-                                let token = user.androidToken || user.iphoneToken;
-                                let title = query.title;
-                                let body = query.body;
-                                Firebase.send(token, title, body);
+                                console.log('--------------');
+                                console.log(user.name);
+                                console.log(user.androidToken);
+                                console.log(user.iphoneToken);
                             }, (err) => {
                                 callback(null, true);
                             });

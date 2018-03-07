@@ -1,7 +1,7 @@
 {
-  "name": "Jivida",
+  "name": "RecordFoundation",
   "version": "1.0.0",
-  "description": "Jivida server",
+  "description": "RecordFoundation server",
   "repository": {
     "type": "git",
     "url": "https://github.com/recordfarm/jividaServer.git"
@@ -15,7 +15,9 @@
     "start": "npm run build && node ./server/app.js",
     "start:dev": "npm run build:client && babel-node ./server/app.js --presets=es2015,react",
     "start:server": "npm run build:server && babel-node ./server/server.bundle.js --presets=es2015,react",
-    "development": "set NODE_ENV=development node app.js"
+    "development": "set NODE_ENV=development node app.js",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook"
   },
   "author": "CodeCrain",
   "dependencies": {
@@ -41,15 +43,15 @@
     "express-mysql-session": "^1.2.2",
     "express-session": "^1.15.6",
     "fb": "2.0.0",
-    "fcm-push": "^1.1.3",
     "fetch-ie8": "^1.5.0",
-    "firebase-admin": "^5.8.2",
+    "firebase-admin": "^5.5.1",
     "fs": "0.0.1-security",
     "google-map-react": "^0.25.0",
     "graceful-fs": "^4.1.11",
     "history": "^4.7.2",
     "jest": "^21.2.1",
     "jmespath": "^0.15.0",
+    "jquery": "^3.3.1",
     "lodash": "^4.17.4",
     "moment": "^2.19.1",
     "moment-timezone": "^0.5.14",
@@ -78,6 +80,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
     "react-router-server": "^4.2.2",
+    "react-scroll": "^1.7.6",
     "react-scrollbar": "^0.5.1",
     "recompose": "^0.25.1",
     "redux": "^3.7.2",
@@ -85,7 +88,6 @@
     "redux-pender": "^1.1.141",
     "redux-thunk": "^2.2.0",
     "serialize-javascript": "^1.4.0",
-    "sharp": "^0.18.4",
     "socket.io": "^2.0.4",
     "socket.io-client": "^2.0.4",
     "style-loader": "^0.18.2",
@@ -106,7 +108,10 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "jasmine": "^2.8.0",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.4"
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "@storybook/react": "^3.2.18",
+    "@storybook/addon-actions": "^3.2.18",
+    "@storybook/addon-links": "^3.2.18"
   }
 }

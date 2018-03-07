@@ -24,7 +24,6 @@ const User = {
          * @param {Boolean} query.notRegistered
          */
         search: (query, callback) => {
-            console.log(query);
             let sql = 'SELECT user.*' +
                 ', ' + SQL.USER_AGENCY_CONCAT +
                 ', agencyLicense.url AS agencyLicense, agencyRegistrationCertificate.url AS agencyRegistrationCertificate' +
@@ -33,19 +32,21 @@ const User = {
                 ' LEFT JOIN agencyLicense ON user.id=agencyLicense.uId' +
                 ' LEFT JOIN agencyRegistrationCertificate ON user.id=agencyRegistrationCertificate.uId';
                 let sqlParams = [];
-            sql += ' WHERE';
-            if (query.isCertified == false) {
-                sql += ' agency.isCertified=0';
-            } else if (query.notRegistered == true) {
-                sql += ' agency.isCertified=1 AND user.type = 9';
-            } else {
-                sql += ' user.type <> 9';
+            if (query.searchQuery || query.isCertified == false || query.notRegistered == true) {
+                sql += ' WHERE';
             }
             if (query.searchQuery) {
-                sql += ' AND (user.name LIKE ? OR user.id=? OR agency.agencyName LIKE ?)';
+                sql += ' user.name LIKE ? OR user.id=? OR agency.agencyName LIKE ?';
                 sqlParams.push(query.searchQuery + '%');
                 sqlParams.push(query.searchQuery);
                 sqlParams.push(query.searchQuery + '%');
+            }
+            if (query.isCertified == false) {
+                sql += ' agency.isCertified=?';
+                sqlParams.push(query.isCertified);
+            }
+            if (query.notRegistered == true) {
+                sql += ' user.type=9';
             }
             sql += ' ORDER BY createdAt DESC LIMIT ?,?';
             sqlParams.push(query.from);
@@ -61,7 +62,6 @@ const User = {
                         if (err || !results) {
                             callback('ResourceNotFound', null);
                         } else {
-                            console.log(results);
                             callback(null, results);
                         }
                     });
@@ -171,7 +171,6 @@ const User = {
          * @param {String} query.dong
          */
         nearAgencyIds: (query, callback) => {
-            console.log(query);
             let sql = 'SELECT user.id' +
                 ' FROM user ' +
                 'LEFT JOIN agency ON user.id=agency.uId ' +
@@ -229,19 +228,22 @@ const User = {
                 ' FROM user' +
                 ' LEFT JOIN agency ON user.id=agency.uId';
             let sqlParams = [];
-            sql += ' WHERE';
-            if (query.isCertified == false) {
-                sql += ' agency.isCertified=0';
-            } else if (query.notRegistered == true) {
-                sql += ' agency.isCertified=1 AND user.type = 9';
-            } else {
-                sql += ' user.type <> 9';
+            if (query.searchQuery || query.isCertified == false || query.notRegistered == true) {
+                sql += ' WHERE';
             }
             if (query.searchQuery) {
-                sql += ' AND (user.name LIKE ? OR user.id=? OR agency.agencyName LIKE ?)';
+                sql += ' user.name LIKE ? OR user.id=? OR agency.agencyName LIKE ?';
                 sqlParams.push(query.searchQuery + '%');
                 sqlParams.push(query.searchQuery);
                 sqlParams.push(query.searchQuery + '%');
+            }
+            if (query.isCertified == false) {
+                sql += ' agency.isCertified=?';
+                sqlParams.push(query.isCertified);
+            }
+            if (query.notRegistered == true) {
+                sql += ' agency.isCertified=?';
+                sqlParams.push(query.isCertified);
             }
             dbConnectionHelper.getConnection((err, connection) => {
                 connection.query(sql, sqlParams, (err, results) => {

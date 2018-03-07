@@ -1,10 +1,10 @@
 {
-  "APP_NAME" : "Jivida",
-  "DOMAIN" : "http://jivida.com",
+  "APP_NAME" : "RecordFoundation",
+  "DOMAIN" : "http://recordFoundation.com",
 
-  "META_TITLE" : "지비다 :: 집을 찾는 새로운 솔루션",
-  "META_DESCRIPTION" : "지비다 :: 집을 찾는 새로운 솔루션",
-  "META_KEYWORD": "지비다, jivida, 직방, 다방, 부동산, 오피스텔, 원룸, 투룸, 아파트, 사무실, 오피스",
+  "META_TITLE" : "RecordFoundation",
+  "META_DESCRIPTION" : "RecordFoundation",
+  "META_KEYWORD": "RecordFoundation",
   "META_IMAGE": "",
 
   "admin": ["shysin8@gmail.com", "abc@abc.com"],

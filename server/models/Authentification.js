@@ -153,7 +153,6 @@ const Authentification = {
      * @param {Callback} callback
      */
     signup: (query, callback) => {
-        console.log(query);
         let uId;
         let cbErr;
         dbConnectionHelper.getConnection((err, connection) => {
@@ -184,8 +183,6 @@ const Authentification = {
                             callback(null);
                         } else {
                             connection.query('INSERT INTO user SET ?', query, (err, result) => {
-                                console.log(err);
-                                console.log(result);
                                 if (err || !result) {
                                     cbErr = 'InvalidAuthenticationInfo';
                                     callback(null);
@@ -233,29 +230,26 @@ const Authentification = {
                     bcrypt.genSalt(saltRounds, (err, salt) => {
                         bcrypt.hash(query.password, salt, (err, hash) => {
                             query.password = hash;
-                            if (query.currentPassword) {
-                                bcrypt.hash(query.currentPassword, salt, (err, hash) => {
-                                    query.currentPassword = hash;
-                                    callback(null);
-                                });
-                            } else {
-                                callback(null);
-                            }
+                            callback(null);
                         });
                     });
                 },
             ], (err) => {
                 dbConnectionHelper.getConnection((err, connection) => {
-                    console.log(query);
                     if (query.currentPassword) {
                         // 비밀번호 암호화
-                        connection.query('UPDATE user SET password = ? WHERE id=?', [query.password, query.uId], (err, results) => {
-                            connection.release();
-                            if (err) {
-                                callback('InvalidAuthenticationInfo', null);
-                                return;
-                            }
-                            callback(null, true);
+                        bcrypt.genSalt(saltRounds, (err, salt) => {
+                            bcrypt.hash(query.currentPassword, salt, (err, hash) => {
+                                query.currentPassword = hash;
+                                connection.query('UPDATE user SET password = ? WHERE id=? AND password=?', [query.password, query.uId, query.currentPassword], (err, results) => {
+                                    connection.release();
+                                    if (err) {
+                                        callback('InvalidAuthenticationInfo', null);
+                                        return;
+                                    }
+                                    callback(null, true);
+                                });
+                            });
                         });
                     } else {
                         connection.query('UPDATE user SET password = ? WHERE fullPhoneNumber=? AND idText=?', [query.password, query.fullPhoneNumber, query.idText], (err, results) => {
@@ -302,8 +296,6 @@ passport.serializeUser((user, done) => {
         fullPhoneNumber: user.fullPhoneNumber,
         countryDialCode: user.countryDialCode,
         phoneNumber: user.phoneNumber,
-        androidToken: user.androidToken,
-        iphoneToken: user.iphoneToken,
         name: user.name,
         email: user.email,
     };

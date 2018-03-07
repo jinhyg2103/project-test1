@@ -8,13 +8,9 @@ module.exports = {
         modulesDir: __dirname,
     })],
     entry: {
-        Jivida: [
+        RecordFoundation: [
             'react-hot-loader/patch',
-            path.join(__dirname, '/src/Jivida/serverRender.js'),
-        ],
-        Admin: [
-            'react-hot-loader/patch',
-            path.join(__dirname, '/src/Admin/serverRender.js'),
+            path.join(__dirname, '/src/RecordFoundation/serverRender.js'),
         ],
     },
     output: {

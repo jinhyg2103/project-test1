@@ -122,9 +122,6 @@ module.exports = () => {
         if (request.body.address2) query.address2 = request.body.address2;
         if (request.body.androidToken) query.androidToken = request.body.androidToken;
         if (request.body.iphoneToken) query.iphoneToken = request.body.iphoneToken;
-        if (request.body.pushAllOn || request.body.pushAllOn === false) query.pushAllOn = request.body.pushAllOn;
-        if (request.body.pushChatOn || request.body.pushChatOn === false) query.pushChatOn = request.body.pushChatOn;
-        if (request.body.pushRequestOn || request.body.pushRequestOn === false) query.pushRequestOn = request.body.pushRequestOn;
         Models.user().update.user(query, (err, isFavorite) => { // True or False
             if (!err) {
                 responseHelper.success_send(200, isFavorite, response);
