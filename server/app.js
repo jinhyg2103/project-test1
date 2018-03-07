@@ -12,7 +12,7 @@ try {
         controllerSslEnabled: true,
         accountName: 'monroe2017092117022117',
         accountAccessKey: 'krkfmrtcpbc7',
-        applicationName: 'RecordFoundation',
+        applicationName: 'Sellev',
         tierName: 'jivida1',
         nodeName: 'process', // The controller will automatically append the node name with a unique number
     });*/
@@ -53,17 +53,17 @@ try {
     app.use(passport.session());
 
 // Serve static files
-    app.use('/recordFoundation', express.static(path.join(__dirname, '../public/' + c.APP_NAME), { maxAge: 30 }));
+    app.use('/sellev', express.static(path.join(__dirname, '../public/' + c.APP_NAME), { maxAge: 30 }));
     app.use('/node_modules', express.static(path.join(__dirname, 'node_modules'), { maxAge: 30 }));
 
 // **  API
 // Route Common
-    const routeClient = require('./routers/recordFoundation');
+    const routeClient = require('./routers/sellev');
     const routeAuth = require('./routers/api/auth');
     //const routeUpload = require('./routers/api/upload');
 
     app.use('/api', routeAuth());
-    //app.use('/api', routeUpload());
+    //App.use('/api', routeUpload());
 
     // Route App
     routeClient(app);
@@ -71,7 +71,7 @@ try {
     // Server
     const http = require('http').Server(app);
     http.listen(app.get('port'), () => {
-        console.log('app.js :: app.listen :: Server Start on port number ' + app.get('port'));
+        console.log('app.js :: App.listen :: Server Start on port number ' + app.get('port'));
     });
 } catch (e) {
     console.log(e);

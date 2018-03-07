@@ -1,0 +1,795 @@
+.homeContainer {
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+}
+@media screen and (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.homeSection1 {
+    padding-top: 193px;
+    padding-bottom: 153px;
+    position: relative;
+    z-index: 3;
+}
+@media screen and (max-width: 767px) {
+    .homeSection1 {
+        padding-top: 163px;
+    }
+}
+.homeSection1 .container {
+    width: 100%;
+    text-align: center;
+}
+.homeSection1 .container .title {
+    font-size: 76px;
+    color: #fff;
+/*    height: 138px;*/
+    margin: auto;
+    line-height: 0.9;
+    font-family: 'BebasNeue';
+}
+.homeSection1 .container .title p {
+    margin-bottom: 0;
+}
+.homeSection1 .container .smallTitle {
+    margin-top: 40px;
+    margin-bottom: 67px;
+    font-size: 30px;
+    font-family: 'BebasNeue';
+    color: #CFBD8C;
+    display: block;
+}
+.homeSection1 .container .smallTitle p {
+    margin-bottom: 10px;
+}
+.homeSection1 .container .btnBlock {
+    margin-top: 67px;
+}
+@media screen and (max-width: 768px){
+    .homeSection1 .container .title {
+        font-size: 53px;
+    }
+    .homeSection1 .container .smallTitle {
+        font-size: 24px;
+    }
+}
+/*.homeSection1 .container .btnBlock .firstBtn {
+    margin-right: 12px;
+}*/
+.homeSection2 {
+    padding-top: 130px;
+    padding-bottom: 137px;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 3;
+}
+
+.homeSection2 .container .contentList {
+
+}
+.homeSection2 .container .contentList .listItem {
+    margin-bottom: 43px;
+}
+@media screen and (min-width: 767px) {
+    .homeSection2 .container .contentList .listItem:nth-child(5), .homeSection2 .container .contentList .listItem:nth-child(6) {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .homeSection2 .container .contentList .listItem:nth-child(6) {
+        margin-bottom: 0;
+    }
+}
+.homeSection2 .container .contentList .listItem .logo {
+    float: left;
+    height: 100%;
+    margin-right: 25px;
+}
+.homeSection2 .container .contentList .listItem .logo img {
+    width: 81px;
+    height: auto;
+}
+.homeSection2 .container .contentList .listItem .description {
+    margin-left: 92px;
+}
+.homeSection2 .container .contentList .listItem .description .title{
+    font-size: 23px;
+    letter-spacing: 0.6px;
+    text-align: left;
+    font-family: 'BebasNeue';
+}
+.homeSection2 .container .contentList .listItem .description .content {
+    font-size: 13px;
+    letter-spacing: -0.3px;
+    opacity: 0.6;
+    line-height: 1.77;
+    margin-top: 7px;
+    white-space: pre-line;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 35px;
+}
+@media screen and (max-width: 767px) {
+    .homeSection2 {
+        padding-top: 70px;
+        padding-bottom: 87px;
+    }
+    .homeSection2 .container .contentList .listItem .logo {
+        margin-right: 18px;
+    }
+    .homeSection2 .container .contentList .listItem .logo img {
+        width: 70px;
+    }
+    .homeSection2 .container .contentList .listItem .description {
+        margin-left: 80px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .homeSection2 .container .contentList .listItem .description .content {
+        padding-left: 5px;
+        padding-right: 0px;
+    }
+}
+.homeSection3 {
+    padding-top: 224px;
+    padding-bottom: 230px;
+    position: relative;
+    background-image: url('/Sellev/assets/img/common/bg_navy_girl.png') !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.homeSection3 .container {
+
+}
+.homeSection3 .container .title {
+    text-align: left;
+    font-size: 68px;
+    line-height: 0.5;
+    letter-spacing: 1.3px;
+    font-family: 'BebasNeue';
+}
+.homeSection3 .container .title p {
+    padding-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+    .homeSection3 {
+        padding-top: 150px;
+        padding-bottom: 160px;
+    }
+    .homeSection3 .container .title {
+        font-size: 47px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .homeSection3 .container .title {
+        padding-left: 40px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .homeSection3 .container .title {
+        padding-left: 100px;
+    }
+}
+.homeSection4 {
+    padding-top: 196px;
+    padding-bottom: 133px;
+    position: relative;
+    background-color: #FFFFFF;
+}
+.homeSection4 .cardContainer {
+    width: 100%;
+    position: absolute;
+    top: -110px;
+    padding: 0 15px;
+}
+.homeSection4 .cardBlock {
+    margin: auto;
+    position: relative;
+}
+.homeSection4 .cardBlock .card {
+    height: 159px;
+    float: left;
+/*    padding-left: 40px;*/
+    position: relative;
+    color: #FFFFFF;
+}
+.homeSection4 .cardBlock .card .logo {
+    font-size: 84px;
+    width: 50%;
+    text-align: center;
+    line-height: 159px;
+    float: left;
+}
+.homeSection4 .cardBlock .card .logo img {
+    width: 77px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .homeSection4 .cardContainer {
+        top: -100px;
+    }
+    .homeSection4 .cardBlock .card {
+        height: 200px;
+    }
+    .homeSection4 .cardBlock .card .logo {
+        line-height: 117px;
+    }
+    .homeSection4 .cardBlock .card .logo img {
+        width: 60px;
+    }
+}
+.homeSection4 .cardBlock .card .description {
+    padding-top: 55.5px;
+    height: 48px;
+    width: 50%;
+    font-size: 18px;
+    font-family: 'BebasNeue';
+    float: left;
+}
+@media screen and (min-width: 1086px) {
+    .homeSection4 .cardBlock {
+        width: 1086px;
+        margin: auto;
+    }
+    .homeSection4 .cardBlock .card {
+        width: 362px;
+    }
+}
+@media screen and (max-width: 1086px) {
+    .homeSection4 .cardBlock {
+        width: 100%;
+    }
+    .homeSection4 .cardBlock .card {
+        width: 33.3%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .homeSection4 .cardBlock .card {
+        height: 210px;
+        text-align: center;
+    }
+    .homeSection4 .cardBlock .card .logo {
+        width: 100%;
+        line-height: 127px;
+    }
+    .homeSection4 .cardBlock .card .description {
+        width: 100%;
+        padding-top: 0;
+    }
+}
+.homeSection4 .cardBlock .card .description p {
+    margin-bottom: 0;
+    line-height: 24px;
+}
+.homeSection4 .cardBlock .blueCard {
+    background-color: #2a3c6f;
+}
+.homeSection4 .cardBlock .navyCard {
+    background-color: #212c4d;
+}
+.homeSection4 .cardBlock .blackCard {
+    background-color: #101420;
+}
+.homeSection4 .container .border {
+    width: 22px;
+    height: 4px;
+    background-color: #3f65a5;
+}
+@media screen and (min-width: 768px) {
+    .homeSection4 .container .description {
+        padding-right: 40px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .homeSection4 .container .description {
+        padding: 0px;
+    }
+}
+.homeSection4 .container p {
+    margin-bottom: 0;
+}
+.homeSection4 .container .description {
+    max-width: 50%;
+    float: left;
+    -webkit-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+.homeSection4 .container .description .title {
+    font-size: 30px;
+    margin-top: 23px;
+    font-family: 'BebasNeue';
+    line-height: 30px;
+}
+.homeSection4 .container .description .content {
+    font-size: 14px;
+    white-space: pre-line;
+    opacity: 0.7;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    letter-spacing: -0.6px;
+}
+.homeSection4 .container .description .content p {
+    line-height: 1.64;
+    text-align: justify;
+}
+.homeSection4 .container .imageBlock {
+    max-width: 50%;
+    float: left;
+    height: auto;
+    display: block;
+    margin-top: 50px;
+    padding-left: 10px;
+}
+.homeSection4 .container .imageBlock .image {
+    width: 100%;
+    margin-left: 10px;
+    height: auto;
+}
+@media screen and (max-width: 768px) {
+    .homeSection4 .container .description {
+        max-width: 100%;
+    }
+    .homeSection4 .container .imageBlock {
+        max-width: 100%;
+    }
+}
+.homeSection5 {
+    width: 100%;
+    padding: 70px 15px 115px 15px;
+    background-color: #272d42;
+}
+.homeSection5 .title {
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    font-size: 30px;
+    line-height: 0.77;
+    margin-bottom: 33px;
+    font-family: 'BebasNeue';
+}
+.homeSection5 .youtube {
+    position: relative;
+    width: 100%;
+    height: 0;
+    margin: auto;
+    padding-bottom: 56.25%;
+}
+.homeSection5 .youtube .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media screen and (min-width: 992px) {
+    .homeSection5 {
+        padding-top: 90px;
+        padding-bottom: 115px;
+    }
+    .homeSection5 .youtube {
+        width: 720px;
+        padding-bottom: 405px;
+    }
+}
+@media screen and (min-width: 1170px) {
+    .homeSection5 {
+        padding-top: 142px;
+        padding-bottom: 177px;
+    }
+    .homeSection5 .youtube {
+        width: 1024px;
+        padding-bottom: 576px;
+    }
+}
+.homeSection6 {
+    padding-top: 99px;
+    padding-bottom: 128px;
+    background-color: #FFFFFF;
+}
+.homeSection6 .container {
+
+}
+.homeSection6 .container .border {
+    width: 22px;
+    height: 4px;
+    background-color: #3f65a5;
+    margin: auto;
+}
+.homeSection6 .container .contentTitle {
+    font-size: 40px;
+    line-height: 0.58;
+    letter-spacing: 0.3px;
+    height: 23px;
+    text-align: center;
+    width: 100%;
+    margin-top: 29px;
+    font-family: 'BebasNeue';
+}
+.homeSection6 .container .contentList {
+    margin: 67px auto 0;
+    padding: 0 15px;
+}
+.homeSection6 .container .contentList .contentItem {
+    margin-top: 37px;
+}
+.homeSection6 .container .contentList .contentItem:nth-child(1) {
+    margin-top: 0;
+}
+.homeSection6 .container .contentList .contentItem .image1 {
+    background-image: url('/Sellev/assets/img/common/img_artist.png') !important;
+    height: 269px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.homeSection6 .container .contentList .contentItem .image2 {
+    background-image: url('/Sellev/assets/img/common/img_listen_music.png') !important;
+    height: 269px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.homeSection6 .container .contentList .contentItem .image3 {
+    background-image: url('/Sellev/assets/img/common/img_investors.png') !important;
+    height: 269px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.homeSection6 .container .contentList .contentItem .contentBlock {
+    display: table;
+    height: 269px;
+}
+@media screen and (min-width: 768px) {
+    .homeSection6 .container .contentList .contentItem .contentBlock {
+        padding-left: 34px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .homeSection6 .container .contentList .contentItem .contentBlock {
+        margin-top: 20px;
+        padding: 0;
+    }
+}
+.homeSection6 .container .contentList .contentItem .content {
+    display: table-cell;
+    vertical-align: middle;
+}
+.homeSection6 .container .contentList .contentItem .content .title {
+    font-size: 24px;
+    letter-spacing: 0.4px;
+    font-family: 'BebasNeue';
+}
+.homeSection6 .container .contentList .contentItem .description {
+    font-size: 13px;
+    letter-spacing: -0.4px;
+    color: #585858;
+    margin-top: 10px;
+}
+.homeSection6 .container .contentList .contentItem .description p {
+    line-height: 23px;
+    text-align: justify;
+}
+.homeSection7 {
+    padding: 99px 0;
+    background-color: #1e2743;
+}
+.homeSection7 .container {
+    text-align: center;
+}
+.homeSection7 .container .border {
+    width: 22px;
+    height: 4px;
+    margin: auto;
+    background-color: #3f65a5;
+}
+.homeSection7 .container .title1 {
+    margin-top: 25px;
+    height: 63px;
+    font-size: 28px;
+    color: #ffffff;
+    font-family: 'BebasNeue';
+}
+.homeSection7 .container .image1 img {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.homeSection7 .container .title2 {
+    margin-top: 25px;
+    height: 63px;
+    font-size: 28px;
+    color: #ffffff;
+    font-family: 'BebasNeue';
+}
+.homeSection7 .container .smallTitle {
+    margin-bottom: 36px;
+    height: 46px;
+    opacity: 0.6;
+    font-size: 13px;
+    line-height: 1.77;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+.homeSection7 .container .image2 img {
+    width: 100%;
+}
+.homeSection8 {
+    padding-top: 132px;
+    padding-bottom: 140px;
+    background-image: url('/recordfoundation/assets/img/common/bg_navy_concert.png')
+}
+.homeSection8 .container {
+    text-align: center;
+}
+.homeSection8 .container .border {
+    width: 22px;
+    height: 4px;
+    background-color: #3f65a5;
+    margin: auto;
+}
+.homeSection8 .container .recordBtn {
+    width: 168px;
+}
+.homeSection8 .container .title {
+    margin-top: 6px;
+    height: 63px;
+    line-height: 63px;
+    font-size: 47px;
+    color: #ffffff;
+    font-family: 'BebasNeue';
+}
+.homeSection8 .container .smallTitle {
+    margin-bottom: 51px;
+    opacity: 0.6;
+    height: 23px;
+    font-size: 15px;
+    line-height: 1.53;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+    .homeSection8 .container .title {
+        font-size: 40px;
+    }
+}
+.homeSection9 {
+    padding-top: 89px;
+    padding-bottom: 114px;
+    background-color: #1e2743;
+}
+.homeSection9 .container {
+
+}
+.homeSection9 .titleBlock {
+    height: auto;
+    text-align: center;
+    margin-bottom: 46px;
+}
+.homeSection9 .titleBlock .border {
+    width: 22px;
+    height: 4px;
+    background-color: #3f65a5;
+    margin: auto;
+}
+.homeSection9 .titleBlock .title {
+    height: 63px;
+    line-height: 63px;
+    font-size: 28px;
+    opacity: 0.9;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    font-family: 'BebasNeue';
+}
+.homeSection9 .titleBlock .smallTitle {
+    height: 46px;
+    width: 592px;
+    opacity: 0.6;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    line-height: 1.77;
+    color: #FFFFFF;
+    margin: auto;
+    margin-bottom: 64px;
+}
+@media screen and (max-width: 768px) {
+    .homeSection9 .titleBlock .smallTitle {
+        width: 100%;
+    }
+}
+.homeSection9 .teamBlock .teamItem{
+    text-align: center;
+    min-height: 400px;
+    padding: 0 40px;
+    margin-bottom: 40px;
+}
+.homeSection9 .teamBlock .teamItem .avatar {
+    margin-bottom: 20px;
+    width: 150px;
+    height: auto;
+    border-radius: 100%;
+}
+.homeSection9 .teamBlock .teamItem .memberTitle {
+    font-size: 20px;
+    opacity: 0.9;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'BebasNeue';
+}
+.homeSection9 .teamBlock .teamItem .memberOccupation {
+    margin-bottom: 30px;
+    font-size: 19px;
+    font-family: 'BebasNeue';
+    color: #01a2ff;
+    letter-spacing: 0.2px;
+    opacity: 0.9;
+}
+.homeSection9 .teamBlock .teamItem p {
+    font-size: 13px;
+    opacity: 0.5;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    line-height: 1.77;
+    max-width: 292px;
+    margin: 0 auto;
+}
+.homeSection10 {
+    padding-top: 112px;
+    padding-bottom: 449px;
+    background-image: url('/RecordFoundation/assets/img/common/bg_ico_investors.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.homeSection10 .container {
+    text-align: center;
+}
+.homeSection10 .container .border {
+    width: 34px;
+    height: 4px;
+    background-color: #3f65a5;
+    margin: auto;
+}
+.homeSection10 .container .title {
+    font-size: 43px;
+    line-height: 0.53;
+    letter-spacing: 0.3px;
+    height: 46px;
+    font-family: 'BebasNeue';
+}
+.homeSection10 .container .smallTitle {
+    margin-top: 28px;
+    color: #1a1a1a;
+    opacity: 0.6;
+    font-size: 21px;
+    letter-spacing: -0.3px;
+    line-height: 1.1;
+}
+.homeSection10 .container .email {
+    margin-top: 7px;
+    font-size: 17px;
+    color: #1a1a1a;
+    opacity: 0.6;
+    height: 23px;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+}
+.homeSection10 .container .subscribeBox {
+    margin-top: 40px;
+    text-align: center;
+}
+.homeSection10 .container .subscribeBox .formInput {
+    width: 264px;
+    height: 55px;
+    border: 1px solid #e7e7e7;
+    padding: 13px;
+    margin-right: 6px;
+}
+.homeSection10 .container .subscribeBox .subscribeBtn {
+
+}
+@media screen and (max-width: 767px) {
+    .homeSection10 {
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+    .homeSection10 .container .title {
+        font-size: 40px;
+    }
+    .homeSection10 .container .subscribeBox .formInput {
+        width: 190px;
+    }
+}
+.homeSection11 {
+    padding-top: 132px;
+    padding-bottom: 117px;
+    background-color: #f4f4f4;
+}
+.homeSection11 .textBlock {
+    text-align: center;
+}
+.homeSection11 .textBlock h2 {
+    font-size: 43px;
+    font-weight: 100;
+    letter-spacing: -0.5px;
+}
+.homeSection11 .textBlock p {
+    margin-bottom: 0;
+    margin-top: 28px;
+    font-size: 15px;
+    opacity: 0.6;
+    color: #464646;
+    letter-spacing: -0.2px;
+    line-height: 1.53;
+    height: 46px;
+}
+.homeSection11 .searchBlock {
+    margin-top: 48px;
+    text-align: center;
+}
+.homeSection11 .searchBlock .inputSearch {
+    width: 264px;
+    height: 55px;
+    border: 1px solid #e7e7e7;
+    padding: 13px;
+    margin-right: 6px;
+}
+.homeSection12 {
+    padding-top: 100px;
+    padding-bottom: 94px;
+    background-color: #FFFFFF;
+}
+.homeSection12 .title {
+    font-size: 43px;
+    width: 100%;
+    letter-spacing: 0.1px;
+    margin: auto;
+    text-align: center;
+    font-family: 'BebasNeue';
+}
+.homeSection12 .container {
+    text-align: center;
+}
+.homeSection12 .container .image {
+    width: 100%;
+    max-width: 1020px;
+    margin: 25px auto 0;
+}

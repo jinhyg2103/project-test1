@@ -7,10 +7,10 @@ module.exports = {
     // 가장 처음 읽을 스크립트파일
     // 여기서부터 import 되어있는 다른 스크립트를 불러온다.
     entry: {
-        RecordFoundation: [
+        Sellev: [
             'babel-polyfill',
             'react-hot-loader/patch',
-            path.join(__dirname, '/src/RecordFoundation/client.js'),
+            path.join(__dirname, '/src/Sellev/client.js'),
         ],
     },
 

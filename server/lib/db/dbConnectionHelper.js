@@ -56,7 +56,7 @@ module.exports = {
             } catch (e) {
                 global.poolCluster.end((err) => {
                     global.poolCluster = mysql.createPoolCluster();
-                    global.poolCluster.add(c.APP_NAME, dbConfig.app);
+                    global.poolCluster.add(c.APP_NAME, dbConfig.App);
                     global.poolCluster.getConnection(c.APP_NAME, (err, connection) => {
                         callback(err, connection);
                     });

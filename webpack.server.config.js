@@ -8,9 +8,9 @@ module.exports = {
         modulesDir: __dirname,
     })],
     entry: {
-        RecordFoundation: [
+        Sellev: [
             'react-hot-loader/patch',
-            path.join(__dirname, '/src/RecordFoundation/serverRender.js'),
+            path.join(__dirname, '/src/Sellev/serverRender.js'),
         ],
     },
     output: {
