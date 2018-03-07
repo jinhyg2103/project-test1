@@ -7,16 +7,15 @@ import { withRouter } from 'react-router';
 
 // CSS
 import styles from '../App/App.css';
-import stylesHome from './Home.css';
+import stylesVideo from './Video.css';
 
-
-class HomeView extends React.Component {
+class VideoView extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
-            <div className={stylesHome.homeContainer}>
+            <div className={stylesVideo.videoContainer}>
 
             </div>
         );
@@ -26,4 +25,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(HomeView));
+})(withRouter(VideoView));

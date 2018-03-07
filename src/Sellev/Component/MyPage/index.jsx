@@ -7,8 +7,7 @@ import { withRouter } from 'react-router';
 
 // CSS
 import styles from '../App/App.css';
-import stylesHome from './Home.css';
-
+import stylesMyPage from './MyPage.css';
 
 class HomeView extends React.Component {
     constructor(props) {
@@ -16,7 +15,7 @@ class HomeView extends React.Component {
     }
     render() {
         return (
-            <div className={stylesHome.homeContainer}>
+            <div className={stylesHome.myPageContainer}>
 
             </div>
         );
