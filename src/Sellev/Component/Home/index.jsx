@@ -4,8 +4,7 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import jQuery from "jquery";
-window.$ = window.jQuery = jQuery;
+
 // CSS
 import styles from '../App/App.css';
 import stylesHome from './Home.css';
