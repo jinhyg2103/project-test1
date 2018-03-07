@@ -1,0 +1,33 @@
+/* Header */
+.headerContainer {
+    position: relative;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EEEEEE;
+}
+.headerContainer .headerLogoBox {
+}
+.headerContainer .headerLogo {
+    margin: 5px 20px;
+    height: 30px;
+}
+.headerContainer .headerRight{
+    float: right;
+    margin-right: 20px;
+}
+.headerContainer .headerName{
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.headerContainer .headerLogout{
+    display: inline-block;
+    line-height: 40px;
+    font-size: 13px;
+    color: #0F5DD4;
+}
+.headerContainer .headerLogout:hover{
+    text-decoration: underline;
+}

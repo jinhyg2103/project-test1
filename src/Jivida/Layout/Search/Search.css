@@ -1,0 +1,127 @@
+.searchContainer {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.searchContainer .mapBox{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 450px;
+    bottom: 0;
+}
+.searchContainer .searchBox{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    bottom: 0;
+    width: 450px;
+    background-color: #FFFFFF;
+}
+.searchContainer .searchBoxInside{
+
+}
+/* 검색 조건 */
+.searchContainer .searchOptionBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding: 0 22px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+.searchContainer .searchOptionBox .searchBar {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.searchContainer .searchOptionBox .searchBar input {
+    height: 30px;
+    width: 200px;
+    font-size: 13px;
+    padding-left: 27px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+}
+.searchContainer .searchOptionBox .searchBar i {
+    position: absolute;
+    top: 3px;
+    left: 7px;
+}
+.searchContainer .searchOptionItem {
+    float: left;
+    margin: 10px 5px 10px 0;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #333333;
+    background-color: rgba(255, 255, 255, 0);
+    border-right: 1px solid #DADADA!important;
+}
+.searchContainer .searchOptionItem:first-child{
+    border-left: 1px solid #DADADA!important;
+}
+.searchContainer .searchOptionItem.selectItem {
+    border: none;
+    outline: none;
+}
+/* 집찾기 */
+.searchContainer .requestBox{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.searchContainer .requestBox .requestIcon {
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 40px;
+    text-align: center;
+}
+.searchContainer .requestBox .requestDescription {
+    float: left;
+    margin-left: 10px;
+    padding: 5px 0;
+    width: 290px;
+    height: 50px;
+}
+.searchContainer .requestBox .requestDescriptionLine {
+    line-height: 17px;
+    font-size: 12px;
+    color: #6F6F6F;
+}
+.searchContainer .requestBox .requestBtn {
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    bottom: 0;
+    left: 350px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    font-size: 13px;
+    text-align: center;
+}
+    /* 검색 조건 */
+.searchContainer .houseListBox{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.searchContainer .houseItemContainer {
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+}

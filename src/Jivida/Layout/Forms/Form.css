@@ -1,0 +1,530 @@
+label {
+    margin: 0;
+}
+/* COMMON */
+.formContainer{
+    margin: 0 auto;
+    padding: 10px 10px 50px 10px;
+    width: 460px;
+    text-align: center;
+}
+.formContainer .formTitle{
+    margin-top: 17px;
+    margin-bottom: 25px;
+    line-height: 52px;
+    font-size: 35px;
+    letter-spacing: -1px;
+    color: #3d3d3d;
+    font-weight: 100;
+}
+.formContainer .formTitle .bold{
+    font-weight: 700;
+}
+.formContainer .logoBox{
+    display: block;
+    margin: 80px 0 70px;
+}
+.formContainer .logoImg{
+    width: 200px;
+    height: 56px;
+}
+.formContainer .formGroupName{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3D3D3D;
+    text-align: left;
+}
+.formContainer .formGroup{
+    margin-bottom: 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+}
+.formContainer .formRow{
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-bottom: 1px solid #EEEEEE;
+    text-align: left;
+}
+.formContainer .formRow:last-child{
+    border: none;
+}
+.formContainer .formInput{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    border: none;
+}
+.formContainer .formInputPhoneNumber{
+    float: left;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+}
+.formContainer .formDividerPhoneNumber{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #999999;
+}
+.formContainer .formInput::placeholder, .formContainer .formInputPhoneNumber::placeholder {
+    color: #B6B6B6;
+}
+.formContainer .formInputUnit{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    border-left: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+}
+.formContainer .formInput.inputWithVerify {
+    float: left;
+    margin-right: 3%;
+    width: 76%;
+}
+.formContainer .formSelect{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.formContainer .formTextarea{
+    padding: 10px;
+    width: 100%;
+    min-height: 130px;
+    font-size: 12px;
+    border: none;
+    outline: none;
+}
+.formContainer .inputInsideBtn {
+    float: left;
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+}
+.formContainer .inputVerifyBox {
+    float: left;
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.formContainer .formCheckbox{
+    margin-top: 8px;
+    margin-bottom: 7px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.formContainer .formCheckboxLabel{
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+    color: #999999;
+    cursor: pointer;
+}
+.formContainer .formInputWarn{
+    line-height: 25px;
+    font-size: 12px;
+    color: #FF3A30;
+    text-align: left;
+}
+/* Upload multiple Images */
+.formUploadHiddenInput{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+    opacity: 0;
+}
+/* Buttons */
+.formContainer .largeBtn{
+    height: 55px;
+    line-height: 55px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.formContainer .mediumBtn{
+    height: 50px;
+    line-height: 50px;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: #FFF;
+    border: 1px solid #F33939;
+    color: #F33939;
+}
+
+.formContainer .findIdBtn, .formContainer .findPasswordBtn{
+    width: 23.8%;
+    line-height: 20px;
+    color: #AAAAAA;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 25px 0;
+}
+.formContainer .findIdBtn:hover, .formContainer .findPasswordBtn:hover{
+    text-decoration: underline;
+}
+.formContainer .findIdBtn{
+    float: left;
+    margin-left: 25%;
+    padding-right: 1%;
+    text-align: right;
+}
+.formContainer .findPasswordBtn{
+    float: left;
+    margin-right: 25%;
+    padding-left: 1%;
+    text-align: left;
+}
+.formContainer .findDivider{
+    float: left;
+    margin: 30px 0;
+    width: 0.4%;
+    height: 10px;
+    background-color: #CCCCCC;
+}
+/* LOGIN */
+.loginContainer{
+
+}
+.loginContainer .findBox{
+    height: 40px;
+}
+.loginContainer .signupBox{
+
+}
+.loginContainer .signupBox .mediumBtn{
+    float: left;
+    width: 49%;
+}
+.loginContainer .signupBox .leftBtn{
+    margin-right: 0.5%;
+}
+.loginContainer .signupBox .rightBtn{
+    margin-left: 0.5%;
+}
+.loginContainer .formGroup{
+    margin-bottom: 20px;
+}
+.loginContainer .copyrightBox{
+    margin-top: 220px;
+    color: #BEBEBF;
+    font-weight: 400;
+    font-size: 15px;
+}
+/* SIGNUP */
+.signupContainer{
+    margin-bottom: 80px;
+}
+.signupContainer .agreeLabel{
+    color: #3d3d3d;
+}
+.signupContainer .required{
+    color: #5160B1;
+}
+.signupContainer .inputVerifyBox{
+    line-height: 28px;
+}
+/* SIGNUP AGENCY */
+.signupAgencyContainer{
+
+}
+.signupAgencyContainer .row{
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+.signupAgencyContainer .col6:first-child{
+    padding-left: 0;
+    padding-right: 10px;
+}
+.signupAgencyContainer .col6:last-child{
+    padding-left: 10px;
+    padding-right: 0;
+}
+.signupAgencyContainer .formUploadImageBox {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 140px;
+    border: 1px solid #DEDEDE;
+    background-color: #EDF1F6;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-right: 1px solid #CCCCCC;
+}
+.signupAgencyContainer .formUploadImageBox .formUploadBtn{
+    margin: 50px auto;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+}
+.signupAgencyContainer .formUploadImageBox .formUploadBtn>label {
+    width: 100%;
+    line-height: 40px;
+}
+.signupAgencyContainer .formUploadImageBox .formUploadCancelBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 15px;
+}
+.signupAgencyContainer .needed{
+    color: #5160B1;
+}
+/* FIND PASSWORD */
+.findPasswordContainer{
+}
+/* FIND ID */
+.findIdContainer{
+}
+/* SELL */
+.sellContainer{
+}
+.sellContainer .formUploadImagesBox{
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+.sellContainer .formUploadImagesBox .formUploadBtn{
+    float: left;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 4px;
+}
+.sellContainer .formUploadImagesBox .formUploadBtn>label {
+    width: 100%;
+    line-height: 100px;
+}
+.sellContainer .formUploadImagesBox .formUploadDescription{
+    position: absolute;
+    top: 0;
+    left: 110px;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+}
+.sellContainer .formUploadImagesBox .formUploadDescriptionLine{
+    line-height: 20px;
+    font-size: 13px;
+    text-align: left;
+    color: #666666;
+}
+.sellContainer .formPreviewImages{
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    height: 170px;
+    border: 1px solid #DEDEDE;
+    background-color: #EDF1F6;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.sellContainer .formPreviewImages .formPreviewImagesDescription {
+    display: inline-block;
+}
+.sellContainer .formPreviewImages .previewImageBox{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    height: 130px;
+}
+.sellContainer .formPreviewImages .previewImage{
+    height: 130px;
+    border: 1px solid #CCCCCC;
+}
+.sellContainer .formPreviewImages .previewImageDelete{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 10px;
+}
+/* REQUEST */
+.requestContainer{
+}
+.requestContainer .userSelectorList {
+    margin-bottom: 15px;
+}
+.requestContainer .requestAgenciesInfo{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #DEDEDE;
+    border-top: none;
+    background-color: #F5F9FC;
+}
+.requestContainer .requestAgenciesInRange {
+    line-height: 25px;
+    font-size: 13px;
+}
+.requestContainer .requestFavoriteAgencies {
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.requestContainer .requestFavoriteAgencies i{
+    margin-right: 5px;
+}
+.requestContainer .requestAddFavoriteBtn {
+    margin-bottom: 15px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 14px;
+    color: #444444;
+    font-weight: 700;
+    cursor: pointer;
+}
+.requestContainer .requestAddFavoriteBtn:hover {
+    color: #222222;
+}
+.requestContainer .requestAddFavoriteBtn i {
+    margin-right: 5px;
+}
+
+/* 추가사항 */
+.detailBtn{
+    display: inline-block;
+}
+.detailBtn input[type='checkbox']{
+    display: none;
+}
+.detailBtn input[type='checkbox'] + label{
+    display: inline-block;
+    padding: 15px;
+    margin: 0 5px 5px 0;
+    line-height: 1;
+    font-size: 14px;
+    border: 1px solid #ECECEC;
+    border-radius: 4px;
+    color: #5160B1;
+    background-color: #fff;
+    cursor: pointer;
+}
+.detailBtn input[type='checkbox']:checked + label {
+    border: 1px solid #5160B1;
+    background-color: #5160B1;
+    color: #fff;
+}
+.moreOption{
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: left;
+}
+.moreOption .optionTitle{
+    line-height: 30px;
+    font-size: 14px;
+    color: #3d3d3d;
+    border-top: 1px solid #7c7c7c;
+    border-bottom: 1px solid #7c7c7c;
+}
+.moreOption .optionBtn{
+    position: absolute;
+    right: 0;
+    top: 1.5px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+.moreOptionBlank, .selectGroupBlank{
+    height: 8px;
+}
+.optionFormGroup{
+    padding: 0;
+    background-color: transparent;
+}
+.optionFormRow{
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+.optionCaption{
+    color: #5D648D;
+}
+.formContainer .selectGroup{
+    margin-bottom: 0;
+}
+.policiesContents {
+    width: 678px;
+    min-height: 900px;
+    padding: 15px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    overflow: auto;
+    font-size: 12px;
+    background-color: #fff;
+}
+.policiesContents h2, h4, li, p {
+    line-height: 25px;
+}
+.policiesContents h2 {
+    font-size: 20px;
+    padding: 15px 0 20px;
+    font-weight: 700;
+}
+.policiesContents h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.policiesContents li {
+    margin-left: 15px;
+}
+.policiesContents p {
+    font-size: 12px;
+    margin: 0;
+}
+.policiesContents table {
+    border: 1px solid #000;
+    text-align: center;
+    width: 100%;
+}
+.policiesContents table tr, .policiesContents table td {
+    border: 1px solid #000;
+}
+/* 경고 메세지에 text-align: left 추가 */
+/* 추가 사항 끝 */

@@ -1,0 +1,292 @@
+.homeContainer {
+    position: relative;
+}
+.homeContainer .homeBanner{
+    position: relative;
+    margin: 0 auto;
+    max-width: 1920px;
+    min-width: 1024px;
+    height: 620px;
+    background-image: url('/jivida/assets/img/home/home_banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@media screen and (max-width : 1160px) {
+    .homeContainer .homeBanner{
+        height: 550px;
+    }
+}
+.homeContainer .homeBanner .homeSectionContainer {
+    height: 100%;
+}
+.homeContainer .homeBanner .requestBtn {
+    position: absolute;
+    top: 415px;
+    left: 10px;
+    padding: 20px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.homeContainer .searchBtn {
+    position: absolute;
+    top: 557px;
+    left: 500px;
+}
+@media screen and (max-width : 1160px) {
+    .homeContainer .homeBanner .requestBtn{
+        top: 365px;
+        left: 15px;
+    }
+    .homeContainer .searchBtn {
+        top: 493px;
+        left: 430px;
+    }
+}
+.homeContainer .homeBanner .requestBtn i, .homeContainer .homeSection1 i {
+    margin-left: 5px;
+}
+.homeContainer .homeSectionContainer {
+    position: relative;
+    margin: 0 auto;
+    width: 1160px;
+    height: 500px;
+}
+@media screen and (max-width : 1160px) {
+    .homeContainer .homeSectionContainer{
+        width: 1024px;
+    }
+}
+.homeContainer .homeSection1 {
+    background-color: #FFFFFF;
+}
+.homeContainer .homeSection1 .homeSectionContainer {
+    width: 1024px;
+    height: 525px;
+}
+.homeContainer .homeSection1 .sectionBanner {
+    margin: 0 auto;
+    width: 1024px;
+    height: 600px;
+    background-image: url('/jivida/assets/img/home/home_banner2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.homeContainer .homeSection1 .requestBtn, .homeContainer .homeSection1 .searchBtn, .homeContainer .homeSection1 .sellBtn, .homeContainer .homeBanner .requestBtn{
+    padding: 15px 20px 13px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+.homeContainer .homeSection1 .requestBtn {
+    position: absolute;
+    top: 450px;
+    left: 162px;
+}
+.homeContainer .homeSection1 .searchBtn {
+    position: absolute;
+    top: 450px;
+    left: 456px;
+}
+.homeContainer .homeSection1 .sellBtn {
+    position: absolute;
+    top: 450px;
+    left: 729px;
+}
+.homeContainer .homeSection2 {
+    background-color: #F6F6F6;
+}
+.homeContainer .homeSection2 .homeSectionContainer {
+    width: 1160px;
+    height: 600px;
+}
+.homeContainer .homeSection2 .sectionBanner {
+    width: 1160px;
+    height: 550px;
+    background-image: url('/jivida/assets/img/home/home_banner3.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.homeContainer .homeSection2 .sectionAndroidBtn {
+    position: absolute;
+    top: 310px;
+    left: 75px;
+    width: 300px;
+}
+.homeContainer .homeSection2 .sectionIOSBtn {
+    position: absolute;
+    top: 390px;
+    left: 75px;
+    width: 300px;
+}
+@media screen and (max-width: 1160px) {
+    .homeContainer .homeSection2 .homeSectionContainer {
+        width: 1024px;
+        height: 550px;
+    }
+    .homeContainer .homeSection2 .sectionBanner {
+        width: 1024px;
+        height: 550px;
+    }
+    .homeContainer .homeSection2 .sectionAndroidBtn, .homeContainer .homeSection2 .sectionIOSBtn {
+        left: 10px;
+    }
+}
+.homeContainer .homeSection3 {
+    background-color: #FFFFFF;
+}
+.homeContainer .homeSection3 .homeSectionContainer {
+    width: 100%;
+    height: 205px;
+}
+.homeContainer .homeSection3 .sectionBannerContainer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -36px;
+}
+.homeContainer .homeSection3 .sectionBanner {
+    margin: 0 auto;
+    width: 1024px;
+    height: 275.5px;
+    background-image: url(/jivida/assets/img/home/home_banner4.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 10;
+    position: relative;
+    margin: auto;
+}
+.homeContainer .homeSection3 .sectionBg {
+    width: 100%;
+    height: 100%;
+    background-color: #E4322E;
+    position: relative;
+    z-index: 0;
+}
+.homeContainer .homeSection3 .sectionSignBtn {
+    padding: 11px 40px;
+    background-color: #B30F0F;
+    color: #FFF;
+    position: absolute;
+    top: 182px;
+    left: 446px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+.homeContainer .homeSection4 {
+    background-color: #FFFFFF;
+}
+.homeContainer .homeSection4 .homeSectionContainer {
+    width: 1024px;
+    height: 190px;
+    position: relative;
+    margin: 0 auto;
+    padding: 25px 0;
+ }
+.homeContainer .homeSection4 .sectionPhone {
+    position: relative;
+    height: 140px;
+    display: inline-block;
+}
+.homeContainer .homeSection4 .sectionService {
+    position: absolute;
+    top: 80px;
+    left: 305px;
+}
+.homeContainer .homeSection4 .sectionPolicy {
+    position: absolute;
+    top: 80px;
+    left: 510px;
+}
+.homeContainer .homeSection4 .sectionSignin {
+    position: absolute;
+    top: 80px;
+    left: 695px;
+}
+.homeContainer .homeSection4 .sectionSignup {
+    position: absolute;
+    top: 80px;
+    left: 845px;
+}
+.homeContainer .homeSection4 .sectionService, .homeContainer .homeSection4 .sectionPolicy, .homeContainer .homeSection4 .sectionSignin, .homeContainer .homeSection4 .sectionSignup {
+    color: #7c7c7c;
+    font-size: 16px;
+    text-decoration: none;
+}
+.homeContainer .homeSection4 i {
+    margin-right: 5px;
+    font-size: 25px;
+}
+.homeContainer .homeSection4 .sectionLink {
+    position: relative;
+    vertical-align: middle;
+    padding: 10px;
+    display: inline-block;
+}
+.homeContainer .homeFooter{
+    width: 100%;
+    height: 211px;
+    background-color: #35383C;
+}
+.homeContainer .homeFooter .homeFooterBox{
+    position: relative;
+    margin: 0 auto;
+    padding: 50px 20px;
+    width: 1024px;
+}
+.homeContainer .homeFooter .footerLeft{
+    float: left;
+    width: 130px;
+    height: 100%;
+}
+.homeContainer .homeFooter .footerLogo{
+
+}
+.homeContainer .homeFooter .footerMiddle{
+    position: absolute;
+    left: 178px;
+}
+.homeContainer .homeFooter .policyLine{
+}
+.homeContainer .homeFooter .policyLineBtn{
+    display: inline;
+    padding: 0 10px;
+    height: 13px;
+    color: #999999;
+    font-size: 11px;
+    border-right: 1px solid #999999;
+}
+.homeContainer .homeFooter .policyLineBtn:first-child{
+    padding-left: 0;
+}
+.homeContainer .homeFooter .policyLineBtn:last-child{
+    border-right: none;
+}
+.homeContainer .homeFooter .companyLine{
+    margin-top: 15px;
+}
+.homeContainer .homeFooter .companyLineText{
+    line-height: 25px;
+    font-size: 15px;
+    color: #EBEBEB;
+}
+.homeContainer .homeFooter .companyLineText span{
+    padding-right: 10px;
+}

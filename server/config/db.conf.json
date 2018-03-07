@@ -1,0 +1,12 @@
+{
+    "app": {
+        "connectionLimit": 50,
+        "waitForConnections": false,
+        "port": 3306,
+        "host" : "wordpress-rf.coviludadtqs.ap-northeast-2.rds.amazonaws.com",
+        "user" : "wordpress",
+        "password" : "record2016",
+        "database" : "Jivida",
+        "charset" : "utf8"
+    }
+}

@@ -1,0 +1,12 @@
+.smsPageContainer{
+
+}
+.smsPageContainer .line{
+    padding: 0 10px;
+}
+.smsPageContainer .lineBtn{
+    cursor: pointer;
+}
+.smsPageContainer .lineBtnBlue{
+    color: #0F5DD4;
+}

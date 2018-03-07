@@ -1,0 +1,341 @@
+.chatContainer {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+/* Chat List */
+.chatContainer .chatListBox {
+    position: relative;
+    padding: 0;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+.chatContainer .chatListBox .chatListHeader {
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    line-height: 68px;
+    font-weight: 400;
+    border-bottom: 1px solid #ececec;
+}
+.chatContainer .chatListBox .chatListLine {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #ECECEC;
+    cursor: pointer
+}
+.chatContainer .chatListBox .chatListLine.active{
+    background-color: #F6F6F6;
+}
+.chatContainer .chatListBox .chatListLine:hover{
+    background-color: #FCFCFC;
+}
+.chatContainer .chatListBox .chatListLine.active:hover{
+    background-color: #F6F6F6;
+}
+.chatContainer .chatListBox .profile {
+    float: left;
+    margin: 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.chatContainer .chatListBox .header {
+    position: absolute;
+    top: 0;
+    left: 68px;
+    right: 10px;
+    margin: 14px 0 0 0;
+    height: 20px;
+}
+.chatContainer .chatListBox .header .name{
+    float: left;
+    width: 70%;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color :#2D2D2D;
+}
+.chatContainer .chatListBox .header .date{
+    float: right;
+    width: 30%;
+    line-height: 20px;
+    font-size: 10.5px;
+    color :#AAAAAA;
+    text-align: right;
+}
+.chatContainer .chatListBox .body {
+    position: absolute;
+    top: 37px;
+    left: 68px;
+    right: 10px;
+}
+.chatContainer .chatListBox .body .text {
+    float: left;
+    width: 84%;
+    line-height: 17px;
+    font-size: 12px;
+    color: #979797;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.chatContainer .chatListBox .body .count {
+    float: right;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ff5b49;
+    color: #FFFFFF;
+}
+
+
+/* Chat  */
+.chatContainer .chatBox {
+    position: relative;
+    padding: 0;
+    height: 100%;
+    border-left: 1px solid #ECECEC;
+    border-right: 1px solid #ECECEC;
+    background-color: #FFFFFF;
+}
+.chatContainer .chatBox .chatLineBox {
+    position: absolute;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    border-bottom: 1px solid #ECECEC;
+}
+.chatContainer .chatLineBox .chatLine {
+    overflow: hidden;
+}
+.chatContainer .chatLineBox .chatLineMine {
+    position: relative;
+    margin: 7px;
+    max-width: 83%;
+    float: right;
+}
+.chatContainer .chatLineBox .chatLineMine .date{
+    position: absolute;
+    left: -55px;
+    bottom: 0;
+    font-size: 11px;
+    color: #AAAAAA;
+}
+.chatContainer .chatLineBox .chatLineMine .text{
+    padding: 10px;
+    line-height: 17px;
+    font-size: 13px;
+    background-color: #5d648d;
+    border-radius: 19px;
+    color: #FFFFFF;
+}
+.chatContainer .chatLineBox .image{
+    position: relative;
+    width: 100%;
+    border: 1px solid #ECECEC;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.chatContainer .chatLineBox .chatLineOthers .image{
+    margin-left: 45px;
+    max-width: 70%;
+}
+.chatContainer .chatLineBox .chatLineMine .house, .chatContainer .chatLineBox .chatLineOthers .house{
+    position: relative;
+    padding: 10px;
+    width: 380px;
+    height: 141px;
+    background-color: #FFFFFF;
+    border: 1px solid #ECECEC;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.chatLineOthers .house {
+    margin-left: 45px;
+}
+.chatContainer .chatLineBox .chatLineMine .house:hover, .chatContainer .chatLineBox .chatLineOthers .house:hover {
+    background-color: #F5F5F5;
+}
+.chatContainer .chatLineBox .chatLineOthers {
+    position: relative;
+    margin: 7px;
+    max-width: 90%;
+    float: left;
+}
+.chatContainer .chatLineBox .chatLineOthers .profile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 33px;
+    border-radius: 17px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.chatContainer .chatLineBox .chatLineOthers .date{
+    position: absolute;
+    right: -55px;
+    bottom: 0;
+    font-size: 11px;
+    color: #AAAAAA;
+}
+.chatContainer .chatLineBox .chatLineOthers .text{
+    margin-left: 43px;
+    padding: 10px;
+    line-height: 17px;
+    font-size: 13px;
+    background-color: #f2f2f2;
+    border-radius: 19px;
+    color: #000000;
+}
+
+.chatContainer .chatBox .inputBox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+}
+.chatContainer .chatBox .inputHouse, .chatContainer .chatBox .inputPicture {
+    float: left;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+.chatContainer .chatBox .inputHouse i{
+    line-height: 60px;
+    font-size: 28px;
+    color: #ff5b49;
+    cursor: pointer;
+}
+.chatContainer .chatBox .inputPicture i{
+    line-height: 83px;
+    font-size: 48px;
+    margin-left: 5px;
+    color: #ff5b49;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 50px;
+    overflow: hidden;
+    display: block;
+}
+.chatContainer .chatBox .inputText {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    right: 0;
+    bottom: 0;
+}
+.chatContainer .chatBox .inputText4User{
+    position: absolute;
+    top: 0;
+    left: 60px;
+    right: 0;
+    bottom: 0;
+}
+.chatContainer .chatBox .inputText input, .chatContainer .chatBox .inputText4User input {
+    padding: 0 10px;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border: none;
+}
+.chatContainer .chatBox .inputText input::placeholder, .chatContainer .chatBox .inputText4User input::placeholder {
+    color: #B6B6B6
+}
+
+
+    /* House List */
+.chatContainer .houseList {
+    overflow: hidden;
+    padding: 0;
+}
+.chatContainer .houseListHeader {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #ECECEC;
+    background-color: #FFFFFF;
+}
+.chatContainer .houseListHeader .profile {
+    margin: 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.chatContainer .houseListHeader .header {
+    position: absolute;
+    top: 0;
+    left: 68px;
+    right: 10px;
+    margin: 14px 0 0 0;
+    height: 20px;
+    font-weight: 700;
+}
+.chatContainer .houseListTitle {
+    position: relative;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: 700;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #ececec;
+}
+.chatContainer .houseListDelete {
+    position: absolute;
+    line-height: 35px;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.chatContainer .houseListBox {
+    height: 93%;
+    background-color: #F5F5F5;
+    padding: 10px;
+}
+@media (max-width: 992px) {
+    .chatContainer .houseListBox {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+/* Upload Images */
+.formUploadHiddenInput{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+    opacity: 0;
+}

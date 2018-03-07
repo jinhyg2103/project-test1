@@ -1,0 +1,238 @@
+label {
+    margin: 0;
+}
+/* COMMON */
+.formContainer{
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+}
+.formContainer .formTitle{
+    margin-top: 17px;
+    margin-bottom: 25px;
+    line-height: 52px;
+    font-size: 35px;
+    letter-spacing: -1px;
+    color: #3d3d3d;
+    font-weight: 100;
+}
+.formContainer .formTitle .bold{
+    font-weight: 700;
+}
+.formContainer .logoBox{
+    display: block;
+    margin: 80px 0 70px;
+}
+.formContainer .logoImg{
+    width: 200px;
+    height: 56px;
+}
+.formContainer .formGroupName{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3D3D3D;
+    text-align: left;
+}
+.formContainer .formGroup{
+    margin-bottom: 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+}
+.formContainer .formRow{
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-bottom: 1px solid #EEEEEE;
+    text-align: left;
+}
+.formContainer .formRow:last-child{
+    border: none;
+}
+.formContainer .formInput{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    border: none;
+}
+.formContainer .formInputPhoneNumber{
+    float: left;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+}
+.formContainer .formDividerPhoneNumber{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #999999;
+}
+.formContainer .formInput::placeholder, .formContainer .formInputPhoneNumber::placeholder {
+    color: #B6B6B6;
+}
+.formContainer .formInputUnit{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    border-left: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+}
+.formContainer .formInput.inputWithVerify {
+    float: left;
+    margin-right: 3%;
+    width: 76%;
+}
+.formContainer .formSelect{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.formContainer .formTextarea{
+    padding: 10px;
+    width: 100%;
+    min-height: 130px;
+    font-size: 12px;
+    border: none;
+    outline: none;
+}
+.formContainer .inputInsideBtn {
+    float: left;
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+}
+.formContainer .inputVerifyBox {
+    float: left;
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #999999;
+    color: #FFFFFF;
+}
+.formContainer .formCheckbox{
+    margin-top: 8px;
+    margin-bottom: 7px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.formContainer .formCheckboxLabel{
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+    color: #999999;
+    cursor: pointer;
+}
+.formContainer .formInputWarn{
+    line-height: 25px;
+    font-size: 12px;
+    color: #FF3A30;
+    text-align: left;
+}
+/* Upload multiple Images */
+.formUploadHiddenInput{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+    opacity: 0;
+}
+/* Buttons */
+.formContainer .largeBtn{
+    height: 55px;
+    line-height: 55px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.formContainer .mediumBtn{
+    height: 50px;
+    line-height: 50px;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: #FFF;
+    border: 1px solid #F33939;
+    color: #F33939;
+}
+
+.formContainer .findIdBtn, .formContainer .findPasswordBtn{
+    width: 23.8%;
+    line-height: 20px;
+    color: #AAAAAA;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 25px 0;
+}
+.formContainer .findIdBtn:hover, .formContainer .findPasswordBtn:hover{
+    text-decoration: underline;
+}
+.formContainer .findIdBtn{
+    float: left;
+    margin-left: 25%;
+    padding-right: 1%;
+    text-align: right;
+}
+.formContainer .findPasswordBtn{
+    float: left;
+    margin-right: 25%;
+    padding-left: 1%;
+    text-align: left;
+}
+.formContainer .findDivider{
+    float: left;
+    margin: 30px 0;
+    width: 0.4%;
+    height: 10px;
+    background-color: #CCCCCC;
+}
+
+/* LOGIN */
+.loginContainer{
+
+}
+.loginContainer .findBox{
+    height: 40px;
+}
+.loginContainer .signupBox{
+
+}
+.loginContainer .signupBox .mediumBtn{
+    float: left;
+    width: 49%;
+}
+.loginContainer .signupBox .leftBtn{
+    margin-right: 0.5%;
+}
+.loginContainer .signupBox .rightBtn{
+    margin-left: 0.5%;
+}
+.loginContainer .formGroup{
+    margin-bottom: 20px;
+}
+.loginContainer .copyrightBox{
+    margin-top: 220px;
+    color: #BEBEBF;
+    font-weight: 400;
+    font-size: 15px;
+}

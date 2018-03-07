@@ -1,0 +1,18 @@
+.userModalBody{
+}
+.userModalBody .photo{
+    margin-bottom: 15px;
+    width: 100%;
+}
+.userModalBody .photoTitle{
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.userModalFooter{
+    background-color: #e74141;
+    color: #FFFFFF;
+    cursor: pointer;
+}

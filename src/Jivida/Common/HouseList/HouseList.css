@@ -1,0 +1,496 @@
+/* houseItemBox */
+.houseItemContainerWithoutToolBox {
+    position: relative;
+    margin: 0 auto 10px;
+    height: 121px;
+    border: 1px solid #ECECEC;
+    background-color: #FFFFFF;
+    text-align: left;
+    cursor: pointer;
+}
+.houseItemContainerWithoutToolBox>.houseItemBox {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.houseItemContainerWithoutToolBox>.houseItemBox:hover {
+    background-color: #F5F5F5;
+}
+.houseItemBox {
+    position: relative;
+}
+.houseItemBox .photo {
+    float: left;
+    width: 130px;
+    height: 98px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-right: 1px solid #ECECEC;
+    text-align: center;
+}
+.houseItemBox .photo i, .houseItemBox .photoBig {
+    float: left;
+    width: 130px;
+    height: 120px;
+    text-align: center;
+}
+.houseItemBox .photo i, .houseItemBox .photoBig i {
+    line-height: 120px;
+    font-size: 50px;
+    color: #DDDDDD;
+}
+.houseItemBox .selectBox {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    background: #DDDDDD;
+    border-radius: 4px;
+    text-align: center;
+}
+.houseItemBox .selectBox i{
+    line-height: 20px;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.houseItemBox .description{
+    position: absolute;
+    left: 140px;
+    right: 0;
+    padding: 10px 10px;
+    height: 120px;
+}
+.houseItemBox .priceLine{
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.houseItemBox .type{
+    float: left;
+    margin-top: 8px;
+    margin-right: 10px;
+    padding: 2px 5px;
+    line-height: 14px;
+    font-size: 11px;
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+.houseItemBox .type.type1{
+    background-color: #FF5C5C;
+}
+.houseItemBox .type.type2{
+    background-color: #87b555;
+}
+.houseItemBox .type.type3{
+    background-color: #f6c023;
+}
+.houseItemBox .price{
+    height: 35px;
+    line-height: 35px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #444444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.houseItemBox .metaLine{
+    height: 20px;
+    line-height: 20px;
+    color: #666666;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.houseItemBox .descLine{
+    height: 20px;
+    line-height: 20px;
+    color: #3d3d3d;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.houseItemBox .authorLine{
+    height: 20px;
+    line-height: 20px;
+    color: #888888;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ToolBox */
+.houseItemContainerWithToolBox {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 10px;
+    max-width: 700px;
+    min-width: 500px;
+    height: 120px;
+    border: 1px solid #ECECEC;
+    background-color: #FFFFFF;
+    text-align: left;
+}
+.houseItemContainerWithToolBox>.houseItemBox {
+    position: absolute;
+    left: 0;
+    right: 221px;
+    height: 120px;
+    cursor: pointer;
+}
+.houseItemContainerWithToolBox .toolBox{
+    float: right;
+    padding: 10px;
+    width: 220px;
+    height: 120px;
+    border-left: 1px solid #ECECEC;
+}
+.houseItemContainerWithToolBox .toolBoxHeader {
+    display: block;
+    height: 50%;
+}
+.houseItemContainerWithToolBox .toolBoxHeader .profile{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.houseItemContainerWithToolBox .toolBoxHeader .agency{
+    float: left;
+    margin-top: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.houseItemContainerWithToolBox .toolBoxHeader .agency .agencyName{
+    display: block;
+    line-height: 18px;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+    width: 149px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.houseItemContainerWithToolBox .toolBoxHeader .agency .agencyAuthorName{
+    display: block;
+    line-height: 18px;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+    width: 149px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.houseItemContainerWithToolBox .toolBoxHeader .agency .authorName{
+    display: block;
+    line-height: 34px;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+}
+.houseItemContainerWithToolBox .toolBoxBody {
+    margin-top: 10px;
+    height: 50%;
+}
+.houseItemContainerWithToolBox .toolBoxBody .btnActive, .houseItemContainerWithToolBox .toolBoxBody .btnCancel {
+    height: 40px;
+    line-height: 37px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+.houseItemContainerWithToolBox .toolBoxBody .btnActive{
+    float: left;
+    margin-right: 5%;
+    width: 47%;
+}
+.houseItemContainerWithToolBox .toolBoxBody .btnCancel{
+    float: left;
+    width: 47%;
+    cursor: pointer;
+}
+.houseItemContainerWithToolBox .toolBoxBody .btnActive i, .houseItemContainerWithToolBox .toolBoxBody .btnCancel i{
+    margin-right: 5px;
+}
+.houseItemContainerWithToolBox .talkBox {
+    float: right;
+    padding: 10px;
+    width: 150px;
+    height: 120px;
+    border-left: 1px solid #ECECEC;
+}
+.houseItemContainerWithToolBox .toolBoxHeader, .houseItemContainerWithToolBox .talkBoxHeader {
+    display: block;
+    height: 50%;
+    position: relative;
+    font-size: 14px;
+}
+.houseItemContainerWithToolBox .talkBoxBody  {
+    margin-top: 10px;
+    height: 50%;
+}
+.houseItemContainerWithToolBox .talkBoxBody .btnTalk {
+    height: 40px;
+    line-height: 37px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+.houseItemContainerWithToolBox .talkBoxHeader .profile{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.houseItemContainerWithToolBox .talkBoxHeader .agency{
+    float: left;
+    margin-top: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.houseItemContainerWithToolBox .talkBoxHeader .agency .agencyName{
+    display: block;
+    line-height: 18px;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+    width: 79px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.houseItemContainerWithToolBox .talkBoxHeader .agency .agencyAuthorName{
+    display: block;
+    line-height: 18px;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+    width: 79px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.houseItemContainerWithToolBox .talkBoxHeader .agency .authorName{
+    display: block;
+    line-height: 34px;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+}
+.houseItemContainerWithToolBox .talkBoxBody .btnTalk{
+    float: left;
+    margin-right: 5%;
+    width: 100%;
+}
+.houseItemContainerWithToolBox .talkBoxBody .btnTalk i{
+    margin-right: 5px;
+}
+/*========================================================*/
+.houseMyItemContainerWithToolBox{
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 10px;
+    max-width: 1000px;
+    min-width: 500px;
+    height: 120px;
+    border: 1px solid #ECECEC;
+    background-color: #FFFFFF;
+    text-align: left;
+}
+.houseMyItemContainerWithToolBox>.houseItemBox {
+    position: absolute;
+    left: 220px;
+    right: 150px;
+    height: 120px;
+    cursor: pointer;
+    border-left: 1px solid #ECECEC;
+}
+.houseMyItemContainerWithToolBox .toolBox{
+    float: left;
+    padding: 10px;
+    width: 225px;
+    height: 120px;
+    border-left: 1px solid #ECECEC;
+}
+.houseMyItemContainerWithToolBox .toolBoxHeader, .houseMyItemContainerWithToolBox .talkBoxHeader {
+    display: block;
+    height: 50%;
+    position: relative;
+    font-size: 14px;
+}
+.houseMyItemContainerWithToolBox .toolBoxBody {
+    margin-top: 5px;
+    height: 50%;
+}
+.houseMyItemContainerWithToolBox .talkBoxBody  {
+    margin-top: 10px;
+    height: 50%;
+}
+.houseMyItemContainerWithToolBox .toolBoxBody .btnActive, .houseMyItemContainerWithToolBox .toolBoxBody .btnCancel, .houseMyItemContainerWithToolBox .talkBoxBody .btnTalk {
+    height: 40px;
+    line-height: 37px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+.houseMyItemContainerWithToolBox .toolBoxBody .btnActive, .houseMyItemContainerWithToolBox .talkBoxBody .btnActive{
+    float: left;
+    margin-right: 5%;
+    width: 46%;
+}
+.houseMyItemContainerWithToolBox .toolBoxBody .btnCancel{
+    float: left;
+    width: 46%;
+    cursor: pointer;
+}
+.houseMyItemContainerWithToolBox .talkBox {
+    float: right;
+    padding: 10px;
+    width: 150px;
+    height: 120px;
+    border-left: 1px solid #ECECEC;
+}
+.houseMyItemContainerWithToolBox .category {
+    padding-top: 2px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.houseMyItemContainerWithToolBox .category .myHouse {
+    color: #2D2D2D;
+}
+.houseMyItemContainerWithToolBox .category .customer {
+    color: #009B50;
+}
+.houseMyItemContainerWithToolBox .category .common {
+    color: #2135A8;
+}
+.houseMyItemContainerWithToolBox .category i {
+    margin-right: 5px;
+    font-size: 15px;
+}
+.houseMyItemContainerWithToolBox .btnBox {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    height: 100%;
+    font-weight: 700;
+    color: #444444;
+}
+.houseMyItemContainerWithToolBox .btnBox .publicSelector {
+    border: none;
+}
+.houseMyItemContainerWithToolBox .btnBox .showToggle {
+    margin-bottom: 8px;
+}
+.houseMyItemContainerWithToolBox .btnBox .showToggle, .houseMyItemContainerWithToolBox .btnBox .memo {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+.houseMyItemContainerWithToolBox .btnBox .memo{
+    margin-top: 11px;
+    padding-left: 4px;
+}
+.houseMyItemContainerWithToolBox .btnBox i {
+    margin-left: 5px;
+    font-size: 10px;
+    position: relative;
+    bottom: 2px;
+}
+.houseMyItemContainerWithToolBox .number {
+    margin-top: 8px;
+    color: #666666;
+}
+.houseMyItemContainerWithToolBox .talkBoxHeader .profile{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.houseMyItemContainerWithToolBox .talkBoxHeader .agency{
+    float: left;
+    margin-top: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.houseMyItemContainerWithToolBox .talkBoxHeader .agency .agencyName{
+    display: block;
+    line-height: 18px;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 79px;
+    overflow: hidden;
+}
+.houseMyItemContainerWithToolBox .talkBoxHeader .agency .agencyAuthorName{
+    display: block;
+    line-height: 18px;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 79px;
+    overflow: hidden;
+}
+.houseMyItemContainerWithToolBox .talkBoxHeader .agency .authorName{
+    display: block;
+    line-height: 34px;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+}
+.houseMyItemContainerWithToolBox .talkBoxBody .btnTalk{
+      float: left;
+      margin-right: 5%;
+      width: 100%;
+}
+.houseMyItemContainerWithToolBox .talkBoxBody .btnTalk i{
+    margin-right: 5px;
+}
+.houseMyItemContainerWithToolBox .dropdownMenu{
+    min-width: 50%;
+    padding: 0;
+}
+.houseMyItemContainerWithToolBox .dropdownItem{
+    font-size: 13px;
+    padding: 7px;
+}

@@ -1,0 +1,12 @@
+.requestContainer {
+    margin: 15px auto;
+    width: 700px;
+}
+
+.requestContainer .expiredDate {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #AAAAAA;
+}
+
