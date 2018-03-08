@@ -82,6 +82,7 @@
     "react-router-server": "^4.2.2",
     "react-scroll": "^1.7.6",
     "react-scrollbar": "^0.5.1",
+    "react-slick": "^0.20.0",
     "recompose": "^0.25.1",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",

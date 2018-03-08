@@ -27,7 +27,11 @@
 
 /* Banner */
 .bannerSection {
-
+    width: 100%;
+    height: 385px;
+    background-color: black;
+    padding-top: 60px;
+    margin-top: 85px;
 }
 
 /* Funding */

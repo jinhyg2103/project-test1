@@ -18,7 +18,7 @@ class Banner extends React.Component {
     render() {
         return (
             <div className={stylesHome.bannerSection}>
-                <div>
+                <div className={stylesHome.bannerHeader}>
                     <div className={stylesHome.sectionSmallTitle}>셀레브 Pick</div>
                     <div className={stylesHome.sectionWhiteTitle}>놓치지마세요</div>
                 </div>
