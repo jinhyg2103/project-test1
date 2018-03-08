@@ -7,23 +7,20 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 
 // Components
-import HomeBanner from '../../Components/Home/Banner';
-import HomeFunding from '../../Components/Home/Funding';
-
-// Actions
+import BannerHeader from './BannerHeader';
+import BannerBody from './BannerBody';
 
 // Styles
 import stylesHome from './Home.css';
 
-// Routes
+// Actions
 
-
-class HomeContainer extends React.Component {
+class Banner extends React.Component {
     render() {
         return (
-            <div className={stylesHome.homeContainer}>
-                <HomeBanner />
-                <HomeFunding />
+            <div className={stylesHome.bannerSection}>
+                <BannerHeader />
+                <BannerBody />
             </div>
         );
     }
@@ -32,4 +29,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(HomeContainer));
+})(withRouter(Banner));

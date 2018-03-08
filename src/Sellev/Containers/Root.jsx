@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 
 // Components
-import HeaderComponent from '../Components/App/Header';
+import HeaderComponent from '../Components/Header/index';
 import HomeContainer from './Home';
 import FundingContainer from './Funding';
 import HashTagContainer from './HashTag';
