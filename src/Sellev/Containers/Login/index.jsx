@@ -5,10 +5,6 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-// CSS
-import styles from '../App/App.css';
-import stylesLogin from './Login.css';
-
 
 class LoginView extends React.Component {
     constructor(props) {
@@ -16,7 +12,7 @@ class LoginView extends React.Component {
     }
     render() {
         return (
-            <div className={stylesLogin.loginContainer}>
+            <div>
 
             </div>
         );
