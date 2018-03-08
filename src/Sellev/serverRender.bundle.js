@@ -13631,7 +13631,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // React Router
-//import ReactApp from './App';
+//import ReactApp from './Header';
 
 // Actions
 // React
@@ -31408,7 +31408,7 @@ module.exports = require("zlib");
 /* 318 */
 /***/ (function(module, exports) {
 
-module.exports = {"_args":[["axios@0.17.0","C:\\recordFarm\\project_sellev"]],"_from":"axios@0.17.0","_id":"axios@0.17.0","_inBundle":false,"_integrity":"sha1-fadHkW24A/dhZR1gkdcIeJuVPGo=","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.17.0","name":"axios","escapedName":"axios","rawSpec":"0.17.0","saveSpec":null,"fetchSpec":"0.17.0"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.17.0.tgz","_spec":"0.17.0","_where":"C:\\recordFarm\\project_sellev","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.2.3","is-buffer":"^1.1.5"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"bundlesize":"^0.5.7","coveralls":"^2.11.9","es6-promise":"^4.0.5","grunt":"^1.0.1","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.0.0","grunt-contrib-nodeunit":"^1.0.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^19.0.0","grunt-karma":"^2.0.0","grunt-ts":"^6.0.0-beta.3","grunt-webpack":"^1.0.18","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^1.3.0","karma-chrome-launcher":"^2.0.0","karma-coverage":"^1.0.0","karma-firefox-launcher":"^1.0.0","karma-jasmine":"^1.0.2","karma-jasmine-ajax":"^0.1.13","karma-opera-launcher":"^1.0.0","karma-phantomjs-launcher":"^1.0.0","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^1.1.0","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.7","karma-webpack":"^1.7.0","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","phantomjs-prebuilt":"^2.1.7","sinon":"^1.17.4","typescript":"^2.0.3","url-search-params":"^0.6.1","webpack":"^1.13.1","webpack-dev-server":"^1.14.1"},"homepage":"https://github.com/axios/axios","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test && bundlesize","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","version":"0.17.0"}
+module.exports = {"_args":[["axios@0.17.0","E:\\codecrain\\jivida_0223"]],"_from":"axios@0.17.0","_id":"axios@0.17.0","_inBundle":false,"_integrity":"sha1-fadHkW24A/dhZR1gkdcIeJuVPGo=","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.17.0","name":"axios","escapedName":"axios","rawSpec":"0.17.0","saveSpec":null,"fetchSpec":"0.17.0"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.17.0.tgz","_spec":"0.17.0","_where":"E:\\codecrain\\jivida_0223","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.2.3","is-buffer":"^1.1.5"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"bundlesize":"^0.5.7","coveralls":"^2.11.9","es6-promise":"^4.0.5","grunt":"^1.0.1","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.0.0","grunt-contrib-nodeunit":"^1.0.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^19.0.0","grunt-karma":"^2.0.0","grunt-ts":"^6.0.0-beta.3","grunt-webpack":"^1.0.18","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^1.3.0","karma-chrome-launcher":"^2.0.0","karma-coverage":"^1.0.0","karma-firefox-launcher":"^1.0.0","karma-jasmine":"^1.0.2","karma-jasmine-ajax":"^0.1.13","karma-opera-launcher":"^1.0.0","karma-phantomjs-launcher":"^1.0.0","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^1.1.0","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.7","karma-webpack":"^1.7.0","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","phantomjs-prebuilt":"^2.1.7","sinon":"^1.17.4","typescript":"^2.0.3","url-search-params":"^0.6.1","webpack":"^1.13.1","webpack-dev-server":"^1.14.1"},"homepage":"https://github.com/axios/axios","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test && bundlesize","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","version":"0.17.0"}
 
 /***/ }),
 /* 319 */
@@ -31737,96 +31737,96 @@ module.exports = function spread(callback) {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+   value: true
 });
 exports.default = {
-    clientId: '8puWuJWZYls1Ylawxm6CMiYREhsGGSyw',
-    //url: 'http://jivida.com',
-    url: '',
+   clientId: '8puWuJWZYls1Ylawxm6CMiYREhsGGSyw',
+   //url: 'http://jivida.com',
+   url: '',
 
-    /////////////// Authentification /////////////
-    GET_AUTH_GET_VERIFICATION_CODE: '/api/auth/sms/getVerificationCode', // {'countryDialCode': '82로 넣고 보내주시면 됩니다.','phoneNumber': '휴대폰번호','langCode': '(Option) kr이 default입니다.','force': '(Option) 무조건 SMS를 보낼 경우 true로 설정'}
-    GET_AUTH_IS_ID_DUPLICATED: '/api/auth/is/idDuplicated',
-    GET_AUTH_SESSION: '/api/auth/session', // {'countryDialCode': '82로 넣고 보내주시면 됩니다.','phoneNumber': '휴대폰번호','langCode': '(Option) kr이 default입니다.','force': '(Option) 무조건 SMS를 보낼 경우 true로 설정'}
-    GET_AUTH_FIND_IDTEXT: '/api/auth/find/idText',
-    POST_AUTH_LOGIN: '/api/auth/login', //{'idText': '아이디 (4자 이상, 20자 이하)','password': '비밀번호',}
-    POST_AUTH_SIGNUP: '/api/auth/signup', // {'countryDialCode': '82로 넣고 보내주시면 됩니다.','phoneNumber': '휴대폰번호','password': '비밀번호','idText': '아이디 (4자 이상, 20자 이하)','email': '이메일','name': '닉네임 (중복가능, 1자 이상, 25자 이하)','address': '(Option) 주소 (필수입력 아님)','type': '일반사용자는 1, 중개업자는 2'
-    POST_AUTH_LOGOUT: '/api/auth/logout',
-    POST_AUTH_CHANGE_PASSWORD: '/api/auth/password/change',
-    POST_AUTH_CREATE_AGENCY: '/api/auth/agency/create',
-    POST_AUTH_CREATE_AGENCY_LICENSE: '/api/auth/agency/create/license',
-    POST_AUTH_CREATE_AGENCY_REGISTRATION_CERTIFICATE: '/api/auth/agency/create/registrationCertificate',
+   /////////////// Authentification /////////////
+   GET_AUTH_GET_VERIFICATION_CODE: '/api/auth/sms/getVerificationCode', // {'countryDialCode': '82로 넣고 보내주시면 됩니다.','phoneNumber': '휴대폰번호','langCode': '(Option) kr이 default입니다.','force': '(Option) 무조건 SMS를 보낼 경우 true로 설정'}
+   GET_AUTH_IS_ID_DUPLICATED: '/api/auth/is/idDuplicated',
+   GET_AUTH_SESSION: '/api/auth/session', // {'countryDialCode': '82로 넣고 보내주시면 됩니다.','phoneNumber': '휴대폰번호','langCode': '(Option) kr이 default입니다.','force': '(Option) 무조건 SMS를 보낼 경우 true로 설정'}
+   GET_AUTH_FIND_IDTEXT: '/api/auth/find/idText',
+   POST_AUTH_LOGIN: '/api/auth/login', //{'idText': '아이디 (4자 이상, 20자 이하)','password': '비밀번호',}
+   POST_AUTH_SIGNUP: '/api/auth/signup', // {'countryDialCode': '82로 넣고 보내주시면 됩니다.','phoneNumber': '휴대폰번호','password': '비밀번호','idText': '아이디 (4자 이상, 20자 이하)','email': '이메일','name': '닉네임 (중복가능, 1자 이상, 25자 이하)','address': '(Option) 주소 (필수입력 아님)','type': '일반사용자는 1, 중개업자는 2'
+   POST_AUTH_LOGOUT: '/api/auth/logout',
+   POST_AUTH_CHANGE_PASSWORD: '/api/auth/password/change',
+   POST_AUTH_CREATE_AGENCY: '/api/auth/agency/create',
+   POST_AUTH_CREATE_AGENCY_LICENSE: '/api/auth/agency/create/license',
+   POST_AUTH_CREATE_AGENCY_REGISTRATION_CERTIFICATE: '/api/auth/agency/create/registrationCertificate',
 
-    /////////////// Chat /////////////////
-    GET_CHATS: '/api/chat/get/chats',
-    GET_CHAT_BY_UID: '/api/chat/get/chatByUId',
-    GET_CHAT_LINES: '/api/chat/get/lines',
-    GET_CHAT_HOUSES: '/api/chat/get/houses',
-    RESET_CHAT_COUNT: '/api/chat/reset/chatCount',
-    DELETE_CHAT_HOUSES: '/api/chat/delete/houses',
+   /////////////// Chat /////////////////
+   GET_CHATS: '/api/chat/get/chats',
+   GET_CHAT_BY_UID: '/api/chat/get/chatByUId',
+   GET_CHAT_LINES: '/api/chat/get/lines',
+   GET_CHAT_HOUSES: '/api/chat/get/houses',
+   RESET_CHAT_COUNT: '/api/chat/reset/chatCount',
+   DELETE_CHAT_HOUSES: '/api/chat/delete/houses',
 
-    /////////////// house /////////////////
-    GET_HOUSE_BY_ID: '/api/house/get/id',
-    GET_SEARCH_HOUSES: '/api/house/get/searchHouses',
-    GET_SEARCH_HOUSES_COUNT: '/api/house/count/searchHouses',
-    GET_SEARCH_HOUSES_FOR_MAP: '/api/house/get/searchHousesForMap',
-    GET_FAVORITE_HOUSES: '/api/house/get/favoriteHouses',
-    GET_FAVORITE_HOUSES_COUNT: '/api/house/count/favoriteHouses',
-    GET_MY_HOUSES: '/api/house/get/myHouses',
-    GET_MY_HOUSES_COUNT: '/api/house/count/myHouses',
-    GET_AGENCY_OTHER_HOUSES: '/api/house/get/agencyOtherHouses',
-    POST_CREATE_HOUSE: '/api/house/create',
-    POST_CREATE_HOUSE_OPTIONS: '/api/house/create/options',
-    POST_CREATE_HOUSE_PHOTO: '/api/house/create/photo',
-    POST_HOUSE_FAVORITE: '/api/house/favorite', // 즐겨찾기 추가/삭제
-    POST_DELETE_HOUSE: '/api/house/delete',
-    POST_UPDATE_HOUSE: '/api/house/update',
-    POST_UPDATE_HOUSE_OPTIONS: '/api/house/update/options',
-    POST_UPDATE_HOUSE_PHOTOS: '/api/house/update/photos',
+   /////////////// house /////////////////
+   GET_HOUSE_BY_ID: '/api/house/get/id',
+   GET_SEARCH_HOUSES: '/api/house/get/searchHouses',
+   GET_SEARCH_HOUSES_COUNT: '/api/house/count/searchHouses',
+   GET_SEARCH_HOUSES_FOR_MAP: '/api/house/get/searchHousesForMap',
+   GET_FAVORITE_HOUSES: '/api/house/get/favoriteHouses',
+   GET_FAVORITE_HOUSES_COUNT: '/api/house/count/favoriteHouses',
+   GET_MY_HOUSES: '/api/house/get/myHouses',
+   GET_MY_HOUSES_COUNT: '/api/house/count/myHouses',
+   GET_AGENCY_OTHER_HOUSES: '/api/house/get/agencyOtherHouses',
+   POST_CREATE_HOUSE: '/api/house/create',
+   POST_CREATE_HOUSE_OPTIONS: '/api/house/create/options',
+   POST_CREATE_HOUSE_PHOTO: '/api/house/create/photo',
+   POST_HOUSE_FAVORITE: '/api/house/favorite', // 즐겨찾기 추가/삭제
+   POST_DELETE_HOUSE: '/api/house/delete',
+   POST_UPDATE_HOUSE: '/api/house/update',
+   POST_UPDATE_HOUSE_OPTIONS: '/api/house/update/options',
+   POST_UPDATE_HOUSE_PHOTOS: '/api/house/update/photos',
 
-    /////////////// inquiry /////////////////
-    GET_INQUIRIES: '/api/inquiry/get/search',
-    GET_INQUIRIES_COUNT: '/api/inquiry/count/search',
-    POST_CREATE_INQUIRY: '/api/inquiry/create',
-    POST_ACCEPT_INQUIRY: '/api/inquiry/accept',
-    POST_CANCEL_INQUIRY: '/api/inquiry/cancel',
+   /////////////// inquiry /////////////////
+   GET_INQUIRIES: '/api/inquiry/get/search',
+   GET_INQUIRIES_COUNT: '/api/inquiry/count/search',
+   POST_CREATE_INQUIRY: '/api/inquiry/create',
+   POST_ACCEPT_INQUIRY: '/api/inquiry/accept',
+   POST_CANCEL_INQUIRY: '/api/inquiry/cancel',
 
-    /////////////// User & Agency ////////////////////
-    GET_USER_BY_ID: '/api/user/get/id',
-    GET_FAVORITE_USERS: '/api/user/get/favoriteUsers',
-    GET_FAVORITE_USERS_COUNT: '/api/user/count/favoriteUsers',
-    GET_FAVORITE_AGENCIES: '/api/user/get/favoriteAgencies',
-    GET_FAVORITE_AGENCIES_COUNT: '/api/user/count/favoriteAgencies',
-    GET_NEAR_AGENCY_IDS: '/api/user/get/nearAgencyIds',
-    POST_USER_FAVORITE: '/api/user/favorite',
-    POST_USER_UPDATE: '/api/user/update',
-    POST_AGENCY_UPDATE: '/api/agency/update',
+   /////////////// User & Agency ////////////////////
+   GET_USER_BY_ID: '/api/user/get/id',
+   GET_FAVORITE_USERS: '/api/user/get/favoriteUsers',
+   GET_FAVORITE_USERS_COUNT: '/api/user/count/favoriteUsers',
+   GET_FAVORITE_AGENCIES: '/api/user/get/favoriteAgencies',
+   GET_FAVORITE_AGENCIES_COUNT: '/api/user/count/favoriteAgencies',
+   GET_NEAR_AGENCY_IDS: '/api/user/get/nearAgencyIds',
+   POST_USER_FAVORITE: '/api/user/favorite',
+   POST_USER_UPDATE: '/api/user/update',
+   POST_AGENCY_UPDATE: '/api/agency/update',
 
-    /////////////// Request /////////////////
-    GET_REQUEST_SELLS: '/api/request/get/sells',
-    GET_REQUEST_SELL_AGENCIES: '/api/request/get/sellAgencies',
-    GET_REQUEST_FIND_HOUSE_BY_ID: '/api/request/get/findHouseById',
-    GET_REQUEST_FIND_HOUSES: '/api/request/get/findHouses',
-    GET_REQUEST_FIND_HOUSE_ASKS: '/api/request/get/findHouseAsks',
-    GET_REQUEST_FIND_HOUSE_ANSWERS: '/api/request/get/findHouseAnswers',
-    GET_REQUEST_FIND_CUSTOMERS: '/api/request/get/findCustomers',
-    GET_REQUEST_FIND_CUSTOMER_AGENCIES: '/api/request/get/findCustomerAgencies',
-    POST_CREATE_REQUEST_SELL: '/api/request/create/sell',
-    POST_ACCEPT_REQUEST_SELL: '/api/request/accept/sell',
-    POST_DELETE_REQUEST_SELL: '/api/request/delete/sell',
-    POST_CREATE_REQUEST_FIND_HOUSE: '/api/request/create/find/house',
-    POST_DELETE_REQUEST_FIND_HOUSE: '/api/request/delete/find/house',
-    POST_ACCEPT_REQUEST_FIND_HOUSE_ASK: '/api/request/accept/find/house/ask',
-    POST_DELETE_REQUEST_FIND_HOUSE_ASK: '/api/request/delete/find/house/ask',
-    POST_CREATE_REQUEST_FIND_CUSTOMER: '/api/request/create/find/customer',
-    POST_ACCEPT_REQUEST_FIND_CUSTOMER: '/api/request/accept/find/customer',
-    POST_DELETE_REQUEST_FIND_CUSTOMER: '/api/request/delete/find/customer',
+   /////////////// Request /////////////////
+   GET_REQUEST_SELLS: '/api/request/get/sells',
+   GET_REQUEST_SELL_AGENCIES: '/api/request/get/sellAgencies',
+   GET_REQUEST_FIND_HOUSE_BY_ID: '/api/request/get/findHouseById',
+   GET_REQUEST_FIND_HOUSES: '/api/request/get/findHouses',
+   GET_REQUEST_FIND_HOUSE_ASKS: '/api/request/get/findHouseAsks',
+   GET_REQUEST_FIND_HOUSE_ANSWERS: '/api/request/get/findHouseAnswers',
+   GET_REQUEST_FIND_CUSTOMERS: '/api/request/get/findCustomers',
+   GET_REQUEST_FIND_CUSTOMER_AGENCIES: '/api/request/get/findCustomerAgencies',
+   POST_CREATE_REQUEST_SELL: '/api/request/create/sell',
+   POST_ACCEPT_REQUEST_SELL: '/api/request/accept/sell',
+   POST_DELETE_REQUEST_SELL: '/api/request/delete/sell',
+   POST_CREATE_REQUEST_FIND_HOUSE: '/api/request/create/find/house',
+   POST_DELETE_REQUEST_FIND_HOUSE: '/api/request/delete/find/house',
+   POST_ACCEPT_REQUEST_FIND_HOUSE_ASK: '/api/request/accept/find/house/ask',
+   POST_DELETE_REQUEST_FIND_HOUSE_ASK: '/api/request/delete/find/house/ask',
+   POST_CREATE_REQUEST_FIND_CUSTOMER: '/api/request/create/find/customer',
+   POST_ACCEPT_REQUEST_FIND_CUSTOMER: '/api/request/accept/find/customer',
+   POST_DELETE_REQUEST_FIND_CUSTOMER: '/api/request/delete/find/customer',
 
-    /////////////// Report //////////////
-    POST_CREATE_REPORT: '/api/report/post/create',
+   /////////////// Report //////////////
+   POST_CREATE_REPORT: '/api/report/post/create',
 
-    /////////////// ETC /////////////////
-    UPLOAD_IMAGE: '/api/upload/image'
+   /////////////// ETC /////////////////
+   UPLOAD_IMAGE: '/api/upload/image'
 };
 
 /***/ }),

@@ -5,7 +5,7 @@ import { StaticRouter } from 'react-router';
 import { renderToString } from 'react-router-server';
 
 // React Router
-//import ReactApp from './App';
+//import ReactApp from './Header';
 
 // Actions
 import * as ActionAuth from './Data/Authentification/actions';
