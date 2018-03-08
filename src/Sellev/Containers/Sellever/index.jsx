@@ -5,9 +5,6 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-// CSS
-import styles from '../App/App.css';
-import stylesSellever from './Sellever.css';
 
 class SelleverView extends React.Component {
     constructor(props) {
@@ -15,7 +12,7 @@ class SelleverView extends React.Component {
     }
     render() {
         return (
-            <div className={stylesSellever.selleverContainer}>
+            <div>
 
             </div>
         );

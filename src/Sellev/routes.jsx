@@ -1,5 +1,5 @@
 // Pages
-import RootPage from './Component/App/index';
+import RootPage from './Containers/Root';
 
 // React
 import store from './store';
