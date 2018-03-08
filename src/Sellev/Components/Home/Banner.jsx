@@ -10,7 +10,7 @@ import { Switch, Route } from 'react-router';
 import BannerBody from './BannerBody';
 
 // Styles
-import stylesHome from './Home.css';
+import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
 
@@ -18,9 +18,9 @@ class Banner extends React.Component {
     render() {
         return (
             <div className={stylesHome.bannerSection}>
-                <div className={stylesHome.bannerHeader}>
+                <div className={stylesHome.BannerHeader}>
                     <div className={stylesHome.sectionSmallTitle}>셀레브 Pick</div>
-                    <div className={stylesHome.sectionWhiteTitle}>놓치지마세요</div>
+                    <div className={stylesHome.sectionTitle}>놓치지마세요</div>
                 </div>
                 <BannerBody />
             </div>

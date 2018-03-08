@@ -35,3 +35,29 @@
     left: 30px;
     color: #ffffff;
 }
+
+.listBox img {
+    width: 323px;
+    height: 317px;
+    border-radius: 12px;
+}
+.listBox {
+    position: relative;
+    width: 323px;
+    height: 317px;
+    float: left;
+    margin: 13px 5px;
+}
+.titleBox div:first-child{
+    font-size: 16px;
+}
+.titleBox div:last-child{
+    font-size: 22px;
+}
+.titleBox{
+    position: relative;
+    width: 170px;
+    bottom: 80px;
+    left: 30px;
+    color: #ffffff;
+}

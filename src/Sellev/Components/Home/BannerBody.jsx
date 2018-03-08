@@ -12,7 +12,7 @@ import SwipeBanner from '../../Common/SwipeBanner';
 // Components
 
 // Styles
-import stylesHome from './BannerBody';
+import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
 

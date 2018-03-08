@@ -18,7 +18,7 @@ class Header extends React.Component {
     constructor() {
         super();
         this.state = {
-            dropdownOpen: false,
+            dropDownOpen: false,
             sideMenuOpen: false,
         };
         this.handleDropdown = this.handleDropdown.bind(this);
@@ -62,7 +62,7 @@ class Header extends React.Component {
                             <div><img alt={''} src={'Sellev/assets/img/img_user.png'} /></div>
                             <div>김제니</div>
                             <div onClick={this.handleSideMenu} />
-                            <ul className={styles.sideMenu + (this.state.sideMenuOpen ? ' ' + styles.active : '')}>
+                            <ul className={styles.sideMenu + (this.state.sideMenuOpen ? '' : ' ' + styles.hide)}>
                                 <li><Link to={'/home'}>관심펀딩/상품</Link></li>
                                 <li><Link to={'/hashtag'}>참여 펀딩 현황</Link></li>
                                 <li><Link to={'/product'}>주문내역 조회</Link></li>
