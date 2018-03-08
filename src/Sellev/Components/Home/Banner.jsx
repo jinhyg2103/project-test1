@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 
 // Components
-import BannerHeader from './BannerHeader';
 import BannerBody from './BannerBody';
 
 // Styles
@@ -19,7 +18,10 @@ class Banner extends React.Component {
     render() {
         return (
             <div className={stylesHome.bannerSection}>
-                <BannerHeader />
+                <div className={stylesHome.BannerHeader}>
+                    <div className={stylesHome.sectionSmallTitle}>셀레브 Pick</div>
+                    <div className={stylesHome.sectionTitle}>놓치지마세요</div>
+                </div>
                 <BannerBody />
             </div>
         );
