@@ -11,7 +11,7 @@ import { Switch, Route } from 'react-router';
 import FundingList from './FundingList';
 
 // Styles
-import stylesHome from './Home.css';
+import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
 
@@ -25,7 +25,7 @@ class FundingBody extends React.Component {
     render() {
         return (
             <div>
-                <FundingList title={'펀딩액순'} listItem={''}/>
+                <FundingList title={'펀딩액순'} listItem={''} />
                 <FundingList title={'조회순'} listItem={''} />
                 <FundingList title={'신규'} listItem={''} />
             </div>

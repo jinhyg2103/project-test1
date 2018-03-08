@@ -39,7 +39,7 @@ dl, ol, ul {
 }
 .leftList li a{
     text-decoration: none;
-    color: #ffffff;
+    color: #a0a0a0;
     padding: 10px 2px;
     border-bottom: solid 3px transparent;
 }
@@ -61,6 +61,9 @@ dl, ol, ul {
     min-height: 85px;
     height: auto;
     background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 .headerBox{
     width: 1100px;
@@ -113,13 +116,14 @@ dl, ol, ul {
 .iconBox{
     float: left;
     line-height: 85px;
+    position: relative;
 }
 .iconBox div:not(:last-child){
     float: left;
     height: 85px;
     line-height: 85px;
 }
-.iconBox div:last-child{
+.iconBox div:nth-child(3){
     width: 15px;
     height: 15px;
     float: left;
@@ -131,6 +135,13 @@ dl, ol, ul {
     width: 34px;
     height: 34px;
 }
+.sideMenu {
+    overflow: hidden;
+    position: absolute;
+    top: 70px;
+    right: -70px;
+}
+
 .logo {
     margin-right: 40px;
     line-height: 85px;
@@ -139,9 +150,9 @@ dl, ol, ul {
 .toggleMenu{
     color: white;
     overflow: hidden;
-    position: relative;
-    top: 50px;
-    right: 0;
+    position: absolute;
+    top: 70px;
+    right: -70px;
 }
 .toggleMenu li{
     float: none;
@@ -158,6 +169,7 @@ dl, ol, ul {
     background-image: url('/Sellev/assets/img/ic_home.png');
     background-position: 360px 240px;
 }
+
 /*반응형*/
 @media screen and (max-width: 1100px){
     .headerBox{
@@ -180,11 +192,11 @@ dl, ol, ul {
         margin-right: 0;
     }
     .leftList{
-    display: none;
+        display: none;
     }
 
     .toggleIcon{
-    display: block;
+        display: block;
     }
 
     .toggleMenu {

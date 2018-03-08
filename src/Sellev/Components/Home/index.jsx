@@ -7,7 +7,7 @@ import { withRouter } from 'react-router';
 
 // CSS
 import styles from '../App/App.css';
-import stylesHome from './Home.css';
+import stylesHome from '../../Styles/Components/Home.css';
 
 
 class HomeView extends React.Component {

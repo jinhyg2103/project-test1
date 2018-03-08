@@ -10,7 +10,7 @@ import { Switch, Route } from 'react-router';
 // Components
 
 // Styles
-import stylesHome from './Home.css';
+import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
 

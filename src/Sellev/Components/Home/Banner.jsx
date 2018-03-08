@@ -11,7 +11,7 @@ import BannerHeader from './BannerHeader';
 import BannerBody from './BannerBody';
 
 // Styles
-import stylesHome from './Home.css';
+import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
 

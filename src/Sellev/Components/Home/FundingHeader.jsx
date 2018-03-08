@@ -10,14 +10,14 @@ import { Switch, Route } from 'react-router';
 // Components
 
 // Styles
-import stylesHome from './Home.css';
+import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
 
 class FundingHeader extends React.Component {
     render() {
         return (
-            <div>
+            <div className={stylesHome.fundingHeader}>
                 <div className={stylesHome.sectionSmallTitle}>랭킹</div>
                 <div className={stylesHome.sectionTitle}>펀딩&마켓</div>
             </div>

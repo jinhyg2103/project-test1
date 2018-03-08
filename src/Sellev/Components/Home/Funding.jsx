@@ -11,7 +11,7 @@ import FundingHeader from './FundingHeader';
 import FundingBody from './FundingBody';
 
 // Styles
-import stylesHome from './Home.css';
+import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
 

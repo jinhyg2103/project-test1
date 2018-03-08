@@ -12,13 +12,16 @@ import SwipeBanner from '../../Common/SwipeBanner';
 // Components
 
 // Styles
-
+import stylesHome from '../../Styles/Components/Home.css';
 // Actions
 
 class BannerBody extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
-            <div>
+            <div className={stylesHome.bannerBody}>
                 <SwipeBanner />
             </div>
         );
