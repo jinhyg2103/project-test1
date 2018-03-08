@@ -7,22 +7,22 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 
 // Components
-import BannerBody from './BannerBody';
+import HashTagBody from './HashTagBody';
 
 // Styles
 import stylesHome from './Home.css';
 
 // Actions
 
-class Banner extends React.Component {
+class HashTag extends React.Component {
     render() {
         return (
-            <div className={stylesHome.bannerSection}>
+            <div className={stylesHome.hashTagSection}>
                 <div>
-                    <div className={stylesHome.sectionSmallTitle}>셀레브 Pick</div>
-                    <div className={stylesHome.sectionWhiteTitle}>놓치지마세요</div>
+                    <div className={stylesHome.sectionSmallTitle}>랭킹</div>
+                    <div className={stylesHome.sectionTitle}>해시태그</div>
                 </div>
-                <BannerBody />
+                <HashTagBody />
             </div>
         );
     }
@@ -31,4 +31,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(Banner));
+})(withRouter(HashTag));

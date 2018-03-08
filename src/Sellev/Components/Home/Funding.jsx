@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 
 // Components
-import FundingHeader from './FundingHeader';
 import FundingBody from './FundingBody';
 
 // Styles
@@ -19,7 +18,10 @@ class Funding extends React.Component {
     render() {
         return (
             <div className={stylesHome.fundingSection}>
-                <FundingHeader />
+                <div>
+                    <div className={stylesHome.sectionSmallTitle}>랭킹</div>
+                    <div className={stylesHome.sectionTitle}>펀딩&마켓</div>
+                </div>
                 <FundingBody />
             </div>
         );

@@ -7,22 +7,17 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 
 // Components
-import BannerBody from './BannerBody';
 
 // Styles
 import stylesHome from './Home.css';
 
 // Actions
 
-class Banner extends React.Component {
+class VideoBody extends React.Component {
     render() {
         return (
-            <div className={stylesHome.bannerSection}>
-                <div>
-                    <div className={stylesHome.sectionSmallTitle}>셀레브 Pick</div>
-                    <div className={stylesHome.sectionWhiteTitle}>놓치지마세요</div>
-                </div>
-                <BannerBody />
+            <div className={stylesHome.videoBody}>
+                비디오
             </div>
         );
     }
@@ -31,4 +26,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(Banner));
+})(withRouter(VideoBody));
