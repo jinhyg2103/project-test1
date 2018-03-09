@@ -31,7 +31,7 @@ class SwipeBanner extends React.Component {
             centerMode: true,
         };
         return (
-            <Slider {...settings}>
+            <Slider>
                 {bannerListBox}
             </Slider>
         );

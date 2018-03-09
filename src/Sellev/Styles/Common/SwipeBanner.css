@@ -1,37 +1,8 @@
-.swipeBanner {
-
-}
-
-.swipeBanner .bannerItem {
-
-}
-
-.listBox img {
-    width: 323px;
-    height: 317px;
-    border-radius: 12px;
-}
-
-.titleBox div:first-child {
-    font-size: 16px;
-}
-
-.titleBox div:last-child {
-    font-size: 22px;
-}
-
-.listBox {
-    position: relative;
-    width: 323px;
-    height: 317px;
-    margin: 13px 5px;
-}
-
-.titleBox {
-    position: relative;
-    width: 170px;
-    bottom: 80px;
-    left: 30px;
+.sectionWhiteTitle {
+    font-family: 'Apple SD Gothic Neo';
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: -1.2px;
     color: #ffffff;
 }
 
