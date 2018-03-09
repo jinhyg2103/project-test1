@@ -10,7 +10,7 @@ import Slider from 'react-slick';
 import BannerItem from './BannerItem';
 
 // Styles
-import styles from './SwipeBanner.css';
+import styles from '../../Styles/Common/SwipeBanner.css';
 
 
 /*
@@ -23,8 +23,15 @@ class SwipeBanner extends React.Component {
                 <BannerItem bgImage={list.imgURL} title={list.title} artist={list.artist} key={key} />
             );
         });
+        let settings = {
+            dots: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+        };
         return (
-            <Slider>
+            <Slider {...settings}>
                 {bannerListBox}
             </Slider>
         );

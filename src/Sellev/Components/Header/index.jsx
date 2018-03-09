@@ -7,7 +7,7 @@ import { withRouter } from 'react-router';
 
 
 // Styles
-import styles from './Header.css';
+import styles from '../../Styles/Components/Header.css';
 
 // Actions
 import * as ActionAuth from '../../Data/Authentification/actions';

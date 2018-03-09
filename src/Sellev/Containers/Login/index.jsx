@@ -10,7 +10,7 @@ import LoginBody from '../../Components/Login/LoginBody';
 import LoginFooter from '../../Components/Login/LoginFooter';
 
 // Styles
-import stylesLogin from './Login.css';
+import stylesLogin from '../../Styles/Containers/Login.css';
 
 
 class LoginView extends React.Component {

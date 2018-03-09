@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Styles
-import styles from './SwipeBanner.css';
+import styles from '../../Styles/Common/SwipeBanner.css';
 
 /*
 * this.props.bgImage
@@ -20,16 +20,14 @@ import styles from './SwipeBanner.css';
 class BannerItem extends React.Component {
     render() {
         return (
-            <div>
-                <li className={styles.listBox} key={this.props.key}>
-                    <img src={this.props.bgImage} alt=" " />
-                    <div className={styles.titleBox}>
-                        <div>{this.props.artist}</div>
-                        <div>
-                            {this.props.title}
-                        </div>
+            <div className={styles.listBox} key={this.props.key}>
+                <img src={this.props.bgImage} alt=" " />
+                <div className={styles.titleBox}>
+                    <div>{this.props.artist}</div>
+                    <div>
+                        {this.props.title}
                     </div>
-                </li>
+                </div>
             </div>
         );
     }
