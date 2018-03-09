@@ -43,6 +43,13 @@ dl, ol, ul {
     transition-timing-function: ease-out;
     z-index: 1000;
     -webkit-overflow-scrolling: touch;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.globalMenuHeader {
+    margin-top: 58px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #979797;
 }
 .globalMenuHeader div:first-child{
     width: 24px;
@@ -55,23 +62,28 @@ dl, ol, ul {
      font-weight: bold;
      width: 180px;
  }
-.globalMenuBody {
-
-}
 .globalMenuList{
-    font-size: 23px;
-    font-weight: bold;
+    padding: 16px 0 22px 0;
+    border-bottom: 1px solid #979797;
 }
 .globalMenuList li{
     line-height: 2em;
+    font-size: 24px;
+    font-weight: bold;
 }
 .globalMenuList li a {
-    font-size: 23px;
-    font-weight: bold;
     color: #000000;
+}
+.othersList {
+    padding-top: 21px;
 }
 .othersList li {
     line-height: 2em;
+    font-size: 24px;
+    font-weight: bold;
+}
+.othersList li a {
+    color: #000000;
 }
 
 /**********************************************/
@@ -224,6 +236,9 @@ dl, ol, ul {
 
 /*모바일 반응형*/
 @media screen and (min-width: 768px){
+    .leftList{
+        display: block;
+    }
     .toggleIcon{
         display: none;
     }

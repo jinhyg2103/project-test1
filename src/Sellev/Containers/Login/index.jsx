@@ -7,10 +7,10 @@ import { withRouter } from 'react-router';
 
 // Components
 // import LoginBody from '../../Components/Login/LoginBody';
-// import LoginFooter from '../../Components/Login/LoginFooter';
+import LoginFooter from '../../Components/Login/LoginFooter';
 
 // Styles
-// import stylesLogin from '../../../Styles/Components/Login.css';
+import stylesLogin from '../../Styles/Components/Login.css';
 
 
 class LoginView extends React.Component {
@@ -20,7 +20,7 @@ class LoginView extends React.Component {
     render() {
         return (
             <div className={stylesLogin.loginContainer}>
-                <LoginBody />
+                {/*<LoginBody />*/}
                 <LoginFooter />
             </div>
         );

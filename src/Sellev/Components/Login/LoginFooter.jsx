@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Styles
-import stylesLogin from './Login.css';
+import stylesLogin from '../../Styles/Components/Login.css';
 
 class LoginBody extends React.Component {
     constructor(props) {

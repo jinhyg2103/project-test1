@@ -9,7 +9,7 @@ import { withRouter } from 'react-router';
 import LoginBtn from './LoginBtn';
 
 // Styles
-import stylesLogin from './Login.css';
+import stylesLogin from '../../Styles/Components/Login.css';
 
 class LoginBody extends React.Component {
     constructor(props) {
@@ -25,7 +25,6 @@ class LoginBody extends React.Component {
                     <LoginBtn />
                 </div>
                 <div>OR</div>
-                <
             </div>
         );
     }
