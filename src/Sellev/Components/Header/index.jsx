@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 //Component
-import GlobalMenu from './globalMenu';
-import GlobalUserMenu from './globalUserMenu';
+import GlobalMenu from './GlobalMenu';
+import GlobalUserMenu from './GlobalUserMenu';
 import UserBox from '../../Common/UserBox';
 
 // Styles
