@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Styles
-import styles from './BubbleBox.css';
+import styles from '../../Styles/Common/BubbleBox.css';
 
 
 class BubbleBox extends React.Component {

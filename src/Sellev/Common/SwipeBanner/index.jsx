@@ -4,11 +4,13 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
+
+
 //component
 import BannerItem from './BannerItem';
 
 // Styles
-import styles from './SwipeBanner.css';
+import styles from '../../Styles/Common/SwipeBanner.css';
 
 
 class SwipeBanner extends React.Component {

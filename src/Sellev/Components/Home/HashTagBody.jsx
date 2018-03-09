@@ -7,10 +7,10 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 
 // Components
-import BubbleBox from '../../Common/BubbleBox'
+import BubbleBox from '../../Common/BubbleBox';
 
 // Styles
-import stylesHome from './Home.css';
+import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
 

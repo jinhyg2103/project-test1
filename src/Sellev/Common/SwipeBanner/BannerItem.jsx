@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Styles
-import styles from './SwipeBanner.css';
+import styles from '../../Styles/Common/SwipeBanner.css';
 
 /*
 * this.props.bgImage

@@ -11,7 +11,7 @@ import ReactModal from 'react-modal';
 import * as ActionHouse from '../../Data/House/actions';
 
 // Styles
-import stylesModal from './Modal.css';
+import stylesModal from '../../Styles/Common/Modal.css';
 
 /*
 * this.props.modalHeader

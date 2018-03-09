@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // CSS
-import styles from '../App/App.css';
 import stylesHome from '../../Styles/Components/Home.css';
 
 
