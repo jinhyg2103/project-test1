@@ -13,16 +13,25 @@ import SwipeBanner from '../../Common/SwipeBanner';
 
 // Styles
 import stylesHome from '../../Styles/Components/Home.css';
+
 // Actions
 
 class BannerBody extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            bannerList: [
+                { artist: 'Adoy', title: 'AdoyX셀레브 굿즈 콜라보 펀딩', imgURL: '/Sellev/assets/img/img_pick_1.png' },
+                { artist: 'Adoy', title: 'AdoyX셀레브 굿즈 콜라보 펀딩', imgURL: '/Sellev/assets/img/img_pick_2.png' },
+                { artist: 'Adoy', title: 'AdoyX셀레브 굿즈 콜라보 펀딩', imgURL: '/Sellev/assets/img/img_pick_3.png' },
+                { artist: 'Adoy', title: 'AdoyX셀레브 굿즈 콜라보 펀딩', imgURL: '/Sellev/assets/img/img_pick_4.png' },
+            ],
+        };
     }
     render() {
         return (
             <div className={stylesHome.bannerBody}>
-                <SwipeBanner />
+                <SwipeBanner listItem={this.state.bannerList} />
             </div>
         );
     }
