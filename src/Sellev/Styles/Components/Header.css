@@ -45,10 +45,10 @@ dl, ol, ul {
     -webkit-overflow-scrolling: touch;
 }
 .globalMenuHeader div:first-child{
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     background-image: url('/Sellev/assets/img/ic_common.png');
-    background-position: 104px -1px;
+    background-position: 83px 24px;
 }
 .globalMenuHeader div:last-child{
      font-size: 30px;
@@ -59,7 +59,15 @@ dl, ol, ul {
     font-size: 23px;
     font-weight: bold;
 }
+.globalMenuList li a {
 
+}
+
+/**********************************************/
+/*globalUserMenu*/
+
+
+/**********************************************/
 /* Header */
 /*header*/
 .leftList{
