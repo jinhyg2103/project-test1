@@ -51,13 +51,13 @@ dl, ol, ul {
     padding-bottom: 25px;
     border-bottom: 1px solid #979797;
 }
-.globalMenuHeader div:first-child{
+.globalMenuHeader .redPoint{
     width: 24px;
     height: 24px;
     background-image: url('/Sellev/assets/img/ic_common.png');
     background-position: 83px 24px;
 }
-.globalMenuHeader div:last-child{
+.globalMenuHeader .menuTitle{
      font-size: 30px;
      font-weight: bold;
      width: 180px;
@@ -88,7 +88,24 @@ dl, ol, ul {
 
 /**********************************************/
 /*globalUserMenu*/
-
+.userInfo span:nth-child(2),
+ .userInfo span:nth-child(4) {
+    font-size: 18px;
+     color: #fd0a0a;
+ }
+.userInfo span:nth-child(3),
+.userInfo span:nth-child(5) {
+    font-size: 18px;
+    color: #383838;
+}
+.userInfo div {
+    font-size: 24px;
+    font-weight: bold;
+}
+.userInfo {
+    display: inline-table;
+    line-height: 2em;
+}
 
 /**********************************************/
 /* Header */
