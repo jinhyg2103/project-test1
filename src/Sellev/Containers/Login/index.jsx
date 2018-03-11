@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-// import LoginBody from '../../Components/Login/LoginBody';
+import LoginBody from '../../Components/Login/LoginBody';
 import LoginFooter from '../../Components/Login/LoginFooter';
 
 // Styles
@@ -20,7 +20,7 @@ class LoginView extends React.Component {
     render() {
         return (
             <div className={stylesLogin.loginContainer}>
-                {/*<LoginBody />*/}
+                <LoginBody />
                 <LoginFooter />
             </div>
         );

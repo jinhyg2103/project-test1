@@ -15,7 +15,7 @@ import HomeVideo from '../../Components/Home/Video';
 // Actions
 
 // Styles
-import stylesHome from './Home.css';
+import stylesHome from '../../Styles/Containers/Home.css';
 
 // Routes
 

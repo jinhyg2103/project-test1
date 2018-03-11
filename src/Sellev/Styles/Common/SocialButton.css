@@ -1,0 +1,144 @@
+/*logo btn*/
+.loginBtn {
+    margin-bottom: 10px;
+}
+
+/*kakao button*/
+.kakaoBtn {
+    height: 56px;
+    width: 371px;
+    margin: 0 auto;
+    background-color: #feea02;
+    border-radius: 4px;
+}
+
+.kakaoBody {
+    overflow: hidden;
+    padding: 18px 36px;
+}
+.kakaoBody div:first-child {
+    background-image: url('/Sellev/assets/img/ic_common.png');
+    width: 22px;
+    height: 19px;
+    background-position:  113px -63px;
+    float: left;
+}
+.kakaoBody span:nth-child(2) {
+    opacity: 0.5;
+    float: left;
+    margin: 0 30px;
+}
+.kakaoBody div:last-child {
+    color: #4c2c10;
+    font-size: 16px;
+    float: left;
+    line-height: 21px;
+}
+
+/*naver button*/
+.naverBtn {
+    height: 56px;
+    width: 371px;
+    margin: 0 auto;
+    background-color: #1dc800;
+    border-radius: 4px;
+}
+.naverBody {
+    overflow: hidden;
+    padding: 18px 36px;
+}
+.naverBody div:first-child {
+    background-image: url('/Sellev/assets/img/ic_common.png');
+    width: 22px;
+    height: 19px;
+    background-position:  113px 40px;
+    float: left;
+}
+.naverBody span:nth-child(2) {
+    opacity: 0.5;
+    float: left;
+    margin: 0 30px;
+}
+.naverBody div:last-child {
+    color: #ffffff;
+    font-size: 16px;
+    float: left;
+    line-height: 21px;
+}
+
+/*facebook button*/
+.facebookBtn {
+    height: 56px;
+    width: 371px;
+    margin: 0 auto;
+    background-color: #395a90;
+    border-radius: 4px;
+}
+.facebookBody {
+    overflow: hidden;
+    padding: 18px 36px;
+}
+.facebookBody div:first-child {
+    background-image: url('/Sellev/assets/img/ic_common.png');
+    width: 22px;
+    height: 18px;
+    background-position:  113px 19px;
+    float: left;
+}
+.facebookBody span:nth-child(2) {
+    opacity: 0.5;
+    float: left;
+    margin: 0 30px;
+}
+.facebookBody div:last-child {
+    color: #ffffff;
+    font-size: 16px;
+    float: left;
+    line-height: 21px;
+}
+
+/*login button*/
+.submitBtn {
+    height: 56px;
+    width: 371px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #fd0a0a;
+}
+.submitBody {
+    overflow: hidden;
+    padding: 20px 36px;
+    color: #ffffff;
+}
+
+/*sellev button*/
+.sellevBtn {
+    height: 56px;
+    width: 371px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px #e5e5e5;
+}
+.sellevBody {
+    overflow: hidden;
+    padding: 18px 36px;
+}
+.sellevBody div:first-child {
+    background-image: url('/Sellev/assets/img/ic_common.png');
+    width: 55px;
+    height: 20px;
+    background-position: 112px 128px;
+    float: left;
+}
+.sellevBody span:nth-child(2) {
+    opacity: 0.5;
+    float: left;
+    margin: 0 30px;
+}
+.sellevBody div:last-child {
+    font-size: 16px;
+    float: left;
+    line-height: 21px;
+}

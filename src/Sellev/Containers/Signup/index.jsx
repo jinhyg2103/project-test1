@@ -5,6 +5,12 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
+//Component
+import SignupBody from '../../Components/Signup/SignupBody';
+import SignupFooter from '../../Components/Signup/SignupFooter';
+
+//CSS
+import StyleSignup from '../../Styles/Components/Signup.css';
 
 class SignupView extends React.Component {
     constructor(props) {
@@ -12,8 +18,9 @@ class SignupView extends React.Component {
     }
     render() {
         return (
-            <div>
-
+            <div className={StyleSignup.signupContainer}>
+                <SignupBody />
+                <SignupFooter />
             </div>
         );
     }
