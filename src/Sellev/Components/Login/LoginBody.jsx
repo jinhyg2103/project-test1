@@ -28,7 +28,10 @@ class LoginBody extends React.Component {
                 <div>
                     <div className={stylesLogin.formGroup}>
                         <div className={stylesLogin.formRow}>
+                            <div className={stylesLogin.formTitle}>
 
+                            </div>
+                            <input />
                         </div>
                         <div className={stylesLogin.formRow}>
 

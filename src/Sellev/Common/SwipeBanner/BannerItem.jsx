@@ -21,7 +21,7 @@ class BannerItem extends React.Component {
     render() {
         return (
             <div className={styles.listBox} key={this.props.key}>
-                <img src={this.props.bgImage} alt=" " />
+                <div className={styles.bgImage} style={{ backgroundImage: 'url("' + this.props.bgImage +'")'}} />
                 <div className={styles.titleBox}>
                     <div>{this.props.artist}</div>
                     <div>

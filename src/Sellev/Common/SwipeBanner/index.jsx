@@ -24,14 +24,30 @@ class SwipeBanner extends React.Component {
             );
         });
         let settings = {
-            dots: false,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            arrows: false,
             centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerPadding: '0px',
+                        centerMode: true,
+                        slidesToShow: 1,
+                        autoplay: true,
+                        autoplaySpeed: 5000,
+                        variableWidth: true,
+                    }
+                },
+            ]
         };
         return (
-            <Slider>
+            <Slider className={styles.swipeBanner} {...settings}>
                 {bannerListBox}
             </Slider>
         );
