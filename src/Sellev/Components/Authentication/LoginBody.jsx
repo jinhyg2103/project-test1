@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-import LoginBtn from './SocialButton';
+import AuthBtn from './AuthButton';
 
 // Styles
 import stylesAuth from '../../Styles/Components/Authentication.css';
@@ -22,10 +22,13 @@ class LoginBody extends React.Component {
                     <img src="/Sellev/assets/img/logo_sellev_black_lg.png" alt="" />
                 </div>
                 <div className={stylesAuth.loginBox}>
-                    <LoginBtn type={'kakao'} />
-                    <LoginBtn type={'naver'} />
-                    <LoginBtn type={'facebook'} />
+                    <AuthBtn type={'kakao'} />
+                    <AuthBtn type={'naver'} />
+                    <AuthBtn type={'facebook'} />
                     <div className={stylesAuth.border}><span>&#8211;</span>OR<span>&#8211;</span></div>
+{/*
+                     ----------이 부분 스타일 수정해주세요 (findpassword.jsx, 지비다 참조)-------------------
+*/}
                     <form className={stylesAuth.loginForm}>
                         <label>
                             핸드폰번호
@@ -36,10 +39,13 @@ class LoginBody extends React.Component {
                             <input type="text" placeholder="비밀번호를 입력해주세요" />
                         </label>
                     </form>
-                    <LoginBtn type={'login'} />
+{/*
+                     -----------------------------------------------------------------------------------------
+*/}
+                    <AuthBtn btnText={'로그인'} />
                     <div className={stylesAuth.boxFooter}>
                         <span>아직 회원이 아니신가요?</span>
-                        <Link to={'/signup'}> 셀레브 가입하기</Link>
+                        <Link to={'/auth/signup'}> 셀레브 가입하기</Link>
                     </div>
                 </div>
             </div>
