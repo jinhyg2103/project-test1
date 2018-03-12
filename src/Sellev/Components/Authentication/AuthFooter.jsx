@@ -12,7 +12,7 @@ class AuthFooter extends React.Component {
     render() {
         return (
             <div className={stylesAuth.loginFooter}>
-                <Link to={'/password'}>비밀번호찾기</Link>
+                <Link to={'/auth/findpassword'}>비밀번호찾기</Link>
                 <div className={stylesAuth.logoBox}>
                     <div />
                     <span>Copyright All Right Reserved</span>

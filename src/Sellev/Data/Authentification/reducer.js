@@ -6,10 +6,6 @@ export const initialState = {
     },
 }
 /*
-*@params (ADD_PHOTO) action.photo
-*@params (UPDATE_PHOTO) action.photo, action.index
-*@params (DELETE_PHOTO) action.index
-*@params (DELETE_ALL_PHOTO) action
 */
 export const authReducer = (state = initialState, action) => {
     switch (action.type) {
