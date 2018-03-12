@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-import AuthBtn from '../../Components/Authentication/AuthButton';
 
 // Styles
 import styles from '../../Styles/App.css';
@@ -53,7 +52,7 @@ class SignupBody extends React.Component {
                       </div>
                   </div>
                   <div>
-                      <AuthBtn btnText={'가입하기'} />
+                      <div className={stylesAuth.authBtn} onClick={this.verifyUser}>가입하기</div>
                   </div>
               </div>
           </div>

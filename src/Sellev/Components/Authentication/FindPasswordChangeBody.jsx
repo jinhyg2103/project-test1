@@ -6,10 +6,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-import VerifyBody from '../../Components/Authentication/FindPasswordVerifyBody';
-import ChangeBody from '../../Components/Authentication/FindPasswordChangeBody';
-import AuthFooter from './AuthFooter';
-import AuthBtn from './AuthButton';
 
 // Styles
 import styles from '../../Styles/App.css';
@@ -27,17 +23,16 @@ class LoginView extends React.Component {
                 <div>비밀번호 재설정</div>
                 <div className={styles.formGroup}>
                     <div className={styles.formRow}>
-                        <div className={styles.formInputName}>핸드폰번호</div>
-                        <input className={styles.formInputWithVerify} type={'text'} placeholder={'핸드폰번호를 입력해주세요.'} />
-                        <div className={styles.formInputVerifyBtn}>인증</div>
+                        <div className={styles.formInputName}>새 비밀번호</div>
+                        <input className={styles.formInputWithVerify} type={'password'} placeholder={'비밀번호는 6~18문자로 구성해주세요.'} />
                     </div>
                     <div className={styles.formRow}>
-                        <div className={styles.formInputName}>인증번호</div>
-                        <input className={styles.formInput} type={'text'} placeholder={'위의 인증버튼 선택 후 인증번호를 입력해주세요.'} />
+                        <div className={styles.formInputName}>새 비밀번호 확인</div>
+                        <input className={styles.formInput} type={'password'} placeholder={'새 비밀번호를 다시 입력해주세요.'} />
                     </div>
                 </div>
                 <div>
-                    <AuthBtn btnText={'비밀번호 변경'} />
+                    <div className={stylesAuth.authBtn} onClick={this.verifyUser}>비밀번호 변경</div>
                 </div>
             </div>
         );

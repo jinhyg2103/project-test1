@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-import AuthBtn from './AuthButton';
 
 // Styles
 import styles from '../../Styles/App.css';
@@ -39,7 +38,7 @@ class LoginView extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <AuthBtn btnText={'다음'} onClick={this.verifyUser}/>
+                    <div className={stylesAuth.authBtn} onClick={this.verifyUser}>다음</div>
                 </div>
             </div>
         );
