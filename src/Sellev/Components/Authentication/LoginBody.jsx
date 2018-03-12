@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-import LoginBtn from './LoginBtn';
+import LoginBtn from './SocialButton';
 
 // Styles
-import stylesLogin from '../../Styles/Components/Login.css';
+import stylesAuth from '../../Styles/Components/Authentication.css';
 
 class LoginBody extends React.Component {
     constructor(props) {
@@ -17,16 +17,16 @@ class LoginBody extends React.Component {
     }
     render() {
         return (
-            <div className={stylesLogin.loginBody}>
-                <div className={stylesLogin.loginLogo}>
+            <div className={stylesAuth.loginBody}>
+                <div className={stylesAuth.loginLogo}>
                     <img src="/Sellev/assets/img/logo_sellev_black_lg.png" alt="" />
                 </div>
-                <div className={stylesLogin.loginBox}>
+                <div className={stylesAuth.loginBox}>
                     <LoginBtn type={'kakao'} />
                     <LoginBtn type={'naver'} />
                     <LoginBtn type={'facebook'} />
-                    <div className={stylesLogin.border}><span>&#8211;</span>OR<span>&#8211;</span></div>
-                    <form className={stylesLogin.loginForm}>
+                    <div className={stylesAuth.border}><span>&#8211;</span>OR<span>&#8211;</span></div>
+                    <form className={stylesAuth.loginForm}>
                         <label>
                             핸드폰번호
                             <input type="text" placeholder="핸드폰번호를 입력해주세요" />
@@ -37,7 +37,7 @@ class LoginBody extends React.Component {
                         </label>
                     </form>
                     <LoginBtn type={'login'} />
-                    <div className={stylesLogin.boxFooter}>
+                    <div className={stylesAuth.boxFooter}>
                         <span>아직 회원이 아니신가요?</span>
                         <Link to={'/signup'}> 셀레브 가입하기</Link>
                     </div>

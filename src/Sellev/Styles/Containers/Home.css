@@ -16,7 +16,10 @@ body {
     color: #a0a0a0;
     letter-spacing: -0.5px;
 }
-
+.homeContainer {
+    width: 100%;
+    overflow: hidden;
+}
 /* Banner */
 .bannerBody{
     overflow: hidden;
