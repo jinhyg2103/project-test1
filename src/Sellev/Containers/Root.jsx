@@ -9,8 +9,7 @@ import { Switch, Route } from 'react-router';
 // Components
 import HeaderComponent from '../Components/Header/index';
 import HomeContainer from './Home';
-import LoginContainer from './Login';
-import SignupContainer from './Signup';
+import AuthContainer from './Authentication';
 import FundingContainer from './Funding';
 import HashTagContainer from './HashTag';
 import MyPageContainer from './MyPage';
@@ -18,6 +17,9 @@ import PaymentContainer from './Payment';
 import SearchContainer from './Search';
 import SelleverContainer from './Sellever';
 import VideoContainer from './Video';
+
+// Styles
+import SellevLayout from '../Styles/App.css';
 
 // Actions
 import * as ActionAuth from '../Data/Authentification/actions';
@@ -32,8 +34,7 @@ class RootView extends React.Component {
             <div>
                 <HeaderComponent />
                 <Route path={'/'} exact={true} strict={false} component={HomeContainer} />
-                <Route path={'/login'} exact={true} strict={false} component={LoginContainer} />
-                <Route path={'/signup'} exact={true} strict={false} component={SignupContainer} />
+                <Route path={'/auth'} exact={false} strict={false} component={AuthContainer} />
                 <Route path={'/fundingmarket'} exact={true} strict={false} component={FundingContainer} />
                 <Route path={'/hashtag'} exact={true} strict={false} component={HashTagContainer} />
                 <Route path={'/mypage'} exact={true} strict={false} component={MyPageContainer} />

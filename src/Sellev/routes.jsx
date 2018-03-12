@@ -12,14 +12,8 @@ const routes = [
         component: RootPage,
     },
     {
-        path: '/login',
-        exact: true,
-        strict: false,
-        component: RootPage,
-    },
-    {
-        path: '/signup',
-        exact: true,
+        path: '/auth',
+        exact: false,
         strict: false,
         component: RootPage,
     },

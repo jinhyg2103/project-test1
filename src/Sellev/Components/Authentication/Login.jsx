@@ -5,18 +5,23 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
+// Components
+import LoginBody from '../../Components/Authentication/LoginBody';
+import LoginFooter from '../../Components/Authentication/LoginFooter';
+
 // Styles
 import stylesAuth from '../../Styles/Components/Authentication.css';
 
-class LoginFooter extends React.Component {
+
+class LoginView extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
-            <div className={stylesAuth.loginFooter}>
-                <Link to={'/password'}>비밀번호찾기</Link>
-                <div className={stylesAuth.logoBox}>
-                    <div />
-                    <span>Copyright All Right Reserved</span>
-                </div>
+            <div className={stylesAuth.loginContainer}>
+                <LoginBody />
+                <LoginFooter />
             </div>
         );
     }
@@ -25,5 +30,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(LoginFooter));
-
+})(withRouter(LoginView));
