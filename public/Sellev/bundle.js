@@ -731,7 +731,7 @@ module.exports = function (it) {
 
 var _prodInvariant = __webpack_require__(11);
 
-var DOMProperty = __webpack_require__(53);
+var DOMProperty = __webpack_require__(55);
 var ReactDOMComponentFlags = __webpack_require__(222);
 
 var invariant = __webpack_require__(3);
@@ -3414,322 +3414,6 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 
 /***/ }),
 /* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(693);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(55)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--1-1!./Home.css", function() {
-			var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--1-1!./Home.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var META = __webpack_require__(57)('meta');
-var isObject = __webpack_require__(12);
-var has = __webpack_require__(24);
-var setDesc = __webpack_require__(15).f;
-var id = 0;
-var isExtensible = Object.isExtensible || function () {
-  return true;
-};
-var FREEZE = !__webpack_require__(10)(function () {
-  return isExtensible(Object.preventExtensions({}));
-});
-var setMeta = function (it) {
-  setDesc(it, META, { value: {
-    i: 'O' + ++id, // object ID
-    w: {}          // weak collections IDs
-  } });
-};
-var fastKey = function (it, create) {
-  // return primitive with prefix
-  if (!isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
-  if (!has(it, META)) {
-    // can't set metadata to uncaught frozen object
-    if (!isExtensible(it)) return 'F';
-    // not necessary to add metadata
-    if (!create) return 'E';
-    // add missing metadata
-    setMeta(it);
-  // return object ID
-  } return it[META].i;
-};
-var getWeak = function (it, create) {
-  if (!has(it, META)) {
-    // can't set metadata to uncaught frozen object
-    if (!isExtensible(it)) return true;
-    // not necessary to add metadata
-    if (!create) return false;
-    // add missing metadata
-    setMeta(it);
-  // return hash weak collections IDs
-  } return it[META].w;
-};
-// add metadata on freeze-family methods calling
-var onFreeze = function (it) {
-  if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);
-  return it;
-};
-var meta = module.exports = {
-  KEY: META,
-  NEED: false,
-  fastKey: fastKey,
-  getWeak: getWeak,
-  onFreeze: onFreeze
-};
-
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 22.1.3.31 Array.prototype[@@unscopables]
-var UNSCOPABLES = __webpack_require__(13)('unscopables');
-var ArrayProto = Array.prototype;
-if (ArrayProto[UNSCOPABLES] == undefined) __webpack_require__(25)(ArrayProto, UNSCOPABLES, {});
-module.exports = function (key) {
-  ArrayProto[UNSCOPABLES][key] = true;
-};
-
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var _prodInvariant = __webpack_require__(11);
-
-var invariant = __webpack_require__(3);
-
-function checkMask(value, bitmask) {
-  return (value & bitmask) === bitmask;
-}
-
-var DOMPropertyInjection = {
-  /**
-   * Mapping from normalized, camelcased property names to a configuration that
-   * specifies how the associated DOM property should be accessed or rendered.
-   */
-  MUST_USE_PROPERTY: 0x1,
-  HAS_BOOLEAN_VALUE: 0x4,
-  HAS_NUMERIC_VALUE: 0x8,
-  HAS_POSITIVE_NUMERIC_VALUE: 0x10 | 0x8,
-  HAS_OVERLOADED_BOOLEAN_VALUE: 0x20,
-
-  /**
-   * Inject some specialized knowledge about the DOM. This takes a config object
-   * with the following properties:
-   *
-   * isCustomAttribute: function that given an attribute name will return true
-   * if it can be inserted into the DOM verbatim. Useful for data-* or aria-*
-   * attributes where it's impossible to enumerate all of the possible
-   * attribute names,
-   *
-   * Properties: object mapping DOM property name to one of the
-   * DOMPropertyInjection constants or null. If your attribute isn't in here,
-   * it won't get written to the DOM.
-   *
-   * DOMAttributeNames: object mapping React attribute name to the DOM
-   * attribute name. Attribute names not specified use the **lowercase**
-   * normalized name.
-   *
-   * DOMAttributeNamespaces: object mapping React attribute name to the DOM
-   * attribute namespace URL. (Attribute names not specified use no namespace.)
-   *
-   * DOMPropertyNames: similar to DOMAttributeNames but for DOM properties.
-   * Property names not specified use the normalized name.
-   *
-   * DOMMutationMethods: Properties that require special mutation methods. If
-   * `value` is undefined, the mutation method should unset the property.
-   *
-   * @param {object} domPropertyConfig the config as described above.
-   */
-  injectDOMPropertyConfig: function (domPropertyConfig) {
-    var Injection = DOMPropertyInjection;
-    var Properties = domPropertyConfig.Properties || {};
-    var DOMAttributeNamespaces = domPropertyConfig.DOMAttributeNamespaces || {};
-    var DOMAttributeNames = domPropertyConfig.DOMAttributeNames || {};
-    var DOMPropertyNames = domPropertyConfig.DOMPropertyNames || {};
-    var DOMMutationMethods = domPropertyConfig.DOMMutationMethods || {};
-
-    if (domPropertyConfig.isCustomAttribute) {
-      DOMProperty._isCustomAttributeFunctions.push(domPropertyConfig.isCustomAttribute);
-    }
-
-    for (var propName in Properties) {
-      !!DOMProperty.properties.hasOwnProperty(propName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'injectDOMPropertyConfig(...): You\'re trying to inject DOM property \'%s\' which has already been injected. You may be accidentally injecting the same DOM property config twice, or you may be injecting two configs that have conflicting property names.', propName) : _prodInvariant('48', propName) : void 0;
-
-      var lowerCased = propName.toLowerCase();
-      var propConfig = Properties[propName];
-
-      var propertyInfo = {
-        attributeName: lowerCased,
-        attributeNamespace: null,
-        propertyName: propName,
-        mutationMethod: null,
-
-        mustUseProperty: checkMask(propConfig, Injection.MUST_USE_PROPERTY),
-        hasBooleanValue: checkMask(propConfig, Injection.HAS_BOOLEAN_VALUE),
-        hasNumericValue: checkMask(propConfig, Injection.HAS_NUMERIC_VALUE),
-        hasPositiveNumericValue: checkMask(propConfig, Injection.HAS_POSITIVE_NUMERIC_VALUE),
-        hasOverloadedBooleanValue: checkMask(propConfig, Injection.HAS_OVERLOADED_BOOLEAN_VALUE)
-      };
-      !(propertyInfo.hasBooleanValue + propertyInfo.hasNumericValue + propertyInfo.hasOverloadedBooleanValue <= 1) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'DOMProperty: Value can be one of boolean, overloaded boolean, or numeric value, but not a combination: %s', propName) : _prodInvariant('50', propName) : void 0;
-
-      if (process.env.NODE_ENV !== 'production') {
-        DOMProperty.getPossibleStandardName[lowerCased] = propName;
-      }
-
-      if (DOMAttributeNames.hasOwnProperty(propName)) {
-        var attributeName = DOMAttributeNames[propName];
-        propertyInfo.attributeName = attributeName;
-        if (process.env.NODE_ENV !== 'production') {
-          DOMProperty.getPossibleStandardName[attributeName] = propName;
-        }
-      }
-
-      if (DOMAttributeNamespaces.hasOwnProperty(propName)) {
-        propertyInfo.attributeNamespace = DOMAttributeNamespaces[propName];
-      }
-
-      if (DOMPropertyNames.hasOwnProperty(propName)) {
-        propertyInfo.propertyName = DOMPropertyNames[propName];
-      }
-
-      if (DOMMutationMethods.hasOwnProperty(propName)) {
-        propertyInfo.mutationMethod = DOMMutationMethods[propName];
-      }
-
-      DOMProperty.properties[propName] = propertyInfo;
-    }
-  }
-};
-
-/* eslint-disable max-len */
-var ATTRIBUTE_NAME_START_CHAR = ':A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD';
-/* eslint-enable max-len */
-
-/**
- * DOMProperty exports lookup objects that can be used like functions:
- *
- *   > DOMProperty.isValid['id']
- *   true
- *   > DOMProperty.isValid['foobar']
- *   undefined
- *
- * Although this may be confusing, it performs better in general.
- *
- * @see http://jsperf.com/key-exists
- * @see http://jsperf.com/key-missing
- */
-var DOMProperty = {
-  ID_ATTRIBUTE_NAME: 'data-reactid',
-  ROOT_ATTRIBUTE_NAME: 'data-reactroot',
-
-  ATTRIBUTE_NAME_START_CHAR: ATTRIBUTE_NAME_START_CHAR,
-  ATTRIBUTE_NAME_CHAR: ATTRIBUTE_NAME_START_CHAR + '\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040',
-
-  /**
-   * Map from property "standard name" to an object with info about how to set
-   * the property in the DOM. Each object contains:
-   *
-   * attributeName:
-   *   Used when rendering markup or with `*Attribute()`.
-   * attributeNamespace
-   * propertyName:
-   *   Used on DOM node instances. (This includes properties that mutate due to
-   *   external factors.)
-   * mutationMethod:
-   *   If non-null, used instead of the property or `setAttribute()` after
-   *   initial render.
-   * mustUseProperty:
-   *   Whether the property must be accessed and mutated as an object property.
-   * hasBooleanValue:
-   *   Whether the property should be removed when set to a falsey value.
-   * hasNumericValue:
-   *   Whether the property must be numeric or parse as a numeric and should be
-   *   removed when set to a falsey value.
-   * hasPositiveNumericValue:
-   *   Whether the property must be positive numeric or parse as a positive
-   *   numeric and should be removed when set to a falsey value.
-   * hasOverloadedBooleanValue:
-   *   Whether the property can be used as a flag as well as with a value.
-   *   Removed when strictly equal to false; present without a value when
-   *   strictly equal to true; present with a value otherwise.
-   */
-  properties: {},
-
-  /**
-   * Mapping from lowercase property names to the properly cased version, used
-   * to warn in the case of missing properties. Available only in __DEV__.
-   *
-   * autofocus is predefined, because adding it to the property whitelist
-   * causes unintended side effects.
-   *
-   * @type {Object}
-   */
-  getPossibleStandardName: process.env.NODE_ENV !== 'production' ? { autofocus: 'autoFocus' } : null,
-
-  /**
-   * All of the isCustomAttribute() functions that have been injected.
-   */
-  _isCustomAttributeFunctions: [],
-
-  /**
-   * Checks whether a property name is a custom attribute.
-   * @method
-   */
-  isCustomAttribute: function (attributeName) {
-    for (var i = 0; i < DOMProperty._isCustomAttributeFunctions.length; i++) {
-      var isCustomAttributeFn = DOMProperty._isCustomAttributeFunctions[i];
-      if (isCustomAttributeFn(attributeName)) {
-        return true;
-      }
-    }
-    return false;
-  },
-
-  injection: DOMPropertyInjection
-};
-
-module.exports = DOMProperty;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 54 */
 /***/ (function(module, exports) {
 
 /*
@@ -3811,7 +3495,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 55 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -4168,6 +3852,322 @@ function updateLink (link, options, obj) {
 	if(oldSrc) URL.revokeObjectURL(oldSrc);
 }
 
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(693);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(51)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--1-1!./Home.css", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--1-1!./Home.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var META = __webpack_require__(57)('meta');
+var isObject = __webpack_require__(12);
+var has = __webpack_require__(24);
+var setDesc = __webpack_require__(15).f;
+var id = 0;
+var isExtensible = Object.isExtensible || function () {
+  return true;
+};
+var FREEZE = !__webpack_require__(10)(function () {
+  return isExtensible(Object.preventExtensions({}));
+});
+var setMeta = function (it) {
+  setDesc(it, META, { value: {
+    i: 'O' + ++id, // object ID
+    w: {}          // weak collections IDs
+  } });
+};
+var fastKey = function (it, create) {
+  // return primitive with prefix
+  if (!isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+  if (!has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return 'F';
+    // not necessary to add metadata
+    if (!create) return 'E';
+    // add missing metadata
+    setMeta(it);
+  // return object ID
+  } return it[META].i;
+};
+var getWeak = function (it, create) {
+  if (!has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return true;
+    // not necessary to add metadata
+    if (!create) return false;
+    // add missing metadata
+    setMeta(it);
+  // return hash weak collections IDs
+  } return it[META].w;
+};
+// add metadata on freeze-family methods calling
+var onFreeze = function (it) {
+  if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);
+  return it;
+};
+var meta = module.exports = {
+  KEY: META,
+  NEED: false,
+  fastKey: fastKey,
+  getWeak: getWeak,
+  onFreeze: onFreeze
+};
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 22.1.3.31 Array.prototype[@@unscopables]
+var UNSCOPABLES = __webpack_require__(13)('unscopables');
+var ArrayProto = Array.prototype;
+if (ArrayProto[UNSCOPABLES] == undefined) __webpack_require__(25)(ArrayProto, UNSCOPABLES, {});
+module.exports = function (key) {
+  ArrayProto[UNSCOPABLES][key] = true;
+};
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+var _prodInvariant = __webpack_require__(11);
+
+var invariant = __webpack_require__(3);
+
+function checkMask(value, bitmask) {
+  return (value & bitmask) === bitmask;
+}
+
+var DOMPropertyInjection = {
+  /**
+   * Mapping from normalized, camelcased property names to a configuration that
+   * specifies how the associated DOM property should be accessed or rendered.
+   */
+  MUST_USE_PROPERTY: 0x1,
+  HAS_BOOLEAN_VALUE: 0x4,
+  HAS_NUMERIC_VALUE: 0x8,
+  HAS_POSITIVE_NUMERIC_VALUE: 0x10 | 0x8,
+  HAS_OVERLOADED_BOOLEAN_VALUE: 0x20,
+
+  /**
+   * Inject some specialized knowledge about the DOM. This takes a config object
+   * with the following properties:
+   *
+   * isCustomAttribute: function that given an attribute name will return true
+   * if it can be inserted into the DOM verbatim. Useful for data-* or aria-*
+   * attributes where it's impossible to enumerate all of the possible
+   * attribute names,
+   *
+   * Properties: object mapping DOM property name to one of the
+   * DOMPropertyInjection constants or null. If your attribute isn't in here,
+   * it won't get written to the DOM.
+   *
+   * DOMAttributeNames: object mapping React attribute name to the DOM
+   * attribute name. Attribute names not specified use the **lowercase**
+   * normalized name.
+   *
+   * DOMAttributeNamespaces: object mapping React attribute name to the DOM
+   * attribute namespace URL. (Attribute names not specified use no namespace.)
+   *
+   * DOMPropertyNames: similar to DOMAttributeNames but for DOM properties.
+   * Property names not specified use the normalized name.
+   *
+   * DOMMutationMethods: Properties that require special mutation methods. If
+   * `value` is undefined, the mutation method should unset the property.
+   *
+   * @param {object} domPropertyConfig the config as described above.
+   */
+  injectDOMPropertyConfig: function (domPropertyConfig) {
+    var Injection = DOMPropertyInjection;
+    var Properties = domPropertyConfig.Properties || {};
+    var DOMAttributeNamespaces = domPropertyConfig.DOMAttributeNamespaces || {};
+    var DOMAttributeNames = domPropertyConfig.DOMAttributeNames || {};
+    var DOMPropertyNames = domPropertyConfig.DOMPropertyNames || {};
+    var DOMMutationMethods = domPropertyConfig.DOMMutationMethods || {};
+
+    if (domPropertyConfig.isCustomAttribute) {
+      DOMProperty._isCustomAttributeFunctions.push(domPropertyConfig.isCustomAttribute);
+    }
+
+    for (var propName in Properties) {
+      !!DOMProperty.properties.hasOwnProperty(propName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'injectDOMPropertyConfig(...): You\'re trying to inject DOM property \'%s\' which has already been injected. You may be accidentally injecting the same DOM property config twice, or you may be injecting two configs that have conflicting property names.', propName) : _prodInvariant('48', propName) : void 0;
+
+      var lowerCased = propName.toLowerCase();
+      var propConfig = Properties[propName];
+
+      var propertyInfo = {
+        attributeName: lowerCased,
+        attributeNamespace: null,
+        propertyName: propName,
+        mutationMethod: null,
+
+        mustUseProperty: checkMask(propConfig, Injection.MUST_USE_PROPERTY),
+        hasBooleanValue: checkMask(propConfig, Injection.HAS_BOOLEAN_VALUE),
+        hasNumericValue: checkMask(propConfig, Injection.HAS_NUMERIC_VALUE),
+        hasPositiveNumericValue: checkMask(propConfig, Injection.HAS_POSITIVE_NUMERIC_VALUE),
+        hasOverloadedBooleanValue: checkMask(propConfig, Injection.HAS_OVERLOADED_BOOLEAN_VALUE)
+      };
+      !(propertyInfo.hasBooleanValue + propertyInfo.hasNumericValue + propertyInfo.hasOverloadedBooleanValue <= 1) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'DOMProperty: Value can be one of boolean, overloaded boolean, or numeric value, but not a combination: %s', propName) : _prodInvariant('50', propName) : void 0;
+
+      if (process.env.NODE_ENV !== 'production') {
+        DOMProperty.getPossibleStandardName[lowerCased] = propName;
+      }
+
+      if (DOMAttributeNames.hasOwnProperty(propName)) {
+        var attributeName = DOMAttributeNames[propName];
+        propertyInfo.attributeName = attributeName;
+        if (process.env.NODE_ENV !== 'production') {
+          DOMProperty.getPossibleStandardName[attributeName] = propName;
+        }
+      }
+
+      if (DOMAttributeNamespaces.hasOwnProperty(propName)) {
+        propertyInfo.attributeNamespace = DOMAttributeNamespaces[propName];
+      }
+
+      if (DOMPropertyNames.hasOwnProperty(propName)) {
+        propertyInfo.propertyName = DOMPropertyNames[propName];
+      }
+
+      if (DOMMutationMethods.hasOwnProperty(propName)) {
+        propertyInfo.mutationMethod = DOMMutationMethods[propName];
+      }
+
+      DOMProperty.properties[propName] = propertyInfo;
+    }
+  }
+};
+
+/* eslint-disable max-len */
+var ATTRIBUTE_NAME_START_CHAR = ':A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD';
+/* eslint-enable max-len */
+
+/**
+ * DOMProperty exports lookup objects that can be used like functions:
+ *
+ *   > DOMProperty.isValid['id']
+ *   true
+ *   > DOMProperty.isValid['foobar']
+ *   undefined
+ *
+ * Although this may be confusing, it performs better in general.
+ *
+ * @see http://jsperf.com/key-exists
+ * @see http://jsperf.com/key-missing
+ */
+var DOMProperty = {
+  ID_ATTRIBUTE_NAME: 'data-reactid',
+  ROOT_ATTRIBUTE_NAME: 'data-reactroot',
+
+  ATTRIBUTE_NAME_START_CHAR: ATTRIBUTE_NAME_START_CHAR,
+  ATTRIBUTE_NAME_CHAR: ATTRIBUTE_NAME_START_CHAR + '\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040',
+
+  /**
+   * Map from property "standard name" to an object with info about how to set
+   * the property in the DOM. Each object contains:
+   *
+   * attributeName:
+   *   Used when rendering markup or with `*Attribute()`.
+   * attributeNamespace
+   * propertyName:
+   *   Used on DOM node instances. (This includes properties that mutate due to
+   *   external factors.)
+   * mutationMethod:
+   *   If non-null, used instead of the property or `setAttribute()` after
+   *   initial render.
+   * mustUseProperty:
+   *   Whether the property must be accessed and mutated as an object property.
+   * hasBooleanValue:
+   *   Whether the property should be removed when set to a falsey value.
+   * hasNumericValue:
+   *   Whether the property must be numeric or parse as a numeric and should be
+   *   removed when set to a falsey value.
+   * hasPositiveNumericValue:
+   *   Whether the property must be positive numeric or parse as a positive
+   *   numeric and should be removed when set to a falsey value.
+   * hasOverloadedBooleanValue:
+   *   Whether the property can be used as a flag as well as with a value.
+   *   Removed when strictly equal to false; present without a value when
+   *   strictly equal to true; present with a value otherwise.
+   */
+  properties: {},
+
+  /**
+   * Mapping from lowercase property names to the properly cased version, used
+   * to warn in the case of missing properties. Available only in __DEV__.
+   *
+   * autofocus is predefined, because adding it to the property whitelist
+   * causes unintended side effects.
+   *
+   * @type {Object}
+   */
+  getPossibleStandardName: process.env.NODE_ENV !== 'production' ? { autofocus: 'autoFocus' } : null,
+
+  /**
+   * All of the isCustomAttribute() functions that have been injected.
+   */
+  _isCustomAttributeFunctions: [],
+
+  /**
+   * Checks whether a property name is a custom attribute.
+   * @method
+   */
+  isCustomAttribute: function (attributeName) {
+    for (var i = 0; i < DOMProperty._isCustomAttributeFunctions.length; i++) {
+      var isCustomAttributeFn = DOMProperty._isCustomAttributeFunctions[i];
+      if (isCustomAttributeFn(attributeName)) {
+        return true;
+      }
+    }
+    return false;
+  },
+
+  injection: DOMPropertyInjection
+};
+
+module.exports = DOMProperty;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 56 */
@@ -6209,7 +6209,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(55)(content, options);
+var update = __webpack_require__(51)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -6406,7 +6406,7 @@ var global = __webpack_require__(6);
 var $export = __webpack_require__(0);
 var redefine = __webpack_require__(26);
 var redefineAll = __webpack_require__(66);
-var meta = __webpack_require__(51);
+var meta = __webpack_require__(53);
 var forOf = __webpack_require__(65);
 var anInstance = __webpack_require__(64);
 var isObject = __webpack_require__(12);
@@ -8734,7 +8734,7 @@ module.exports = function fill(value /* , start = 0, end = @length */) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(52);
+var addToUnscopables = __webpack_require__(54);
 var step = __webpack_require__(196);
 var Iterators = __webpack_require__(71);
 var toIObject = __webpack_require__(29);
@@ -11905,7 +11905,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(55)(content, options);
+var update = __webpack_require__(51)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -13288,7 +13288,7 @@ var $iterDefine = __webpack_require__(130);
 var step = __webpack_require__(196);
 var setSpecies = __webpack_require__(63);
 var DESCRIPTORS = __webpack_require__(14);
-var fastKey = __webpack_require__(51).fastKey;
+var fastKey = __webpack_require__(53).fastKey;
 var validate = __webpack_require__(72);
 var SIZE = DESCRIPTORS ? '_s' : 'size';
 
@@ -13452,7 +13452,7 @@ module.exports = __webpack_require__(98)(SET, function (get) {
 
 var each = __webpack_require__(43)(0);
 var redefine = __webpack_require__(26);
-var meta = __webpack_require__(51);
+var meta = __webpack_require__(53);
 var assign = __webpack_require__(184);
 var weak = __webpack_require__(204);
 var isObject = __webpack_require__(12);
@@ -13517,7 +13517,7 @@ if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp)
 "use strict";
 
 var redefineAll = __webpack_require__(66);
-var getWeak = __webpack_require__(51).getWeak;
+var getWeak = __webpack_require__(53).getWeak;
 var anObject = __webpack_require__(5);
 var isObject = __webpack_require__(12);
 var anInstance = __webpack_require__(64);
@@ -16640,7 +16640,7 @@ module.exports = CSSProperty;
 
 
 
-var DOMProperty = __webpack_require__(53);
+var DOMProperty = __webpack_require__(55);
 var ReactDOMComponentTree = __webpack_require__(17);
 var ReactInstrumentation = __webpack_require__(32);
 
@@ -17821,7 +17821,7 @@ module.exports = getActiveElement;
 var _prodInvariant = __webpack_require__(11);
 
 var DOMLazyTree = __webpack_require__(76);
-var DOMProperty = __webpack_require__(53);
+var DOMProperty = __webpack_require__(55);
 var React = __webpack_require__(73);
 var ReactBrowserEventEmitter = __webpack_require__(111);
 var ReactCurrentOwner = __webpack_require__(45);
@@ -20875,7 +20875,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(55)(content, options);
+var update = __webpack_require__(51)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -21189,7 +21189,7 @@ var has = __webpack_require__(24);
 var DESCRIPTORS = __webpack_require__(14);
 var $export = __webpack_require__(0);
 var redefine = __webpack_require__(26);
-var META = __webpack_require__(51).KEY;
+var META = __webpack_require__(53).KEY;
 var $fails = __webpack_require__(10);
 var shared = __webpack_require__(89);
 var setToStringTag = __webpack_require__(69);
@@ -21527,7 +21527,7 @@ __webpack_require__(42)('getOwnPropertyNames', function () {
 
 // 19.1.2.5 Object.freeze(O)
 var isObject = __webpack_require__(12);
-var meta = __webpack_require__(51).onFreeze;
+var meta = __webpack_require__(53).onFreeze;
 
 __webpack_require__(42)('freeze', function ($freeze) {
   return function freeze(it) {
@@ -21542,7 +21542,7 @@ __webpack_require__(42)('freeze', function ($freeze) {
 
 // 19.1.2.17 Object.seal(O)
 var isObject = __webpack_require__(12);
-var meta = __webpack_require__(51).onFreeze;
+var meta = __webpack_require__(53).onFreeze;
 
 __webpack_require__(42)('seal', function ($seal) {
   return function seal(it) {
@@ -21557,7 +21557,7 @@ __webpack_require__(42)('seal', function ($seal) {
 
 // 19.1.2.15 Object.preventExtensions(O)
 var isObject = __webpack_require__(12);
-var meta = __webpack_require__(51).onFreeze;
+var meta = __webpack_require__(53).onFreeze;
 
 __webpack_require__(42)('preventExtensions', function ($preventExtensions) {
   return function preventExtensions(it) {
@@ -23202,7 +23202,7 @@ var $export = __webpack_require__(0);
 
 $export($export.P, 'Array', { copyWithin: __webpack_require__(195) });
 
-__webpack_require__(52)('copyWithin');
+__webpack_require__(54)('copyWithin');
 
 
 /***/ }),
@@ -23214,7 +23214,7 @@ var $export = __webpack_require__(0);
 
 $export($export.P, 'Array', { fill: __webpack_require__(138) });
 
-__webpack_require__(52)('fill');
+__webpack_require__(54)('fill');
 
 
 /***/ }),
@@ -23235,7 +23235,7 @@ $export($export.P + $export.F * forced, 'Array', {
     return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
-__webpack_require__(52)(KEY);
+__webpack_require__(54)(KEY);
 
 
 /***/ }),
@@ -23256,7 +23256,7 @@ $export($export.P + $export.F * forced, 'Array', {
     return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
-__webpack_require__(52)(KEY);
+__webpack_require__(54)(KEY);
 
 
 /***/ }),
@@ -24294,7 +24294,7 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(52)('includes');
+__webpack_require__(54)('includes');
 
 
 /***/ }),
@@ -24323,7 +24323,7 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(52)('flatMap');
+__webpack_require__(54)('flatMap');
 
 
 /***/ }),
@@ -24351,7 +24351,7 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(52)('flatten');
+__webpack_require__(54)('flatten');
 
 
 /***/ }),
@@ -26309,11 +26309,11 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(720).polyfill();
+__webpack_require__(722).polyfill();
 
 // Components
 
-__webpack_require__(722);
+__webpack_require__(724);
 __webpack_require__(117);
 
 (0, _reactDom.render)(_react2.default.createElement(
@@ -29596,7 +29596,7 @@ module.exports = EnterLeaveEventPlugin;
 
 
 
-var DOMProperty = __webpack_require__(53);
+var DOMProperty = __webpack_require__(55);
 
 var MUST_USE_PROPERTY = DOMProperty.injection.MUST_USE_PROPERTY;
 var HAS_BOOLEAN_VALUE = DOMProperty.injection.HAS_BOOLEAN_VALUE;
@@ -30286,7 +30286,7 @@ var AutoFocusUtils = __webpack_require__(527);
 var CSSPropertyOperations = __webpack_require__(528);
 var DOMLazyTree = __webpack_require__(76);
 var DOMNamespaces = __webpack_require__(155);
-var DOMProperty = __webpack_require__(53);
+var DOMProperty = __webpack_require__(55);
 var DOMPropertyOperations = __webpack_require__(234);
 var EventPluginHub = __webpack_require__(83);
 var EventPluginRegistry = __webpack_require__(106);
@@ -35253,7 +35253,7 @@ module.exports = getUnboundedScrollPosition;
 
 
 
-var DOMProperty = __webpack_require__(53);
+var DOMProperty = __webpack_require__(55);
 var EventPluginHub = __webpack_require__(83);
 var EventPluginUtils = __webpack_require__(149);
 var ReactComponentEnvironment = __webpack_require__(158);
@@ -37361,7 +37361,7 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
 
 
 
-var DOMProperty = __webpack_require__(53);
+var DOMProperty = __webpack_require__(55);
 var EventPluginRegistry = __webpack_require__(106);
 var ReactComponentTreeHook = __webpack_require__(28);
 
@@ -37524,7 +37524,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 
 
 
-var DOMProperty = __webpack_require__(53);
+var DOMProperty = __webpack_require__(55);
 var ReactComponentTreeHook = __webpack_require__(28);
 
 var warning = __webpack_require__(4);
@@ -41696,6 +41696,10 @@ var _Video = __webpack_require__(719);
 
 var _Video2 = _interopRequireDefault(_Video);
 
+var _App = __webpack_require__(720);
+
+var _App2 = _interopRequireDefault(_App);
+
 var _actions = __webpack_require__(174);
 
 var ActionAuth = _interopRequireWildcard(_actions);
@@ -41715,6 +41719,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 // Components
+
+
+// Styles
 
 
 // Actions
@@ -42257,7 +42264,7 @@ var _temp = function () {
 /* 645 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(54)(undefined);
+exports = module.exports = __webpack_require__(50)(undefined);
 // imports
 
 
@@ -42593,7 +42600,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(55)(content, options);
+var update = __webpack_require__(51)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -42613,7 +42620,7 @@ if(false) {
 /* 649 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(54)(undefined);
+exports = module.exports = __webpack_require__(50)(undefined);
 // imports
 
 
@@ -43774,7 +43781,7 @@ var _BannerBody = __webpack_require__(673);
 
 var _BannerBody2 = _interopRequireDefault(_BannerBody);
 
-var _Home = __webpack_require__(50);
+var _Home = __webpack_require__(52);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -43879,7 +43886,7 @@ var _SwipeBanner = __webpack_require__(674);
 
 var _SwipeBanner2 = _interopRequireDefault(_SwipeBanner);
 
-var _Home = __webpack_require__(50);
+var _Home = __webpack_require__(52);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -46018,7 +46025,7 @@ var _temp = function () {
 /* 692 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(54)(undefined);
+exports = module.exports = __webpack_require__(50)(undefined);
 // imports
 
 
@@ -46038,7 +46045,7 @@ exports.locals = {
 /* 693 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(54)(undefined);
+exports = module.exports = __webpack_require__(50)(undefined);
 // imports
 
 
@@ -46086,7 +46093,7 @@ var _FundingBody = __webpack_require__(695);
 
 var _FundingBody2 = _interopRequireDefault(_FundingBody);
 
-var _Home = __webpack_require__(50);
+var _Home = __webpack_require__(52);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -46191,7 +46198,7 @@ var _FundingList = __webpack_require__(696);
 
 var _FundingList2 = _interopRequireDefault(_FundingList);
 
-var _Home = __webpack_require__(50);
+var _Home = __webpack_require__(52);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -46285,7 +46292,7 @@ var _reactRedux = __webpack_require__(8);
 
 var _reactRouter = __webpack_require__(9);
 
-var _Home = __webpack_require__(50);
+var _Home = __webpack_require__(52);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -46400,7 +46407,7 @@ var _HashTagBody = __webpack_require__(698);
 
 var _HashTagBody2 = _interopRequireDefault(_HashTagBody);
 
-var _Home = __webpack_require__(50);
+var _Home = __webpack_require__(52);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -46505,7 +46512,7 @@ var _BubbleBox = __webpack_require__(699);
 
 var _BubbleBox2 = _interopRequireDefault(_BubbleBox);
 
-var _Home = __webpack_require__(50);
+var _Home = __webpack_require__(52);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -46662,7 +46669,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(55)(content, options);
+var update = __webpack_require__(51)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -46682,7 +46689,7 @@ if(false) {
 /* 701 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(54)(undefined);
+exports = module.exports = __webpack_require__(50)(undefined);
 // imports
 
 
@@ -46721,7 +46728,7 @@ var _VideoBody = __webpack_require__(703);
 
 var _VideoBody2 = _interopRequireDefault(_VideoBody);
 
-var _Home = __webpack_require__(50);
+var _Home = __webpack_require__(52);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -46822,7 +46829,7 @@ var _reactRedux = __webpack_require__(8);
 
 var _reactRouter = __webpack_require__(9);
 
-var _Home = __webpack_require__(50);
+var _Home = __webpack_require__(52);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -46900,7 +46907,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(55)(content, options);
+var update = __webpack_require__(51)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -46920,25 +46927,16 @@ if(false) {
 /* 705 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(54)(undefined);
+exports = module.exports = __webpack_require__(50)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "/* Common */\r\nbody {\r\n    font-family: RobotoRegular,'Noto Sans','Apple SD Gothic Neo',Helvetica,Arial,sans-serif;\r\n}\r\n.Home__sectionTitle___UYK0S {\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #161616;\r\n}\r\n\r\n.Home__sectionSmallTitle___2oRCi {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    line-height: 19px;\r\n    color: #a0a0a0;\r\n    letter-spacing: -0.5px;\r\n}\r\n.Home__homeContainer___BZFju {\r\n    width: 100%;\r\n    overflow: hidden;\r\n}\r\n/* Banner */\r\n.Home__bannerBody___2QVqV{\r\n    overflow: hidden;\r\n}\r\n.Home__bannerSection___3ewTy {\r\n    width: 100%;\r\n    height: 385px;\r\n    background-color: black;\r\n    padding-top: 60px;\r\n    margin-top: 85px;\r\n}\r\n.Home__BannerHeader___3xjvG {\r\n    width: 1100px;\r\n    margin: 0px auto 20px;\r\n}\r\n.Home__BannerHeader___3xjvG .Home__sectionTitle___UYK0S{\r\n    color: #FFFFFF;\r\n}\r\n\r\n/* Funding */\r\n.Home__fundingSection___3z52T {\r\n    margin-top: 120px;\r\n}\r\n.Home__fundingHeader___2Nwgc {\r\n    width: 1100px;\r\n    margin: 0 auto 22px;\r\n}\r\n\r\n/* HashTag */\r\n.Home__hashTagSection___1jClV {\r\n\r\n}\r\n\r\n/* Video */\r\n.Home__videoSection___3XGDk {\r\n\r\n}", ""]);
+exports.push([module.i, ".Home__homeContainer___BZFju {\r\n    width: 100%;\r\n    overflow: hidden;\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"sectionTitle": "Home__sectionTitle___UYK0S",
-	"sectionSmallTitle": "Home__sectionSmallTitle___2oRCi",
-	"homeContainer": "Home__homeContainer___BZFju",
-	"bannerBody": "Home__bannerBody___2QVqV",
-	"bannerSection": "Home__bannerSection___3ewTy",
-	"BannerHeader": "Home__BannerHeader___3xjvG",
-	"fundingSection": "Home__fundingSection___3z52T",
-	"fundingHeader": "Home__fundingHeader___2Nwgc",
-	"hashTagSection": "Home__hashTagSection___1jClV",
-	"videoSection": "Home__videoSection___3XGDk"
+	"homeContainer": "Home__homeContainer___BZFju"
 };
 
 /***/ }),
@@ -47219,7 +47217,7 @@ var _temp = function () {
 /* 709 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(54)(undefined);
+exports = module.exports = __webpack_require__(50)(undefined);
 // imports
 
 
@@ -47348,7 +47346,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(55)(content, options);
+var update = __webpack_require__(51)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -47368,7 +47366,7 @@ if(false) {
 /* 712 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(54)(undefined);
+exports = module.exports = __webpack_require__(50)(undefined);
 // imports
 
 
@@ -47881,6 +47879,51 @@ var _temp = function () {
 /* 720 */
 /***/ (function(module, exports, __webpack_require__) {
 
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(721);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(51)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--1-1!./App.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js??ref--1-1!./App.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 721 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(50)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "body {\r\n    margin: 0;\r\n    padding: 0;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 722 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* WEBPACK VAR INJECTION */(function(process, global) {var require;/*!
  * @overview es6-promise - a tiny implementation of Promises/A+.
  * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
@@ -48018,7 +48061,7 @@ function flush() {
 function attemptVertx() {
   try {
     var r = require;
-    var vertx = __webpack_require__(721);
+    var vertx = __webpack_require__(723);
     vertxNext = vertx.runOnLoop || vertx.runOnContext;
     return useVertxTimer();
   } catch (e) {
@@ -49042,13 +49085,13 @@ return Promise$2;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(78)))
 
 /***/ }),
-/* 721 */
+/* 723 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 722 */
+/* 724 */
 /***/ (function(module, exports) {
 
 // Console-polyfill. MIT license.

@@ -18,6 +18,9 @@ import SearchContainer from './Search';
 import SelleverContainer from './Sellever';
 import VideoContainer from './Video';
 
+// Styles
+import SellevLayout from '../Styles/App.css';
+
 // Actions
 import * as ActionAuth from '../Data/Authentification/actions';
 
