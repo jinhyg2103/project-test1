@@ -12,6 +12,18 @@ const routes = [
         component: RootPage,
     },
     {
+        path: '/login',
+        exact: true,
+        strict: false,
+        component: RootPage,
+    },
+    {
+        path: '/signup',
+        exact: true,
+        strict: false,
+        component: RootPage,
+    },
+    {
         path: '/fundingmarket',
         exact: true,
         strict: false,

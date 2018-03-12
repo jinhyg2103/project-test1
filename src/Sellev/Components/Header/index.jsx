@@ -25,7 +25,12 @@ class Header extends React.Component {
             dropDownOpen: false,
             userMenuOpen: false,
             mediaQuery: !mql.matches,
-            imgUrl: 'Sellev/assets/img/img_user.png',
+            userProfile: {
+                name: '김제니',
+                imgUrl: 'Sellev/assets/img/img_user.png',
+                coin: '1,000',
+                point: '200',
+            },
         };
         this.handleDropdown = this.handleDropdown.bind(this);
         this.handleUserMenu = this.handleUserMenu.bind(this);
@@ -88,7 +93,7 @@ class Header extends React.Component {
                                 <li><div className={(this.state.mediaQuery ? styles.notifyBlack : styles.notifyWhite)} /></li>
                             </ul>
                             <div className={styles.iconBox}>
-                                <div onClick={this.handleUserMenu}><UserBox imgUrl={this.state.imgUrl} /></div>
+                                <div onClick={this.handleUserMenu}><UserBox imgUrl={this.state.userProfile.imgUrl} /></div>
                                 <ul className={styles.userMenu + (this.state.userMenuOpen ? '' : ' ' + styles.hide)}>
                                     <li><Link to={'/home'}>관심펀딩/상품</Link></li>
                                     <li><Link to={'/hashtag'}>참여 펀딩 현황</Link></li>
@@ -100,7 +105,16 @@ class Header extends React.Component {
                     </div>
                 </div>
                 { this.state.dropDownOpen ? <GlobalMenu /> : null }
-                { this.state.userMenuOpen ? <GlobalUserMenu /> : null }
+                {
+                    this.state.userMenuOpen ?
+                        <GlobalUserMenu
+                            imgUrl={this.state.userProfile.imgUrl}
+                            name={this.state.userProfile.name}
+                            coin={this.state.userProfile.coin}
+                            point={this.state.userProfile.point}
+                        />
+                        : null
+                }
             </div>
         );
     }

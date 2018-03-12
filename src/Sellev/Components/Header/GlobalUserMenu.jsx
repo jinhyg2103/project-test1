@@ -5,6 +5,9 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
+//Component
+import UserBox from '../../Common/UserBox';
+
 // Styles
 import styles from '../../Styles/Components/Header.css';
 
@@ -16,19 +19,21 @@ class globalUserMenu extends React.Component {
         return (
             <div className={styles.globalMenuContainer}>
                 <div className={styles.globalMenuHeader}>
-                    <div />
-                    <div>
-                        Sellev<br />
-                        New project
+                    <UserBox imgUrl={this.props.imgUrl} />
+                    <div className={styles.userInfo}>
+                        <div>{this.props.name}</div>
+                        <span>Coin</span>
+                        <span>{this.props.coin}C</span>
+                        <span>Point</span>
+                        <span>{this.props.point}P</span>
                     </div>
                 </div>
                 <div className={styles.globalMenuBody}>
                     <ul className={styles.globalMenuList}>
-                        <li><Link to={'/home'}>Home</Link></li>
-                        <li><Link to={'/hashtag'}>해시태그</Link></li>
-                        <li><Link to={'/product'}>펀딩&마켓</Link></li>
-                        <li><Link to={'/media'}>동영상</Link></li>
-                        <li><Link to={'/myhome'}>마이홈</Link></li>
+                        <li><Link to={'/home'}>프로필설정</Link></li>
+                        <li><Link to={'/hashtag'}>관심펀딩/상품</Link></li>
+                        <li><Link to={'/product'}>참여 펀딩 현황</Link></li>
+                        <li><Link to={'/media'}>주문내역 조회</Link></li>
                     </ul>
                     <ul className={styles.othersList}>
                         <li><Link to={'/'}>코인 충전</Link></li>

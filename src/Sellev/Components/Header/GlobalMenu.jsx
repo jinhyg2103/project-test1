@@ -16,8 +16,8 @@ class globalMenu extends React.Component {
         return (
           <div className={styles.globalMenuContainer}>
               <div className={styles.globalMenuHeader}>
-                  <div />
-                  <div>
+                  <div className={styles.redPoint} />
+                  <div className={styles.menuTitle}>
                       Sellev<br />
                       New project
                   </div>
