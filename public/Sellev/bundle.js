@@ -47382,8 +47382,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -47517,49 +47515,56 @@ var SignupBody = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { className: _App2.default.formGroup },
-                        _react2.default.createElement(
-                            'div',
-                            { className: _App2.default.formRow },
-                            _react2.default.createElement(
-                                'div',
-                                { className: _App2.default.formInputName },
-                                '\uD578\uB4DC\uD3F0\uBC88\uD638'
-                            ),
-                            _react2.default.createElement('input', { className: _App2.default.formInputWithVerify, type: 'text', value: this.state.phoneNumber, autoComplete: 'off', onChange: function onChange(e) {
-                                    return _this3.setState({ phoneNumber: e.target.value });
-                                }, placeholder: '핸드폰번호를 입력해주세요.' }),
-                            _react2.default.createElement(
-                                'div',
-                                { className: _App2.default.formInputVerifyBtn + (this.state.phoneNumber.length < 6 ? ' ' + _App2.default.disabled : ''), onClick: this.sendSmsVerificationCode },
-                                '\uC778\uC99D'
-                            )
-                        ),
                         this.state.isSmsVerified ? _react2.default.createElement(
                             'div',
                             { className: _App2.default.formRow },
+                            _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', value: this.state.phoneNumber, disabled: true }),
                             _react2.default.createElement(
                                 'div',
-                                { className: _App2.default.formInputName },
-                                '\uC778\uC99D\uBC88\uD638'
-                            ),
-                            _react2.default.createElement('input', _defineProperty({ className: _App2.default.formInputWithIcon + ' ' + _App2.default.inputWithVerifyWithIcon, type: 'password', autoComplete: 'off', value: this.state.contact }, 'autoComplete', 'off')),
-                            _react2.default.createElement(
-                                'div',
-                                { className: _App2.default.formInputVerifyCheckBtn, onClick: this.sendSmsVerificationCode },
-                                '\uC778\uC99D\uD558\uAE30'
+                                { className: _App2.default.inputVerifyBox },
+                                '\uC778\uC99D\uC644\uB8CC'
                             )
                         ) : _react2.default.createElement(
                             'div',
-                            { className: _App2.default.formRow + ' ' + _App2.default.disabled },
-                            ' ',
+                            { className: _App2.default.formRow },
+                            this.state.smsVerificationCode.length > 0 ? _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', value: this.state.phoneNumber, disabled: true }) : _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', placeholder: '핸드폰번호를 입력해주세요.', value: this.state.phoneNumber, onChange: function onChange(e) {
+                                    return _this3.setState({ phoneNumber: e.target.value });
+                                } }),
+                            '  /*\uACE0\uCCD0\uB193\uAE30*/',
                             _react2.default.createElement(
                                 'div',
-                                { className: _App2.default.formInputName },
-                                '\uC778\uC99D\uBC88\uD638'
+                                { className: _App2.default.inputVerifyBox, onClick: this.sendSmsVerificationCode.bind(this) },
+                                '\uC778\uC99D'
                             ),
-                            _react2.default.createElement('input', { className: _App2.default.formInput, type: 'password', autoComplete: 'off', placeholder: '위의 인증버튼 선택 후 인증번호를 입력해주세요.', disabled: 'true' })
+                            this.state.warnPhoneNumberValid ? _react2.default.createElement(
+                                'div',
+                                { className: _App2.default.formInputWarn },
+                                '\uD734\uB300\uD3F0 \uC778\uC99D\uC744 \uBC1B\uC73C\uC138\uC694.'
+                            ) : null,
+                            this.state.warnPhoneNumberAlreadyExist ? _react2.default.createElement(
+                                'div',
+                                { className: _App2.default.formInputWarn },
+                                '\uC774\uBBF8 \uAC00\uC785\uD55C \uD734\uB300\uD3F0\uC785\uB2C8\uB2E4. \uBE44\uBC00\uBC88\uD638\uB97C \uCC3E\uC544\uBCF4\uC138\uC694.'
+                            ) : null
                         ),
-                        this.state.isSmsSended ? _react2.default.createElement(
+                        _react2.default.createElement(
+                            'div',
+                            { className: _App2.default.formRow + (this.state.smsVerificationCode.length > 0 ? '' : ' ' + _App2.default.disabled) },
+                            _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', autoComplete: 'off', placeholder: this.state.smsVerificationCode.length > 0 ? '' : '위의 인증버튼 선택 후 인증번호를 입력해주세요.', value: this.state.smsVerificationCodeByUser, onChange: function onChange(e) {
+                                    return _this3.setState({ smsVerificationCodeByUser: e.target.value });
+                                }, disabled: this.state.smsVerificationCode.length <= 0 }),
+                            this.state.smsVerificationCode.length > 0 ? _react2.default.createElement(
+                                'div',
+                                { className: _App2.default.inputVerifyBox, onClick: this.smsVerificationCodeCheck.bind(this) },
+                                '\uC778\uC99D\uD558\uAE30'
+                            ) : null,
+                            this.state.warnPhoneNumber6digitWrong ? _react2.default.createElement(
+                                'div',
+                                { className: _App2.default.formInputWarn },
+                                '\uC778\uC99D\uBC88\uD638\uAC00 \uD2C0\uB9BD\uB2C8\uB2E4.'
+                            ) : null
+                        ),
+                        this.state.smsVerificationCode.length > 0 ? _react2.default.createElement(
                             'div',
                             null,
                             '\uC778\uC99D\uC2DC\uAC04\uC774 ',
