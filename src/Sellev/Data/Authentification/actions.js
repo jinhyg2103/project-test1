@@ -21,12 +21,10 @@ export const actionTypes = ActionTypes;
 //////////////////
 /*
 * @params {Number} query.countryDialCode
-* @params {Number} query.phoneNumber
 */
 export const getVerificationCode = (params) => {
-    return HttpApi.get('GET_AUTH_GET_VERIFICATION_CODE', params)
+    return HttpApi.get('GET_AUTH_VERIFICATION_CODE', params)
         .then((response) => {
-            console.log(response);
             return Promise.resolve(response.data);
         })
         .catch((err) => {
@@ -99,8 +97,6 @@ export const signup = (params) => {
     return (dispatch) => {
         return HttpApi.post('POST_AUTH_SIGNUP', params)
             .then((response) => {
-                console.log(response.data);
-                console.log(dispatch);
                 dispatch({ type: ActionTypes.LOGIN, author: response.data });
                 return Promise.resolve(response.data);
             })
@@ -147,62 +143,7 @@ export const changePassword = ( params ) => {
 * @params {String} query.phoneNumber
 */
 export const findIdText = ( params ) => {
-    return HttpApi.get('GET_AUTH_FIND_IDTEXT', params)
-        .then((response) => {
-            return Promise.resolve(response.data);
-        })
-        .catch((err) => {
-            return Promise.reject(err);
-        });
-};
-
-//////////////////////
-/////// Agency ///////
-//////////////////////
-/*
-* @params {Number} query.uId
-* @params {Number} query.type // 개설 공인중개사(1), 소속 공인중개사(2), 중개 보조원(3)
-* @params {String} query.registrationNumber // 사업자번호
-* @params {String} query.ceoName
-* @params {String} query.agencyName // 중개사무소명
-* @params {Number} query.countryDialCode
-* @params {Number} query.phoneNumber
-* @params {String} query.state
-* @params {String} query.city
-* @params {String} query.address1
-* @params {String} query.address2
-*/
-export const createAgency = ( params ) => {
-    return HttpApi.post('POST_AUTH_CREATE_AGENCY', params)
-        .then((response) => {
-            // 공인중개사로 등록하면 user의 type이 변하므로, session 다시 받아오도록 함
-            Store.dispatch(ActionAuth.session());
-            return Promise.resolve(response.data);
-        })
-        .catch((err) => {
-            return Promise.reject(err);
-        });
-};
-
-/*
-* @params {Number} query.aId
-* @params {String} query.url // 공인중개사 자격증
-*/
-export const createAgencyLicense = ( params ) => {
-    return HttpApi.post('POST_AUTH_CREATE_AGENCY_LICENSE', params)
-        .then((response) => {
-            return Promise.resolve(response.data);
-        })
-        .catch((err) => {
-            return Promise.reject(err);
-        });
-};
-/*
-* @params {Number} query.aId
-* @params {String} query.url // 사업자등록증
-*/
-export const createAgencyRegistrationCertificate = (params) => {
-    return HttpApi.post('POST_AUTH_CREATE_AGENCY_REGISTRATION_CERTIFICATE', params)
+    return HttpApi.post('POST_AUTH_VERIFY_PHONENUMBER', params)
         .then((response) => {
             return Promise.resolve(response.data);
         })

@@ -8,7 +8,7 @@ import { withRouter } from 'react-router';
 // Components
 import VerifyBody from '../../Components/Authentication/FindPasswordVerifyBody';
 import ChangeBody from '../../Components/Authentication/FindPasswordChangeBody';
-import AuthFooter from './AuthFooter';
+import Footer from './Footer';
 
 // Styles
 import stylesAuth from '../../Styles/Components/Authentication.css';
@@ -32,7 +32,7 @@ class LoginView extends React.Component {
         return (
             <div className={stylesAuth.findPasswordContainer}>
                 { this.state.verified ? <ChangeBody /> : <VerifyBody onVerified={(verified) => this.verifyUser(verified)} /> }
-                <AuthFooter />
+                <Footer />
             </div>
         );
     }

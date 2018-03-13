@@ -183,6 +183,22 @@
 
 /* login button */
 
+/* ==========여기에 authBtn 스타일 적용 부탁드립니다! ============= */
+
+.authBtn {
+
+}
+.authBtn.kakao {
+
+}
+.authBtn.facebook {
+
+}
+.authBtn.naver {
+
+}
+
+/* ================================================================= */
 .submitBtn {
     height: 56px;
     width: 371px;

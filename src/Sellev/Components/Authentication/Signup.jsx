@@ -7,6 +7,7 @@ import { withRouter } from 'react-router';
 
 // Components
 import SignupBody from '../../Components/Authentication/SignupBody';
+import Footer from './Footer';
 
 // Styles
 import stylesAuth from '../../Styles/Components/Authentication.css';
@@ -20,6 +21,7 @@ class SingupView extends React.Component {
         return (
             <div className={stylesAuth.signupContainer}>
                 <SignupBody />
+                <Footer />
             </div>
         );
     }

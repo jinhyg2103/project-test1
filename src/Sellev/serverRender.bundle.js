@@ -12632,7 +12632,7 @@ module.exports = getActiveElement;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.createAgencyRegistrationCertificate = exports.createAgencyLicense = exports.createAgency = exports.findIdText = exports.changePassword = exports.logout = exports.signup = exports.login = exports.session = exports.isIdDuplicated = exports.getVerificationCode = exports.actionTypes = undefined;
+exports.findIdText = exports.changePassword = exports.logout = exports.signup = exports.login = exports.session = exports.isIdDuplicated = exports.getVerificationCode = exports.actionTypes = undefined;
 
 var _actionTypes = __webpack_require__(123);
 
@@ -12670,14 +12670,12 @@ var actionTypes = exports.actionTypes = ActionTypes;
 //////////////////
 /*
 * @params {Number} query.countryDialCode
-* @params {Number} query.phoneNumber
 */
 
 
 // API
 var getVerificationCode = exports.getVerificationCode = function getVerificationCode(params) {
-    return HttpApi.get('GET_AUTH_GET_VERIFICATION_CODE', params).then(function (response) {
-        console.log(response);
+    return HttpApi.get('GET_AUTH_VERIFICATION_CODE', params).then(function (response) {
         return Promise.resolve(response.data);
     }).catch(function (err) {
         return Promise.reject(err);
@@ -12740,8 +12738,6 @@ var login = exports.login = function login(params) {
 var signup = exports.signup = function signup(params) {
     return function (dispatch) {
         return HttpApi.post('POST_AUTH_SIGNUP', params).then(function (response) {
-            console.log(response.data);
-            console.log(dispatch);
             dispatch({ type: ActionTypes.LOGIN, author: response.data });
             return Promise.resolve(response.data);
         }).catch(function (err) {
@@ -12782,56 +12778,7 @@ var changePassword = exports.changePassword = function changePassword(params) {
 * @params {String} query.phoneNumber
 */
 var findIdText = exports.findIdText = function findIdText(params) {
-    return HttpApi.get('GET_AUTH_FIND_IDTEXT', params).then(function (response) {
-        return Promise.resolve(response.data);
-    }).catch(function (err) {
-        return Promise.reject(err);
-    });
-};
-
-//////////////////////
-/////// Agency ///////
-//////////////////////
-/*
-* @params {Number} query.uId
-* @params {Number} query.type // 개설 공인중개사(1), 소속 공인중개사(2), 중개 보조원(3)
-* @params {String} query.registrationNumber // 사업자번호
-* @params {String} query.ceoName
-* @params {String} query.agencyName // 중개사무소명
-* @params {Number} query.countryDialCode
-* @params {Number} query.phoneNumber
-* @params {String} query.state
-* @params {String} query.city
-* @params {String} query.address1
-* @params {String} query.address2
-*/
-var createAgency = exports.createAgency = function createAgency(params) {
-    return HttpApi.post('POST_AUTH_CREATE_AGENCY', params).then(function (response) {
-        // 공인중개사로 등록하면 user의 type이 변하므로, session 다시 받아오도록 함
-        _store2.default.dispatch(ActionAuth.session());
-        return Promise.resolve(response.data);
-    }).catch(function (err) {
-        return Promise.reject(err);
-    });
-};
-
-/*
-* @params {Number} query.aId
-* @params {String} query.url // 공인중개사 자격증
-*/
-var createAgencyLicense = exports.createAgencyLicense = function createAgencyLicense(params) {
-    return HttpApi.post('POST_AUTH_CREATE_AGENCY_LICENSE', params).then(function (response) {
-        return Promise.resolve(response.data);
-    }).catch(function (err) {
-        return Promise.reject(err);
-    });
-};
-/*
-* @params {Number} query.aId
-* @params {String} query.url // 사업자등록증
-*/
-var createAgencyRegistrationCertificate = exports.createAgencyRegistrationCertificate = function createAgencyRegistrationCertificate(params) {
-    return HttpApi.post('POST_AUTH_CREATE_AGENCY_REGISTRATION_CERTIFICATE', params).then(function (response) {
+    return HttpApi.post('POST_AUTH_VERIFY_PHONENUMBER', params).then(function (response) {
         return Promise.resolve(response.data);
     }).catch(function (err) {
         return Promise.reject(err);
@@ -29798,10 +29745,6 @@ var initialState = exports.initialState = {
         type: null
     }
     /*
-    *@params (ADD_PHOTO) action.photo
-    *@params (UPDATE_PHOTO) action.photo, action.index
-    *@params (DELETE_PHOTO) action.index
-    *@params (DELETE_ALL_PHOTO) action
     */
 };var authReducer = exports.authReducer = function authReducer() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -31741,15 +31684,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
     /////////////// Authentification /////////////
-    AUTH_LOGIN: '',
-    AUTH_LOGIN_KAKAO: '',
-    AUTH_LOGIN_FACEBOOK: '',
-    AUTH_LOGIN_NAVER: '',
-    AUTH_LOGOUT: '',
-    AUTH_SIGNUP: '',
-    AUTH_FIND_PASSWORD: '',
-    AUTH_PHONENUMBER: '',
-    AUTH_CHANGE_PASSWORD: ''
+    GET_AUTH_VERIFICATION_CODE: '',
+    GET_AUTH_IS_ID_DUPLICATED: '',
+    GET_AUTH_SESSION: '',
+
+    POST_AUTH_LOGIN: '',
+    POST_AUTH_LOGIN_KAKAO: '',
+    POST_AUTH_LOGIN_FACEBOOK: '',
+    POST_AUTH_LOGIN_NAVER: '',
+    POST_AUTH_LOGOUT: '',
+    POST_AUTH_SIGNUP: '',
+    POST_AUTH_VERIFY_PHONENUMBER: '',
+    POST_AUTH_CHANGE_PASSWORD: ''
 };
 
 /***/ }),
