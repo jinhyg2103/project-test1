@@ -7,7 +7,6 @@ import { withRouter } from 'react-router';
 import Slider from 'react-slick';
 
 // Components
-import BannerItem from './BannerItem';
 
 // Styles
 import styles from '../../Styles/Common/SwipeBanner.css';

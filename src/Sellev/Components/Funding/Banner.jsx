@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 
 // Components
+import BannerBody from './BannerBody';
 
 // Styles
 import stylesHome from '../../Styles/Components/Home.css';
@@ -21,7 +22,7 @@ class Banner extends React.Component {
                     <div>셀레브 추천</div>
                     <div>오늘의 펀딩&마켓</div>
                 </div>
-
+                <BannerBody />
             </div>
         );
     }
