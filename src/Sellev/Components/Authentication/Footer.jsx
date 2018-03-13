@@ -8,7 +8,15 @@ import { withRouter } from 'react-router';
 // Styles
 import stylesAuth from '../../Styles/Components/Authentication.css';
 
+// Utils
+import * as ParseUrlParameter from '../../Lib/Utils/parseUrlParameter';
+
 class AuthFooter extends React.Component {
+    componentWillMount() {
+        this.setState({
+            urlParams: parseUrlParameter.parse(this.props.location.search);
+        })
+    }
     render() {
         return (
             <div className={stylesAuth.loginFooter}>

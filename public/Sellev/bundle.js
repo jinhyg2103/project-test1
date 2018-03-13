@@ -1649,7 +1649,7 @@ module.exports = ReactComponentTreeHook;
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(80);
+var IObject = __webpack_require__(81);
 var defined = __webpack_require__(40);
 module.exports = function (it) {
   return IObject(defined(it));
@@ -1660,7 +1660,7 @@ module.exports = function (it) {
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pIE = __webpack_require__(81);
+var pIE = __webpack_require__(82);
 var createDesc = __webpack_require__(57);
 var toIObject = __webpack_require__(29);
 var toPrimitive = __webpack_require__(39);
@@ -2224,7 +2224,7 @@ module.exports = function (KEY, exec) {
 // 5 -> Array#find
 // 6 -> Array#findIndex
 var ctx = __webpack_require__(35);
-var IObject = __webpack_require__(80);
+var IObject = __webpack_require__(81);
 var toObject = __webpack_require__(18);
 var toLength = __webpack_require__(16);
 var asc = __webpack_require__(139);
@@ -2617,7 +2617,7 @@ if (__webpack_require__(14)) {
   var toAbsoluteIndex = __webpack_require__(61);
   var toPrimitive = __webpack_require__(39);
   var has = __webpack_require__(24);
-  var classof = __webpack_require__(82);
+  var classof = __webpack_require__(83);
   var isObject = __webpack_require__(12);
   var toObject = __webpack_require__(18);
   var isArrayIter = __webpack_require__(136);
@@ -5393,6 +5393,196 @@ module.exports = DOMLazyTree;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.findIdText = exports.changePassword = exports.logout = exports.signup = exports.login = exports.session = exports.isIdDuplicated = exports.getVerificationCode = exports.actionTypes = undefined;
+
+var _actionTypes = __webpack_require__(264);
+
+var ActionTypes = _interopRequireWildcard(_actionTypes);
+
+var _actions = __webpack_require__(78);
+
+var ActionAuth = _interopRequireWildcard(_actions);
+
+var _store = __webpack_require__(172);
+
+var _store2 = _interopRequireDefault(_store);
+
+var _index = __webpack_require__(650);
+
+var HttpApi = _interopRequireWildcard(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+/*
+* other constants
+*/
+/**
+ * @providesModule ActionAuth
+ */
+var actionTypes = exports.actionTypes = ActionTypes;
+/*
+* action creators
+*/
+
+//////////////////
+///// GET ////////
+//////////////////
+/*
+* @params {Number} query.countryDialCode
+*/
+
+
+// API
+var getVerificationCode = exports.getVerificationCode = function getVerificationCode(params) {
+    return HttpApi.get('GET_AUTH_VERIFICATION_CODE', params).then(function (response) {
+        return Promise.resolve(response.data);
+    }).catch(function (err) {
+        return Promise.reject(err);
+    });
+};
+
+/*
+* @params {String} query.idText
+*/
+var isIdDuplicated = exports.isIdDuplicated = function isIdDuplicated(params) {
+    return HttpApi.get('GET_AUTH_IS_ID_DUPLICATED', params).then(function (response) {
+        return Promise.resolve(null);
+    }).catch(function (err) {
+        return Promise.reject(err);
+    });
+};
+/*
+*/
+var session = exports.session = function session() {
+    return function (dispatch) {
+        return HttpApi.get('GET_AUTH_SESSION').then(function (response) {
+            dispatch({ type: ActionTypes.LOGIN, author: response.data });
+            return Promise.resolve(response.data);
+        }).catch(function (err) {
+            return Promise.reject(err);
+        });
+    };
+};
+
+//////////////////
+///// POST ///////
+//////////////////
+/*
+* @params {String} query.idText (idText 혹은 fullPhoneNumber 둘 중 하나는 필수)
+* @params {String} query.password
+*/
+var login = exports.login = function login(params) {
+    return function (dispatch) {
+        return HttpApi.post('POST_AUTH_LOGIN', params).then(function (response) {
+            dispatch({ type: ActionTypes.LOGIN, author: response.data });
+            return Promise.resolve(response.data);
+        }).catch(function (err) {
+            return Promise.reject(err);
+        });
+    };
+};
+/*
+* @params {String} params.idText
+* @params {String} params.password
+* @params {Number} params.countryDialCode
+* @params {Number} params.phoneNumber
+* @params {String} params.name
+* @params {String} params.email
+* @params {String} params.state // 주소에서 시(광역), 도 ex)서울시 / 경기도 / 강원도
+* @params {String} params.city // 주소에서 구(광역), 시 / 군 ex) 서초구 / 성남시 / 횡성군
+* @params {String} params.address1  // 주소에서 동(광역) / 구 / 읍 ex) 서초동 / 분당구 / 횡성읍
+* @params {String} params.address2 // 자세한 주소
+*/
+//http://www.juso.go.kr/support/AddressMainSearch.do?searchType=TOTAL => 주소검색기
+var signup = exports.signup = function signup(params) {
+    return function (dispatch) {
+        return HttpApi.post('POST_AUTH_SIGNUP', params).then(function (response) {
+            dispatch({ type: ActionTypes.LOGIN, author: response.data });
+            return Promise.resolve(response.data);
+        }).catch(function (err) {
+            return Promise.reject(err);
+        });
+    };
+};
+
+var logout = exports.logout = function logout() {
+    return function (dispatch) {
+        return HttpApi.post('POST_AUTH_LOGOUT').then(function (response) {
+            dispatch({ type: ActionTypes.LOGOUT });
+            return Promise.resolve();
+        }).catch(function (err) {
+            dispatch({ type: ActionTypes.LOGOUT });
+            return Promise.resolve();
+        });
+    };
+};
+/*
+* @params {String} query.idText
+* @params {String} query.countryDialCode
+* @params {String} query.phoneNumber
+* or
+* @params {String} query.currentPassword
+* and
+* @params {String} query.password
+*/
+var changePassword = exports.changePassword = function changePassword(params) {
+    return HttpApi.post('POST_AUTH_CHANGE_PASSWORD', params).then(function (response) {
+        return Promise.resolve(response.data);
+    }).catch(function (err) {
+        return Promise.reject(err);
+    });
+};
+/*
+* @params {String} query.countryDialCode
+* @params {String} query.phoneNumber
+*/
+var findIdText = exports.findIdText = function findIdText(params) {
+    return HttpApi.post('POST_AUTH_VERIFY_PHONENUMBER', params).then(function (response) {
+        return Promise.resolve(response.data);
+    }).catch(function (err) {
+        return Promise.reject(err);
+    });
+};
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(actionTypes, 'actionTypes', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+
+    __REACT_HOT_LOADER__.register(getVerificationCode, 'getVerificationCode', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+
+    __REACT_HOT_LOADER__.register(isIdDuplicated, 'isIdDuplicated', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+
+    __REACT_HOT_LOADER__.register(session, 'session', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+
+    __REACT_HOT_LOADER__.register(login, 'login', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+
+    __REACT_HOT_LOADER__.register(signup, 'signup', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+
+    __REACT_HOT_LOADER__.register(logout, 'logout', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+
+    __REACT_HOT_LOADER__.register(changePassword, 'changePassword', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+
+    __REACT_HOT_LOADER__.register(findIdText, 'findIdText', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+}();
+
+;
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -5486,7 +5676,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports) {
 
 var g;
@@ -5513,7 +5703,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
@@ -5525,14 +5715,14 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports) {
 
 exports.f = {}.propertyIsEnumerable;
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
@@ -5561,7 +5751,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5575,7 +5765,7 @@ module.exports = function (it) {
 
 
 
-var EventPluginHub = __webpack_require__(84);
+var EventPluginHub = __webpack_require__(85);
 var EventPluginUtils = __webpack_require__(151);
 
 var accumulateInto = __webpack_require__(224);
@@ -5699,7 +5889,7 @@ module.exports = EventPropagators;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5977,7 +6167,7 @@ module.exports = EventPluginHub;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6039,7 +6229,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6088,7 +6278,7 @@ var ReactInstanceMap = {
 module.exports = ReactInstanceMap;
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6155,7 +6345,7 @@ var createPath = exports.createPath = function createPath(location) {
 };
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6224,196 +6414,6 @@ var createPath = function createPath(location) {
 
   return path;
 };
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.findIdText = exports.changePassword = exports.logout = exports.signup = exports.login = exports.session = exports.isIdDuplicated = exports.getVerificationCode = exports.actionTypes = undefined;
-
-var _actionTypes = __webpack_require__(264);
-
-var ActionTypes = _interopRequireWildcard(_actionTypes);
-
-var _actions = __webpack_require__(89);
-
-var ActionAuth = _interopRequireWildcard(_actions);
-
-var _store = __webpack_require__(172);
-
-var _store2 = _interopRequireDefault(_store);
-
-var _index = __webpack_require__(650);
-
-var HttpApi = _interopRequireWildcard(_index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-/*
-* other constants
-*/
-/**
- * @providesModule ActionAuth
- */
-var actionTypes = exports.actionTypes = ActionTypes;
-/*
-* action creators
-*/
-
-//////////////////
-///// GET ////////
-//////////////////
-/*
-* @params {Number} query.countryDialCode
-*/
-
-
-// API
-var getVerificationCode = exports.getVerificationCode = function getVerificationCode(params) {
-    return HttpApi.get('GET_AUTH_VERIFICATION_CODE', params).then(function (response) {
-        return Promise.resolve(response.data);
-    }).catch(function (err) {
-        return Promise.reject(err);
-    });
-};
-
-/*
-* @params {String} query.idText
-*/
-var isIdDuplicated = exports.isIdDuplicated = function isIdDuplicated(params) {
-    return HttpApi.get('GET_AUTH_IS_ID_DUPLICATED', params).then(function (response) {
-        return Promise.resolve(null);
-    }).catch(function (err) {
-        return Promise.reject(err);
-    });
-};
-/*
-*/
-var session = exports.session = function session() {
-    return function (dispatch) {
-        return HttpApi.get('GET_AUTH_SESSION').then(function (response) {
-            dispatch({ type: ActionTypes.LOGIN, author: response.data });
-            return Promise.resolve(response.data);
-        }).catch(function (err) {
-            return Promise.reject(err);
-        });
-    };
-};
-
-//////////////////
-///// POST ///////
-//////////////////
-/*
-* @params {String} query.idText (idText 혹은 fullPhoneNumber 둘 중 하나는 필수)
-* @params {String} query.password
-*/
-var login = exports.login = function login(params) {
-    return function (dispatch) {
-        return HttpApi.post('POST_AUTH_LOGIN', params).then(function (response) {
-            dispatch({ type: ActionTypes.LOGIN, author: response.data });
-            return Promise.resolve(response.data);
-        }).catch(function (err) {
-            return Promise.reject(err);
-        });
-    };
-};
-/*
-* @params {String} params.idText
-* @params {String} params.password
-* @params {Number} params.countryDialCode
-* @params {Number} params.phoneNumber
-* @params {String} params.name
-* @params {String} params.email
-* @params {String} params.state // 주소에서 시(광역), 도 ex)서울시 / 경기도 / 강원도
-* @params {String} params.city // 주소에서 구(광역), 시 / 군 ex) 서초구 / 성남시 / 횡성군
-* @params {String} params.address1  // 주소에서 동(광역) / 구 / 읍 ex) 서초동 / 분당구 / 횡성읍
-* @params {String} params.address2 // 자세한 주소
-*/
-//http://www.juso.go.kr/support/AddressMainSearch.do?searchType=TOTAL => 주소검색기
-var signup = exports.signup = function signup(params) {
-    return function (dispatch) {
-        return HttpApi.post('POST_AUTH_SIGNUP', params).then(function (response) {
-            dispatch({ type: ActionTypes.LOGIN, author: response.data });
-            return Promise.resolve(response.data);
-        }).catch(function (err) {
-            return Promise.reject(err);
-        });
-    };
-};
-
-var logout = exports.logout = function logout() {
-    return function (dispatch) {
-        return HttpApi.post('POST_AUTH_LOGOUT').then(function (response) {
-            dispatch({ type: ActionTypes.LOGOUT });
-            return Promise.resolve();
-        }).catch(function (err) {
-            dispatch({ type: ActionTypes.LOGOUT });
-            return Promise.resolve();
-        });
-    };
-};
-/*
-* @params {String} query.idText
-* @params {String} query.countryDialCode
-* @params {String} query.phoneNumber
-* or
-* @params {String} query.currentPassword
-* and
-* @params {String} query.password
-*/
-var changePassword = exports.changePassword = function changePassword(params) {
-    return HttpApi.post('POST_AUTH_CHANGE_PASSWORD', params).then(function (response) {
-        return Promise.resolve(response.data);
-    }).catch(function (err) {
-        return Promise.reject(err);
-    });
-};
-/*
-* @params {String} query.countryDialCode
-* @params {String} query.phoneNumber
-*/
-var findIdText = exports.findIdText = function findIdText(params) {
-    return HttpApi.post('POST_AUTH_VERIFY_PHONENUMBER', params).then(function (response) {
-        return Promise.resolve(response.data);
-    }).catch(function (err) {
-        return Promise.reject(err);
-    });
-};
-;
-
-var _temp = function () {
-    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-        return;
-    }
-
-    __REACT_HOT_LOADER__.register(actionTypes, 'actionTypes', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
-
-    __REACT_HOT_LOADER__.register(getVerificationCode, 'getVerificationCode', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
-
-    __REACT_HOT_LOADER__.register(isIdDuplicated, 'isIdDuplicated', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
-
-    __REACT_HOT_LOADER__.register(session, 'session', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
-
-    __REACT_HOT_LOADER__.register(login, 'login', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
-
-    __REACT_HOT_LOADER__.register(signup, 'signup', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
-
-    __REACT_HOT_LOADER__.register(logout, 'logout', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
-
-    __REACT_HOT_LOADER__.register(changePassword, 'changePassword', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
-
-    __REACT_HOT_LOADER__.register(findIdText, 'findIdText', 'E:/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
-}();
-
-;
 
 /***/ }),
 /* 90 */
@@ -7383,7 +7383,7 @@ module.exports = TransactionImpl;
 
 
 
-var SyntheticUIEvent = __webpack_require__(85);
+var SyntheticUIEvent = __webpack_require__(86);
 var ViewportMetrics = __webpack_require__(231);
 
 var getEventModifierState = __webpack_require__(155);
@@ -8201,7 +8201,7 @@ var matchPath = function matchPath(pathname) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(248);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(249);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(89);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -8905,7 +8905,7 @@ module.exports = function (object, index, value) {
 /* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof = __webpack_require__(82);
+var classof = __webpack_require__(83);
 var ITERATOR = __webpack_require__(13)('iterator');
 var Iterators = __webpack_require__(72);
 module.exports = __webpack_require__(38).getIteratorMethod = function (it) {
@@ -10884,7 +10884,7 @@ module.exports = KeyEscapeUtils;
 var _prodInvariant = __webpack_require__(11);
 
 var ReactCurrentOwner = __webpack_require__(45);
-var ReactInstanceMap = __webpack_require__(86);
+var ReactInstanceMap = __webpack_require__(87);
 var ReactInstrumentation = __webpack_require__(32);
 var ReactUpdates = __webpack_require__(46);
 
@@ -11552,7 +11552,7 @@ var _valueEqual = __webpack_require__(249);
 
 var _valueEqual2 = _interopRequireDefault(_valueEqual);
 
-var _PathUtils = __webpack_require__(87);
+var _PathUtils = __webpack_require__(88);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12358,7 +12358,7 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _trackHelper = __webpack_require__(276);
 
-var _objectAssign = __webpack_require__(78);
+var _objectAssign = __webpack_require__(79);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -12905,9 +12905,9 @@ module.exports.f = function getOwnPropertyNames(it) {
 // 19.1.2.1 Object.assign(target, source, ...)
 var getKeys = __webpack_require__(60);
 var gOPS = __webpack_require__(93);
-var pIE = __webpack_require__(81);
+var pIE = __webpack_require__(82);
 var toObject = __webpack_require__(18);
-var IObject = __webpack_require__(80);
+var IObject = __webpack_require__(81);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
@@ -13106,7 +13106,7 @@ module.exports = function (iterator, fn, value, entries) {
 
 var aFunction = __webpack_require__(22);
 var toObject = __webpack_require__(18);
-var IObject = __webpack_require__(80);
+var IObject = __webpack_require__(81);
 var toLength = __webpack_require__(16);
 
 module.exports = function (that, callbackfn, aLen, memo, isRight) {
@@ -13680,7 +13680,7 @@ module.exports = function (that, maxLength, fillString, left) {
 
 var getKeys = __webpack_require__(60);
 var toIObject = __webpack_require__(29);
-var isEnum = __webpack_require__(81).f;
+var isEnum = __webpack_require__(82).f;
 module.exports = function (isEntries) {
   return function (it) {
     var O = toIObject(it);
@@ -13701,7 +13701,7 @@ module.exports = function (isEntries) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var classof = __webpack_require__(82);
+var classof = __webpack_require__(83);
 var from = __webpack_require__(212);
 module.exports = function (NAME) {
   return function toJSON() {
@@ -17801,7 +17801,7 @@ var ReactDOMComponentTree = __webpack_require__(17);
 var ReactDOMContainerInfo = __webpack_require__(577);
 var ReactDOMFeatureFlags = __webpack_require__(578);
 var ReactFeatureFlags = __webpack_require__(228);
-var ReactInstanceMap = __webpack_require__(86);
+var ReactInstanceMap = __webpack_require__(87);
 var ReactInstrumentation = __webpack_require__(32);
 var ReactMarkupChecksum = __webpack_require__(579);
 var ReactReconciler = __webpack_require__(76);
@@ -18999,7 +18999,7 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(114);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -20550,7 +20550,7 @@ var _reactDom = __webpack_require__(107);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _objectAssign = __webpack_require__(78);
+var _objectAssign = __webpack_require__(79);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -20952,9 +20952,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(AuthFooter, 'AuthFooter', 'E:/codecrain/sellev-test/src/Sellev/Components/Authentication/AuthFooter.jsx');
+    __REACT_HOT_LOADER__.register(AuthFooter, 'AuthFooter', 'E:/codecrain/sellev-test/src/Sellev/Components/Authentication/Footer.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Authentication/AuthFooter.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Authentication/Footer.jsx');
 }();
 
 ;
@@ -21001,7 +21001,7 @@ define(String.prototype, "padRight", "".padEnd);
 "pop,reverse,shift,keys,values,entries,indexOf,every,some,forEach,map,filter,find,findIndex,includes,join,slice,concat,push,splice,unshift,sort,lastIndexOf,reduce,reduceRight,copyWithin,fill".split(",").forEach(function (key) {
   [][key] && define(Array, key, Function.call.bind([][key]));
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(79)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(80)))
 
 /***/ }),
 /* 283 */
@@ -21157,7 +21157,7 @@ if (!USE_NATIVE) {
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
   __webpack_require__(63).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(81).f = $propertyIsEnumerable;
+  __webpack_require__(82).f = $propertyIsEnumerable;
   __webpack_require__(93).f = $getOwnPropertySymbols;
 
   if (DESCRIPTORS && !__webpack_require__(59)) {
@@ -21251,7 +21251,7 @@ setToStringTag(global.JSON, 'JSON', true);
 // all enumerable object keys, includes symbols
 var getKeys = __webpack_require__(60);
 var gOPS = __webpack_require__(93);
-var pIE = __webpack_require__(81);
+var pIE = __webpack_require__(82);
 module.exports = function (it) {
   var result = getKeys(it);
   var getSymbols = gOPS.f;
@@ -21480,7 +21480,7 @@ $export($export.S, 'Object', { setPrototypeOf: __webpack_require__(125).set });
 "use strict";
 
 // 19.1.3.6 Object.prototype.toString()
-var classof = __webpack_require__(82);
+var classof = __webpack_require__(83);
 var test = {};
 test[__webpack_require__(13)('toStringTag')] = 'z';
 if (test + '' != '[object z]') {
@@ -22754,7 +22754,7 @@ var toIObject = __webpack_require__(29);
 var arrayJoin = [].join;
 
 // fallback for not array-like strings
-$export($export.P + $export.F * (__webpack_require__(80) != Object || !__webpack_require__(37)(arrayJoin)), 'Array', {
+$export($export.P + $export.F * (__webpack_require__(81) != Object || !__webpack_require__(37)(arrayJoin)), 'Array', {
   join: function join(separator) {
     return arrayJoin.call(toIObject(this), separator === undefined ? ',' : separator);
   }
@@ -23309,7 +23309,7 @@ __webpack_require__(98)('split', 2, function (defined, SPLIT, $split) {
 var LIBRARY = __webpack_require__(59);
 var global = __webpack_require__(9);
 var ctx = __webpack_require__(35);
-var classof = __webpack_require__(82);
+var classof = __webpack_require__(83);
 var $export = __webpack_require__(0);
 var isObject = __webpack_require__(12);
 var aFunction = __webpack_require__(22);
@@ -26039,7 +26039,7 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
   typeof self === "object" ? self : this
 );
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(79)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(80)))
 
 /***/ }),
 /* 480 */
@@ -27714,7 +27714,7 @@ module.exports = ARIADOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(83);
+var EventPropagators = __webpack_require__(84);
 var ExecutionEnvironment = __webpack_require__(20);
 var FallbackCompositionState = __webpack_require__(506);
 var SyntheticCompositionEvent = __webpack_require__(507);
@@ -28278,8 +28278,8 @@ module.exports = SyntheticInputEvent;
 
 
 
-var EventPluginHub = __webpack_require__(84);
-var EventPropagators = __webpack_require__(83);
+var EventPluginHub = __webpack_require__(85);
+var EventPropagators = __webpack_require__(84);
 var ExecutionEnvironment = __webpack_require__(20);
 var ReactDOMComponentTree = __webpack_require__(17);
 var ReactUpdates = __webpack_require__(46);
@@ -29321,7 +29321,7 @@ module.exports = DefaultEventPluginOrder;
 
 
 
-var EventPropagators = __webpack_require__(83);
+var EventPropagators = __webpack_require__(84);
 var ReactDOMComponentTree = __webpack_require__(17);
 var SyntheticMouseEvent = __webpack_require__(110);
 
@@ -30114,7 +30114,7 @@ var DOMLazyTree = __webpack_require__(77);
 var DOMNamespaces = __webpack_require__(157);
 var DOMProperty = __webpack_require__(55);
 var DOMPropertyOperations = __webpack_require__(235);
-var EventPluginHub = __webpack_require__(84);
+var EventPluginHub = __webpack_require__(85);
 var EventPluginRegistry = __webpack_require__(108);
 var ReactBrowserEventEmitter = __webpack_require__(113);
 var ReactDOMComponentFlags = __webpack_require__(223);
@@ -31678,7 +31678,7 @@ module.exports = quoteAttributeValueForBrowser;
 
 
 
-var EventPluginHub = __webpack_require__(84);
+var EventPluginHub = __webpack_require__(85);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -32401,7 +32401,7 @@ module.exports = ReactDOMTextarea;
 var _prodInvariant = __webpack_require__(11);
 
 var ReactComponentEnvironment = __webpack_require__(160);
-var ReactInstanceMap = __webpack_require__(86);
+var ReactInstanceMap = __webpack_require__(87);
 var ReactInstrumentation = __webpack_require__(32);
 
 var ReactCurrentOwner = __webpack_require__(45);
@@ -33012,7 +33012,7 @@ var React = __webpack_require__(74);
 var ReactComponentEnvironment = __webpack_require__(160);
 var ReactCurrentOwner = __webpack_require__(45);
 var ReactErrorUtils = __webpack_require__(152);
-var ReactInstanceMap = __webpack_require__(86);
+var ReactInstanceMap = __webpack_require__(87);
 var ReactInstrumentation = __webpack_require__(32);
 var ReactNodeTypes = __webpack_require__(239);
 var ReactReconciler = __webpack_require__(76);
@@ -35080,7 +35080,7 @@ module.exports = getUnboundedScrollPosition;
 
 
 var DOMProperty = __webpack_require__(55);
-var EventPluginHub = __webpack_require__(84);
+var EventPluginHub = __webpack_require__(85);
 var EventPluginUtils = __webpack_require__(151);
 var ReactComponentEnvironment = __webpack_require__(160);
 var ReactEmptyComponent = __webpack_require__(240);
@@ -36000,7 +36000,7 @@ module.exports = SVGDOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(83);
+var EventPropagators = __webpack_require__(84);
 var ExecutionEnvironment = __webpack_require__(20);
 var ReactDOMComponentTree = __webpack_require__(17);
 var ReactInputSelection = __webpack_require__(244);
@@ -36195,7 +36195,7 @@ module.exports = SelectEventPlugin;
 var _prodInvariant = __webpack_require__(11);
 
 var EventListener = __webpack_require__(243);
-var EventPropagators = __webpack_require__(83);
+var EventPropagators = __webpack_require__(84);
 var ReactDOMComponentTree = __webpack_require__(17);
 var SyntheticAnimationEvent = __webpack_require__(568);
 var SyntheticClipboardEvent = __webpack_require__(569);
@@ -36206,7 +36206,7 @@ var SyntheticMouseEvent = __webpack_require__(110);
 var SyntheticDragEvent = __webpack_require__(573);
 var SyntheticTouchEvent = __webpack_require__(574);
 var SyntheticTransitionEvent = __webpack_require__(575);
-var SyntheticUIEvent = __webpack_require__(85);
+var SyntheticUIEvent = __webpack_require__(86);
 var SyntheticWheelEvent = __webpack_require__(576);
 
 var emptyFunction = __webpack_require__(44);
@@ -36504,7 +36504,7 @@ module.exports = SyntheticClipboardEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(85);
+var SyntheticUIEvent = __webpack_require__(86);
 
 /**
  * @interface FocusEvent
@@ -36543,7 +36543,7 @@ module.exports = SyntheticFocusEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(85);
+var SyntheticUIEvent = __webpack_require__(86);
 
 var getEventCharCode = __webpack_require__(166);
 var getEventKey = __webpack_require__(572);
@@ -36784,7 +36784,7 @@ module.exports = SyntheticDragEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(85);
+var SyntheticUIEvent = __webpack_require__(86);
 
 var getEventModifierState = __webpack_require__(155);
 
@@ -37108,7 +37108,7 @@ var _prodInvariant = __webpack_require__(11);
 
 var ReactCurrentOwner = __webpack_require__(45);
 var ReactDOMComponentTree = __webpack_require__(17);
-var ReactInstanceMap = __webpack_require__(86);
+var ReactInstanceMap = __webpack_require__(87);
 
 var getHostComponentFromComposite = __webpack_require__(247);
 var invariant = __webpack_require__(3);
@@ -37587,7 +37587,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _LocationUtils = __webpack_require__(167);
 
-var _PathUtils = __webpack_require__(87);
+var _PathUtils = __webpack_require__(88);
 
 var _createTransitionManager = __webpack_require__(168);
 
@@ -37964,7 +37964,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _LocationUtils = __webpack_require__(167);
 
-var _PathUtils = __webpack_require__(87);
+var _PathUtils = __webpack_require__(88);
 
 var _createTransitionManager = __webpack_require__(168);
 
@@ -38301,7 +38301,7 @@ var _warning = __webpack_require__(21);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _PathUtils = __webpack_require__(87);
+var _PathUtils = __webpack_require__(88);
 
 var _LocationUtils = __webpack_require__(167);
 
@@ -39018,7 +39018,7 @@ module.exports = Array.isArray || function (arr) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(116);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(89);
 /* unused harmony reexport parsePath */
 /* unused harmony reexport createPath */
 
@@ -39041,7 +39041,7 @@ module.exports = Array.isArray || function (arr) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(256);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -39345,7 +39345,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(256);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -39663,7 +39663,7 @@ var createHashHistory = function createHashHistory() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(171);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -40005,7 +40005,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(79)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(80)))
 
 /***/ }),
 /* 611 */
@@ -40203,7 +40203,7 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(79), __webpack_require__(618)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(80), __webpack_require__(618)(module)))
 
 /***/ }),
 /* 618 */
@@ -41522,7 +41522,7 @@ var _App = __webpack_require__(90);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _actions = __webpack_require__(89);
+var _actions = __webpack_require__(78);
 
 var ActionAuth = _interopRequireWildcard(_actions);
 
@@ -41644,7 +41644,7 @@ var _Header = __webpack_require__(175);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _actions = __webpack_require__(89);
+var _actions = __webpack_require__(78);
 
 var ActionAuth = _interopRequireWildcard(_actions);
 
@@ -43934,7 +43934,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _innerSlider = __webpack_require__(677);
 
-var _objectAssign = __webpack_require__(78);
+var _objectAssign = __webpack_require__(79);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -44157,7 +44157,7 @@ var _classnames = __webpack_require__(118);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _objectAssign = __webpack_require__(78);
+var _objectAssign = __webpack_require__(79);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -44463,7 +44463,7 @@ var _helpers = __webpack_require__(178);
 
 var _helpers2 = _interopRequireDefault(_helpers);
 
-var _objectAssign = __webpack_require__(78);
+var _objectAssign = __webpack_require__(79);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -44952,7 +44952,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _objectAssign = __webpack_require__(78);
+var _objectAssign = __webpack_require__(79);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -46890,9 +46890,9 @@ var _LoginBody = __webpack_require__(708);
 
 var _LoginBody2 = _interopRequireDefault(_LoginBody);
 
-var _AuthFooter = __webpack_require__(280);
+var _Footer = __webpack_require__(280);
 
-var _AuthFooter2 = _interopRequireDefault(_AuthFooter);
+var _Footer2 = _interopRequireDefault(_Footer);
 
 var _Authentication = __webpack_require__(56);
 
@@ -46928,7 +46928,7 @@ var LoginView = function (_React$Component) {
                 'div',
                 { className: _Authentication2.default.loginContainer },
                 _react2.default.createElement(_LoginBody2.default, null),
-                _react2.default.createElement(_AuthFooter2.default, null)
+                _react2.default.createElement(_Footer2.default, null)
             );
         }
     }]);
@@ -46988,7 +46988,7 @@ var _Authentication = __webpack_require__(56);
 
 var _Authentication2 = _interopRequireDefault(_Authentication);
 
-var _actions = __webpack_require__(89);
+var _actions = __webpack_require__(78);
 
 var ActionAuth = _interopRequireWildcard(_actions);
 
@@ -47374,7 +47374,7 @@ var _Authentication = __webpack_require__(56);
 
 var _Authentication2 = _interopRequireDefault(_Authentication);
 
-var _actions = __webpack_require__(89);
+var _actions = __webpack_require__(78);
 
 var ActionAuth = _interopRequireWildcard(_actions);
 
@@ -47418,8 +47418,10 @@ var SignupBody = function (_React$Component) {
 
             warnPhoneNumberNotValid: false,
             warnPhoneNumberAlreadyExist: false,
+            warnPhoneNumber6digitWrong: false, // 6자리 인증번호가 틀립니다
             warnPasswordNotValid: false,
-            warnPasswordRetype: false
+            warnPasswordRetype: false,
+            warnAgreeTerms: false // 약관 동의해라
         };
 
         _this.sendSmsVerificationCode = _this.sendSmsVerificationCode.bind(_this);
@@ -47433,10 +47435,8 @@ var SignupBody = function (_React$Component) {
     _createClass(SignupBody, [{
         key: 'sendSmsVerificationCode',
         value: function sendSmsVerificationCode() {
-            var _this2 = this;
-
             if (!this.state.phoneNumber || this.state.phoneNumber.length < 6) {
-                this.setState({ warnPhoneNumberValid: true });
+                this.setState({ warnPhoneNumberNotValid: true });
                 return;
             }
 
@@ -47449,30 +47449,37 @@ var SignupBody = function (_React$Component) {
                 warnPhoneNumberAlreadyExist: false
             });
 
-            ActionAuth.isIdDuplicated({
-                phoneNumber: this.state.phoneNumber
-            }).then(function (response) {
-                if (response.code == 200) {
-                    ActionAuth.getVerificationCode({
-                        phoneNumber: _this2.state.phoneNumber
-                    }).then(function (response) {
-                        _this2.setState({
-                            smsVerificationCode: data.verificationCode,
-                            warnPhoneNumberNotValid: false,
-                            isSmsSended: false
-                        });
-                        alert('인증번호가 SMS로 전송되었습니다.');
-                    }).catch(function (err) {
-                        _this2.setState({ isSmsSended: false });
-                        if (err) {
-                            console.log(err);
-                        }
-                    });
-                } else {
-                    _this2.setState({ isSmsSended: false });
-                    alert('이미 가입한 핸드폰번호입니다.');
-                }
+            //----------test------------------
+            this.setState({
+                smsVerificationCode: '123123',
+                warnPhoneNumberNotValid: false,
+                isSmsSended: false
             });
+            alert('인증번호가 SMS로 전송되었습니다.');
+            /* ActionAuth.isIdDuplicated({
+                 phoneNumber: this.state.phoneNumber,
+             }).then((response) => {
+                 if (response.code == 200) {
+                     ActionAuth.getVerificationCode({
+                         phoneNumber: this.state.phoneNumber,
+                     }).then((response) => {
+                         this.setState({
+                             smsVerificationCode: data.verificationCode,
+                             warnPhoneNumberNotValid: false,
+                             isSmsSended: false,
+                         });
+                         alert('인증번호가 SMS로 전송되었습니다.');
+                     }).catch((err) => {
+                         this.setState({ isSmsSended: false });
+                         if (err) {
+                             console.log(err);
+                         }
+                     });
+                 } else {
+                     this.setState({ isSmsSended: false });
+                     alert('이미 가입한 핸드폰번호입니다.');
+                 }
+             });*/
         }
     }, {
         key: 'smsVerificationCodeCheck',
@@ -47490,7 +47497,50 @@ var SignupBody = function (_React$Component) {
         }
     }, {
         key: 'signup',
-        value: function signup() {}
+        value: function signup() {
+            var _this2 = this;
+
+            this.setState({
+                warnPhoneNumberNotValid: false,
+                warnPhoneNumberAlreadyExist: false,
+                warnPhoneNumber6digitWrong: false, // 6자리 인증번호가 틀립니다
+                warnPasswordNotValid: false,
+                warnPasswordRetype: false,
+                warnAgreeTerms: false // 약관 동의해라
+            });
+
+            // 휴대폰 인증완료되었는가?
+            if (!this.state.isSmsVerified) {
+                this.setState({ warnPhoneNumberNotValid: true });
+            }
+            // 비밀번호 포맷이 맞는가?
+            if (this.state.password == null || this.state.password.length < 5 || this.state.password.length > 20) {
+                this.setState({ warnPasswordNotValid: true });
+            }
+            // 비밀번호 재입력했는가?
+            if (this.state.passwordRe != this.state.password) {
+                this.setState({ warnPasswordRetype: true });
+            }
+            // 약관에 동의하였는가?
+            if (!this.state.isAgreeTerms) {
+                this.setState({ warnAgreeTerms: true });
+            }
+            setTimeout(function () {
+                if (_this2.state.warnPhoneNumberNotValid || _this2.state.warnPhoneNumberAlreadyExist || _this2.state.warnPasswordNotValid || _this2.state.warnPasswordRetype || _this2.state.warnPhoneNumber6digitWrong || _this2.state.warnAgreeTerms) {
+                    return;
+                }
+                alert('회원가입 성공');
+                /*// 가입시작
+                this.props.dispatch(ActionAuth.signup({
+                    phoneNumber: this.state.phoneNumber,
+                    password: this.state.password,
+                })).then((response) => {
+                    console.log(response);
+                }).catch((err) => {
+                    alert('회원가입이 실패하였습니다. \n잠시 후, 다시 시도해주세요.');
+                });*/
+            }, 100);
+        }
     }, {
         key: 'render',
         value: function render() {
@@ -47527,19 +47577,23 @@ var SignupBody = function (_React$Component) {
                         ) : _react2.default.createElement(
                             'div',
                             { className: _App2.default.formRow },
+                            _react2.default.createElement(
+                                'div',
+                                { className: _App2.default.formInputName },
+                                '\uD578\uB4DC\uD3F0\uBC88\uD638'
+                            ),
                             this.state.smsVerificationCode.length > 0 ? _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', value: this.state.phoneNumber, disabled: true }) : _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', placeholder: '핸드폰번호를 입력해주세요.', value: this.state.phoneNumber, onChange: function onChange(e) {
                                     return _this3.setState({ phoneNumber: e.target.value });
                                 } }),
-                            '  /*\uACE0\uCCD0\uB193\uAE30*/',
                             _react2.default.createElement(
                                 'div',
                                 { className: _App2.default.inputVerifyBox, onClick: this.sendSmsVerificationCode.bind(this) },
                                 '\uC778\uC99D'
                             ),
-                            this.state.warnPhoneNumberValid ? _react2.default.createElement(
+                            this.state.warnPhoneNumberNotValid ? _react2.default.createElement(
                                 'div',
                                 { className: _App2.default.formInputWarn },
-                                '\uD734\uB300\uD3F0 \uC778\uC99D\uC744 \uBC1B\uC73C\uC138\uC694.'
+                                '\uD578\uB4DC\uD3F0 \uC778\uC99D\uC744 \uBC1B\uC73C\uC138\uC694.'
                             ) : null,
                             this.state.warnPhoneNumberAlreadyExist ? _react2.default.createElement(
                                 'div',
@@ -47550,6 +47604,11 @@ var SignupBody = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: _App2.default.formRow + (this.state.smsVerificationCode.length > 0 ? '' : ' ' + _App2.default.disabled) },
+                            _react2.default.createElement(
+                                'div',
+                                { className: _App2.default.formInputName },
+                                '\uC778\uC99D\uBC88\uD638'
+                            ),
                             _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', autoComplete: 'off', placeholder: this.state.smsVerificationCode.length > 0 ? '' : '위의 인증버튼 선택 후 인증번호를 입력해주세요.', value: this.state.smsVerificationCodeByUser, onChange: function onChange(e) {
                                     return _this3.setState({ smsVerificationCodeByUser: e.target.value });
                                 }, disabled: this.state.smsVerificationCode.length <= 0 }),
@@ -47583,7 +47642,14 @@ var SignupBody = function (_React$Component) {
                                 { className: _App2.default.formInputName },
                                 '\uBE44\uBC00\uBC88\uD638'
                             ),
-                            _react2.default.createElement('input', { className: _App2.default.formInputWithVerify, type: 'password', autoComplete: 'off', placeholder: '비밀번호 확인' })
+                            _react2.default.createElement('input', { className: _App2.default.formInputWithVerify, type: 'password', autoComplete: 'off', value: this.state.password, onChange: function onChange(e) {
+                                    return _this3.setState({ password: e.target.value });
+                                }, placeholder: '비밀번호 확인' }),
+                            this.state.warnPasswordNotValid ? _react2.default.createElement(
+                                'div',
+                                { className: _App2.default.formInputWarn },
+                                '\uBE44\uBC00\uBC88\uD638\uB294 6\uC790 \uC774\uC0C1, 30\uC790 \uBBF8\uB9CC, \uC601\uBB38/\uC22B\uC790 \uC870\uD569\uC785\uB2C8\uB2E4.'
+                            ) : null
                         ),
                         _react2.default.createElement(
                             'div',
@@ -47593,7 +47659,14 @@ var SignupBody = function (_React$Component) {
                                 { className: _App2.default.formInputName },
                                 '\uBE44\uBC00\uBC88\uD638\uD655\uC778'
                             ),
-                            _react2.default.createElement('input', { className: _App2.default.formInputWithVerify, type: 'password', autoComplete: 'off', placeholder: '비밀번호 확인' })
+                            _react2.default.createElement('input', { className: _App2.default.formInputWithVerify, type: 'password', autoComplete: 'off', value: this.state.passwordRe, onChange: function onChange(e) {
+                                    return _this3.setState({ passwordRe: e.target.value });
+                                }, placeholder: '비밀번호 확인' }),
+                            this.state.warnPasswordRetype ? _react2.default.createElement(
+                                'div',
+                                { className: _App2.default.formInputWarn },
+                                '\uBE44\uBC00\uBC88\uD638 \uC7AC\uC785\uB825\uC774 \uD2C0\uB838\uC2B5\uB2C8\uB2E4.'
+                            ) : null
                         ),
                         _react2.default.createElement(
                             'div',
@@ -47602,7 +47675,9 @@ var SignupBody = function (_React$Component) {
                                 'div',
                                 { className: _App2.default.agreeLabel },
                                 ' ',
-                                _react2.default.createElement('input', { type: 'checkbox' }),
+                                _react2.default.createElement('input', { type: 'checkbox', value: this.state.isAgreeTerms, onChange: function onChange(e) {
+                                        return _this3.setState({ isAgreeTerms: e.target.checked });
+                                    } }),
                                 _react2.default.createElement(
                                     'label',
                                     null,
@@ -47680,9 +47755,9 @@ var _FindPasswordChangeBody = __webpack_require__(715);
 
 var _FindPasswordChangeBody2 = _interopRequireDefault(_FindPasswordChangeBody);
 
-var _AuthFooter = __webpack_require__(280);
+var _Footer = __webpack_require__(280);
 
-var _AuthFooter2 = _interopRequireDefault(_AuthFooter);
+var _Footer2 = _interopRequireDefault(_Footer);
 
 var _Authentication = __webpack_require__(56);
 
@@ -47736,7 +47811,7 @@ var LoginView = function (_React$Component) {
                 this.state.verified ? _react2.default.createElement(_FindPasswordChangeBody2.default, null) : _react2.default.createElement(_FindPasswordVerifyBody2.default, { onVerified: function onVerified(verified) {
                         return _this2.verifyUser(verified);
                     } }),
-                _react2.default.createElement(_AuthFooter2.default, null)
+                _react2.default.createElement(_Footer2.default, null)
             );
         }
     }]);
@@ -47817,19 +47892,128 @@ var LoginView = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (LoginView.__proto__ || Object.getPrototypeOf(LoginView)).call(this, props));
 
+        _this.state = {
+            phoneNumber: '',
+
+            isSmsSended: false,
+            isSmsVerified: false,
+            smsVerificationCode: '',
+            smsVerificationCodeByUser: '',
+
+            warnPhoneNumberNotValid: false,
+            warnPhoneNumber6digitWrong: false // 6자리 인증번호가 틀립니다
+        };
+
+        _this.sendSmsVerificationCode = _this.sendSmsVerificationCode.bind(_this);
+        _this.smsVerificationCodeCheck = _this.smsVerificationCodeCheck.bind(_this);
         _this.verifyUser = _this.verifyUser.bind(_this);
         return _this;
     }
+    // 인증번호 요청
+
 
     _createClass(LoginView, [{
+        key: 'sendSmsVerificationCode',
+        value: function sendSmsVerificationCode() {
+            if (!this.state.phoneNumber || this.state.phoneNumber.length < 6) {
+                this.setState({ warnPhoneNumberNotValid: true });
+                return;
+            }
+
+            if (this.state.isSmsSended) {
+                return; // 이미 SMS 전송 중임
+            }
+
+            this.setState({
+                isSmsSended: true
+            });
+
+            //----------test------------------
+            this.setState({
+                smsVerificationCode: '123123',
+                warnPhoneNumberNotValid: false,
+                isSmsSended: false
+            });
+            alert('인증번호가 SMS로 전송되었습니다.');
+            /* ActionAuth.isIdDuplicated({
+                 phoneNumber: this.state.phoneNumber,
+             }).then((response) => {
+                 if (response.code == 200) {
+                     ActionAuth.getVerificationCode({
+                         phoneNumber: this.state.phoneNumber,
+                     }).then((response) => {
+                         this.setState({
+                             smsVerificationCode: data.verificationCode,
+                             warnPhoneNumberNotValid: false,
+                             isSmsSended: false,
+                         });
+                         alert('인증번호가 SMS로 전송되었습니다.');
+                     }).catch((err) => {
+                         this.setState({ isSmsSended: false });
+                         if (err) {
+                             console.log(err);
+                         }
+                     });
+                 } else {
+                     this.setState({ isSmsSended: false });
+                     alert('이미 가입한 핸드폰번호입니다.');
+                 }
+             });*/
+        }
+    }, {
+        key: 'smsVerificationCodeCheck',
+        value: function smsVerificationCodeCheck() {
+            if (this.state.smsVerificationCode.toString() != this.state.smsVerificationCodeByUser.toString()) {
+                this.setState({ warnPhoneNumber6digitWrong: true });
+                return;
+            }
+            this.setState({
+                smsVerificationCode: '',
+                isSmsSended: false,
+                isSmsVerified: true,
+                warnPhoneNumber6digitWrong: false
+            });
+
+            if (!this.state.isSmsVerified) {
+                this.setState({ warnPhoneNumberNotValid: true });
+            }
+        }
+    }, {
         key: 'verifyUser',
         value: function verifyUser() {
-            console.log('dfsf');
-            this.props.onVerified(true);
+            var _this2 = this;
+
+            this.setState({
+                warnPhoneNumberNotValid: false,
+                warnPhoneNumber6digitWrong: false // 6자리 인증번호가 틀립니다
+            });
+            // 휴대폰 인증완료되었는가?
+            if (!this.state.isSmsVerified) {
+                this.setState({ warnPhoneNumberNotValid: true });
+            }
+            setTimeout(function () {
+                if (_this2.state.warnPhoneNumberNotValid || _this2.state.warnPhoneNumber6digitWrong) {
+                    alert('핸드폰번호가 인증되지 않았습니다.');
+                    return;
+                }
+
+                _this2.props.onVerified(true);
+                /*// 가입시작
+                this.props.dispatch(ActionAuth.signup({
+                    phoneNumber: this.state.phoneNumber,
+                    password: this.state.password,
+                })).then((response) => {
+                    console.log(response);
+                }).catch((err) => {
+                    alert('회원가입이 실패하였습니다. \n잠시 후, 다시 시도해주세요.');
+                });*/
+            }, 100);
         }
     }, {
         key: 'render',
         value: function render() {
+            var _this3 = this;
+
             return _react2.default.createElement(
                 'div',
                 { className: _Authentication2.default.verifyBody },
@@ -47841,7 +48025,16 @@ var LoginView = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     { className: _App2.default.formGroup },
-                    _react2.default.createElement(
+                    this.state.isSmsVerified ? _react2.default.createElement(
+                        'div',
+                        { className: _App2.default.formRow },
+                        _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', value: this.state.phoneNumber, disabled: true }),
+                        _react2.default.createElement(
+                            'div',
+                            { className: _App2.default.inputVerifyBox },
+                            '\uC778\uC99D\uC644\uB8CC'
+                        )
+                    ) : _react2.default.createElement(
                         'div',
                         { className: _App2.default.formRow },
                         _react2.default.createElement(
@@ -47849,22 +48042,46 @@ var LoginView = function (_React$Component) {
                             { className: _App2.default.formInputName },
                             '\uD578\uB4DC\uD3F0\uBC88\uD638'
                         ),
-                        _react2.default.createElement('input', { className: _App2.default.formInputWithVerify, type: 'text', placeholder: '핸드폰번호를 입력해주세요.' }),
+                        this.state.smsVerificationCode.length > 0 ? _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', value: this.state.phoneNumber, disabled: true }) : _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', placeholder: '핸드폰번호를 입력해주세요.', value: this.state.phoneNumber, onChange: function onChange(e) {
+                                return _this3.setState({ phoneNumber: e.target.value });
+                            } }),
                         _react2.default.createElement(
                             'div',
-                            { className: _App2.default.formInputVerifyBtn },
+                            { className: _App2.default.inputVerifyBox, onClick: this.sendSmsVerificationCode },
                             '\uC778\uC99D'
-                        )
+                        ),
+                        this.state.warnPhoneNumberNotValid ? _react2.default.createElement(
+                            'div',
+                            { className: _App2.default.formInputWarn },
+                            '\uD578\uB4DC\uD3F0 \uC778\uC99D\uC744 \uBC1B\uC73C\uC138\uC694.'
+                        ) : null,
+                        this.state.warnPhoneNumberNotExist ? _react2.default.createElement(
+                            'div',
+                            { className: _App2.default.formInputWarn },
+                            '\uAC00\uC785 \uC548\uB41C \uD578\uB4DC\uD3F0\uBC88\uD638\uC785\uB2C8\uB2E4.'
+                        ) : null
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: _App2.default.formRow },
+                        { className: _App2.default.formRow + (this.state.smsVerificationCode.length > 0 ? '' : ' ' + _App2.default.disabled) },
                         _react2.default.createElement(
                             'div',
                             { className: _App2.default.formInputName },
                             '\uC778\uC99D\uBC88\uD638'
                         ),
-                        _react2.default.createElement('input', { className: _App2.default.formInput, type: 'text', placeholder: '위의 인증버튼 선택 후 인증번호를 입력해주세요.' })
+                        _react2.default.createElement('input', { className: _App2.default.formInput + ' ' + _App2.default.inputWithVerify, type: 'text', autoComplete: 'off', placeholder: this.state.smsVerificationCode.length > 0 ? '' : '위의 인증버튼 선택 후 인증번호를 입력해주세요.', value: this.state.smsVerificationCodeByUser, onChange: function onChange(e) {
+                                return _this3.setState({ smsVerificationCodeByUser: e.target.value });
+                            }, disabled: this.state.smsVerificationCode.length <= 0 }),
+                        this.state.smsVerificationCode.length > 0 ? _react2.default.createElement(
+                            'div',
+                            { className: _App2.default.inputVerifyBox, onClick: this.smsVerificationCodeCheck },
+                            '\uC778\uC99D\uD558\uAE30'
+                        ) : null,
+                        this.state.warnPhoneNumber6digitWrong ? _react2.default.createElement(
+                            'div',
+                            { className: _App2.default.formInputWarn },
+                            '\uC778\uC99D\uBC88\uD638\uAC00 \uD2C0\uB9BD\uB2C8\uB2E4.'
+                        ) : null
                     )
                 ),
                 _react2.default.createElement(
@@ -47935,6 +48152,12 @@ var _Authentication = __webpack_require__(56);
 
 var _Authentication2 = _interopRequireDefault(_Authentication);
 
+var _actions = __webpack_require__(78);
+
+var ActionAuth = _interopRequireWildcard(_actions);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -47948,18 +48171,66 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // Styles
 
 
+// Actions
+
+
 var LoginView = function (_React$Component) {
     _inherits(LoginView, _React$Component);
 
     function LoginView(props) {
         _classCallCheck(this, LoginView);
 
-        return _possibleConstructorReturn(this, (LoginView.__proto__ || Object.getPrototypeOf(LoginView)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (LoginView.__proto__ || Object.getPrototypeOf(LoginView)).call(this, props));
+
+        _this.state = {
+            password: '',
+            passwordRe: '',
+
+            warnPasswordNotValid: false,
+            warnPasswordRetype: false
+        };
+
+        _this.changePassword = _this.changePassword.bind(_this);
+        return _this;
     }
 
     _createClass(LoginView, [{
+        key: 'changePassword',
+        value: function changePassword() {
+            var _this2 = this;
+
+            this.setState({
+                warnPasswordNotValid: false,
+                warnPasswordRetype: false // 6자리 인증번호가 틀립니다
+            });
+            // 비밀번호 포맷이 맞는가?
+            if (this.state.password == null || this.state.password.length < 6 || this.state.password.length > 20) {
+                this.setState({ warnPasswordNotValid: true });
+            }
+            // 비밀번호 재입력했는가?
+            if (this.state.passwordRe != this.state.password) {
+                this.setState({ warnPasswordRetype: true });
+            }
+            setTimeout(function () {
+                if (_this2.state.warnPasswordNotValid || _this2.state.warnPasswordRetype) {
+                    return;
+                }
+                alert('비밀번호 변경 성공');
+                // // 비밀번호 변경 시작
+                // this.props.dispatch(ActionAuth.changePassword({
+                //     password: this.state.password,
+                // })).then((response) => {
+                //     console.log(response);
+                // }).catch((err) => {
+                //     alert('비밀번호 변경이 실패하였습니다. \n잠시 후, 다시 시도해주세요.');
+                // });
+            }, 100);
+        }
+    }, {
         key: 'render',
         value: function render() {
+            var _this3 = this;
+
             return _react2.default.createElement(
                 'div',
                 { className: _Authentication2.default.changeBody },
@@ -47979,7 +48250,14 @@ var LoginView = function (_React$Component) {
                             { className: _App2.default.formInputName },
                             '\uC0C8 \uBE44\uBC00\uBC88\uD638'
                         ),
-                        _react2.default.createElement('input', { className: _App2.default.formInputWithVerify, type: 'password', placeholder: '비밀번호는 6~18문자로 구성해주세요.' })
+                        _react2.default.createElement('input', { className: _App2.default.formInputWithVerify, type: 'password', value: this.state.password, onChange: function onChange(e) {
+                                return _this3.setState({ password: e.target.value });
+                            }, placeholder: '비밀번호는 6~18문자로 구성해주세요.' }),
+                        this.state.warnPasswordNotValid ? _react2.default.createElement(
+                            'div',
+                            { className: _App2.default.formInputWarn },
+                            '\uBE44\uBC00\uBC88\uD638\uB294 6\uC790 \uC774\uC0C1, 30\uC790 \uBBF8\uB9CC, \uC601\uBB38/\uC22B\uC790 \uC870\uD569\uC785\uB2C8\uB2E4.'
+                        ) : null
                     ),
                     _react2.default.createElement(
                         'div',
@@ -47989,7 +48267,14 @@ var LoginView = function (_React$Component) {
                             { className: _App2.default.formInputName },
                             '\uC0C8 \uBE44\uBC00\uBC88\uD638 \uD655\uC778'
                         ),
-                        _react2.default.createElement('input', { className: _App2.default.formInput, type: 'password', placeholder: '새 비밀번호를 다시 입력해주세요.' })
+                        _react2.default.createElement('input', { className: _App2.default.formInput, type: 'password', value: this.state.passwordRe, onChange: function onChange(e) {
+                                return _this3.setState({ passwordRe: e.target.value });
+                            }, placeholder: '새 비밀번호를 다시 입력해주세요.' }),
+                        this.state.warnPasswordRetype ? _react2.default.createElement(
+                            'div',
+                            { className: _App2.default.formInputWarn },
+                            '\uBE44\uBC00\uBC88\uD638 \uC7AC\uC785\uB825\uC774 \uD2C0\uB838\uC2B5\uB2C8\uB2E4.'
+                        ) : null
                     )
                 ),
                 _react2.default.createElement(
@@ -47997,7 +48282,7 @@ var LoginView = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                         'div',
-                        { className: _Authentication2.default.authBtn, onClick: this.verifyUser },
+                        { className: _Authentication2.default.authBtn, onClick: this.changePassword },
                         '\uBE44\uBC00\uBC88\uD638 \uBCC0\uACBD'
                     )
                 )
@@ -49735,7 +50020,7 @@ return Promise$2;
 
 //# sourceMappingURL=es6-promise.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(79)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(80)))
 
 /***/ }),
 /* 726 */
