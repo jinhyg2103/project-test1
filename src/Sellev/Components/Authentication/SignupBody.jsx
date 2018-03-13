@@ -19,6 +19,7 @@ class SignupBody extends React.Component {
         super(props);
 
         this.state = {
+            authTest: true, /* 핸드폰 번호 인증 버튼 테스트*/
             phoneNumber: '',
             password: '',
             passwordRe: '',
@@ -155,10 +156,12 @@ class SignupBody extends React.Component {
         return (
           <div className={stylesAuth.signupBody}>
               <div className={stylesAuth.signupLogo}>
-                  <img src="/Sellev/assets/img/logo_sellev_black_lg.png" alt="" />
+                  <img src="/Sellev/assets/img/logo_sellev_auth.png" alt="" />
               </div>
               <div className={stylesAuth.signupBox}>
-                  <div>핸드폰번호로 셀레브 회원가입</div>
+                  <div className={stylesAuth.bodyTitle}>
+                      핸드폰번호로<br />
+                      셀레브 회원가입</div>
                   <div className={styles.formGroup}>
                       {/*<div className={styles.formRow}>
                           <div className={styles.formInputName}>핸드폰번호</div>
@@ -171,13 +174,15 @@ class SignupBody extends React.Component {
                               <div className={styles.inputVerifyBox}>인증완료</div>
                           </div>
                       ) : (
-                          <div className={styles.formRow}>
-                              <div className={styles.formInputName}>핸드폰번호</div>
-                              { this.state.smsVerificationCode.length > 0
-                                  ? <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} value={this.state.phoneNumber} disabled />
-                                  : <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} placeholder={'핸드폰번호를 입력해주세요.'} value={this.state.phoneNumber} onChange={(e) => this.setState({ phoneNumber: e.target.value })} />
-                              }
-                              <div className={styles.inputVerifyBox} onClick={this.sendSmsVerificationCode.bind(this)}>인증</div>
+                          <div>
+                              <div className={styles.formRow}>
+                                  <div className={styles.formInputName}>핸드폰번호</div>
+                                  { this.state.smsVerificationCode.length > 0
+                                      ? <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} value={this.state.phoneNumber} disabled />
+                                      : <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} placeholder={'핸드폰번호를 입력해주세요.'} value={this.state.phoneNumber} onChange={(e) => this.setState({ phoneNumber: e.target.value })} />
+                                  }
+                                  <div className={styles.inputVerifyBox + ' ' + styles.disabled} onClick={this.sendSmsVerificationCode.bind(this)}>인증</div>
+                              </div>
                               { this.state.warnPhoneNumberNotValid ? <div className={styles.formInputWarn}>핸드폰 인증을 받으세요.</div> : null }
                               { this.state.warnPhoneNumberAlreadyExist ? <div className={styles.formInputWarn}>이미 가입한 휴대폰입니다. 비밀번호를 찾아보세요.</div> : null }
                           </div>

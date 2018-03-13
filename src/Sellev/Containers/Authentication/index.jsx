@@ -7,12 +7,12 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-import LoginContainer from "../../Components/Authentication/Login";
-import SignupContainer from "../../Components/Authentication/Signup";
-import FindPasswordContainer from "../../Components/Authentication/FindPassword";
+import LoginContainer from '../../Components/Authentication/Login';
+import SignupContainer from '../../Components/Authentication/Signup';
+import FindPasswordContainer from '../../Components/Authentication/FindPassword';
 
 // Styles
-import stylesAuth from '../../Styles/Containers/Authentication.css';
+
 
 
 class LoginView extends React.Component {
@@ -21,7 +21,7 @@ class LoginView extends React.Component {
     }
     render() {
         return (
-            <div className={stylesAuth.authContainer}>
+            <div>
                 <Route path={'/auth/login'} exact={true} strict={false} component={LoginContainer} />
                 <Route path={'/auth/signup'} exact={true} strict={false} component={SignupContainer} />
                 <Route path={'/auth/findpassword'} exact={true} strict={false} component={FindPasswordContainer} />

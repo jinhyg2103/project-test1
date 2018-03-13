@@ -16,6 +16,7 @@ class LoginView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            authTest: true, /*인증 버튼 테스트용 임의로 넣어둠 */
             phoneNumber: '',
 
             isSmsSended: false,
@@ -125,7 +126,7 @@ class LoginView extends React.Component {
     render() {
         return (
             <div className={stylesAuth.verifyBody}>
-                <div>비밀번호를 잊으셨나요?</div>
+                <div className={stylesAuth.bodyTitle}>비밀번호를 잊으셨나요?</div>
                 <div className={styles.formGroup}>
                     { this.state.isSmsVerified ? (
                         <div className={styles.formRow}>
@@ -133,23 +134,26 @@ class LoginView extends React.Component {
                             <div className={styles.inputVerifyBox}>인증완료</div>
                         </div>
                     ) : (
+                        <div>
                         <div className={styles.formRow}>
                             <div className={styles.formInputName}>핸드폰번호</div>
                             { this.state.smsVerificationCode.length > 0
                                 ? <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} value={this.state.phoneNumber} disabled />
                                 : <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} placeholder={'핸드폰번호를 입력해주세요.'} value={this.state.phoneNumber} onChange={(e) => this.setState({ phoneNumber: e.target.value })} />
                             }
-                            <div className={styles.inputVerifyBox} onClick={this.sendSmsVerificationCode}>인증</div>
+                            {/*인증버튼 활성화 .formRow .inputVerifyBox.black */}
+                            <div className={styles.inputVerifyBox + ' ' + (this.state.authTest ? styles.activeBlack : styles.disabled)} onClick={this.sendSmsVerificationCode}>인증</div>
+                        </div>
                             { this.state.warnPhoneNumberNotValid ? <div className={styles.formInputWarn}>핸드폰 인증을 받으세요.</div> : null }
                             { this.state.warnPhoneNumberNotExist ? <div className={styles.formInputWarn}>가입 안된 핸드폰번호입니다.</div> : null }
                         </div>
                     ) }
                     <div className={styles.formRow + ( this.state.smsVerificationCode.length > 0 ? '' : ' ' + styles.disabled )}>
                         <div className={styles.formInputName}>인증번호</div>
-                        <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} autoComplete={'off'} placeholder={ this.state.smsVerificationCode.length > 0 ? '' : '위의 인증버튼 선택 후 인증번호를 입력해주세요.' } value={this.state.smsVerificationCodeByUser} onChange={(e) => this.setState({ smsVerificationCodeByUser: e.target.value })} disabled={ this.state.smsVerificationCode.length <= 0 }/>
-                        { this.state.smsVerificationCode.length > 0 ? <div className={styles.inputVerifyBox} onClick={this.smsVerificationCodeCheck}>인증하기</div> : null }
-                        { this.state.warnPhoneNumber6digitWrong ? <div className={styles.formInputWarn}>인증번호가 틀립니다.</div> : null }
+                        <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} autoComplete={'off'} placeholder={this.state.smsVerificationCode.length > 0 ? '' : '위의 인증버튼 선택 후 인증번호를 입력해주세요.' } value={this.state.smsVerificationCodeByUser} onChange={(e) => this.setState({ smsVerificationCodeByUser: e.target.value })} disabled={ this.state.smsVerificationCode.length <= 0 }/>
+                        { this.state.smsVerificationCode.length > 0 ? <div className={styles.inputVerifyBox + ' ' + styles.activeWhite} onClick={this.smsVerificationCodeCheck}>인증하기</div> : null }
                     </div>
+                    { this.state.warnPhoneNumber6digitWrong ? <div className={styles.formInputWarn}>인증번호가 틀립니다.</div> : null }
                 </div>
                 <div>
                     <div className={stylesAuth.authBtn} onClick={this.verifyUser}>다음</div>
