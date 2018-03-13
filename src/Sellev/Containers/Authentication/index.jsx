@@ -9,6 +9,7 @@ import { withRouter } from 'react-router';
 // Components
 import LoginContainer from "../../Components/Authentication/Login";
 import SignupContainer from "../../Components/Authentication/Signup";
+import FindPasswordContainer from "../../Components/Authentication/FindPassword";
 
 // Styles
 import stylesAuth from '../../Styles/Containers/Authentication.css';
@@ -21,8 +22,9 @@ class LoginView extends React.Component {
     render() {
         return (
             <div className={stylesAuth.authContainer}>
-                <Route path={'/auth/login'} exact={false} strict={false} component={LoginContainer} />
-                <Route path={'/auth/signup'} exact={false} strict={false} component={SignupContainer} />
+                <Route path={'/auth/login'} exact={true} strict={false} component={LoginContainer} />
+                <Route path={'/auth/signup'} exact={true} strict={false} component={SignupContainer} />
+                <Route path={'/auth/findpassword'} exact={true} strict={false} component={FindPasswordContainer} />
             </div>
         );
     }
