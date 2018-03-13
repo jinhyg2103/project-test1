@@ -68,11 +68,11 @@ class LoginBody extends React.Component {
     }
     render() {
         return (
-            <div className={stylesAuth.loginBody}>
-                <div className={stylesAuth.loginLogo}>
-                    <img src="/Sellev/assets/img/logo_sellev_black_lg.png" alt="" />
+            <div className={stylesAuth.authBody}>
+                <div className={stylesAuth.authLogo}>
+                    <img src="/Sellev/assets/img/logo_sellev_auth.png" alt="" />
                 </div>
-                <div className={stylesAuth.loginBox}>
+                <div className={stylesAuth.authBox}>
                     {/*<AuthBtn type={'kakao'} />
                     <AuthBtn type={'naver'} />
                     <AuthBtn type={'facebook'} />*/}
