@@ -15,7 +15,7 @@ class AuthFooter extends React.Component {
     componentWillMount() {
         this.setState({
             urlParams: ParseUrlParameter.parse(this.props.location.search),
-        });
+        })
     }
     render() {
         return (

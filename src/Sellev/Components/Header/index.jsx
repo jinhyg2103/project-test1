@@ -80,10 +80,10 @@ class Header extends React.Component {
                                 <div />
                             </div>
                             <ul className={(this.state.dropDownOpen ? styles.toggleMenu : styles.leftList)}>
-                                <li><Link to={'/home'}>Home</Link></li>
+                                <li><Link to={'/'}>Home</Link></li>
                                 <li><Link to={'/hashtag'}>해시태그</Link></li>
-                                <li><Link to={'/product'}>펀딩&마켓</Link></li>
-                                <li><Link to={'/media'}>동영상</Link></li>
+                                <li><Link to={'/fundingmarket'}>펀딩&마켓</Link></li>
+                                <li><Link to={'/video'}>동영상</Link></li>
                                 <li><Link to={'/myhome'}>마이홈</Link></li>
                             </ul>
                         </div>

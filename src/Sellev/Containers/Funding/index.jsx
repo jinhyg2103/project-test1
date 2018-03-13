@@ -5,6 +5,9 @@ import {
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
+// Components
+import Banner from '../../Components/Funding/Banner';
+import Body from '../../Components/Funding/List';
 
 class FundingView extends React.Component {
     constructor(props) {
@@ -13,7 +16,8 @@ class FundingView extends React.Component {
     render() {
         return (
             <div>
-
+                <Banner />
+                <Body />
             </div>
         );
     }

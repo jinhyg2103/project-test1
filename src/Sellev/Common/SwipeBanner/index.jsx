@@ -7,7 +7,6 @@ import { withRouter } from 'react-router';
 import Slider from 'react-slick';
 
 // Components
-import BannerItem from './BannerItem';
 
 // Styles
 import styles from '../../Styles/Common/SwipeBanner.css';
@@ -18,33 +17,31 @@ import styles from '../../Styles/Common/SwipeBanner.css';
 */
 class SwipeBanner extends React.Component {
     render() {
-        let bannerListBox = this.props.listItem.map((list, key) => {
-            return (
-                <BannerItem bgImage={list.imgURL} title={list.title} artist={list.artist} key={key} />
-            );
+        let bannerListBox = this.props.getList.map((list, index) => {
+            return this.props.listItem(list, index);
         });
         let settings = {
             arrows: false,
-            centerMode: true,
+            centerMode: this.props.centerMode || true,
             centerPadding: '0px',
-            slidesToShow: 1,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            variableWidth: true,
+            slidesToShow: this.props.slidesToShow || 1,
+            autoplay: this.props.autoplay || true,
+            autoplaySpeed: this.props.autoplay && this.props.autoplaySpeed || 5000,
+            variableWidth: this.props.variableWidth || true,
             responsive: [
                 {
                     breakpoint: 768,
                     settings: {
                         arrows: false,
                         centerPadding: '0px',
-                        centerMode: true,
-                        slidesToShow: 1,
-                        autoplay: true,
-                        autoplaySpeed: 5000,
-                        variableWidth: true,
-                    },
+                        centerMode: this.props.centerMode || true,
+                        slidesToShow: this.props.slidesToShow || 1,
+                        autoplay: this.props.autoplay || true,
+                        autoplaySpeed: this.props.autoplay && this.props.autoplaySpeed || 5000,
+                        variableWidth: this.props.variableWidth || true,
+                    }
                 },
-            ],
+            ]
         };
         return (
             <Slider className={styles.swipeBanner} {...settings}>

@@ -29,6 +29,9 @@ import routes from '../routes';
 
 
 class RootView extends React.Component {
+    componentWillMount() {
+        this.props.dispatch(ActionAuth.session());
+    }
     render() {
         return (
             <div>
