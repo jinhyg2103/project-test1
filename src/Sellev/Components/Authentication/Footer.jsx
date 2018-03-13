@@ -14,7 +14,7 @@ import * as ParseUrlParameter from '../../Lib/Utils/parseUrlParameter';
 class AuthFooter extends React.Component {
     componentWillMount() {
         this.setState({
-            urlParams: parseUrlParameter.parse(this.props.location.search);
+            urlParams: ParseUrlParameter.parse(this.props.location.search),
         })
     }
     render() {

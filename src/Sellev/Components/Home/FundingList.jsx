@@ -23,22 +23,22 @@ class FundingList extends React.Component {
     constructor(props) {
         super(props);
     }
-    componentWillMount() {
-
-    }
     render() {
         /* FundingBody에서 호출한 Action들(this.props.listItem)을 받아와서 리스트 형태로 뿌려줄 예정 */
         let listItem = this.props.listItem && this.props.listItem.length > 0 ?
             this.props.listItem.map((item, index) => {
                 return (
                     <li key={index}>
-                        펀딩 마켓 리스트 내용들
+                        <div>{/*번호*/}{index + 1}</div>
+                        <div>{item.title}</div>
+                        <div>{item.name}</div>
                     </li>
                 );
             }) : null;
         return (
             <div>
                 <div>{this.props.title}</div>
+                <div style={{width: '352px', height: '172px', backgroundImage: 'url("' + this.props.listItem[0].bgImage + '")'}}></div>
                 <ul>
                     {listItem}
                 </ul>
