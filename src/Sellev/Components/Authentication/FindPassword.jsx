@@ -18,7 +18,7 @@ class LoginView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            verified: true, // 이걸로 비밀번호 변경 전에 인증이 됐는지 여부를 나타낼 생각입니다.
+            verified: false, // 이걸로 비밀번호 변경 전에 인증이 됐는지 여부를 나타낼 생각입니다.
         };
         this.verifyUser = this.verifyUser.bind(this);
     }
