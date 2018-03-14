@@ -126,11 +126,10 @@ class LoginView extends React.Component {
     render() {
         return (
             <div className={stylesAuth.authBody}>
-                <div className={stylesAuth.authLogo}>
-                    <img src="/Sellev/assets/img/logo_sellev_auth.png" alt="" />
-                </div>
+                <div className={stylesAuth.authLogo} />
+                <div className={stylesAuth.authLogoMobile} />
                 <div className={stylesAuth.authBox}>
-                    <div className={stylesAuth.authTitle}>비밀번호를 잊으셨나요?</div>
+                    <div className={stylesAuth.authTitle + ' ' + stylesAuth.findPasswordTitle}>비밀번호를 잊으셨나요?</div>
                     <div className={styles.formGroup}>
                         { this.state.isSmsVerified ? (
                             <div className={styles.formRow}>

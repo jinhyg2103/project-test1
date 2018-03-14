@@ -9,7 +9,7 @@ import { withRouter } from 'react-router';
 
 
 // Styles
-import stylesSignup from '../../Styles/Components/Signup.css';
+import stylesSignup from '../../Styles/Components/Authentication.css';
 
 class SignupFooter extends React.Component {
     render() {

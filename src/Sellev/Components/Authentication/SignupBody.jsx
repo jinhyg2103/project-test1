@@ -155,9 +155,8 @@ class SignupBody extends React.Component {
     render() {
         return (
             <div className={stylesAuth.authBody}>
-                <div className={stylesAuth.authLogo}>
-                    <img src="/Sellev/assets/img/logo_sellev_auth.png" alt="" />
-                </div>
+                <div className={stylesAuth.authLogo} />
+                <div className={stylesAuth.authLogoMobile} />
                 <div className={stylesAuth.authBox}>
                     <div className={stylesAuth.authTitle}>
                         핸드폰번호로<br />
@@ -191,7 +190,7 @@ class SignupBody extends React.Component {
                         <div className={styles.formRow + ( this.state.smsVerificationCode.length > 0 ? '' : ' ' + styles.disabled )}>
                             <div className={styles.formInputName}>인증번호</div>
                             <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} autoComplete={'off'} placeholder={ this.state.smsVerificationCode.length > 0 ? '' : '위의 인증버튼 선택 후 인증번호를 입력해주세요.' } value={this.state.smsVerificationCodeByUser} onChange={(e) => this.setState({ smsVerificationCodeByUser: e.target.value })} disabled={ this.state.smsVerificationCode.length <= 0 }/>
-                            { this.state.smsVerificationCode.length > 0 ? <div className={styles.inputVerifyBox + ' ' + (this.state.authTest ? styles.activeWhite : styles.disabled)} onClick={this.smsVerificationCodeCheck.bind(this)}>인증하기</div> : null }
+                            { this.state.smsVerificationCode.length > 0 ? <div className={styles.inputVerifyBox + ' ' + (this.state.authTest ? styles.activeWhite : styles.disabled)} onClick={this.smsVerificationCodeCheck.bind(this)}>인증</div> : null }
                             {/*{ this.state.isSmsVerified ? <div className={styles.inputVerifyBox}><img src={'/Sellev/assets/img/ic_signup_check.png'} /></div> : null }*/}
                         </div>
                         { this.state.warnPhoneNumber6digitWrong ? <div className={styles.formInputWarn}>인증번호가 틀립니다.</div> : null }

@@ -5,7 +5,7 @@ body {
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-size: 14px;
 }
-/*FindPassword*/
+/*Autentication form */
 .formGroup {
     width: 407px;
     margin: 23px auto;
@@ -36,6 +36,12 @@ body {
 .formRow.disabled .formInputName {
     color: #dcdcdc;
     background-color: #f8f8f8;
+}
+.formInputName.newPasswordName {
+    display: none;
+    text-align: center;
+    padding: 17px 7px 17px 5px;
+    line-height: 1.5em;
 }
 .formRow .inputWithVerify {
     width: 55%;
@@ -95,7 +101,7 @@ body {
     position: relative;
 }
 
-/*warning mesage*/
+/*warning message*/
 .formInputWarn {
     font-size: 14px;
     color: #ff0000;
@@ -115,4 +121,13 @@ body {
 }
 .bold {
     font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+    .formGroup {
+        width: 100%;
+    }
+    .formInputName.newPasswordName {
+        display: block;
+    }
 }
