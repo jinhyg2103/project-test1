@@ -80,9 +80,7 @@ class LoginBody extends React.Component {
                     <div className={stylesAuth.authBtn + ' ' + stylesAuth.naver}>| 네이버 계정으로 로그인</div>
                     <div className={stylesAuth.authBtn + ' ' + stylesAuth.facebook}>| 페이스북 계정으로 로그인</div>
                     <div className={stylesAuth.border}><span>&#8211;</span>OR<span>&#8211;</span></div>
-{/*
-                     ----------이 부분 스타일 수정해주세요 (findpassword.jsx, 지비다 참조)-------------------
-*/}
+
                     <div className={styles.formGroup}>
                         <div className={styles.formRow}>
                             <div className={styles.formInputName}>핸드폰번호</div>
@@ -95,9 +93,7 @@ class LoginBody extends React.Component {
                             { this.state.warnPasswordNotValid ? <div className={styles.formInputWarn}>비밀번호를 입력하세요.</div> : null }
                         </div>
                     </div>
-{/*
-                     -----------------------------------------------------------------------------------------
-*/}
+
                     <div className={stylesAuth.authBtn} onClick={this.login}>로그인</div>
                     <div className={stylesAuth.boxFooter}>
                         <span>아직 회원이 아니신가요?</span>

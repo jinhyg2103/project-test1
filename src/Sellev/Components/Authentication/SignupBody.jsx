@@ -170,6 +170,7 @@ class SignupBody extends React.Component {
                       </div>*/}
                       { this.state.isSmsVerified ? (
                           <div className={styles.formRow}>
+                              <div className={styles.formInputName}>핸드폰번호</div>
                               <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} value={this.state.phoneNumber} disabled />
                               <div className={styles.inputVerifyBox}>인증완료</div>
                           </div>
