@@ -8,14 +8,14 @@ import { Switch, Route } from 'react-router';
 
 
 // Components
-import FundingList from './FundingList';
+import FundingMarketList from './FundingMarketList';
 
 // Styles
 import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
 
-class FundingBody extends React.Component {
+class FundingMarketBody extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -108,9 +108,9 @@ class FundingBody extends React.Component {
     render() {
         return (
             <div>
-                <FundingList title={'펀딩액순'} listItem={this.state.fundingList} />
-                <FundingList title={'조회순'} listItem={this.state.hitList} />
-                <FundingList title={'신규'} listItem={this.state.newList} />
+                <FundingMarketList title={'펀딩액순'} listItem={this.state.fundingList} />
+                <FundingMarketList title={'조회순'} listItem={this.state.hitList} />
+                <FundingMarketList title={'신규'} listItem={this.state.newList} />
             </div>
         );
     }
@@ -119,4 +119,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(FundingBody));
+})(withRouter(FundingMarketBody));

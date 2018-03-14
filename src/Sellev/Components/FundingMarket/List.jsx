@@ -10,11 +10,11 @@ import { Switch, Route } from 'react-router';
 import ImageList from '../../Common/ImageList';
 
 // Styles
-import stylesFunding from '../../Styles/Components/Funding.css';
+import stylesFundingMarket from '../../Styles/Components/FundingMarket.css';
 
 // Actions
 
-class FundingList extends React.Component {
+class FundingMarketList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -103,4 +103,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(FundingList));
+})(withRouter(FundingMarketList));

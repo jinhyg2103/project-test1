@@ -10,7 +10,7 @@ import { Switch, Route } from 'react-router';
 import BannerBody from './BannerBody';
 
 // Styles
-import stylesFunding from '../../Styles/Components/Funding.css';
+import stylesFundingMarket from '../../Styles/Components/FundingMarket.css';
 
 // Actions
 

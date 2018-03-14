@@ -21035,9 +21035,9 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _Funding = __webpack_require__(707);
+var _FundingMarket = __webpack_require__(707);
 
-var _Funding2 = _interopRequireDefault(_Funding);
+var _FundingMarket2 = _interopRequireDefault(_FundingMarket);
 
 var _Market = __webpack_require__(710);
 
@@ -21086,7 +21086,7 @@ var ImageList = function (_React$Component) {
                 null,
                 _react2.default.createElement('div', { style: { width: '264px', height: '132px', backgroundImage: 'url("' + this.props.listItem.bgImage + '")' } }),
                 this.props.type == 'fundingmarket' ? _react2.default.createElement('div', { style: { backgroundImage: 'url("' + this.props.listItem.profile + '")' } }) : null,
-                this.props.type == 'fundingmarket' ? this.props.listItem.type == 'funding' ? _react2.default.createElement(_Funding2.default, { listItem: this.props.listItem }) : _react2.default.createElement(_Market2.default, { listItem: this.props.listItem }) : null,
+                this.props.type == 'fundingmarket' ? this.props.listItem.type == 'funding' ? _react2.default.createElement(_FundingMarket2.default, { listItem: this.props.listItem }) : _react2.default.createElement(_Market2.default, { listItem: this.props.listItem }) : null,
                 this.props.type == 'video' ? _react2.default.createElement(_Video2.default, { listItem: this.props.listItem }) : null
             );
         }
@@ -21242,8 +21242,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--1-1!./Funding.css", function() {
-			var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--1-1!./Funding.css");
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--1-1!./FundingMarket.css", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--1-1!./FundingMarket.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -21466,9 +21466,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailContent, 'DetailContent', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailContent.jsx');
+    __REACT_HOT_LOADER__.register(DetailContent, 'DetailContent', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContent.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailContent.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContent.jsx');
 }();
 
 ;
@@ -42004,9 +42004,9 @@ var _Authentication = __webpack_require__(714);
 
 var _Authentication2 = _interopRequireDefault(_Authentication);
 
-var _Funding = __webpack_require__(726);
+var _FundingMarket = __webpack_require__(726);
 
-var _Funding2 = _interopRequireDefault(_Funding);
+var _FundingMarket2 = _interopRequireDefault(_FundingMarket);
 
 var _HashTag = __webpack_require__(738);
 
@@ -42089,7 +42089,7 @@ var RootView = function (_React$Component) {
                 _react2.default.createElement(_index2.default, null),
                 _react2.default.createElement(_reactRouter.Route, { path: '/', exact: true, strict: false, component: _Home2.default }),
                 _react2.default.createElement(_reactRouter.Route, { path: '/auth', exact: false, strict: false, component: _Authentication2.default }),
-                _react2.default.createElement(_reactRouter.Route, { path: '/fundingmarket', exact: false, strict: false, component: _Funding2.default }),
+                _react2.default.createElement(_reactRouter.Route, { path: '/fundingmarket', exact: false, strict: false, component: _FundingMarket2.default }),
                 _react2.default.createElement(_reactRouter.Route, { path: '/hashtag', exact: true, strict: false, component: _HashTag2.default }),
                 _react2.default.createElement(_reactRouter.Route, { path: '/mypage', exact: true, strict: false, component: _MyPage2.default }),
                 _react2.default.createElement(_reactRouter.Route, { path: '/payment', exact: true, strict: false, component: _Payment2.default }),
@@ -43964,9 +43964,9 @@ var _Banner = __webpack_require__(677);
 
 var _Banner2 = _interopRequireDefault(_Banner);
 
-var _Funding = __webpack_require__(697);
+var _FundingMarket = __webpack_require__(697);
 
-var _Funding2 = _interopRequireDefault(_Funding);
+var _FundingMarket2 = _interopRequireDefault(_FundingMarket);
 
 var _HashTag = __webpack_require__(700);
 
@@ -44015,7 +44015,7 @@ var HomeContainer = function (_React$Component) {
                 'div',
                 { className: _Home2.default.homeContainer },
                 _react2.default.createElement(_Banner2.default, null),
-                _react2.default.createElement(_Funding2.default, null),
+                _react2.default.createElement(_FundingMarket2.default, null),
                 _react2.default.createElement(_HashTag2.default, null),
                 _react2.default.createElement(_Video2.default, null)
             );
@@ -46148,7 +46148,7 @@ exports = module.exports = __webpack_require__(48)(undefined);
 
 
 // module
-exports.push([module.i, "/* Common */\r\n\r\n.Home__sectionTitle___3woZq {\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #161616;\r\n}\r\n\r\n.Home__sectionWhiteTitle___1F_Ku {\r\n    font-family: 'Apple SD Gothic Neo';\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #ffffff;\r\n}\r\n\r\n.Home__sectionSmallTitle___3lXqe {\r\n    font-family: 'Product Sans';\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    line-height: 19px;\r\n    color: #a0a0a0;\r\n    letter-spacing: -0.5px;\r\n}\r\n\r\n/* Banner */\r\n.Home__bannerBody___2CqX-{\r\n    overflow: hidden;\r\n}\r\n.Home__bannerSection___20VGJ {\r\n    width: 100%;\r\n    height: 385px;\r\n    background-color: black;\r\n    padding-top: 60px;\r\n    margin-top: 65px;\r\n}\r\n.Home__BannerHeader___H8waY {\r\n    width: 1100px;\r\n    margin: 0px auto 20px;\r\n}\r\n.Home__BannerHeader___H8waY .Home__sectionTitle___3woZq{\r\n    color: #FFFFFF;\r\n}\r\n\r\n/* Funding */\r\n.Home__fundingSection___3KCMl {\r\n    margin-top: 120px;\r\n}\r\n.Home__fundingHeader___3jDi2 {\r\n    width: 1100px;\r\n    margin: 0 auto 22px;\r\n}\r\n\r\n/* HashTag */\r\n.Home__hashTagSection___341kM {\r\n\r\n}\r\n\r\n/* Video */\r\n.Home__videoSection___3_9ga {\r\n\r\n}", ""]);
+exports.push([module.i, "/* Common */\r\n\r\n.Home__sectionTitle___3woZq {\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #161616;\r\n}\r\n\r\n.Home__sectionWhiteTitle___1F_Ku {\r\n    font-family: 'Apple SD Gothic Neo';\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #ffffff;\r\n}\r\n\r\n.Home__sectionSmallTitle___3lXqe {\r\n    font-family: 'Product Sans';\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    line-height: 19px;\r\n    color: #a0a0a0;\r\n    letter-spacing: -0.5px;\r\n}\r\n\r\n/* Banner */\r\n.Home__bannerBody___2CqX-{\r\n    overflow: hidden;\r\n}\r\n.Home__bannerSection___20VGJ {\r\n    width: 100%;\r\n    height: 385px;\r\n    background-color: black;\r\n    padding-top: 60px;\r\n    margin-top: 65px;\r\n}\r\n.Home__BannerHeader___H8waY {\r\n    width: 1100px;\r\n    margin: 0px auto 20px;\r\n}\r\n.Home__BannerHeader___H8waY .Home__sectionTitle___3woZq{\r\n    color: #FFFFFF;\r\n}\r\n\r\n/* FundingMarket */\r\n.Home__fundingSection___3KCMl {\r\n    margin-top: 120px;\r\n}\r\n.Home__fundingHeader___3jDi2 {\r\n    width: 1100px;\r\n    margin: 0 auto 22px;\r\n}\r\n\r\n/* HashTag */\r\n.Home__hashTagSection___341kM {\r\n\r\n}\r\n\r\n/* Video */\r\n.Home__videoSection___3_9ga {\r\n\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -46187,9 +46187,9 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _FundingBody = __webpack_require__(698);
+var _FundingMarketBody = __webpack_require__(698);
 
-var _FundingBody2 = _interopRequireDefault(_FundingBody);
+var _FundingMarketBody2 = _interopRequireDefault(_FundingMarketBody);
 
 var _Home = __webpack_require__(38);
 
@@ -46211,16 +46211,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // Actions
 
-var Funding = function (_React$Component) {
-    _inherits(Funding, _React$Component);
+var FundingMarket = function (_React$Component) {
+    _inherits(FundingMarket, _React$Component);
 
-    function Funding() {
-        _classCallCheck(this, Funding);
+    function FundingMarket() {
+        _classCallCheck(this, FundingMarket);
 
-        return _possibleConstructorReturn(this, (Funding.__proto__ || Object.getPrototypeOf(Funding)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (FundingMarket.__proto__ || Object.getPrototypeOf(FundingMarket)).apply(this, arguments));
     }
 
-    _createClass(Funding, [{
+    _createClass(FundingMarket, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -46240,19 +46240,19 @@ var Funding = function (_React$Component) {
                         '\uD380\uB529&\uB9C8\uCF13'
                     )
                 ),
-                _react2.default.createElement(_FundingBody2.default, null)
+                _react2.default.createElement(_FundingMarketBody2.default, null)
             );
         }
     }]);
 
-    return Funding;
+    return FundingMarket;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouterDom.withRouter)(Funding));
+})((0, _reactRouterDom.withRouter)(FundingMarket));
 
 exports.default = _default;
 ;
@@ -46262,9 +46262,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Funding, 'Funding', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/Funding.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarket, 'FundingMarket', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarket.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/Funding.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarket.jsx');
 }();
 
 ;
@@ -46292,9 +46292,9 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _FundingList = __webpack_require__(699);
+var _FundingMarketList = __webpack_require__(699);
 
-var _FundingList2 = _interopRequireDefault(_FundingList);
+var _FundingMarketList2 = _interopRequireDefault(_FundingMarketList);
 
 var _Home = __webpack_require__(38);
 
@@ -46316,16 +46316,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // Actions
 
-var FundingBody = function (_React$Component) {
-    _inherits(FundingBody, _React$Component);
+var FundingMarketBody = function (_React$Component) {
+    _inherits(FundingMarketBody, _React$Component);
 
-    function FundingBody(props) {
-        _classCallCheck(this, FundingBody);
+    function FundingMarketBody(props) {
+        _classCallCheck(this, FundingMarketBody);
 
-        return _possibleConstructorReturn(this, (FundingBody.__proto__ || Object.getPrototypeOf(FundingBody)).call(this, props));
+        return _possibleConstructorReturn(this, (FundingMarketBody.__proto__ || Object.getPrototypeOf(FundingMarketBody)).call(this, props));
     }
 
-    _createClass(FundingBody, [{
+    _createClass(FundingMarketBody, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
             /* 이 부분에 listItem 에 들어갈 Action 호출할 예정 */
@@ -46401,21 +46401,21 @@ var FundingBody = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_FundingList2.default, { title: '펀딩액순', listItem: this.state.fundingList }),
-                _react2.default.createElement(_FundingList2.default, { title: '조회순', listItem: this.state.hitList }),
-                _react2.default.createElement(_FundingList2.default, { title: '신규', listItem: this.state.newList })
+                _react2.default.createElement(_FundingMarketList2.default, { title: '펀딩액순', listItem: this.state.fundingList }),
+                _react2.default.createElement(_FundingMarketList2.default, { title: '조회순', listItem: this.state.hitList }),
+                _react2.default.createElement(_FundingMarketList2.default, { title: '신규', listItem: this.state.newList })
             );
         }
     }]);
 
-    return FundingBody;
+    return FundingMarketBody;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouterDom.withRouter)(FundingBody));
+})((0, _reactRouterDom.withRouter)(FundingMarketBody));
 
 exports.default = _default;
 ;
@@ -46425,9 +46425,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingBody, 'FundingBody', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingBody.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketBody, 'FundingMarketBody', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarketBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarketBody.jsx');
 }();
 
 ;
@@ -46479,19 +46479,19 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 * this.props.listItem
 */
 
-var FundingList = function (_React$Component) {
-    _inherits(FundingList, _React$Component);
+var FundingMarketList = function (_React$Component) {
+    _inherits(FundingMarketList, _React$Component);
 
-    function FundingList(props) {
-        _classCallCheck(this, FundingList);
+    function FundingMarketList(props) {
+        _classCallCheck(this, FundingMarketList);
 
-        return _possibleConstructorReturn(this, (FundingList.__proto__ || Object.getPrototypeOf(FundingList)).call(this, props));
+        return _possibleConstructorReturn(this, (FundingMarketList.__proto__ || Object.getPrototypeOf(FundingMarketList)).call(this, props));
     }
 
-    _createClass(FundingList, [{
+    _createClass(FundingMarketList, [{
         key: 'render',
         value: function render() {
-            /* FundingBody에서 호출한 Action들(this.props.listItem)을 받아와서 리스트 형태로 뿌려줄 예정 */
+            /* FundingMarketBody에서 호출한 Action들(this.props.listItem)을 받아와서 리스트 형태로 뿌려줄 예정 */
             var listItem = this.props.listItem && this.props.listItem.length > 0 ? this.props.listItem.map(function (item, index) {
                 return _react2.default.createElement(
                     'li',
@@ -46531,14 +46531,14 @@ var FundingList = function (_React$Component) {
         }
     }]);
 
-    return FundingList;
+    return FundingMarketList;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouterDom.withRouter)(FundingList));
+})((0, _reactRouterDom.withRouter)(FundingMarketList));
 
 exports.default = _default;
 ;
@@ -46548,9 +46548,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingList, 'FundingList', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingList.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketList, 'FundingMarketList', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarketList.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingList.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarketList.jsx');
 }();
 
 ;
@@ -47172,16 +47172,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /*
 * this.props.listItem
 */
-var Funding = function (_React$Component) {
-    _inherits(Funding, _React$Component);
+var FundingMarket = function (_React$Component) {
+    _inherits(FundingMarket, _React$Component);
 
-    function Funding() {
-        _classCallCheck(this, Funding);
+    function FundingMarket() {
+        _classCallCheck(this, FundingMarket);
 
-        return _possibleConstructorReturn(this, (Funding.__proto__ || Object.getPrototypeOf(Funding)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (FundingMarket.__proto__ || Object.getPrototypeOf(FundingMarket)).apply(this, arguments));
     }
 
-    _createClass(Funding, [{
+    _createClass(FundingMarket, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -47271,10 +47271,10 @@ var Funding = function (_React$Component) {
         }
     }]);
 
-    return Funding;
+    return FundingMarket;
 }(_react2.default.Component);
 
-var _default = (0, _reactRedux.connect)()((0, _reactRouter.withRouter)(Funding));
+var _default = (0, _reactRedux.connect)()((0, _reactRouter.withRouter)(FundingMarket));
 
 exports.default = _default;
 ;
@@ -47284,9 +47284,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Funding, 'Funding', 'E:/codecrain/sellev-test/src/Sellev/Common/ImageList/Funding.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarket, 'FundingMarket', 'E:/codecrain/sellev-test/src/Sellev/Common/ImageList/FundingMarket.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Common/ImageList/Funding.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Common/ImageList/FundingMarket.jsx');
 }();
 
 ;
@@ -49492,9 +49492,9 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _Funding = __webpack_require__(727);
+var _FundingMarket = __webpack_require__(727);
 
-var _Funding2 = _interopRequireDefault(_Funding);
+var _FundingMarket2 = _interopRequireDefault(_FundingMarket);
 
 var _Detail = __webpack_require__(732);
 
@@ -49511,35 +49511,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // Components
 
 
-var FundingView = function (_React$Component) {
-    _inherits(FundingView, _React$Component);
+var FundingMarketView = function (_React$Component) {
+    _inherits(FundingMarketView, _React$Component);
 
-    function FundingView(props) {
-        _classCallCheck(this, FundingView);
+    function FundingMarketView(props) {
+        _classCallCheck(this, FundingMarketView);
 
-        return _possibleConstructorReturn(this, (FundingView.__proto__ || Object.getPrototypeOf(FundingView)).call(this, props));
+        return _possibleConstructorReturn(this, (FundingMarketView.__proto__ || Object.getPrototypeOf(FundingMarketView)).call(this, props));
     }
 
-    _createClass(FundingView, [{
+    _createClass(FundingMarketView, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_reactRouterDom.Route, { path: '/fundingmarket', exact: true, strict: false, component: _Funding2.default }),
+                _react2.default.createElement(_reactRouterDom.Route, { path: '/fundingmarket', exact: true, strict: false, component: _FundingMarket2.default }),
                 _react2.default.createElement(_reactRouterDom.Route, { path: '/fundingmarket/detail', exact: true, strict: false, component: _Detail2.default })
             );
         }
     }]);
 
-    return FundingView;
+    return FundingMarketView;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouter.withRouter)(FundingView));
+})((0, _reactRouter.withRouter)(FundingMarketView));
 
 exports.default = _default;
 ;
@@ -49549,9 +49549,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingView, 'FundingView', 'E:/codecrain/sellev-test/src/Sellev/Containers/Funding/index.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketView, 'FundingMarketView', 'E:/codecrain/sellev-test/src/Sellev/Containers/FundingMarket/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Containers/Funding/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Containers/FundingMarket/index.jsx');
 }();
 
 ;
@@ -49598,16 +49598,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // Components
 
 
-var FundingHome = function (_React$Component) {
-    _inherits(FundingHome, _React$Component);
+var FundingMarketHome = function (_React$Component) {
+    _inherits(FundingMarketHome, _React$Component);
 
-    function FundingHome(props) {
-        _classCallCheck(this, FundingHome);
+    function FundingMarketHome(props) {
+        _classCallCheck(this, FundingMarketHome);
 
-        return _possibleConstructorReturn(this, (FundingHome.__proto__ || Object.getPrototypeOf(FundingHome)).call(this, props));
+        return _possibleConstructorReturn(this, (FundingMarketHome.__proto__ || Object.getPrototypeOf(FundingMarketHome)).call(this, props));
     }
 
-    _createClass(FundingHome, [{
+    _createClass(FundingMarketHome, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -49619,14 +49619,14 @@ var FundingHome = function (_React$Component) {
         }
     }]);
 
-    return FundingHome;
+    return FundingMarketHome;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouter.withRouter)(FundingHome));
+})((0, _reactRouter.withRouter)(FundingMarketHome));
 
 exports.default = _default;
 ;
@@ -49636,9 +49636,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingHome, 'FundingHome', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/index.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketHome, 'FundingMarketHome', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/index.jsx');
 }();
 
 ;
@@ -49670,9 +49670,9 @@ var _BannerBody = __webpack_require__(729);
 
 var _BannerBody2 = _interopRequireDefault(_BannerBody);
 
-var _Funding = __webpack_require__(284);
+var _FundingMarket = __webpack_require__(284);
 
-var _Funding2 = _interopRequireDefault(_Funding);
+var _FundingMarket2 = _interopRequireDefault(_FundingMarket);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49761,9 +49761,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Banner, 'Banner', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/Banner.jsx');
+    __REACT_HOT_LOADER__.register(Banner, 'Banner', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/Banner.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/Banner.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/Banner.jsx');
 }();
 
 ;
@@ -49885,9 +49885,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(BannerBody, 'BannerBody', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/BannerBody.jsx');
+    __REACT_HOT_LOADER__.register(BannerBody, 'BannerBody', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/BannerBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/BannerBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/BannerBody.jsx');
 }();
 
 ;
@@ -49933,9 +49933,9 @@ var _ImageList = __webpack_require__(282);
 
 var _ImageList2 = _interopRequireDefault(_ImageList);
 
-var _Funding = __webpack_require__(284);
+var _FundingMarket = __webpack_require__(284);
 
-var _Funding2 = _interopRequireDefault(_Funding);
+var _FundingMarket2 = _interopRequireDefault(_FundingMarket);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49953,13 +49953,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // Actions
 
-var FundingList = function (_React$Component) {
-    _inherits(FundingList, _React$Component);
+var FundingMarketList = function (_React$Component) {
+    _inherits(FundingMarketList, _React$Component);
 
-    function FundingList(props) {
-        _classCallCheck(this, FundingList);
+    function FundingMarketList(props) {
+        _classCallCheck(this, FundingMarketList);
 
-        var _this = _possibleConstructorReturn(this, (FundingList.__proto__ || Object.getPrototypeOf(FundingList)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (FundingMarketList.__proto__ || Object.getPrototypeOf(FundingMarketList)).call(this, props));
 
         _this.state = {
             list: [{
@@ -50023,7 +50023,7 @@ var FundingList = function (_React$Component) {
         return _this;
     }
 
-    _createClass(FundingList, [{
+    _createClass(FundingMarketList, [{
         key: 'render',
         value: function render() {
             var fundingMarketList = this.state.list.map(function (item, index) {
@@ -50037,14 +50037,14 @@ var FundingList = function (_React$Component) {
         }
     }]);
 
-    return FundingList;
+    return FundingMarketList;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouterDom.withRouter)(FundingList));
+})((0, _reactRouterDom.withRouter)(FundingMarketList));
 
 exports.default = _default;
 ;
@@ -50054,9 +50054,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingList, 'FundingList', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/List.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketList, 'FundingMarketList', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/List.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/List.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/List.jsx');
 }();
 
 ;
@@ -50150,9 +50150,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Detail, 'Detail', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/Detail.jsx');
+    __REACT_HOT_LOADER__.register(Detail, 'Detail', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/Detail.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/Detail.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/Detail.jsx');
 }();
 
 ;
@@ -50321,9 +50321,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailFunding, 'DetailFunding', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailFunding.jsx');
+    __REACT_HOT_LOADER__.register(DetailFunding, 'DetailFunding', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailFunding.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailFunding.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailFunding.jsx');
 }();
 
 ;
@@ -50621,9 +50621,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailContent, 'DetailContent', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailContentSide.jsx');
+    __REACT_HOT_LOADER__.register(DetailContent, 'DetailContent', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContentSide.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailContentSide.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContentSide.jsx');
 }();
 
 ;
@@ -50796,9 +50796,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailFunding, 'DetailFunding', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailMarket.jsx');
+    __REACT_HOT_LOADER__.register(DetailFunding, 'DetailFunding', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailMarket.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailMarket.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailMarket.jsx');
 }();
 
 ;
@@ -50961,9 +50961,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailRanking, 'DetailRanking', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailRanking.jsx');
+    __REACT_HOT_LOADER__.register(DetailRanking, 'DetailRanking', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailRanking.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/DetailRanking.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailRanking.jsx');
 }();
 
 ;
@@ -51083,9 +51083,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(RankingList, 'RankingList', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/RankingList.jsx');
+    __REACT_HOT_LOADER__.register(RankingList, 'RankingList', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/RankingList.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Funding/RankingList.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/RankingList.jsx');
 }();
 
 ;

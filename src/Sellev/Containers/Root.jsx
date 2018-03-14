@@ -10,7 +10,7 @@ import { Switch, Route } from 'react-router';
 import HeaderComponent from '../Components/Header/index';
 import HomeContainer from './Home';
 import AuthContainer from './Authentication';
-import FundingContainer from './Funding';
+import FundingMarketContainer from './FundingMarket';
 import HashTagContainer from './HashTag';
 import MyPageContainer from './MyPage';
 import PaymentContainer from './Payment';
@@ -38,7 +38,7 @@ class RootView extends React.Component {
                 <HeaderComponent />
                 <Route path={'/'} exact={true} strict={false} component={HomeContainer} />
                 <Route path={'/auth'} exact={false} strict={false} component={AuthContainer} />
-                <Route path={'/fundingmarket'} exact={false} strict={false} component={FundingContainer} />
+                <Route path={'/fundingmarket'} exact={false} strict={false} component={FundingMarketContainer} />
                 <Route path={'/hashtag'} exact={true} strict={false} component={HashTagContainer} />
                 <Route path={'/mypage'} exact={true} strict={false} component={MyPageContainer} />
                 <Route path={'/payment'} exact={true} strict={false} component={PaymentContainer} />

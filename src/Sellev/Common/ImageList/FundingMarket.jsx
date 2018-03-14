@@ -14,7 +14,7 @@ import * as NumberUtil from '../../Lib/Utils/converter'
 /*
 * this.props.listItem
 */
-class Funding extends React.Component {
+class FundingMarket extends React.Component {
     render() {
         return (
             <div>
@@ -43,4 +43,4 @@ class Funding extends React.Component {
         );
     }
 }
-export default connect()(withRouter(Funding));
+export default connect()(withRouter(FundingMarket));

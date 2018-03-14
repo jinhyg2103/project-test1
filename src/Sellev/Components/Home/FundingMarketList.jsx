@@ -19,12 +19,12 @@ import stylesHome from '../../Styles/Components/Home.css';
 * this.props.listItem
 */
 
-class FundingList extends React.Component {
+class FundingMarketList extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
-        /* FundingBody에서 호출한 Action들(this.props.listItem)을 받아와서 리스트 형태로 뿌려줄 예정 */
+        /* FundingMarketBody에서 호출한 Action들(this.props.listItem)을 받아와서 리스트 형태로 뿌려줄 예정 */
         let listItem = this.props.listItem && this.props.listItem.length > 0 ?
             this.props.listItem.map((item, index) => {
                 return (
@@ -50,4 +50,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(FundingList));
+})(withRouter(FundingMarketList));

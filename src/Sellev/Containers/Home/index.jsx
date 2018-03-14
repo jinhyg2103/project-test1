@@ -8,7 +8,7 @@ import { Switch, Route } from 'react-router';
 
 // Components
 import HomeBanner from '../../Components/Home/Banner';
-import HomeFunding from '../../Components/Home/Funding';
+import HomeFundingMarket from '../../Components/Home/FundingMarket';
 import HomeHashTag from '../../Components/Home/HashTag';
 import HomeVideo from '../../Components/Home/Video';
 
@@ -25,7 +25,7 @@ class HomeContainer extends React.Component {
         return (
             <div className={stylesHome.homeContainer}>
                 <HomeBanner />
-                <HomeFunding />
+                <HomeFundingMarket />
                 <HomeHashTag />
                 <HomeVideo />
             </div>
