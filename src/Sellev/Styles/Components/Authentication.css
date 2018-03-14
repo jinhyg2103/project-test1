@@ -20,9 +20,10 @@
 }
 
 /*or*/
-.loginBox .border {
+.border {
     color: #e0e0e0;
     margin: 18px 0;
+    text-align: center;
 }
 /*form*/
 .loginForm {
@@ -68,6 +69,7 @@
     line-height: 23px;
     width: 50%;
     margin: 12px auto;
+    text-align: center;
 }
 
 .loginFooter .logoBox div {
@@ -77,23 +79,28 @@
     background-position: 112px 128px;
     float: left;
 }
+.signupFooter {
+    margin-top: 54px;
+    text-align: center;
+}
 
 /* logo btn */
 
 .loginBtn {
     margin-bottom: 10px;
 }
-
-/* kakao button */
-
-.kakaoBtn {
+/*button Common*/
+.authBtn {
     height: 56px;
     width: 371px;
-    margin: 0 auto;
-    background-color: #feea02;
+    margin: 8px auto;
     border-radius: 4px;
 }
+/* kakao button */
 
+.kakao {
+    background-color: #feea02;
+}
 .kakaoBody {
     overflow: hidden;
     padding: 18px 36px;
@@ -119,12 +126,8 @@
 
 /* naver button */
 
-.naverBtn {
-    height: 56px;
-    width: 371px;
-    margin: 0 auto;
+.naver {
     background-color: #1dc800;
-    border-radius: 4px;
 }
 .naverBody {
     overflow: hidden;
@@ -151,12 +154,8 @@
 
 /* facebook button */
 
-.facebookBtn {
-    height: 56px;
-    width: 371px;
-    margin: 0 auto;
+.facebook {
     background-color: #395a90;
-    border-radius: 4px;
 }
 .facebookBody {
     overflow: hidden;
@@ -182,12 +181,7 @@
 }
 
 /* login button : red button */
-.authBtn {
-    height: 56px;
-    width: 371px;
-    margin: 0 auto;
-    border-radius: 4px;
-}
+
 .loginBtn {
     background-color: #fd0a0a;
     overflow: hidden;

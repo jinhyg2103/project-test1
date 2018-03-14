@@ -15,7 +15,7 @@ a:link, a:hover {
 }
 
 li {
-   list-style: none;
+    list-style: none;
 }
 dl, ol, ul {
     margin: 0;
@@ -58,10 +58,10 @@ dl, ol, ul {
     background-position: 83px 24px;
 }
 .globalMenuHeader .menuTitle{
-     font-size: 30px;
-     font-weight: bold;
-     width: 180px;
- }
+    font-size: 30px;
+    font-weight: bold;
+    width: 180px;
+}
 .globalMenuList{
     padding: 16px 0 22px 0;
     border-bottom: 1px solid #979797;
@@ -89,10 +89,10 @@ dl, ol, ul {
 /**********************************************/
 /*globalUserMenu*/
 .userInfo span:nth-child(2),
- .userInfo span:nth-child(4) {
+.userInfo span:nth-child(4) {
     font-size: 18px;
-     color: #fd0a0a;
- }
+    color: #fd0a0a;
+}
 .userInfo span:nth-child(3),
 .userInfo span:nth-child(5) {
     font-size: 18px;
@@ -147,10 +147,19 @@ dl, ol, ul {
     color: #FFFFFF;
     height: 100%;
 }
-.logo{
+.headerLogo{
     float: left;
     margin-right: 40px;
-    line-height: 65px;
+    width: 90px;
+    height: 65px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.headerLogo.logoWhite {
+    background-image: url(/Sellev/assets/img/logo_sellev_white.png);
+}
+.headerLogo.logoBlack {
+    background-image: url(/Sellev/assets/img/logo_sellev_black.png);
 }
 .leftBox{
     float: left;
@@ -162,9 +171,9 @@ dl, ol, ul {
     line-height: 65px;
     height: 100%;
 }
-.rightList {
-    float: left;
-}
+/*.rightList {*/
+/*float: left;*/
+/*}*/
 .searchWhite {
     width: 22px;
     height: 22px;
@@ -259,12 +268,10 @@ dl, ol, ul {
     .toggleIcon{
         display: none;
     }
-    .logoBlack {
-        display: none;
-    }
 }
 @media screen and (max-width: 768px){
-    .logo{
+    .headerLogo{
+        padding: 17px 0;
         margin-right: 0;
     }
     .leftList{
@@ -281,14 +288,5 @@ dl, ol, ul {
 
     .headerContainer {
         background-color: #FFFFFF;
-    }
-    .logo{
-        padding: 17px 0;
-    }
-    .logoBlack {
-        display: block;
-    }
-    .logoWhite {
-        display: none;
     }
 }

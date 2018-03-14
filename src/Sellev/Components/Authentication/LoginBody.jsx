@@ -76,29 +76,41 @@ class LoginBody extends React.Component {
                     {/*<AuthBtn type={'kakao'} />
                     <AuthBtn type={'naver'} />
                     <AuthBtn type={'facebook'} />*/}
-                    <div className={stylesAuth.authBtn + ' ' + stylesAuth.kakao}>| 카카오 계정으로 로그인</div>
-                    <div className={stylesAuth.authBtn + ' ' + stylesAuth.naver}>| 네이버 계정으로 로그인</div>
-                    <div className={stylesAuth.authBtn + ' ' + stylesAuth.facebook}>| 페이스북 계정으로 로그인</div>
+                    <div className={stylesAuth.authBtn + ' ' + stylesAuth.kakao}>
+                        <div className={stylesAuth.kakaoBody}>
+                            <div />
+                            <span>|</span>
+                            <div>카카오 계정으로 로그인</div>
+                        </div>
+                    </div>
+                    <div className={stylesAuth.authBtn + ' ' + stylesAuth.naver}>
+                        <div className={stylesAuth.naverBody}>
+                            <div />
+                            <span>|</span>
+                            <div>네이버 계정으로 로그인</div>
+                        </div>
+                    </div>
+                    <div className={stylesAuth.authBtn + ' ' + stylesAuth.facebook}>
+                        <div className={stylesAuth.facebookBody}>
+                            <div />
+                            <span>|</span>
+                            <div>페이스북 계정으로 로그인</div>
+                        </div>
+                    </div>
                     <div className={stylesAuth.border}><span>&#8211;</span>OR<span>&#8211;</span></div>
-{/*
-                     ----------이 부분 스타일 수정해주세요 (findpassword.jsx, 지비다 참조)-------------------
-*/}
                     <div className={styles.formGroup}>
                         <div className={styles.formRow}>
                             <div className={styles.formInputName}>핸드폰번호</div>
-                            <input className={styles.formInput} type={'text'} value={this.state.phoneNumber} onChange={(e) => this.setState({ phoneNumber: e.target.value })} autoComplete={'off'} placeholder={'핸드폰번호를 입력해주세요.'} />
-                            { this.state.warnPhoneNumberNotValid ? <div className={styles.formInputWarn}>핸드폰번호를 입력하세요.</div> : null }
+                            <input className={styles.formInputWithVerify} type={'text'} value={this.state.phoneNumber} onChange={(e) => this.setState({ phoneNumber: e.target.value })} autoComplete={'off'} placeholder={'핸드폰번호를 입력해주세요.'} />
                         </div>
+                        { this.state.warnPhoneNumberNotValid ? <div className={styles.formInputWarn}>핸드폰번호를 입력하세요.</div> : null }
                         <div className={styles.formRow}>
                             <div className={styles.formInputName}>비밀번호</div>
-                            <input className={styles.formInput} type={'password'} value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} autoComplete={'off'} placeholder={'비밀번호를 입력해주세요.'} />
-                            { this.state.warnPasswordNotValid ? <div className={styles.formInputWarn}>비밀번호를 입력하세요.</div> : null }
+                            <input className={styles.formInputWithVerify} type={'password'} value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} autoComplete={'off'} placeholder={'비밀번호를 입력해주세요.'} />
                         </div>
+                        { this.state.warnPasswordNotValid ? <div className={styles.formInputWarn}>비밀번호를 입력하세요.</div> : null }
                     </div>
-{/*
-                     -----------------------------------------------------------------------------------------
-*/}
-                    <div className={stylesAuth.authBtn} onClick={this.login}>로그인</div>
+                    <div className={stylesAuth.authBtn + ' ' + stylesAuth.loginBtn} onClick={this.login}>로그인</div>
                     <div className={stylesAuth.boxFooter}>
                         <span>아직 회원이 아니신가요?</span>
                         <Link to={'/auth/signup'}> 셀레브 가입하기</Link>

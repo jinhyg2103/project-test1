@@ -37,9 +37,6 @@ class Header extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
     componentWillMount() {
-        this.setState({
-            mql: mql,
-        });
         mql.addListener(this.handleChange);
     }
     handleChange() {
@@ -72,10 +69,7 @@ class Header extends React.Component {
                 <div className={styles.headerContainer}>
                     <div className={styles.headerBox}>
                         <div className={styles.leftBox}>
-                            <div className={styles.logo}>
-                                <img className={styles.logoWhite} src={'Sellev/assets/img/logo_sellev_white.png'} alt={''} />
-                                <img className={styles.logoBlack} src={'Sellev/assets/img/logo_sellev_black.png'} alt={''} />
-                            </div>
+                            <div className={styles.headerLogo + ' ' + (this.state.mediaQuery ? styles.logoBlack : styles.logoWhite)} />
                             <div className={styles.toggleIcon} onClick={this.handleDropdown}>
                                 <div />
                             </div>
@@ -91,16 +85,11 @@ class Header extends React.Component {
                             <ul className={styles.rightList}>
                                 <li><div className={(this.state.mediaQuery ? styles.searchBlack : styles.searchWhite)} /></li>
                                 <li><div className={(this.state.mediaQuery ? styles.notifyBlack : styles.notifyWhite)} /></li>
+                                <li onClick={this.handleUserMenu}><UserBox imgUrl={this.state.userProfile.imgUrl} /></li>
                             </ul>
-                            <div className={styles.iconBox}>
-                                <div onClick={this.handleUserMenu}><UserBox imgUrl={this.state.userProfile.imgUrl} /></div>
-                                <ul className={styles.userMenu + (this.state.userMenuOpen ? '' : ' ' + styles.hide)}>
-                                    <li><Link to={'/home'}>관심펀딩/상품</Link></li>
-                                    <li><Link to={'/hashtag'}>참여 펀딩 현황</Link></li>
-                                    <li><Link to={'/product'}>주문내역 조회</Link></li>
-                                    <li><Link to={'/media'}>코인충전</Link></li>
-                                </ul>
-                            </div>
+                            {/*<div className={styles.iconBox}>*/}
+                            {/*<div onClick={this.handleUserMenu}><UserBox imgUrl={this.state.userProfile.imgUrl} /></div>*/}
+                            {/*</div>*/}
                         </div>
                     </div>
                 </div>
