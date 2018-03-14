@@ -154,71 +154,73 @@ class SignupBody extends React.Component {
     }
     render() {
         return (
-          <div className={stylesAuth.signupBody}>
-              <div className={stylesAuth.signupLogo}>
-                  <img src="/Sellev/assets/img/logo_sellev_auth.png" alt="" />
-              </div>
-              <div className={stylesAuth.signupBox}>
-                  <div className={stylesAuth.bodyTitle}>
-                      핸드폰번호로<br />
-                      셀레브 회원가입</div>
-                  <div className={styles.formGroup}>
-                      {/*<div className={styles.formRow}>
+            <div className={stylesAuth.authBody}>
+                <div className={stylesAuth.authLogo}>
+                    <img src="/Sellev/assets/img/logo_sellev_auth.png" alt="" />
+                </div>
+                <div className={stylesAuth.authBox}>
+                    <div className={stylesAuth.authTitle}>
+                        핸드폰번호로<br />
+                        셀레브 회원가입</div>
+                    <div className={styles.formGroup}>
+                        {/*<div className={styles.formRow}>
                           <div className={styles.formInputName}>핸드폰번호</div>
                           <input className={styles.formInputWithVerify} type={'text'} value={this.state.phoneNumber} autoComplete={'off'} onChange={(e) => this.setState({ phoneNumber: e.target.value })} placeholder={'핸드폰번호를 입력해주세요.'} />
                           <div className={styles.formInputVerifyBtn + (this.state.phoneNumber.length < 6 ? ' ' + styles.disabled : '')} onClick={this.sendSmsVerificationCode}>인증</div>
                       </div>*/}
-                      { this.state.isSmsVerified ? (
-                          <div className={styles.formRow}>
-                              <div className={styles.formInputName}>핸드폰번호</div>
-                              <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} value={this.state.phoneNumber} disabled />
-                              <div className={styles.inputVerifyBox}>인증완료</div>
-                          </div>
-                      ) : (
-                          <div>
-                              <div className={styles.formRow}>
-                                  <div className={styles.formInputName}>핸드폰번호</div>
-                                  { this.state.smsVerificationCode.length > 0
-                                      ? <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} value={this.state.phoneNumber} disabled />
-                                      : <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} placeholder={'핸드폰번호를 입력해주세요.'} value={this.state.phoneNumber} onChange={(e) => this.setState({ phoneNumber: e.target.value })} />
-                                  }
-                                  <div className={styles.inputVerifyBox + ' ' + styles.disabled} onClick={this.sendSmsVerificationCode.bind(this)}>인증</div>
-                              </div>
-                              { this.state.warnPhoneNumberNotValid ? <div className={styles.formInputWarn}>핸드폰 인증을 받으세요.</div> : null }
-                              { this.state.warnPhoneNumberAlreadyExist ? <div className={styles.formInputWarn}>이미 가입한 휴대폰입니다. 비밀번호를 찾아보세요.</div> : null }
-                          </div>
-                      ) }
-                      <div className={styles.formRow + ( this.state.smsVerificationCode.length > 0 ? '' : ' ' + styles.disabled )}>
-                          <div className={styles.formInputName}>인증번호</div>
-                          <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} autoComplete={'off'} placeholder={ this.state.smsVerificationCode.length > 0 ? '' : '위의 인증버튼 선택 후 인증번호를 입력해주세요.' } value={this.state.smsVerificationCodeByUser} onChange={(e) => this.setState({ smsVerificationCodeByUser: e.target.value })} disabled={ this.state.smsVerificationCode.length <= 0 }/>
-                          { this.state.smsVerificationCode.length > 0 ? <div className={styles.inputVerifyBox} onClick={this.smsVerificationCodeCheck.bind(this)}>인증하기</div> : null }
-                          { this.state.warnPhoneNumber6digitWrong ? <div className={styles.formInputWarn}>인증번호가 틀립니다.</div> : null }
-                      </div>
-                      { this.state.smsVerificationCode.length > 0 ? (
-                          <div>인증시간이 <span>2:58</span> 남았습니다</div>
-                      ) : null }
-                      <div className={styles.formRow}>
-                          <div className={styles.formInputName}>비밀번호</div>
-                          <input className={styles.formInputWithVerify} type={'password'} autoComplete={'off'} value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} placeholder={'비밀번호 확인'} />
-                          { this.state.warnPasswordNotValid ? <div className={styles.formInputWarn}>비밀번호는 6자 이상, 30자 미만, 영문/숫자 조합입니다.</div> : null }
-                      </div>
-                      <div className={styles.formRow}>
-                          <div className={styles.formInputName}>비밀번호확인</div>
-                          <input className={styles.formInputWithVerify} type={'password'} autoComplete={'off'} value={this.state.passwordRe} onChange={(e) => this.setState({ passwordRe: e.target.value })} placeholder={'비밀번호 확인'} />
-                          { this.state.warnPasswordRetype ? <div className={styles.formInputWarn}>비밀번호 재입력이 틀렸습니다.</div> : null }
-                      </div>
-                      <div className={styles.formRow}>
-                          <div className={styles.agreeLabel}> {/* 체크박스 부분은 formGroup 안에 넣으셔도 되고 밖으로 빼셔도 됩니다. */}
-                              <input type={'checkbox'} value={this.state.isAgreeTerms} onChange={(e) => this.setState({ isAgreeTerms: e.target.checked })} />
-                              <label>이용약관과 개인정보취급방침에 동의합니다.</label>
-                          </div>
-                      </div>
-                  </div>
-                  <div>
-                      <div className={stylesAuth.authBtn} onClick={this.signup}>가입하기</div>
-                  </div>
-              </div>
-          </div>
+                        { this.state.isSmsVerified ? (
+                            <div className={styles.formRow}>
+                                <div className={styles.formInputName}>핸드폰번호</div>
+                                <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} value={this.state.phoneNumber} disabled />
+                                <div className={styles.inputVerifyBox + ' ' + styles.disabled}>인증완료</div>
+                            </div>
+                        ) : (
+                            <div>
+                                <div className={styles.formRow}>
+                                    <div className={styles.formInputName}>핸드폰번호</div>
+                                    { this.state.smsVerificationCode.length > 0
+                                        ? <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} value={this.state.phoneNumber} disabled />
+                                        : <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} placeholder={'핸드폰번호를 입력해주세요.'} value={this.state.phoneNumber} onChange={(e) => this.setState({ phoneNumber: e.target.value })} />
+                                    }
+                                    <div className={styles.inputVerifyBox + ' ' + styles.disabled} onClick={this.sendSmsVerificationCode.bind(this)}>인증</div>
+                                </div>
+                                { this.state.warnPhoneNumberNotValid ? <div className={styles.formInputWarn}>핸드폰 인증을 받으세요.</div> : null }
+                                { this.state.warnPhoneNumberAlreadyExist ? <div className={styles.formInputWarn}>이미 가입한 휴대폰입니다. 비밀번호를 찾아보세요.</div> : null }
+                            </div>
+                        ) }
+                        <div className={styles.formRow + ( this.state.smsVerificationCode.length > 0 ? '' : ' ' + styles.disabled )}>
+                            <div className={styles.formInputName}>인증번호</div>
+                            <input className={styles.formInput + ' ' + styles.inputWithVerify} type={'text'} autoComplete={'off'} placeholder={ this.state.smsVerificationCode.length > 0 ? '' : '위의 인증버튼 선택 후 인증번호를 입력해주세요.' } value={this.state.smsVerificationCodeByUser} onChange={(e) => this.setState({ smsVerificationCodeByUser: e.target.value })} disabled={ this.state.smsVerificationCode.length <= 0 }/>
+                            { this.state.smsVerificationCode.length > 0 ? <div className={styles.inputVerifyBox + ' ' + (this.state.authTest ? styles.activeWhite : styles.disabled)} onClick={this.smsVerificationCodeCheck.bind(this)}>인증하기</div> : null }
+                            {/*{ this.state.isSmsVerified ? <div className={styles.inputVerifyBox}><img src={'/Sellev/assets/img/ic_signup_check.png'} /></div> : null }*/}
+                        </div>
+                        { this.state.warnPhoneNumber6digitWrong ? <div className={styles.formInputWarn}>인증번호가 틀립니다.</div> : null }
+                        { this.state.smsVerificationCode.length > 0 ? (
+                            <div className={styles.formInputAlert}>인증시간이 <span className={styles.red}>2:58</span> 남았습니다</div>
+                        ) : null }
+                        <div className={styles.formRow}>
+                            <div className={styles.formInputName}>비밀번호</div>
+                            <input className={styles.formInputWithVerify} type={'password'} autoComplete={'off'} value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} placeholder={'비밀번호 확인'} />
+                        </div>
+                        { this.state.warnPasswordNotValid ? <div className={styles.formInputWarn}>비밀번호는 6자 이상, 30자 미만, 영문/숫자 조합입니다.</div> : null }
+                        <div className={styles.formRow}>
+                            <div className={styles.formInputName}>비밀번호확인</div>
+                            <input className={styles.formInputWithVerify} type={'password'} autoComplete={'off'} value={this.state.passwordRe} onChange={(e) => this.setState({ passwordRe: e.target.value })} placeholder={'비밀번호 확인'} />
+                        </div>
+                        { this.state.warnPasswordRetype ? <div className={styles.formInputWarn}>비밀번호 재입력이 틀렸습니다.</div> : null }
+                        <div className={styles.formRow}>
+                            <div className={styles.agreeLabel}> {/* 체크박스 부분은 formGroup 안에 넣으셔도 되고 밖으로 빼셔도 됩니다. */}
+                                <input id={'ckeckboxAssociated'} className={stylesAuth.signupCheckbox} type={'checkbox'} value={this.state.isAgreeTerms} onChange={(e) => this.setState({ isAgreeTerms: e.target.checked })} />
+                                <label htmlFor={'ckeckboxAssociated'} className={stylesAuth.ckeckboxBlackIcon} />
+                                <div className={stylesAuth.ckeckboxLabel}><span className={styles.bold}>이용약관</span>과 <span className={styles.bold}>개인정보취급방침</span>에 동의합니다.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className={stylesAuth.authBtn + ' ' + stylesAuth.loginBtn} onClick={this.signup}>가입하기</div>
+                    </div>
+                </div>
+            </div>
         );
     }
 }

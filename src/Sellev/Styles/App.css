@@ -89,6 +89,12 @@ body {
     color: #dcdcdc;
 }
 
+.formRow .agreeLabel {
+    height: 59px;
+    line-height: 59px;
+    position: relative;
+}
+
 /*warning mesage*/
 .formInputWarn {
     font-size: 14px;
@@ -96,4 +102,17 @@ body {
     padding-top: 13px;
     border-top: 1px solid #e0e0e0;
     margin-bottom: 13px;
+}
+.formInputAlert {
+    color: #979797;
+    padding-top: 13px;
+    border-top: 1px solid #e0e0e0;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+.red {
+    color: #ff0000;
+}
+.bold {
+    font-weight: bold;
 }

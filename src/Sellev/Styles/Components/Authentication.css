@@ -20,9 +20,10 @@
 }
 
 /*or*/
-.loginBox .border {
+.border {
     color: #e0e0e0;
     margin: 18px 0;
+    text-align: center;
 }
 /*form*/
 .loginForm {
@@ -68,6 +69,7 @@
     line-height: 23px;
     width: 50%;
     margin: 12px auto;
+    text-align: center;
 }
 
 .loginFooter .logoBox div {
@@ -77,23 +79,28 @@
     background-position: 112px 128px;
     float: left;
 }
+.signupFooter {
+    margin-top: 54px;
+    text-align: center;
+}
 
 /* logo btn */
 
 .loginBtn {
     margin-bottom: 10px;
 }
-
-/* kakao button */
-
-.kakaoBtn {
+/*button Common*/
+.authBtn {
     height: 56px;
     width: 371px;
-    margin: 0 auto;
-    background-color: #feea02;
+    margin: 8px auto;
     border-radius: 4px;
 }
+/* kakao button */
 
+.kakao {
+    background-color: #feea02;
+}
 .kakaoBody {
     overflow: hidden;
     padding: 18px 36px;
@@ -119,12 +126,8 @@
 
 /* naver button */
 
-.naverBtn {
-    height: 56px;
-    width: 371px;
-    margin: 0 auto;
+.naver {
     background-color: #1dc800;
-    border-radius: 4px;
 }
 .naverBody {
     overflow: hidden;
@@ -151,12 +154,8 @@
 
 /* facebook button */
 
-.facebookBtn {
-    height: 56px;
-    width: 371px;
-    margin: 0 auto;
+.facebook {
     background-color: #395a90;
-    border-radius: 4px;
 }
 .facebookBody {
     overflow: hidden;
@@ -181,13 +180,9 @@
     line-height: 21px;
 }
 
-/* login button */
+/* login button : red button */
 
-.authBtn {
-    height: 56px;
-    width: 371px;
-    margin: 0 auto;
-    border-radius: 4px;
+.loginBtn {
     background-color: #fd0a0a;
     overflow: hidden;
     padding: 20px 36px;
@@ -229,19 +224,48 @@
 }
 /*Find Password*/
 .findPasswordContainer {
-    margin-top: 100px;
-}
-.changeBody {
     width: 460px;
-    height: 328px;
-    margin: 0 auto;
-    border-radius: 12px;
-    background-color: #ffffff;
-    box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);
-    padding: 32px 26px;
+    margin: 100px auto 50px;
 }
-.verifyBody {
+
+/* signup */
+.signupContainer {
     width: 460px;
+    margin: 100px auto 50px;
+}
+input[type=checkbox].signupCheckbox:checked + label.ckeckboxBlackIcon {
+    width: 24px;
+    height: 24px;
+    background-image: url("/Sellev/assets/img/ic_web_icon.png");
+    background-position: -30px 75px;
+    position: relative;
+    top: 15px;
+}
+input[type=checkbox].signupCheckbox + label.ckeckboxBlackIcon{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url("/Sellev/assets/img/ic_web_icon.png");
+    background-position: -30px -54px;
+    position: relative;
+    top: 15px;
+}
+input[type=checkbox].signupCheckbox {
+    display: none;
+    position: relative;
+}
+.ckeckboxLabel {
+    display: inline-block;
+}
+
+/*Common */
+.authBody {
+    width: 100%;
+}
+.authLogo {
+    text-align: center;
+}
+.authBox {
     min-height: 328px;
     margin: 0 auto;
     border-radius: 12px;
@@ -249,16 +273,10 @@
     box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);
     padding: 32px 26px;
 }
-
-/* 회원가입 */
-.signupContainer {
-    margin-top: 100px;
-}
-
-/*Common */
-.bodyTitle {
+.authTitle {
     font-size: 24px;
     font-weight: bold;
     width: 407px;
     margin: 0 auto;
+    line-height: 1.5em;
 }
