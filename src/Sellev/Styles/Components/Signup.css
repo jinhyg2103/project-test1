@@ -33,25 +33,3 @@
 }
 
 /*footer*/
-.signupFooter {
-    margin-top: 54px;
-    text-align: center;
-}
-.signupFooter a {
-    color: #272727;
-}
-.signupFooter .logoBox {
-    font-size: 12px;
-    color: #272727;
-    line-height: 23px;
-    width: 50%;
-    margin: 12px auto;
-}
-
-.signupFooter .logoBox div {
-    background-image: url('/Sellev/assets/img/ic_common.png');
-    width: 55px;
-    height: 20px;
-    background-position: 112px 128px;
-    float: left;
-}

@@ -11,9 +11,9 @@ import stylesUser from '../Styles/Common/UserBox.css';
 class userBox extends React.Component {
     render() {
         return (
-            <span className={stylesUser.userBox}>
+            <div className={stylesUser.userBox}>
                 <img alt={''} src={this.props.imgUrl} />
-            </span>
+            </div>
         );
     }
 }

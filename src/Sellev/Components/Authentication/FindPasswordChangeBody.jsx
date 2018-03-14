@@ -62,9 +62,8 @@ class LoginView extends React.Component {
     render() {
         return (
             <div className={stylesAuth.authBody}>
-                <div className={stylesAuth.authLogo}>
-                    <img src="/Sellev/assets/img/logo_sellev_auth.png" alt="" />
-                </div>
+                <div className={stylesAuth.authLogo} />
+                <div className={stylesAuth.authLogoMobile} />
                 <div className={stylesAuth.authBox}>
                     <div className={stylesAuth.authTitle}>비밀번호 재설정</div>
                     <div className={styles.formGroup}>
@@ -74,7 +73,7 @@ class LoginView extends React.Component {
                         </div>
                         { this.state.warnPasswordNotValid ? <div className={styles.formInputWarn}>비밀번호는 6자 이상, 30자 미만, 영문/숫자 조합입니다.</div> : null }
                         <div className={styles.formRow}>
-                            <div className={styles.formInputName}>새 비밀번호확인</div>
+                            <div className={styles.formInputName + ' ' + styles.newPasswordName}>새 비밀번호확인</div>
                             <input className={styles.formInputWithVerify} type={'password'} value={this.state.passwordRe} onChange={(e) => this.setState({ passwordRe: e.target.value })} placeholder={'새 비밀번호를 다시 입력해주세요.'} />
                         </div>
                         { this.state.warnPasswordRetype ? <div className={styles.formInputWarn}>비밀번호 재입력이 틀렸습니다.</div> : null }
