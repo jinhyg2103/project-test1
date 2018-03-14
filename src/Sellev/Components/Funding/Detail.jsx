@@ -14,7 +14,7 @@ class Detail extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            type: 1,
+            type: 2,
         }
     }
     render() {

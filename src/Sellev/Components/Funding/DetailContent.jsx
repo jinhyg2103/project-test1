@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
+import DetailContentSide from './DetailContentSide';
 
 class DetailContent extends React.Component {
     constructor(props) {
@@ -75,6 +76,7 @@ class DetailContent extends React.Component {
                         </div>
                     </div>
                 </div>
+                <DetailContentSide />
             </div>
         );
     }

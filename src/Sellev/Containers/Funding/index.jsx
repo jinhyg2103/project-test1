@@ -17,8 +17,8 @@ class FundingView extends React.Component {
     render() {
         return (
             <div>
-                <Route path={'/fundingmarket'} component={FundingHome} />
-                <Route path={'/fundingmarket/detail'} component={FundingDetail} />
+                <Route path={'/fundingmarket'} exact={true} strict={false} component={FundingHome} />
+                <Route path={'/fundingmarket/detail'} exact={true} strict={false} component={FundingDetail} />
             </div>
         );
     }
