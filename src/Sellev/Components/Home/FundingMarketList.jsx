@@ -19,7 +19,7 @@ import stylesHome from '../../Styles/Components/Home.css';
 * this.props.listItem
 */
 
-class FundingList extends React.Component {
+class FundingMarketList extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -28,7 +28,7 @@ class FundingList extends React.Component {
         let listItem = this.props.listItem && this.props.listItem.length > 0 ?
             this.props.listItem.map((item, index) => {
                 return (
-                    <li key={index}>
+                    <li key={index} className={stylesHome.item}>
                         <div>{/*번호*/}{index + 1}</div>
                         <div>{item.title}</div>
                         <div>{item.name}</div>
@@ -36,10 +36,10 @@ class FundingList extends React.Component {
                 );
             }) : null;
         return (
-            <div>
-                <div>{this.props.title}</div>
-                <div style={{width: '352px', height: '172px', backgroundImage: 'url("' + this.props.listItem[0].bgImage + '")'}}></div>
-                <ul>
+            <div className={stylesHome.FundingMarketListBox}>
+                <div className={stylesHome.listTItle}>{this.props.title}</div>
+                <div className={stylesHome.listImg} style={{width: '352px', height: '172px', backgroundImage: 'url("' + this.props.listItem[0].bgImage + '")'}}></div>
+                <ul className={stylesHome.itemListBox}>
                     {listItem}
                 </ul>
             </div>
@@ -50,4 +50,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(FundingList));
+})(withRouter(FundingMarketList));

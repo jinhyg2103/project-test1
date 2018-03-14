@@ -21081,7 +21081,7 @@ var ImageList = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement('div', { style: { width: '264px', height: '132px', backgroundImage: 'url("' + this.props.listItem.bgImage + '")' } }),
+                _react2.default.createElement('div', { className: _ImageList2.default.imageBox, style: { width: '264px', height: '132px', backgroundImage: 'url("' + this.props.listItem.bgImage + '")' } }),
                 this.props.type == 'fundingmarket' ? _react2.default.createElement('div', { style: { backgroundImage: 'url("' + this.props.listItem.profile + '")' } }) : null,
                 this.props.type == 'fundingmarket' ? this.props.listItem.type == 'funding' ? _react2.default.createElement(_Funding2.default, { listItem: this.props.listItem }) : _react2.default.createElement(_Market2.default, { listItem: this.props.listItem }) : null,
                 this.props.type == 'video' ? _react2.default.createElement(_Video2.default, { listItem: this.props.listItem }) : null
@@ -43709,9 +43709,9 @@ var _Banner = __webpack_require__(675);
 
 var _Banner2 = _interopRequireDefault(_Banner);
 
-var _Funding = __webpack_require__(695);
+var _FundingMarket = __webpack_require__(695);
 
-var _Funding2 = _interopRequireDefault(_Funding);
+var _FundingMarket2 = _interopRequireDefault(_FundingMarket);
 
 var _HashTag = __webpack_require__(698);
 
@@ -43760,7 +43760,7 @@ var HomeContainer = function (_React$Component) {
                 'div',
                 { className: _Home2.default.homeContainer },
                 _react2.default.createElement(_Banner2.default, null),
-                _react2.default.createElement(_Funding2.default, null),
+                _react2.default.createElement(_FundingMarket2.default, null),
                 _react2.default.createElement(_HashTag2.default, null),
                 _react2.default.createElement(_Video2.default, null)
             );
@@ -45893,20 +45893,32 @@ exports = module.exports = __webpack_require__(48)(undefined);
 
 
 // module
-exports.push([module.i, "/* Common */\r\n\r\n.Home__sectionTitle___3woZq {\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #161616;\r\n}\r\n\r\n.Home__sectionWhiteTitle___1F_Ku {\r\n    font-family: 'Apple SD Gothic Neo';\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #ffffff;\r\n}\r\n\r\n.Home__sectionSmallTitle___3lXqe {\r\n    font-family: 'Product Sans';\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    line-height: 19px;\r\n    color: #a0a0a0;\r\n    letter-spacing: -0.5px;\r\n}\r\n\r\n/* Banner */\r\n.Home__bannerBody___2CqX-{\r\n    overflow: hidden;\r\n}\r\n.Home__bannerSection___20VGJ {\r\n    width: 100%;\r\n    height: 385px;\r\n    background-color: black;\r\n    padding-top: 60px;\r\n    margin-top: 65px;\r\n}\r\n.Home__BannerHeader___H8waY {\r\n    width: 1100px;\r\n    margin: 0px auto 20px;\r\n}\r\n.Home__BannerHeader___H8waY .Home__sectionTitle___3woZq{\r\n    color: #FFFFFF;\r\n}\r\n\r\n/* Funding */\r\n.Home__fundingSection___3KCMl {\r\n    margin-top: 120px;\r\n}\r\n.Home__fundingHeader___3jDi2 {\r\n    width: 1100px;\r\n    margin: 0 auto 22px;\r\n}\r\n\r\n/* HashTag */\r\n.Home__hashTagSection___341kM {\r\n\r\n}\r\n\r\n/* Video */\r\n.Home__videoSection___3_9ga {\r\n\r\n}", ""]);
+exports.push([module.i, "/* Common */\r\n\r\n.Home__sectionTitle___3woZq {\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #161616;\r\n}\r\n\r\n.Home__sectionWhiteTitle___1F_Ku {\r\n    font-family: 'Apple SD Gothic Neo';\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #ffffff;\r\n}\r\n\r\n.Home__sectionSmallTitle___3lXqe {\r\n    font-family: 'Product Sans';\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    line-height: 19px;\r\n    color: #a0a0a0;\r\n    letter-spacing: -0.5px;\r\n}\r\n.Home__titleBox___zAY6c {\r\n    overflow: hidden;\r\n}\r\n.Home__titleBox___zAY6c .Home__sectionTitle___3woZq {\r\n    float: left;\r\n}\r\n.Home__titleBox___zAY6c .Home__more___2EPNl {\r\n    color: #fd0a0a;\r\n    font-size: 16px;\r\n    float: right;\r\n    padding-top: 11px;\r\n}\r\n\r\n/* Banner */\r\n.Home__bannerBody___2CqX-{\r\n    overflow: hidden;\r\n}\r\n.Home__bannerSection___20VGJ {\r\n    width: 100%;\r\n    height: 385px;\r\n    background-color: black;\r\n    padding-top: 60px;\r\n    margin-top: 65px;\r\n}\r\n.Home__BannerHeader___H8waY {\r\n    width: 1100px;\r\n    margin: 0px auto 20px;\r\n}\r\n.Home__BannerHeader___H8waY .Home__sectionTitle___3woZq{\r\n    color: #FFFFFF;\r\n}\r\n\r\n/* Funding Market */\r\n.Home__fundingMarketSection___3gQ9A {\r\n     width: 1100px;\r\n     margin: 120px auto 50px;\r\n }\r\n.Home__fundingMarketHeader___1bHgl {\r\n    width: 100%;\r\n    margin-bottom: 22px;\r\n}\r\n.Home__fundingMarketBody___3Z2x8 {\r\n    width: 100%;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 {\r\n    width: 352px;\r\n    display: inline-block;\r\n    margin-right: 20px;\r\n}\r\n.Home__FundingMarketListBox___3Yul1:last-child {\r\n    margin-right: 0;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__listTItle___1fXjN {\r\n    font-size: 19px;\r\n    font-weight: bold;\r\n    margin-top: 15px;\r\n    margin-bottom: 15px;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__listImg___1vKpe {\r\n    background-size: cover;\r\n    background-position: center;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S {\r\n    margin: 11px 11px 0 11px;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S .Home__item___YFgZL {\r\n    height: 83px;\r\n    padding: 18px 0 18px 0;\r\n    border-bottom: 1px solid #e7e7e7;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S .Home__item___YFgZL div:first-child {\r\n    width: 28px;\r\n    height: 28px;\r\n    background-color: #fd0a0a;\r\n    border-radius: 24px;\r\n    padding: 7px 5px;\r\n    text-align: center;\r\n    color: #ffffff;\r\n    float: left;\r\n    margin-top: 6px;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S .Home__item___YFgZL div:nth-child(2) {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    line-height: 1.5em;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S .Home__item___YFgZL div:last-child {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    color: #fd0a0a;\r\n    line-height: 1.5em;\r\n}\r\n\r\n/* HashTag */\r\n.Home__hashTagSection___341kM {\r\n    width: 1100px;\r\n    margin: 120px auto 50px;\r\n}\r\n.Home__hashTagHeader___1SSPQ {\r\n    width: 100%;\r\n    margin-bottom: 22px;\r\n}\r\n\r\n/* Video */\r\n.Home__videoSection___3_9ga {\r\n    width: 1100px;\r\n    margin: 120px auto 50px;\r\n}\r\n.Home__videoHeader___3Z4ay {\r\n    width: 100%;\r\n    margin-bottom: 22px;\r\n}\r\n.Home__videoBody___2Shf3 {\r\n    width: 100%;\r\n}\r\n.Home__videoBox___y-rdm {\r\n    width: 264px;\r\n    display: inline-block;\r\n    margin-right: 10px;\r\n}\r\n\r\n@media screen and (max-width: 1100px){\r\n    .Home__videoSection___3_9ga {\r\n        width: 825px;\r\n    }\r\n}\r\n@media screen and (max-width: 850px){\r\n    .Home__videoSection___3_9ga {\r\n        width: 550px;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
 	"sectionTitle": "Home__sectionTitle___3woZq",
 	"sectionWhiteTitle": "Home__sectionWhiteTitle___1F_Ku",
 	"sectionSmallTitle": "Home__sectionSmallTitle___3lXqe",
+	"titleBox": "Home__titleBox___zAY6c",
+	"more": "Home__more___2EPNl",
 	"bannerBody": "Home__bannerBody___2CqX-",
 	"bannerSection": "Home__bannerSection___20VGJ",
 	"BannerHeader": "Home__BannerHeader___H8waY",
-	"fundingSection": "Home__fundingSection___3KCMl",
-	"fundingHeader": "Home__fundingHeader___3jDi2",
+	"fundingMarketSection": "Home__fundingMarketSection___3gQ9A",
+	"fundingMarketHeader": "Home__fundingMarketHeader___1bHgl",
+	"fundingMarketBody": "Home__fundingMarketBody___3Z2x8",
+	"FundingMarketListBox": "Home__FundingMarketListBox___3Yul1",
+	"listTItle": "Home__listTItle___1fXjN",
+	"listImg": "Home__listImg___1vKpe",
+	"itemListBox": "Home__itemListBox___3F69S",
+	"item": "Home__item___YFgZL",
 	"hashTagSection": "Home__hashTagSection___341kM",
-	"videoSection": "Home__videoSection___3_9ga"
+	"hashTagHeader": "Home__hashTagHeader___1SSPQ",
+	"videoSection": "Home__videoSection___3_9ga",
+	"videoHeader": "Home__videoHeader___3Z4ay",
+	"videoBody": "Home__videoBody___2Shf3",
+	"videoBox": "Home__videoBox___y-rdm"
 };
 
 /***/ }),
@@ -45932,9 +45944,9 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _FundingBody = __webpack_require__(696);
+var _FundingMarketBody = __webpack_require__(696);
 
-var _FundingBody2 = _interopRequireDefault(_FundingBody);
+var _FundingMarketBody2 = _interopRequireDefault(_FundingMarketBody);
 
 var _Home = __webpack_require__(38);
 
@@ -45956,24 +45968,24 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // Actions
 
-var Funding = function (_React$Component) {
-    _inherits(Funding, _React$Component);
+var FundingMarket = function (_React$Component) {
+    _inherits(FundingMarket, _React$Component);
 
-    function Funding() {
-        _classCallCheck(this, Funding);
+    function FundingMarket() {
+        _classCallCheck(this, FundingMarket);
 
-        return _possibleConstructorReturn(this, (Funding.__proto__ || Object.getPrototypeOf(Funding)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (FundingMarket.__proto__ || Object.getPrototypeOf(FundingMarket)).apply(this, arguments));
     }
 
-    _createClass(Funding, [{
+    _createClass(FundingMarket, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: _Home2.default.fundingSection },
+                { className: _Home2.default.fundingMarketSection },
                 _react2.default.createElement(
                     'div',
-                    { className: _Home2.default.fundingHeader },
+                    { className: _Home2.default.fundingMarketHeader },
                     _react2.default.createElement(
                         'div',
                         { className: _Home2.default.sectionSmallTitle },
@@ -45985,19 +45997,19 @@ var Funding = function (_React$Component) {
                         '\uD380\uB529&\uB9C8\uCF13'
                     )
                 ),
-                _react2.default.createElement(_FundingBody2.default, null)
+                _react2.default.createElement(_FundingMarketBody2.default, null)
             );
         }
     }]);
 
-    return Funding;
+    return FundingMarket;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouterDom.withRouter)(Funding));
+})((0, _reactRouterDom.withRouter)(FundingMarket));
 
 exports.default = _default;
 ;
@@ -46007,9 +46019,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Funding, 'Funding', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/Funding.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarket, 'FundingMarket', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarket.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/Funding.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarket.jsx');
 }();
 
 ;
@@ -46037,9 +46049,9 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _FundingList = __webpack_require__(697);
+var _FundingMarketList = __webpack_require__(697);
 
-var _FundingList2 = _interopRequireDefault(_FundingList);
+var _FundingMarketList2 = _interopRequireDefault(_FundingMarketList);
 
 var _Home = __webpack_require__(38);
 
@@ -46078,65 +46090,65 @@ var FundingBody = function (_React$Component) {
                 fundingList: [{
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png'
                 }],
                 hitList: [{
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png'
                 }],
                 newList: [{
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png'
                 }, {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png'
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png'
                 }]
             });
         }
@@ -46145,10 +46157,10 @@ var FundingBody = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
-                _react2.default.createElement(_FundingList2.default, { title: '펀딩액순', listItem: this.state.fundingList }),
-                _react2.default.createElement(_FundingList2.default, { title: '조회순', listItem: this.state.hitList }),
-                _react2.default.createElement(_FundingList2.default, { title: '신규', listItem: this.state.newList })
+                { className: _Home2.default.fundingMarketBody },
+                _react2.default.createElement(_FundingMarketList2.default, { title: '펀딩액순', listItem: this.state.fundingList }),
+                _react2.default.createElement(_FundingMarketList2.default, { title: '조회순', listItem: this.state.hitList }),
+                _react2.default.createElement(_FundingMarketList2.default, { title: '신규', listItem: this.state.newList })
             );
         }
     }]);
@@ -46170,9 +46182,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingBody, 'FundingBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingBody.jsx');
+    __REACT_HOT_LOADER__.register(FundingBody, 'FundingBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarketBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarketBody.jsx');
 }();
 
 ;
@@ -46224,23 +46236,23 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 * this.props.listItem
 */
 
-var FundingList = function (_React$Component) {
-    _inherits(FundingList, _React$Component);
+var FundingMarketList = function (_React$Component) {
+    _inherits(FundingMarketList, _React$Component);
 
-    function FundingList(props) {
-        _classCallCheck(this, FundingList);
+    function FundingMarketList(props) {
+        _classCallCheck(this, FundingMarketList);
 
-        return _possibleConstructorReturn(this, (FundingList.__proto__ || Object.getPrototypeOf(FundingList)).call(this, props));
+        return _possibleConstructorReturn(this, (FundingMarketList.__proto__ || Object.getPrototypeOf(FundingMarketList)).call(this, props));
     }
 
-    _createClass(FundingList, [{
+    _createClass(FundingMarketList, [{
         key: 'render',
         value: function render() {
             /* FundingBody에서 호출한 Action들(this.props.listItem)을 받아와서 리스트 형태로 뿌려줄 예정 */
             var listItem = this.props.listItem && this.props.listItem.length > 0 ? this.props.listItem.map(function (item, index) {
                 return _react2.default.createElement(
                     'li',
-                    { key: index },
+                    { key: index, className: _Home2.default.item },
                     _react2.default.createElement(
                         'div',
                         null,
@@ -46260,30 +46272,30 @@ var FundingList = function (_React$Component) {
             }) : null;
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: _Home2.default.FundingMarketListBox },
                 _react2.default.createElement(
                     'div',
-                    null,
+                    { className: _Home2.default.listTItle },
                     this.props.title
                 ),
-                _react2.default.createElement('div', { style: { width: '352px', height: '172px', backgroundImage: 'url("' + this.props.listItem[0].bgImage + '")' } }),
+                _react2.default.createElement('div', { className: _Home2.default.listImg, style: { width: '352px', height: '172px', backgroundImage: 'url("' + this.props.listItem[0].bgImage + '")' } }),
                 _react2.default.createElement(
                     'ul',
-                    null,
+                    { className: _Home2.default.itemListBox },
                     listItem
                 )
             );
         }
     }]);
 
-    return FundingList;
+    return FundingMarketList;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouterDom.withRouter)(FundingList));
+})((0, _reactRouterDom.withRouter)(FundingMarketList));
 
 exports.default = _default;
 ;
@@ -46293,9 +46305,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingList, 'FundingList', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingList.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketList, 'FundingMarketList', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarketList.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingList.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarketList.jsx');
 }();
 
 ;
@@ -46364,7 +46376,7 @@ var HashTag = function (_React$Component) {
                 { className: _Home2.default.hashTagSection },
                 _react2.default.createElement(
                     'div',
-                    null,
+                    { className: _Home2.default.hashTagHeader },
                     _react2.default.createElement(
                         'div',
                         { className: _Home2.default.sectionSmallTitle },
@@ -46372,8 +46384,17 @@ var HashTag = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: _Home2.default.sectionTitle },
-                        '\uD574\uC2DC\uD0DC\uADF8'
+                        { className: _Home2.default.titleBox },
+                        _react2.default.createElement(
+                            'div',
+                            { className: _Home2.default.sectionTitle },
+                            '\uD574\uC2DC\uD0DC\uADF8'
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { to: '/funding', className: _Home2.default.more },
+                            '\uC804\uCCB4\uBCF4\uAE30'
+                        )
                     )
                 ),
                 _react2.default.createElement(_HashTagBody2.default, null)
@@ -46685,7 +46706,7 @@ var Video = function (_React$Component) {
                 { className: _Home2.default.videoSection },
                 _react2.default.createElement(
                     'div',
-                    null,
+                    { className: _Home2.default.videoHeader },
                     _react2.default.createElement(
                         'div',
                         { className: _Home2.default.sectionSmallTitle },
@@ -46693,8 +46714,17 @@ var Video = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: _Home2.default.sectionTitle },
-                        '\uC624\uB298\uC758 \uB3D9\uC601\uC0C1'
+                        { className: _Home2.default.titleBox },
+                        _react2.default.createElement(
+                            'div',
+                            { className: _Home2.default.sectionTitle },
+                            '\uC624\uB298\uC758 \uB3D9\uC601\uC0C1'
+                        ),
+                        _react2.default.createElement(
+                            _reactRouterDom.Link,
+                            { to: '/funding', className: _Home2.default.more },
+                            '\uC804\uCCB4\uBCF4\uAE30'
+                        )
                     )
                 ),
                 _react2.default.createElement(_VideoBody2.default, null)
@@ -46787,42 +46817,42 @@ var VideoBody = function (_React$Component) {
         value: function componentWillMount() {
             this.setState({
                 list: [{
-                    bgImage: '/Sellev/assets/img/img_pick_5.png',
+                    bgImage: '/Sellev/assets/img/img_video_1.png',
                     title: '이 인터뷰는 유명해지지 않았으면 해',
                     name: '자이언티',
                     like: 8219
                 }, {
-                    bgImage: '/Sellev/assets/img/img_pick_5.png',
+                    bgImage: '/Sellev/assets/img/img_video_2.png',
                     title: '이 인터뷰는 유명해지지 않았으면 해',
                     name: '자이언티',
                     like: 8219
                 }, {
-                    bgImage: '/Sellev/assets/img/img_pick_5.png',
+                    bgImage: '/Sellev/assets/img/img_video_3.png',
                     title: '이 인터뷰는 유명해지지 않았으면 해',
                     name: '자이언티',
                     like: 8219
                 }, {
-                    bgImage: '/Sellev/assets/img/img_pick_5.png',
+                    bgImage: '/Sellev/assets/img/img_video_4.png',
                     title: '이 인터뷰는 유명해지지 않았으면 해',
                     name: '자이언티',
                     like: 8219
                 }, {
-                    bgImage: '/Sellev/assets/img/img_pick_5.png',
+                    bgImage: '/Sellev/assets/img/img_video_5.png',
                     title: '이 인터뷰는 유명해지지 않았으면 해',
                     name: '자이언티',
                     like: 8219
                 }, {
-                    bgImage: '/Sellev/assets/img/img_pick_5.png',
+                    bgImage: '/Sellev/assets/img/img_video_6.png',
                     title: '이 인터뷰는 유명해지지 않았으면 해',
                     name: '자이언티',
                     like: 8219
                 }, {
-                    bgImage: '/Sellev/assets/img/img_pick_5.png',
+                    bgImage: '/Sellev/assets/img/img_video_7.png',
                     title: '이 인터뷰는 유명해지지 않았으면 해',
                     name: '자이언티',
                     like: 8219
                 }, {
-                    bgImage: '/Sellev/assets/img/img_pick_5.png',
+                    bgImage: '/Sellev/assets/img/img_video_8.png',
                     title: '이 인터뷰는 유명해지지 않았으면 해',
                     name: '자이언티',
                     like: 8219
@@ -46833,7 +46863,11 @@ var VideoBody = function (_React$Component) {
         key: 'render',
         value: function render() {
             var videoList = this.state.list.map(function (item, index) {
-                return _react2.default.createElement(_ImageList2.default, { key: index, type: 'video', listItem: item });
+                return _react2.default.createElement(
+                    'div',
+                    { className: _Home2.default.videoBox },
+                    _react2.default.createElement(_ImageList2.default, { key: index, type: 'video', listItem: item })
+                );
             });
             return _react2.default.createElement(
                 'div',
@@ -47045,10 +47079,16 @@ exports = module.exports = __webpack_require__(48)(undefined);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "/**************ImageList*************/\r\n/*video*/\r\n.ImageList__imageBox___x5aMH {\r\n    background-size: cover;\r\n    background-position: center;\r\n    margin-bottom: 10px;\r\n}\r\n.ImageList__videoList___2FIPI {\r\n    width: 100%;\r\n}\r\n.ImageList__videoList___2FIPI .ImageList__listTitle___21z09 {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    line-height: 19px;\r\n}\r\n.ImageList__videoList___2FIPI .ImageList__listBody___3ioFq {\r\n    font-size: 13px;\r\n    color: #979797;\r\n    line-height: 30px;\r\n}\r\n.ImageList__videoList___2FIPI .ImageList__listBody___3ioFq div {\r\n    display: inline-block;\r\n}\r\n.ImageList__videoList___2FIPI .ImageList__listBody___3ioFq .ImageList__likeImg___1GZSZ{\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 20px;\r\n    height: 20px;\r\n    background-position: 0 85px;\r\n}", ""]);
 
 // exports
-
+exports.locals = {
+	"imageBox": "ImageList__imageBox___x5aMH",
+	"videoList": "ImageList__videoList___2FIPI",
+	"listTitle": "ImageList__listTitle___21z09",
+	"listBody": "ImageList__listBody___3ioFq",
+	"likeImg": "ImageList__likeImg___1GZSZ"
+};
 
 /***/ }),
 /* 707 */
@@ -47308,20 +47348,26 @@ var Video = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: _ImageList2.default.videoList },
                 _react2.default.createElement(
                     'div',
-                    null,
+                    { className: _ImageList2.default.listTitle },
                     this.props.listItem.title
                 ),
                 _react2.default.createElement(
                     'div',
-                    null,
+                    { className: _ImageList2.default.listBody },
                     _react2.default.createElement(
                         'div',
                         null,
                         this.props.listItem.name
                     ),
+                    _react2.default.createElement(
+                        'span',
+                        null,
+                        ' | '
+                    ),
+                    _react2.default.createElement('div', { className: _ImageList2.default.likeImg }),
                     _react2.default.createElement(
                         'div',
                         null,
@@ -47883,7 +47929,7 @@ exports = module.exports = __webpack_require__(48)(undefined);
 
 
 // module
-exports.push([module.i, "body {\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n::-webkit-input-placeholder { /* Chrome/Opera/Safari */\r\n    font-size: 14px;\r\n}\r\n/*Autentication form */\r\n.App__formGroup___1BP6j {\r\n    width: 407px;\r\n    margin: 23px auto;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL {\r\n    width: 100%;\r\n    height: 59px;\r\n    line-height: 59px;\r\n    display: inline-flex;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL.App__disabled___3f14q {\r\n    background-color: #f8f8f8;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL {\r\n    border-top: 1px solid #e0e0e0;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL:last-child {\r\n    border-top: 1px solid #e0e0e0;\r\n    border-bottom: 1px solid #e0e0e0;\r\n}\r\n.App__formRow___3NsSL .App__formInputName___3-EU2 {\r\n    font-size: 15px;\r\n    width: 30%;\r\n    line-height: 59px;\r\n    font-weight: bold;\r\n    padding-left: 5px;\r\n}\r\n.App__formRow___3NsSL.App__disabled___3f14q .App__formInputName___3-EU2 {\r\n    color: #dcdcdc;\r\n    background-color: #f8f8f8;\r\n}\r\n.App__formInputName___3-EU2.App__newPasswordName___1ZGLb {\r\n    display: none;\r\n    text-align: center;\r\n    padding: 17px 7px 17px 5px;\r\n    line-height: 1.5em;\r\n}\r\n.App__formRow___3NsSL .App__inputWithVerify___2vFq4 {\r\n    width: 55%;\r\n    height: 50px;\r\n    margin: 5px 0;\r\n    border: 0;\r\n}\r\n.App__formRow___3NsSL .App__formInputWithVerify___rH_bd {\r\n    width: 70%;\r\n    height: 50px;\r\n    margin: 5px 0;\r\n    border: 0;\r\n}\r\n/*auth button*/\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk {\r\n    width: 15%;\r\n    height: 100%;\r\n    padding-top: 20px;\r\n    padding-bottom: 20px;\r\n    text-align: center;\r\n    font-size: 14px;\r\n}\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk.App__disabled___3f14q {\r\n    background-color: #dcdcdc;\r\n    cursor: default;\r\n    color: #ffffff;\r\n}\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk.App__activeBlack___148nZ {\r\n    background-color: #292929;\r\n    cursor: pointer;\r\n    color: #ffffff;\r\n}\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk.App__activeWhite___1HeEV {\r\n    background-color: #ffffff;\r\n    border: 1px solid #e0e0e0;\r\n    cursor: pointer;\r\n}\r\n\r\n.App__formRow___3NsSL .App__formInput___2ReLg {\r\n    /*width: 65%;*/\r\n    height: 50px;\r\n    margin: 5px 0;\r\n    border: 0;\r\n}\r\n.App__formRow___3NsSL input.App__formInput___2ReLg:disabled {\r\n    cursor: default;\r\n    background-color: #f8f8f8;\r\n}\r\n.App__formRow___3NsSL input.App__formInput___2ReLg:disabled::-webkit-input-placeholder { /* Chrome/Opera/Safari */\r\n    background-color: #f8f8f8;\r\n    color: #dcdcdc;\r\n}\r\n\r\n.App__formRow___3NsSL .App__agreeLabel___P91D8 {\r\n    height: 59px;\r\n    line-height: 59px;\r\n    position: relative;\r\n}\r\n\r\n/*warning message*/\r\n.App__formInputWarn___w0aWf {\r\n    font-size: 14px;\r\n    color: #ff0000;\r\n    padding-top: 13px;\r\n    border-top: 1px solid #e0e0e0;\r\n    margin-bottom: 13px;\r\n}\r\n.App__formInputAlert___3nkXi {\r\n    color: #979797;\r\n    padding-top: 13px;\r\n    border-top: 1px solid #e0e0e0;\r\n    margin-bottom: 13px;\r\n    font-size: 14px;\r\n}\r\n.App__red___2btzW {\r\n    color: #ff0000;\r\n}\r\n.App__bold___qn3Ei {\r\n    font-weight: bold;\r\n}\r\n\r\n@media screen and (max-width: 768px){\r\n    .App__formGroup___1BP6j {\r\n        width: 100%;\r\n    }\r\n    .App__formInputName___3-EU2.App__newPasswordName___1ZGLb {\r\n        display: block;\r\n    }\r\n}", ""]);
+exports.push([module.i, "body {\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n::-webkit-input-placeholder { /* Chrome/Opera/Safari */\r\n    font-size: 14px;\r\n}\r\n/*Autentication form */\r\n.App__formGroup___1BP6j {\r\n    width: 407px;\r\n    margin: 23px auto;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL {\r\n    width: 100%;\r\n    height: 59px;\r\n    line-height: 59px;\r\n    display: inline-flex;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL.App__disabled___3f14q {\r\n    background-color: #f8f8f8;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL {\r\n    border-top: 1px solid #e0e0e0;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL:last-child {\r\n    border-top: 1px solid #e0e0e0;\r\n    border-bottom: 1px solid #e0e0e0;\r\n}\r\n.App__formRow___3NsSL .App__formInputName___3-EU2 {\r\n    font-size: 15px;\r\n    width: 30%;\r\n    line-height: 59px;\r\n    font-weight: bold;\r\n    padding-left: 5px;\r\n}\r\n.App__formRow___3NsSL.App__disabled___3f14q .App__formInputName___3-EU2 {\r\n    color: #dcdcdc;\r\n    background-color: #f8f8f8;\r\n}\r\n.App__formInputName___3-EU2.App__newPasswordName___1ZGLb {\r\n    display: none;\r\n    text-align: center;\r\n    padding: 17px 7px 17px 5px;\r\n    line-height: 1.5em;\r\n}\r\n.App__formRow___3NsSL .App__inputWithVerify___2vFq4 {\r\n    width: 55%;\r\n    height: 50px;\r\n    margin: 5px 0;\r\n    border: 0;\r\n}\r\n.App__formRow___3NsSL .App__formInputWithVerify___rH_bd {\r\n    width: 70%;\r\n    height: 50px;\r\n    margin: 5px 0;\r\n    border: 0;\r\n}\r\n/*auth button*/\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk {\r\n    width: 15%;\r\n    height: 100%;\r\n    padding-top: 20px;\r\n    padding-bottom: 20px;\r\n    text-align: center;\r\n    font-size: 14px;\r\n}\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk.App__disabled___3f14q {\r\n    background-color: #dcdcdc;\r\n    cursor: default;\r\n    color: #ffffff;\r\n}\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk.App__activeBlack___148nZ {\r\n    background-color: #292929;\r\n    cursor: pointer;\r\n    color: #ffffff;\r\n}\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk.App__activeWhite___1HeEV {\r\n    background-color: #ffffff;\r\n    border: 1px solid #e0e0e0;\r\n    cursor: pointer;\r\n}\r\n\r\n.App__formRow___3NsSL .App__formInput___2ReLg {\r\n    /*width: 65%;*/\r\n    height: 50px;\r\n    margin: 5px 0;\r\n    border: 0;\r\n}\r\n.App__formRow___3NsSL input.App__formInput___2ReLg:disabled {\r\n    cursor: default;\r\n    background-color: #f8f8f8;\r\n}\r\n.App__formRow___3NsSL input.App__formInput___2ReLg:disabled::-webkit-input-placeholder { /* Chrome/Opera/Safari */\r\n    background-color: #f8f8f8;\r\n    color: #dcdcdc;\r\n}\r\n\r\n.App__formRow___3NsSL .App__agreeLabel___P91D8 {\r\n    height: 59px;\r\n    line-height: 59px;\r\n    position: relative;\r\n}\r\n\r\n/*warning message*/\r\n.App__formInputWarn___w0aWf {\r\n    font-size: 14px;\r\n    color: #ff0000;\r\n    padding-top: 13px;\r\n    border-top: 1px solid #e0e0e0;\r\n    margin-bottom: 13px;\r\n}\r\n.App__formInputAlert___3nkXi {\r\n    color: #979797;\r\n    padding-top: 13px;\r\n    border-top: 1px solid #e0e0e0;\r\n    margin-bottom: 13px;\r\n    font-size: 14px;\r\n}\r\n.App__red___2btzW {\r\n    color: #ff0000;\r\n}\r\n.App__bold___qn3Ei {\r\n    font-weight: bold;\r\n}\r\n\r\n\r\n@media screen and (max-width: 768px){\r\n    .App__formGroup___1BP6j {\r\n        width: 100%;\r\n    }\r\n    .App__formInputName___3-EU2.App__newPasswordName___1ZGLb {\r\n        display: block;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -47914,7 +47960,7 @@ exports = module.exports = __webpack_require__(48)(undefined);
 
 
 // module
-exports.push([module.i, ".Authentication__loginContainer___30btQ {\r\n    width: 460px;\r\n    margin: 121px auto 0;\r\n}\r\n\r\n.Authentication__loginContainer___30btQ .Authentication__loginBody___2rLB1 {\r\n    width: 100%;\r\n    text-align: center;\r\n}\r\n.Authentication__loginLogo___743SL {\r\n    margin: 10px auto;\r\n}\r\n.Authentication__loginBox___1eItI {\r\n    width: 100%;\r\n    height: 545px;\r\n    padding: 30px 35px;\r\n    border-radius: 12px;\r\n    background-color: #ffffff;\r\n    box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);\r\n}\r\n\r\n/*or*/\r\n.Authentication__border___2w57t {\r\n    color: #e0e0e0;\r\n    margin: 18px 0;\r\n    text-align: center;\r\n}\r\n/*form*/\r\n.Authentication__loginForm___3eJ4P {\r\n    width: 100%;\r\n}\r\n.Authentication__loginForm___3eJ4P label {\r\n    height: 59px;\r\n    line-height: 59px;\r\n    width: 100%;\r\n}\r\n.Authentication__loginForm___3eJ4P input {\r\n    margin-left: 20px;\r\n    border: 0;\r\n    width: 75%;\r\n    height: 90%;\r\n}\r\n.Authentication__loginForm___3eJ4P label:first-child {\r\n    border-top: solid 1px #e0e0e0;\r\n    border-bottom: solid 1px #e0e0e0;\r\n}\r\n.Authentication__loginForm___3eJ4P label:last-child {\r\n    border-bottom: solid 1px #e0e0e0;\r\n}\r\n/*link to signup*/\r\n.Authentication__boxFooter___jANjm {\r\n    margin-top: 32px;\r\n}\r\n\r\n.Authentication__boxFooter___jANjm a {\r\n    color: #fd0a0a;\r\n}\r\n/*footer*/\r\n.Authentication__loginFooter___kRQxJ {\r\n    margin-top: 54px;\r\n    text-align: center;\r\n}\r\n.Authentication__loginFooter___kRQxJ a {\r\n    color: #272727;\r\n}\r\n.Authentication__loginFooter___kRQxJ .Authentication__logoBox___2gXEk {\r\n    font-size: 12px;\r\n    color: #272727;\r\n    line-height: 23px;\r\n    width: 50%;\r\n    margin: 12px auto;\r\n    text-align: center;\r\n}\r\n\r\n.Authentication__loginFooter___kRQxJ .Authentication__logoBox___2gXEk div {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 55px;\r\n    height: 20px;\r\n    background-position: 112px 128px;\r\n    float: left;\r\n}\r\n.Authentication__signupFooter___2-CYF {\r\n    margin-top: 54px;\r\n    text-align: center;\r\n}\r\n.Authentication__signupFooter___2-CYF a {\r\n    color: #272727;\r\n}\r\n.Authentication__signupFooter___2-CYF .Authentication__logoBox___2gXEk {\r\n    font-size: 12px;\r\n    color: #272727;\r\n    line-height: 23px;\r\n    width: 50%;\r\n    margin: 12px auto;\r\n}\r\n\r\n.Authentication__signupFooter___2-CYF .Authentication__logoBox___2gXEk div {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 55px;\r\n    height: 20px;\r\n    background-position: 112px 128px;\r\n    float: left;\r\n}\r\n\r\n/* logo btn */\r\n\r\n.Authentication__loginBtn___t13VB {\r\n    margin-bottom: 10px;\r\n}\r\n/*button Common*/\r\n.Authentication__authBtn___2L_OZ {\r\n    height: 56px;\r\n    width: 371px;\r\n    margin: 8px auto;\r\n    border-radius: 4px;\r\n}\r\n/* kakao button */\r\n\r\n.Authentication__kakao___S56T1 {\r\n    background-color: #feea02;\r\n}\r\n.Authentication__kakaoBody___2Ya08 {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__kakaoBody___2Ya08 div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 22px;\r\n    height: 19px;\r\n    background-position:  113px -63px;\r\n    float: left;\r\n}\r\n.Authentication__kakaoBody___2Ya08 span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__kakaoBody___2Ya08 div:last-child {\r\n    color: #4c2c10;\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n\r\n/* naver button */\r\n\r\n.Authentication__naver___1kJAM {\r\n    background-color: #1dc800;\r\n}\r\n.Authentication__naverBody___8MYn5 {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__naverBody___8MYn5 div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 22px;\r\n    height: 19px;\r\n    background-position:  113px 40px;\r\n    float: left;\r\n}\r\n.Authentication__naverBody___8MYn5 span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__naverBody___8MYn5 div:last-child {\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n\r\n/* facebook button */\r\n\r\n.Authentication__facebook___3vCKh {\r\n    background-color: #395a90;\r\n}\r\n.Authentication__facebookBody___mlPEd {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__facebookBody___mlPEd div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 22px;\r\n    height: 18px;\r\n    background-position:  113px 19px;\r\n    float: left;\r\n}\r\n.Authentication__facebookBody___mlPEd span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__facebookBody___mlPEd div:last-child {\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n\r\n/* login button : red button */\r\n\r\n.Authentication__loginBtn___t13VB {\r\n    background-color: #fd0a0a;\r\n    overflow: hidden;\r\n    padding: 20px 36px;\r\n    color: #ffffff;\r\n    text-align: center;\r\n}\r\n\r\n/* sellev button */\r\n\r\n.Authentication__sellevBtn___3ADXA {\r\n    height: 56px;\r\n    width: 371px;\r\n    margin: 0 auto;\r\n    background-color: #ffffff;\r\n    border-radius: 4px;\r\n    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);\r\n    border: solid 1px #e5e5e5;\r\n}\r\n.Authentication__sellevBody___aIjHA {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__sellevBody___aIjHA div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 55px;\r\n    height: 20px;\r\n    background-position: 112px 128px;\r\n    float: left;\r\n}\r\n.Authentication__sellevBody___aIjHA span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__sellevBody___aIjHA div:last-child {\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n/*Find Password*/\r\n.Authentication__findPasswordContainer___1ANW- {\r\n    width: 460px;\r\n    margin: 100px auto 50px;\r\n}\r\n\r\n/* signup */\r\n.Authentication__signupContainer___qzlBQ {\r\n    width: 460px;\r\n    margin: 100px auto 50px;\r\n}\r\ninput[type=checkbox].Authentication__signupCheckbox___3LXzS:checked + label.Authentication__ckeckboxBlackIcon___1-NzR {\r\n    width: 24px;\r\n    height: 24px;\r\n    background-image: url(\"/Sellev/assets/img/ic_web_icon.png\");\r\n    background-position: -30px 75px;\r\n    position: relative;\r\n    top: 15px;\r\n}\r\ninput[type=checkbox].Authentication__signupCheckbox___3LXzS + label.Authentication__ckeckboxBlackIcon___1-NzR{\r\n    width: 24px;\r\n    height: 24px;\r\n    display: inline-block;\r\n    background-image: url(\"/Sellev/assets/img/ic_web_icon.png\");\r\n    background-position: -30px -54px;\r\n    position: relative;\r\n    top: 15px;\r\n}\r\ninput[type=checkbox].Authentication__signupCheckbox___3LXzS {\r\n    display: none;\r\n    position: relative;\r\n}\r\n.Authentication__ckeckboxLabel___8C7eL {\r\n    display: inline-block;\r\n}\r\n\r\n/*Common */\r\n.Authentication__authBody___14bFw {\r\n    width: 100%;\r\n}\r\n.Authentication__authLogo___72gXa {\r\n    width: 163px;\r\n    height: 49px;\r\n    background-image: url(\"/Sellev/assets/img/logo_sellev_auth.png\");\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    margin: 0 auto;\r\n}\r\n.Authentication__authLogoMobile___36ypb {\r\n    display: none;\r\n    width: 24px;\r\n    height: 24px;\r\n    background-image: url(\"/Sellev/assets/img/ic_common.png\");\r\n    background-position: 84px 24px;\r\n}\r\n.Authentication__authBox___oxc28 {\r\n    min-height: 328px;\r\n    margin: 0 auto;\r\n    border-radius: 12px;\r\n    background-color: #ffffff;\r\n    box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);\r\n    padding: 32px 26px;\r\n}\r\n.Authentication__authTitle___2qR1O {\r\n    font-size: 24px;\r\n    font-weight: bold;\r\n    width: 407px;\r\n    margin: 0 auto;\r\n    line-height: 1.5em;\r\n}\r\n\r\n/*Responsive */\r\n@media screen and (max-width: 768px) {\r\n    .Authentication__signupContainer___qzlBQ {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin: 100px 30px 50px;\r\n    }\r\n    .Authentication__authLogo___72gXa {\r\n        display: none;\r\n    }\r\n    .Authentication__authLogoMobile___36ypb {\r\n        display: block;\r\n    }\r\n    .Authentication__authBox___oxc28 {\r\n        padding: 0;\r\n        border: 0;\r\n        box-shadow: none;\r\n    }\r\n    .Authentication__authTitle___2qR1O {\r\n        font-size: 35px;\r\n        width: 100%;\r\n    }\r\n    .Authentication__authBtn___2L_OZ.Authentication__loginBtn___t13VB {\r\n        width: 100%;\r\n        border-radius: 0;\r\n        position: fixed;\r\n        bottom: 0;\r\n        right: 0;\r\n        margin: 0;\r\n    }\r\n    .Authentication__signupFooter___2-CYF {\r\n        display: none;\r\n    }\r\n    /*비밀번호찾기*/\r\n    .Authentication__findPasswordContainer___1ANW- {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin: 100px 30px 50px;\r\n    }\r\n    .Authentication__authTitle___2qR1O.Authentication__findPasswordTitle___2Ptgw {\r\n        width: 211px;\r\n        text-align: left;\r\n        margin: 0;\r\n    }\r\n    .Authentication__loginFooter___kRQxJ {\r\n        display: none;\r\n    }\r\n}", ""]);
+exports.push([module.i, ".Authentication__loginContainer___30btQ {\r\n    width: 460px;\r\n    margin: 121px auto 0;\r\n}\r\n\r\n.Authentication__loginContainer___30btQ .Authentication__loginBody___2rLB1 {\r\n    width: 100%;\r\n    text-align: center;\r\n}\r\n.Authentication__loginLogo___743SL {\r\n    margin: 10px auto;\r\n}\r\n.Authentication__loginBox___1eItI {\r\n    width: 100%;\r\n    height: 545px;\r\n    padding: 30px 35px;\r\n    border-radius: 12px;\r\n    background-color: #ffffff;\r\n    box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);\r\n}\r\n\r\n/*or*/\r\n.Authentication__border___2w57t {\r\n    color: #e0e0e0;\r\n    margin: 18px 0;\r\n    text-align: center;\r\n}\r\n/*form*/\r\n.Authentication__loginForm___3eJ4P {\r\n    width: 100%;\r\n}\r\n.Authentication__loginForm___3eJ4P label {\r\n    height: 59px;\r\n    line-height: 59px;\r\n    width: 100%;\r\n}\r\n.Authentication__loginForm___3eJ4P input {\r\n    margin-left: 20px;\r\n    border: 0;\r\n    width: 75%;\r\n    height: 90%;\r\n}\r\n.Authentication__loginForm___3eJ4P label:first-child {\r\n    border-top: solid 1px #e0e0e0;\r\n    border-bottom: solid 1px #e0e0e0;\r\n}\r\n.Authentication__loginForm___3eJ4P label:last-child {\r\n    border-bottom: solid 1px #e0e0e0;\r\n}\r\n/*link to signup*/\r\n.Authentication__boxFooter___jANjm {\r\n    margin-top: 32px;\r\n}\r\n\r\n.Authentication__boxFooter___jANjm a {\r\n    color: #fd0a0a;\r\n}\r\n/*footer*/\r\n.Authentication__loginFooter___kRQxJ {\r\n    margin-top: 54px;\r\n    text-align: center;\r\n}\r\n.Authentication__loginFooter___kRQxJ a {\r\n    color: #272727;\r\n}\r\n.Authentication__loginFooter___kRQxJ .Authentication__logoBox___2gXEk {\r\n    font-size: 12px;\r\n    color: #272727;\r\n    line-height: 23px;\r\n    width: 50%;\r\n    margin: 12px auto;\r\n    text-align: center;\r\n}\r\n\r\n.Authentication__loginFooter___kRQxJ .Authentication__logoBox___2gXEk div {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 55px;\r\n    height: 20px;\r\n    background-position: 112px 128px;\r\n    float: left;\r\n}\r\n.Authentication__signupFooter___2-CYF {\r\n    margin-top: 54px;\r\n    text-align: center;\r\n}\r\n.Authentication__signupFooter___2-CYF a {\r\n    color: #272727;\r\n}\r\n.Authentication__signupFooter___2-CYF .Authentication__logoBox___2gXEk {\r\n    font-size: 12px;\r\n    color: #272727;\r\n    line-height: 23px;\r\n    width: 50%;\r\n    margin: 12px auto;\r\n}\r\n\r\n.Authentication__signupFooter___2-CYF .Authentication__logoBox___2gXEk div {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 55px;\r\n    height: 20px;\r\n    background-position: 112px 128px;\r\n    float: left;\r\n}\r\n\r\n/* logo btn */\r\n\r\n.Authentication__loginBtn___t13VB {\r\n    margin-bottom: 10px;\r\n}\r\n/*button Common*/\r\n.Authentication__authBtn___2L_OZ {\r\n    height: 56px;\r\n    width: 371px;\r\n    margin: 8px auto;\r\n    border-radius: 4px;\r\n}\r\n/* kakao button */\r\n\r\n.Authentication__kakao___S56T1 {\r\n    background-color: #feea02;\r\n}\r\n.Authentication__kakaoBody___2Ya08 {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__kakaoBody___2Ya08 div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 22px;\r\n    height: 19px;\r\n    background-position:  113px -63px;\r\n    float: left;\r\n}\r\n.Authentication__kakaoBody___2Ya08 span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__kakaoBody___2Ya08 div:last-child {\r\n    color: #4c2c10;\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n\r\n/* naver button */\r\n\r\n.Authentication__naver___1kJAM {\r\n    background-color: #1dc800;\r\n}\r\n.Authentication__naverBody___8MYn5 {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__naverBody___8MYn5 div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 22px;\r\n    height: 19px;\r\n    background-position:  113px 40px;\r\n    float: left;\r\n}\r\n.Authentication__naverBody___8MYn5 span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__naverBody___8MYn5 div:last-child {\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n\r\n/* facebook button */\r\n\r\n.Authentication__facebook___3vCKh {\r\n    background-color: #395a90;\r\n}\r\n.Authentication__facebookBody___mlPEd {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__facebookBody___mlPEd div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 22px;\r\n    height: 18px;\r\n    background-position:  113px 19px;\r\n    float: left;\r\n}\r\n.Authentication__facebookBody___mlPEd span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__facebookBody___mlPEd div:last-child {\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n\r\n/* login button : red button */\r\n\r\n.Authentication__loginBtn___t13VB {\r\n    background-color: #fd0a0a;\r\n    overflow: hidden;\r\n    padding: 20px 36px;\r\n    color: #ffffff;\r\n    text-align: center;\r\n}\r\n\r\n/* sellev button */\r\n\r\n.Authentication__sellevBtn___3ADXA {\r\n    height: 56px;\r\n    width: 371px;\r\n    margin: 0 auto;\r\n    background-color: #ffffff;\r\n    border-radius: 4px;\r\n    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);\r\n    border: solid 1px #e5e5e5;\r\n}\r\n.Authentication__sellevBody___aIjHA {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__sellevBody___aIjHA div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 55px;\r\n    height: 20px;\r\n    background-position: 112px 128px;\r\n    float: left;\r\n}\r\n.Authentication__sellevBody___aIjHA span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__sellevBody___aIjHA div:last-child {\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n/*Find Password*/\r\n.Authentication__findPasswordContainer___1ANW- {\r\n    width: 460px;\r\n    margin: 100px auto 50px;\r\n}\r\n\r\n/* signup */\r\n.Authentication__signupContainer___qzlBQ {\r\n    width: 460px;\r\n    margin: 100px auto 50px;\r\n}\r\ninput[type=checkbox].Authentication__signupCheckbox___3LXzS:checked + label.Authentication__ckeckboxBlackIcon___1-NzR {\r\n    width: 24px;\r\n    height: 24px;\r\n    background-image: url(\"/Sellev/assets/img/ic_web_icon.png\");\r\n    background-position: -30px 75px;\r\n    position: relative;\r\n    top: 15px;\r\n}\r\ninput[type=checkbox].Authentication__signupCheckbox___3LXzS + label.Authentication__ckeckboxBlackIcon___1-NzR{\r\n    width: 24px;\r\n    height: 24px;\r\n    display: inline-block;\r\n    background-image: url(\"/Sellev/assets/img/ic_web_icon.png\");\r\n    background-position: -30px -54px;\r\n    position: relative;\r\n    top: 15px;\r\n}\r\ninput[type=checkbox].Authentication__signupCheckbox___3LXzS {\r\n    display: none;\r\n    position: relative;\r\n}\r\n.Authentication__ckeckboxLabel___8C7eL {\r\n    display: inline-block;\r\n}\r\n\r\n/*Common */\r\n.Authentication__authBody___14bFw {\r\n    width: 100%;\r\n}\r\n.Authentication__authLogo___72gXa {\r\n    width: 163px;\r\n    height: 49px;\r\n    background-image: url(\"/Sellev/assets/img/logo_sellev_auth.png\");\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    margin: 0 auto;\r\n}\r\n.Authentication__authLogoMobile___36ypb {\r\n    display: none;\r\n    width: 24px;\r\n    height: 24px;\r\n    background-image: url(\"/Sellev/assets/img/ic_common.png\");\r\n    background-position: 84px 24px;\r\n}\r\n.Authentication__authBox___oxc28 {\r\n    min-height: 328px;\r\n    margin: 0 auto;\r\n    border-radius: 12px;\r\n    background-color: #ffffff;\r\n    box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);\r\n    padding: 32px 26px;\r\n}\r\n.Authentication__authTitle___2qR1O {\r\n    font-size: 24px;\r\n    font-weight: bold;\r\n    width: 407px;\r\n    margin: 0 auto;\r\n    line-height: 1.5em;\r\n}\r\n\r\n/*Responsive */\r\n@media screen and (max-width: 768px) {\r\n    .Authentication__signupContainer___qzlBQ {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin: 100px 30px 50px;\r\n    }\r\n    .Authentication__authLogo___72gXa {\r\n        display: none;\r\n    }\r\n    .Authentication__authLogoMobile___36ypb {\r\n        display: block;\r\n    }\r\n    .Authentication__authBox___oxc28 {\r\n        padding: 0;\r\n        border: 0;\r\n        box-shadow: none;\r\n    }\r\n    .Authentication__authTitle___2qR1O {\r\n        font-size: 35px;\r\n        width: 100%;\r\n    }\r\n    .Authentication__authBtn___2L_OZ.Authentication__loginBtn___t13VB {\r\n        width: 100%;\r\n        border-radius: 0;\r\n        position: fixed;\r\n        bottom: 0;\r\n        right: 0;\r\n        margin: 0;\r\n    }\r\n    .Authentication__signupFooter___2-CYF {\r\n        display: none;\r\n    }\r\n    /*비밀번호찾기*/\r\n    .Authentication__findPasswordContainer___1ANW- {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin: 100px 30px 50px;\r\n    }\r\n    .Authentication__authTitle___2qR1O.Authentication__findPasswordTitle___2Ptgw {\r\n        width: 211px;\r\n        text-align: left;\r\n        margin: 0;\r\n    }\r\n    .Authentication__loginFooter___kRQxJ {\r\n        display: none;\r\n    }\r\n    /*로그인*/\r\n    .Authentication__loginContainer___30btQ {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin: 100px 30px 50px;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {

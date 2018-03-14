@@ -18,9 +18,12 @@ class HashTag extends React.Component {
     render() {
         return (
             <div className={stylesHome.hashTagSection}>
-                <div>
+                <div className={stylesHome.hashTagHeader}>
                     <div className={stylesHome.sectionSmallTitle}>랭킹</div>
-                    <div className={stylesHome.sectionTitle}>해시태그</div>
+                    <div className={stylesHome.titleBox}>
+                        <div className={stylesHome.sectionTitle}>해시태그</div>
+                        <Link to={'/funding'} className={stylesHome.more}>전체보기</Link>
+                    </div>
                 </div>
                 <HashTagBody />
             </div>
@@ -32,3 +35,4 @@ export default connect((state) => {
         author: state.data.auth.author,
     };
 })(withRouter(HashTag));
+
