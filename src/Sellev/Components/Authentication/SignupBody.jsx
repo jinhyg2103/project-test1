@@ -25,7 +25,7 @@ class SignupBody extends React.Component {
             passwordRe: '',
 
             isSmsSended: false,
-            isSmsVerified: true, /*인증후*/
+            isSmsVerified: false,
             smsVerificationCode: '',
             smsVerificationCodeByUser: '',
 
@@ -66,30 +66,30 @@ class SignupBody extends React.Component {
             isSmsSended: false,
         });
         alert('인증번호가 SMS로 전송되었습니다.');
-        /* ActionAuth.isIdDuplicated({
-             phoneNumber: this.state.phoneNumber,
-         }).then((response) => {
-             if (response.code == 200) {
-                 ActionAuth.getVerificationCode({
-                     phoneNumber: this.state.phoneNumber,
-                 }).then((response) => {
-                     this.setState({
-                         smsVerificationCode: data.verificationCode,
-                         warnPhoneNumberNotValid: false,
-                         isSmsSended: false,
-                     });
-                     alert('인증번호가 SMS로 전송되었습니다.');
-                 }).catch((err) => {
-                     this.setState({ isSmsSended: false });
-                     if (err) {
-                         console.log(err);
-                     }
-                 });
-             } else {
-                 this.setState({ isSmsSended: false });
-                 alert('이미 가입한 핸드폰번호입니다.');
-             }
-         });*/
+       /* ActionAuth.isIdDuplicated({
+            phoneNumber: this.state.phoneNumber,
+        }).then((response) => {
+            if (response.code == 200) {
+                ActionAuth.getVerificationCode({
+                    phoneNumber: this.state.phoneNumber,
+                }).then((response) => {
+                    this.setState({
+                        smsVerificationCode: data.verificationCode,
+                        warnPhoneNumberNotValid: false,
+                        isSmsSended: false,
+                    });
+                    alert('인증번호가 SMS로 전송되었습니다.');
+                }).catch((err) => {
+                    this.setState({ isSmsSended: false });
+                    if (err) {
+                        console.log(err);
+                    }
+                });
+            } else {
+                this.setState({ isSmsSended: false });
+                alert('이미 가입한 핸드폰번호입니다.');
+            }
+        });*/
     }
     smsVerificationCodeCheck() {
         if ( this.state.smsVerificationCode.toString() != this.state.smsVerificationCodeByUser.toString()) {

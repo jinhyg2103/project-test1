@@ -19,7 +19,7 @@ const routes = [
     },
     {
         path: '/fundingmarket',
-        exact: true,
+        exact: false,
         strict: false,
         component: RootPage,
     },

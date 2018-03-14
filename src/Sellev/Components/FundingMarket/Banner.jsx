@@ -10,7 +10,7 @@ import { Switch, Route } from 'react-router';
 import BannerBody from './BannerBody';
 
 // Styles
-import stylesHome from '../../Styles/Components/Home.css';
+import stylesFundingMarket from '../../Styles/Components/FundingMarket.css';
 
 // Actions
 
@@ -19,7 +19,10 @@ class Banner extends React.Component {
         return (
             <div>
                 <div>
-                    <div>셀레브 추천</div>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                </div>
+                <div>
+                    <div>셀레브 Pick</div>
                     <div>오늘의 펀딩&마켓</div>
                 </div>
                 <BannerBody />

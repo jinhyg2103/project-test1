@@ -6,18 +6,24 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-import Banner from '../../Components/Funding/Banner';
-import Body from '../../Components/Funding/List';
+import DetailFunding from './DetailFunding';
+import DetailMarket from './DetailMarket';
+import DetailRanking from './DetailRanking';
 
-class FundingView extends React.Component {
+class Detail extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            type: 2,
+        }
     }
     render() {
         return (
             <div>
-                <Banner />
-                <Body />
+                {
+                    this.state.type === 1 ? <DetailFunding /> : <DetailMarket />
+                }
+                <DetailRanking/>
             </div>
         );
     }
@@ -26,4 +32,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(FundingView));
+})(withRouter(Detail));

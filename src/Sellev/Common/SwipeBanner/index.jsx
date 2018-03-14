@@ -18,27 +18,30 @@ import styles from '../../Styles/Common/SwipeBanner.css';
 class SwipeBanner extends React.Component {
     render() {
         let bannerListBox = this.props.getList.map((list, index) => {
+            console.log(this.props);
             return this.props.listItem(list, index);
         });
         let settings = {
             arrows: false,
-            centerMode: this.props.centerMode || true,
+            centerMode: this.props.centerMode !== undefined ? this.props.centerMode : true,
             centerPadding: '0px',
             slidesToShow: this.props.slidesToShow || 1,
-            autoplay: this.props.autoplay || true,
-            autoplaySpeed: this.props.autoplay && this.props.autoplaySpeed || 5000,
-            variableWidth: this.props.variableWidth || true,
+            autoplay: this.props.autoplay !== undefined ? this.props.autoplay : true,
+            autoplaySpeed: this.props.autoplay !== undefined && this.props.autoplaySpeed ? this.props.autoplaySpeed : 5000,
+            variableWidth: true,
+            infinite: this.props.infinite !== undefined ? this.props.infinite : true,
             responsive: [
                 {
                     breakpoint: 768,
                     settings: {
                         arrows: false,
-                        centerPadding: '0px',
-                        centerMode: this.props.centerMode || true,
+                        centerMode: this.props.centerMode !== undefined ? this.props.centerMode : true,
+                        centerPadding: this.props.centerPadding || '0px',
                         slidesToShow: this.props.slidesToShow || 1,
-                        autoplay: this.props.autoplay || true,
-                        autoplaySpeed: this.props.autoplay && this.props.autoplaySpeed || 5000,
-                        variableWidth: this.props.variableWidth || true,
+                        autoplay: this.props.autoplay !== undefined ? this.props.autoplay : true,
+                        autoplaySpeed: this.props.autoplay !== undefined && this.props.autoplaySpeed ? this.props.autoplaySpeed : 5000,
+                        variableWidth: true,
+                        infinite: this.props.infinite !== undefined ? this.props.infinite : true,
                     }
                 },
             ]
