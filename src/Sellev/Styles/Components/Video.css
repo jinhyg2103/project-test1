@@ -1,0 +1,71 @@
+/* Common */
+
+.sectionTitle {
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: -1.2px;
+    color: #161616;
+}
+
+.sectionSmallTitle {
+    font-family: 'Product Sans';
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 19px;
+    color: #a0a0a0;
+    letter-spacing: -0.5px;
+}
+
+/* Banner */
+
+.bannerSection {
+    width: 100%;
+    background-color: transparent;
+    margin-top: 3px;
+}
+
+.BannerHeader {
+    width: 1100px;
+    margin: 0px auto 20px;
+}
+
+/* Video List */
+
+.videoSection {
+    width: 1100px;
+    margin: 120px auto 50px;
+}
+.videoHeader {
+    width: 100%;
+    margin-bottom: 22px;
+}
+.videoBody {
+    width: 100%;
+}
+.videoBox {
+    width: 264px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1100px){
+    .videoSection {
+        width: 825px;
+    }
+}
+@media screen and (max-width: 850px){
+    .videoSection {
+        width: 550px;
+    }
+}
+/*모바일 반응형*/
+@media screen and (max-width: 768px){
+    /*오늘의 동영상 */
+    .videoSection {
+        max-width: 768px;
+        width: auto;
+    }
+    .videoBox {
+        width: 100%;
+    }
+}

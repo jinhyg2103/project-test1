@@ -4,10 +4,14 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
+import * as parseNumber from "../../Lib/Utils/parseNumber";
 
 // Components
 
-class DetailFunding extends React.Component {
+// Utils
+import * as parseNumber from '../../Lib/Utils/parseNumber';
+
+class DetailComments extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -15,7 +19,7 @@ class DetailFunding extends React.Component {
         return (
             <div>
                 <div>
-                    댓글 <span>89</span>
+                    댓글 <span>{parseNumber.numberWithCommas(89)}</span>
                 </div>
                 <div>
                     <input type={'text'} />
@@ -47,4 +51,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(DetailFunding));
+})(withRouter(DetailComments));

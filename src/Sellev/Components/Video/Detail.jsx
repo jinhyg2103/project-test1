@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
+import DetailHeader from './DetailHeader';
+import DetailContent from './DetailContent';
 
 class Detail extends React.Component {
     constructor(props) {
@@ -14,7 +16,8 @@ class Detail extends React.Component {
     render() {
         return (
             <div>
-                아아아아아
+                <DetailHeader />
+                <DetailContent />
             </div>
         );
     }

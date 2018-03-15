@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
+import VideoBanner from './Banner';
+import VideoBody from './VideoBody';
 
 class VideoHome extends React.Component {
     constructor(props) {
@@ -15,7 +17,8 @@ class VideoHome extends React.Component {
     render() {
         return (
             <div>
-                홈입니다
+                <VideoBanner />
+                <VideoBody />
             </div>
         );
     }

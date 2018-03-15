@@ -6,78 +6,76 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
+import VideoListItem from './VideoListItem';
 
 class DetailContentSide extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            popularVideo: [
+                {
+                    thumbnail: '/Sellev/assets/img/img_video_1.png',
+                    title: '[비하인드] 강식당 화제의 코너! 미래방송 2탄!',
+                    playCount: 153,
+                    like: 8219
+                },
+                {
+                    thumbnail: '/Sellev/assets/img/img_video_1.png',
+                    title: '[비하인드] 강식당 화제의 코너! 미래방송 2탄!',
+                    playCount: 153,
+                    like: 8219
+                },
+                {
+                    thumbnail: '/Sellev/assets/img/img_video_1.png',
+                    title: '[비하인드] 강식당 화제의 코너! 미래방송 2탄!',
+                    playCount: 153,
+                    like: 8219
+                },
+                {
+                    thumbnail: '/Sellev/assets/img/img_video_1.png',
+                    title: '[비하인드] 강식당 화제의 코너! 미래방송 2탄!',
+                    playCount: 153,
+                    like: 8219
+                },
+                {
+                    thumbnail: '/Sellev/assets/img/img_video_1.png',
+                    title: '[비하인드] 강식당 화제의 코너! 미래방송 2탄!',
+                    playCount: 153,
+                    like: 8219
+                },
+                {
+                    thumbnail: '/Sellev/assets/img/img_video_1.png',
+                    title: '[비하인드] 강식당 화제의 코너! 미래방송 2탄!',
+                    playCount: 153,
+                    like: 8219
+                },
+                {
+                    thumbnail: '/Sellev/assets/img/img_video_1.png',
+                    title: '[비하인드] 강식당 화제의 코너! 미래방송 2탄!',
+                    playCount: 153,
+                    like: 8219
+                },
+                {
+                    thumbnail: '/Sellev/assets/img/img_video_1.png',
+                    title: '[비하인드] 강식당 화제의 코너! 미래방송 2탄!',
+                    playCount: 153,
+                    like: 8219
+                },
+            ],
+        }
     }
     render() {
+        let popularVideo = this.state.popularVideo.map((item, index) => {
+            return (
+                <VideoListItem key={index} listItem={item}/>
+            );
+        });
         return (
             <div>
-                <div>펀딩을 선택해보세요</div>
+                <div>인기 영상</div>
                 <div>
-                    <div>
-                        <div>546명이 선택</div>
-                        <div>11000원</div>
-                        <ul>
-                            <li>혁오 소규모 콘서트 A석 (1매)</li>
-                            <li>혁오 하늘티 (1매)</li>
-                        </ul>
-                        <div>
-                            <div>배송비</div>
-                            <div>2500원</div>
-                        </div>
-                        <div>
-                            <div>상품발송일</div>
-                            <div>2018년 1월 초 (1~10일) 예정</div>
-                        </div>
-                        <div>
-                            <div>제한수량</div>
-                            <div>20개</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>546명이 선택</div>
-                        <div>11000원</div>
-                        <ul>
-                            <li>혁오 소규모 콘서트 A석 (1매)</li>
-                            <li>혁오 하늘티 (1매)</li>
-                        </ul>
-                        <div>
-                            <div>배송비</div>
-                            <div>2500원</div>
-                        </div>
-                        <div>
-                            <div>상품발송일</div>
-                            <div>2018년 1월 초 (1~10일) 예정</div>
-                        </div>
-                        <div>
-                            <div>제한수량</div>
-                            <div>20개</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>546명이 선택</div>
-                        <div>11000원</div>
-                        <ul>
-                            <li>혁오 소규모 콘서트 A석 (1매)</li>
-                            <li>혁오 하늘티 (1매)</li>
-                        </ul>
-                        <div>
-                            <div>배송비</div>
-                            <div>2500원</div>
-                        </div>
-                        <div>
-                            <div>상품발송일</div>
-                            <div>2018년 1월 초 (1~10일) 예정</div>
-                        </div>
-                        <div>
-                            <div>제한수량</div>
-                            <div>20개</div>
-                        </div>
-                    </div>
+                    {popularVideo}
                 </div>
-                <div>펀딩하기</div>
             </div>
         );
     }
