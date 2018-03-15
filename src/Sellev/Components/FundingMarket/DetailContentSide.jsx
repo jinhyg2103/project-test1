@@ -7,7 +7,7 @@ import { withRouter } from 'react-router';
 
 // Components
 
-class DetailContent extends React.Component {
+class DetailContentSide extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -86,4 +86,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(DetailContent));
+})(withRouter(DetailContentSide));

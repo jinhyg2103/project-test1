@@ -44,7 +44,7 @@ class RootView extends React.Component {
                 <Route path={'/payment'} exact={true} strict={false} component={PaymentContainer} />
                 <Route path={'/search'} exact={true} strict={false} component={SearchContainer} />
                 <Route path={'/sellever'} exact={true} strict={false} component={SelleverContainer} />
-                <Route path={'/video'} exact={true} strict={false} component={VideoContainer} />
+                <Route path={'/video'} exact={false} strict={false} component={VideoContainer} />
             </div>
         );
     }

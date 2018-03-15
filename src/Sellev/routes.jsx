@@ -55,7 +55,7 @@ const routes = [
     },
     {
         path: '/video',
-        exact: true,
+        exact: false,
         strict: false,
         component: RootPage,
     },

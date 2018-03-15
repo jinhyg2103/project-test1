@@ -20224,7 +20224,7 @@ var routes = [{
     component: _Root2.default
 }, {
     path: '/video',
-    exact: true,
+    exact: false,
     strict: false,
     component: _Root2.default
 }];
@@ -26649,11 +26649,11 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(744).polyfill();
+__webpack_require__(746).polyfill();
 
 // Components
 
-__webpack_require__(746);
+__webpack_require__(748);
 __webpack_require__(120);
 
 (0, _reactDom.render)(_react2.default.createElement(
@@ -42095,7 +42095,7 @@ var RootView = function (_React$Component) {
                 _react2.default.createElement(_reactRouter.Route, { path: '/payment', exact: true, strict: false, component: _Payment2.default }),
                 _react2.default.createElement(_reactRouter.Route, { path: '/search', exact: true, strict: false, component: _Search2.default }),
                 _react2.default.createElement(_reactRouter.Route, { path: '/sellever', exact: true, strict: false, component: _Sellever2.default }),
-                _react2.default.createElement(_reactRouter.Route, { path: '/video', exact: true, strict: false, component: _Video2.default })
+                _react2.default.createElement(_reactRouter.Route, { path: '/video', exact: false, strict: false, component: _Video2.default })
             );
         }
     }]);
@@ -49857,13 +49857,13 @@ var BannerBody = function (_React$Component) {
                             item.title
                         )
                     )
-                ) /*  이 부분 디자인 시안에 맞게 수정해주세요! */
+                ) /*  이 부분 디자인 시안에 맞게 수정해주세요! (배너 아이템입니다)*/
                 ;
             };
             return _react2.default.createElement(
                 'div',
                 { className: _Home2.default.bannerBody },
-                _react2.default.createElement(_SwipeBanner2.default, { listItem: bannerItem, getList: this.state.bannerList, slidesToShow: 1 })
+                _react2.default.createElement(_SwipeBanner2.default, { listItem: bannerItem, getList: this.state.bannerList, centerPadding: '310px', centerMode: false, infinite: false, slidesToShow: 1 })
             );
         }
     }]);
@@ -50116,7 +50116,7 @@ var Detail = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Detail.__proto__ || Object.getPrototypeOf(Detail)).call(this, props));
 
         _this.state = {
-            type: 2
+            type: 1 // type = 1 => 펀딩 상세 페이지, type = 2 => 마켓 상세 페이지 입니다
         };
         return _this;
     }
@@ -50361,16 +50361,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // Components
 
-var DetailContent = function (_React$Component) {
-    _inherits(DetailContent, _React$Component);
+var DetailContentSide = function (_React$Component) {
+    _inherits(DetailContentSide, _React$Component);
 
-    function DetailContent(props) {
-        _classCallCheck(this, DetailContent);
+    function DetailContentSide(props) {
+        _classCallCheck(this, DetailContentSide);
 
-        return _possibleConstructorReturn(this, (DetailContent.__proto__ || Object.getPrototypeOf(DetailContent)).call(this, props));
+        return _possibleConstructorReturn(this, (DetailContentSide.__proto__ || Object.getPrototypeOf(DetailContentSide)).call(this, props));
     }
 
-    _createClass(DetailContent, [{
+    _createClass(DetailContentSide, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -50604,14 +50604,14 @@ var DetailContent = function (_React$Component) {
         }
     }]);
 
-    return DetailContent;
+    return DetailContentSide;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouter.withRouter)(DetailContent));
+})((0, _reactRouter.withRouter)(DetailContentSide));
 
 exports.default = _default;
 ;
@@ -50621,7 +50621,7 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailContent, 'DetailContent', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContentSide.jsx');
+    __REACT_HOT_LOADER__.register(DetailContentSide, 'DetailContentSide', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContentSide.jsx');
 
     __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContentSide.jsx');
 }();
@@ -50666,16 +50666,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // Components
 
 
-var DetailFunding = function (_React$Component) {
-    _inherits(DetailFunding, _React$Component);
+var DetailMarket = function (_React$Component) {
+    _inherits(DetailMarket, _React$Component);
 
-    function DetailFunding(props) {
-        _classCallCheck(this, DetailFunding);
+    function DetailMarket(props) {
+        _classCallCheck(this, DetailMarket);
 
-        return _possibleConstructorReturn(this, (DetailFunding.__proto__ || Object.getPrototypeOf(DetailFunding)).call(this, props));
+        return _possibleConstructorReturn(this, (DetailMarket.__proto__ || Object.getPrototypeOf(DetailMarket)).call(this, props));
     }
 
-    _createClass(DetailFunding, [{
+    _createClass(DetailMarket, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -50779,14 +50779,14 @@ var DetailFunding = function (_React$Component) {
         }
     }]);
 
-    return DetailFunding;
+    return DetailMarket;
 }(_react2.default.Component);
 
 var _default = (0, _reactRedux.connect)(function (state) {
     return {
         author: state.data.auth.author
     };
-})((0, _reactRouter.withRouter)(DetailFunding));
+})((0, _reactRouter.withRouter)(DetailMarket));
 
 exports.default = _default;
 ;
@@ -50796,7 +50796,7 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailFunding, 'DetailFunding', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailMarket.jsx');
+    __REACT_HOT_LOADER__.register(DetailMarket, 'DetailMarket', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailMarket.jsx');
 
     __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailMarket.jsx');
 }();
@@ -51468,6 +51468,14 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
+var _Video = __webpack_require__(744);
+
+var _Video2 = _interopRequireDefault(_Video);
+
+var _Detail = __webpack_require__(745);
+
+var _Detail2 = _interopRequireDefault(_Detail);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51475,6 +51483,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Components
+
+// Styles
+
+// Actions
+
 
 var VideoView = function (_React$Component) {
     _inherits(VideoView, _React$Component);
@@ -51488,7 +51503,12 @@ var VideoView = function (_React$Component) {
     _createClass(VideoView, [{
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', null);
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(_reactRouterDom.Route, { path: '/video', exact: true, strict: false, component: _Video2.default }),
+                _react2.default.createElement(_reactRouterDom.Route, { path: '/video/detail', exact: true, strict: false, component: _Detail2.default })
+            );
         }
     }]);
 
@@ -51518,6 +51538,160 @@ var _temp = function () {
 
 /***/ }),
 /* 744 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(3);
+
+var _reactRedux = __webpack_require__(4);
+
+var _reactRouter = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Components
+
+var VideoHome = function (_React$Component) {
+    _inherits(VideoHome, _React$Component);
+
+    function VideoHome(props) {
+        _classCallCheck(this, VideoHome);
+
+        return _possibleConstructorReturn(this, (VideoHome.__proto__ || Object.getPrototypeOf(VideoHome)).call(this, props));
+    }
+
+    _createClass(VideoHome, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                '\uD648\uC785\uB2C8\uB2E4'
+            );
+        }
+    }]);
+
+    return VideoHome;
+}(_react2.default.Component);
+
+var _default = (0, _reactRedux.connect)(function (state) {
+    return {
+        author: state.data.auth.author
+    };
+})((0, _reactRouter.withRouter)(VideoHome));
+
+exports.default = _default;
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(VideoHome, 'VideoHome', 'E:/codecrain/sellev-test/src/Sellev/Components/Video/index.jsx');
+
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Video/index.jsx');
+}();
+
+;
+
+/***/ }),
+/* 745 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(3);
+
+var _reactRedux = __webpack_require__(4);
+
+var _reactRouter = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Components
+
+var Detail = function (_React$Component) {
+    _inherits(Detail, _React$Component);
+
+    function Detail(props) {
+        _classCallCheck(this, Detail);
+
+        return _possibleConstructorReturn(this, (Detail.__proto__ || Object.getPrototypeOf(Detail)).call(this, props));
+    }
+
+    _createClass(Detail, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                '\uC544\uC544\uC544\uC544\uC544'
+            );
+        }
+    }]);
+
+    return Detail;
+}(_react2.default.Component);
+
+var _default = (0, _reactRedux.connect)(function (state) {
+    return {
+        author: state.data.auth.author
+    };
+})((0, _reactRouter.withRouter)(Detail));
+
+exports.default = _default;
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(Detail, 'Detail', 'E:/codecrain/sellev-test/src/Sellev/Components/Video/Detail.jsx');
+
+    __REACT_HOT_LOADER__.register(_default, 'default', 'E:/codecrain/sellev-test/src/Sellev/Components/Video/Detail.jsx');
+}();
+
+;
+
+/***/ }),
+/* 746 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {var require;/*!
@@ -51657,7 +51831,7 @@ function flush() {
 function attemptVertx() {
   try {
     var r = require;
-    var vertx = __webpack_require__(745);
+    var vertx = __webpack_require__(747);
     vertxNext = vertx.runOnLoop || vertx.runOnContext;
     return useVertxTimer();
   } catch (e) {
@@ -52681,13 +52855,13 @@ return Promise$2;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(80)))
 
 /***/ }),
-/* 745 */
+/* 747 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 746 */
+/* 748 */
 /***/ (function(module, exports) {
 
 // Console-polyfill. MIT license.

@@ -8,7 +8,7 @@ import { withRouter } from 'react-router';
 // Components
 import DetailContent from './DetailContent';
 
-class DetailFunding extends React.Component {
+class DetailMarket extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -60,4 +60,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(DetailFunding));
+})(withRouter(DetailMarket));

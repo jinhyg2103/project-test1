@@ -8,23 +8,14 @@ import { withRouter } from 'react-router';
 
 // Components
 
-import VideoHome from "../../Components/Video";
-import VideoDetail from "../../Components/Video/Detail";
-
-// Styles
-
-// Actions
-
-
-class VideoView extends React.Component {
+class VideoHome extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
             <div>
-                <Route path={'/video'} exact={true} strict={false} component={VideoHome} />
-                <Route path={'/video/detail'} exact={true} strict={false} component={VideoDetail} />
+                홈입니다
             </div>
         );
     }
@@ -33,4 +24,4 @@ export default connect((state) => {
     return {
         author: state.data.auth.author,
     };
-})(withRouter(VideoView));
+})(withRouter(VideoHome));
