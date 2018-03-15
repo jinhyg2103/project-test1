@@ -4,7 +4,6 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import * as parseNumber from "../../Lib/Utils/parseNumber";
 
 // Components
 

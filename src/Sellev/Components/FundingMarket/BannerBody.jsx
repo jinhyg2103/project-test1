@@ -46,12 +46,12 @@ class BannerBody extends React.Component {
                             {item.title}
                         </div>
                     </div>
-                </div> /*  이 부분 디자인 시안에 맞게 수정해주세요! */
+                </div> /*  이 부분 디자인 시안에 맞게 수정해주세요! (배너 아이템입니다)*/
             );
         }
         return (
             <div className={stylesHome.bannerBody}>
-                <SwipeBanner listItem={bannerItem} getList={this.state.bannerList} slidesToShow={1}/>
+                <SwipeBanner listItem={bannerItem} getList={this.state.bannerList} centerPadding={'310px'} centerMode={false} infinite={false} slidesToShow={1}/>
             </div>
         );
     }
