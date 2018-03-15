@@ -123,6 +123,7 @@ body {
     font-weight: bold;
 }
 
+
 @media screen and (max-width: 768px){
     .formGroup {
         width: 100%;

@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router';
 
 // Components
-import FundingMarketBody from './FundingMarketBody';
+import FundingBody from './FundingMarketBody';
 
 // Styles
 import stylesHome from '../../Styles/Components/Home.css';
@@ -17,12 +17,12 @@ import stylesHome from '../../Styles/Components/Home.css';
 class FundingMarket extends React.Component {
     render() {
         return (
-            <div className={stylesHome.fundingSection}>
-                <div className={stylesHome.fundingHeader}>
+            <div className={stylesHome.fundingMarketSection}>
+                <div className={stylesHome.fundingMarketHeader}>
                     <div className={stylesHome.sectionSmallTitle}>랭킹</div>
                     <div className={stylesHome.sectionTitle}>펀딩&마켓</div>
                 </div>
-                <FundingMarketBody />
+                <FundingBody />
             </div>
         );
     }

@@ -21,7 +21,7 @@ class ImageList extends React.Component {
     render() {
         return (
             <div>
-                <div style={{ width: '264px', height: '132px', backgroundImage: 'url("' + this.props.listItem.bgImage + '")' }}></div>
+                <div className={styles.imageBox} style={{ width: '264px', height: '132px', backgroundImage: 'url("' + this.props.listItem.bgImage + '")' }}></div>
                 { this.props.type == 'fundingmarket' ? <div style={{ backgroundImage: 'url("' + this.props.listItem.profile + '")' }}></div> : null}
                 { this.props.type == 'fundingmarket' ?
                     (

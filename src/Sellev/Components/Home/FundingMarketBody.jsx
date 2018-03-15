@@ -26,88 +26,88 @@ class FundingMarketBody extends React.Component {
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
                 },
             ],
             hitList: [
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
                 },
             ],
             newList: [
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
                 },
                 {
                     title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
                     name: '엑소',
-                    bgImage: '/Sellev/assets/img/img_pick_1.png',
+                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
                 },
-            ]
-        })
+            ],
+        });
     }
     render() {
         return (
-            <div>
+            <div className={stylesHome.fundingMarketBody}>
                 <FundingMarketList title={'펀딩액순'} listItem={this.state.fundingList} />
                 <FundingMarketList title={'조회순'} listItem={this.state.hitList} />
                 <FundingMarketList title={'신규'} listItem={this.state.newList} />

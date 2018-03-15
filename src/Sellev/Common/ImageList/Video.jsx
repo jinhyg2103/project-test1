@@ -18,10 +18,12 @@ class Video extends React.Component {
     }
     render() {
         return (
-            <div>
-                <div>{this.props.listItem.title}</div>
-                <div>
+            <div className={styles.videoList}>
+                <div className={styles.listTitle}>{this.props.listItem.title}</div>
+                <div className={styles.listBody}>
                     <div>{this.props.listItem.name}</div>
+                    <span> | </span>
+                    <div className={styles.likeImg} />
                     <div>{this.props.listItem.like}</div>
                 </div>
             </div>

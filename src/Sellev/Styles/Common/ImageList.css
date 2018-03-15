@@ -1,0 +1,32 @@
+/**************ImageList*************/
+/*video*/
+.imageBox {
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+.videoList {
+    width: 100%;
+}
+.videoList .listTitle {
+    font-size: 15px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 19px;
+}
+.videoList .listBody {
+    font-size: 13px;
+    color: #979797;
+    line-height: 30px;
+}
+.videoList .listBody div {
+    display: inline-block;
+}
+.videoList .listBody .likeImg{
+    background-image: url('/Sellev/assets/img/ic_common.png');
+    width: 20px;
+    height: 20px;
+    background-position: 0 85px;
+}

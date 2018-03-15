@@ -18,9 +18,12 @@ class Video extends React.Component {
     render() {
         return (
             <div className={stylesHome.videoSection}>
-                <div>
+                <div className={stylesHome.videoHeader}>
                     <div className={stylesHome.sectionSmallTitle}>랭킹</div>
-                    <div className={stylesHome.sectionTitle}>오늘의 동영상</div>
+                    <div className={stylesHome.titleBox}>
+                        <div className={stylesHome.sectionTitle}>오늘의 동영상</div>
+                        <Link to={'/funding'} className={stylesHome.more}>전체보기</Link>
+                    </div>
                 </div>
                 <VideoBody />
             </div>
