@@ -30,3 +30,20 @@
     height: 20px;
     background-position: 0 85px;
 }
+
+@media screen and (max-width: 768px){
+    .imageBox {
+        min-width: 100%;
+        min-height: 100%;
+        display: block;
+        border-radius: 12px;
+    }
+    .videoList .listTitle {
+        font-size: 23px;
+        line-height: 35px;
+    }
+    .videoList .listBody {
+        font-size: 17px;
+        line-height: 38px;
+    }
+}
