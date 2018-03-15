@@ -45,7 +45,7 @@ class BannerBody extends React.Component {
         }
         return (
             <div className={stylesHome.bannerBody}>
-                <SwipeBanner listItem={bannerItem} getList={this.state.bannerList} centerMode={true} centerPadding={'252px'} slideToShow={1} />
+                <SwipeBanner listItem={bannerItem} getList={this.state.bannerList} centerMode={true} slideToShow={1} />
             </div>
         );
     }

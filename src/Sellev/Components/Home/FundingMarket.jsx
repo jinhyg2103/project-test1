@@ -11,6 +11,7 @@ import FundingBody from './FundingMarketBody';
 
 // Styles
 import stylesHome from '../../Styles/Components/Home.css';
+import styles from '../../Styles/App.css';
 
 // Actions
 
@@ -19,8 +20,8 @@ class FundingMarket extends React.Component {
         return (
             <div className={stylesHome.fundingMarketSection}>
                 <div className={stylesHome.fundingMarketHeader}>
-                    <div className={stylesHome.sectionSmallTitle}>랭킹</div>
-                    <div className={stylesHome.sectionTitle}>펀딩&마켓</div>
+                    <div className={styles.sectionSmallTitle}>랭킹</div>
+                    <div className={styles.sectionTitle}>펀딩&마켓</div>
                 </div>
                 <FundingBody />
             </div>

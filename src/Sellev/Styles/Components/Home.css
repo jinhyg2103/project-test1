@@ -1,41 +1,5 @@
 /* Common */
 
-.sectionTitle {
-    font-size: 34px;
-    font-weight: bold;
-    letter-spacing: -1.2px;
-    color: #161616;
-}
-
-.sectionWhiteTitle {
-    font-family: 'Apple SD Gothic Neo';
-    font-size: 34px;
-    font-weight: bold;
-    letter-spacing: -1.2px;
-    color: #ffffff;
-}
-
-.sectionSmallTitle {
-    font-family: 'Product Sans';
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 19px;
-    color: #a0a0a0;
-    letter-spacing: -0.5px;
-}
-.titleBox {
-    overflow: hidden;
-}
-.titleBox .sectionTitle {
-    float: left;
-}
-.titleBox .more {
-    color: #fd0a0a;
-    font-size: 16px;
-    float: right;
-    padding-top: 11px;
-}
-
 /* Banner */
 .bannerBody{
     overflow: hidden;

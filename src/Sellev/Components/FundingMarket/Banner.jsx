@@ -11,16 +11,18 @@ import BannerBody from './BannerBody';
 
 // Styles
 import stylesFundingMarket from '../../Styles/Components/FundingMarket.css';
+import styles from '../../Styles/App.css';
+
 
 // Actions
 
 class Banner extends React.Component {
     render() {
         return (
-            <div>
-                <div>
-                    <div>셀레브 Pick</div>
-                    <div>오늘의 펀딩&마켓</div>
+            <div className={stylesFundingMarket.fundingMarketSection}>
+                <div className={stylesFundingMarket.fundingMarketHeader}>
+                    <div className={styles.sectionSmallTitle}>랭킹</div>
+                    <div className={styles.sectionTitle}>펀딩&마켓</div>
                 </div>
                 <BannerBody />
             </div>

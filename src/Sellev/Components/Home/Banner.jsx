@@ -11,6 +11,7 @@ import BannerBody from './BannerBody';
 
 // Styles
 import stylesHome from '../../Styles/Components/Home.css';
+import styles from '../../Styles/App.css';
 
 // Actions
 
@@ -19,8 +20,8 @@ class Banner extends React.Component {
         return (
             <div className={stylesHome.bannerSection}>
                 <div className={stylesHome.BannerHeader}>
-                    <div className={stylesHome.sectionSmallTitle}>셀레브 Pick</div>
-                    <div className={stylesHome.sectionTitle}>놓치지마세요</div>
+                    <div className={styles.sectionSmallTitle}>셀레브 Pick</div>
+                    <div className={styles.sectionWhiteTitle}>놓치지마세요</div>
                 </div>
                 <BannerBody />
             </div>

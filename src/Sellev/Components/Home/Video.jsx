@@ -11,6 +11,7 @@ import VideoBody from './VideoBody';
 
 // Styles
 import stylesHome from '../../Styles/Components/Home.css';
+import styles from '../../Styles/App.css';
 
 // Actions
 
@@ -19,10 +20,10 @@ class Video extends React.Component {
         return (
             <div className={stylesHome.videoSection}>
                 <div className={stylesHome.videoHeader}>
-                    <div className={stylesHome.sectionSmallTitle}>랭킹</div>
-                    <div className={stylesHome.titleBox}>
-                        <div className={stylesHome.sectionTitle}>오늘의 동영상</div>
-                        <Link to={'/funding'} className={stylesHome.more}>전체보기</Link>
+                    <div className={styles.sectionSmallTitle}>랭킹</div>
+                    <div className={styles.titleBox}>
+                        <div className={styles.sectionTitle}>오늘의 동영상</div>
+                        <Link to={'/funding'} className={styles.more}>전체보기</Link>
                     </div>
                 </div>
                 <VideoBody />
