@@ -24,7 +24,7 @@ class SwipeBanner extends React.Component {
         let settings = {
             arrows: false,
             centerMode: this.props.centerMode !== undefined ? this.props.centerMode : true,
-            centerPadding: '0px',
+            centerPadding: this.props.centerPadding || '0px',
             slidesToShow: this.props.slidesToShow || 1,
             autoplay: this.props.autoplay !== undefined ? this.props.autoplay : true,
             autoplaySpeed: this.props.autoplay !== undefined && this.props.autoplaySpeed ? this.props.autoplaySpeed : 5000,
@@ -36,7 +36,7 @@ class SwipeBanner extends React.Component {
                     settings: {
                         arrows: false,
                         centerMode: this.props.centerMode !== undefined ? this.props.centerMode : true,
-                        centerPadding: this.props.centerPadding || '0px',
+                        centerPadding: this.props.centerPaddingMobile || '0px',
                         slidesToShow: this.props.slidesToShow || 1,
                         autoplay: this.props.autoplay !== undefined ? this.props.autoplay : true,
                         autoplaySpeed: this.props.autoplay !== undefined && this.props.autoplaySpeed ? this.props.autoplaySpeed : 5000,

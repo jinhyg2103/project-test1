@@ -7,8 +7,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-import Banner from './/Banner';
-import Body from './/List';
+import Banner from './Banner';
+import Body from './List';
 
 class FundingMarketHome extends React.Component {
     constructor(props) {
