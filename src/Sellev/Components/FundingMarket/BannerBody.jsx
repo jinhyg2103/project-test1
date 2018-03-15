@@ -13,7 +13,7 @@ import SwipeBanner from '../../Common/SwipeBanner';
 
 // Styles
 import styles from '../../Styles/Common/SwipeBanner.css';
-import stylesHome from '../../Styles/Components/Home.css';
+import stylesFundingMarket from '../../Styles/Components/FundingMarket.css';
 
 // Actions
 
@@ -50,8 +50,8 @@ class BannerBody extends React.Component {
             );
         }
         return (
-            <div className={stylesHome.bannerBody}>
-                <SwipeBanner listItem={bannerItem} getList={this.state.bannerList} centerPadding={'310px'} centerMode={false} infinite={false} slidesToShow={1}/>
+            <div className={stylesFundingMarket.bannerBody}>
+                <SwipeBanner listItem={bannerItem} getList={this.state.bannerList} centerMode={false} infinite={true} slidesToShow={1}/>
             </div>
         );
     }

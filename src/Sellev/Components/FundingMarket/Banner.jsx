@@ -19,9 +19,6 @@ class Banner extends React.Component {
         return (
             <div>
                 <div>
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                </div>
-                <div>
                     <div>셀레브 Pick</div>
                     <div>오늘의 펀딩&마켓</div>
                 </div>
