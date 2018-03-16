@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 // Components
-import FundingMarket from './FundingMarket';
+import Funding from './Funding';
 import Market from './Market';
 import Video from './Video';
 
@@ -25,7 +25,7 @@ class ImageList extends React.Component {
                 { this.props.type == 'fundingmarket' ? <div style={{ backgroundImage: 'url("' + this.props.listItem.profile + '")' }}></div> : null}
                 { this.props.type == 'fundingmarket' ?
                     (
-                        this.props.listItem.type == 'funding' ? <FundingMarket listItem={this.props.listItem} /> : <Market listItem={this.props.listItem} />
+                        this.props.listItem.type == 'funding' ? <Funding listItem={this.props.listItem} /> : <Market listItem={this.props.listItem} />
                     ) : null
                 }
                 { this.props.type == 'video' ? <Video listItem={this.props.listItem} /> : null }

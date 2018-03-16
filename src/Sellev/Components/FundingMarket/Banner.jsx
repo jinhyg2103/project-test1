@@ -21,8 +21,8 @@ class Banner extends React.Component {
         return (
             <div className={stylesFundingMarket.fundingMarketSection}>
                 <div className={stylesFundingMarket.fundingMarketHeader}>
-                    <div className={styles.sectionSmallTitle}>랭킹</div>
-                    <div className={styles.sectionTitle}>펀딩&마켓</div>
+                    <div className={styles.sectionSmallTitle}>셀레브 Pick</div>
+                    <div className={styles.sectionTitle}>오늘의 펀딩&마켓</div>
                 </div>
                 <BannerBody />
             </div>

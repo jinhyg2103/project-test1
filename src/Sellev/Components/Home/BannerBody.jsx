@@ -12,7 +12,7 @@ import SwipeBanner from '../../Common/SwipeBanner';
 // Components
 
 // Styles
-import styles from '../../Styles/Common/SwipeBanner.css';
+
 import stylesHome from '../../Styles/Components/Home.css';
 
 // Actions
@@ -32,9 +32,9 @@ class BannerBody extends React.Component {
     render() {
         let bannerItem = (item, index) => {
             return (
-                <div className={styles.listBox} key={index}>
-                    <div className={styles.bgImage} style={{ backgroundImage: 'url("' + item.bgImage +'")'}} />
-                    <div className={styles.titleBox}>
+                <div className={stylesHome.listBox} key={index}>
+                    <div className={stylesHome.bgImage} style={{ backgroundImage: 'url("' + item.bgImage +'")'}} />
+                    <div className={stylesHome.titleBox}>
                         <div>{item.artist}</div>
                         <div>
                             {item.title}

@@ -13,7 +13,14 @@ body {
     letter-spacing: -1.2px;
     color: #161616;
 }
-
+.sectionTitle div {
+    background-image: url("/Sellev/assets/img/ic_common.png");
+    width: 20px;
+    height: 11px;
+    background-position: 161px -44px;
+    display: inline-block;
+    margin-bottom: 7px;
+}
 .sectionWhiteTitle {
     font-family: 'Apple SD Gothic Neo';
     font-size: 34px;
@@ -41,6 +48,19 @@ body {
     font-size: 16px;
     float: right;
     padding-top: 11px;
+}
+.titleBox .filter {
+    color: #a8a8a8;
+    font-size: 16px;
+    float: right;
+    padding-top: 11px;
+}
+.filter div {
+    background-image: url("/Sellev/assets/img/ic_home.png");
+    width: 15px;
+    height: 11px;
+    background-position: 150px -35px;
+    display: inline-block;
 }
 
 /*Autentication form */
