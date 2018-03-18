@@ -39,7 +39,7 @@ class RootView extends React.Component {
                 <Route path={'/'} exact={true} strict={false} component={HomeContainer} />
                 <Route path={'/auth'} exact={false} strict={false} component={AuthContainer} />
                 <Route path={'/fundingmarket'} exact={false} strict={false} component={FundingMarketContainer} />
-                <Route path={'/hashtag'} exact={true} strict={false} component={HashTagContainer} />
+                <Route path={'/hashtag'} exact={false} strict={false} component={HashTagContainer} />
                 <Route path={'/mypage'} exact={true} strict={false} component={MyPageContainer} />
                 <Route path={'/payment'} exact={true} strict={false} component={PaymentContainer} />
                 <Route path={'/search'} exact={true} strict={false} component={SearchContainer} />

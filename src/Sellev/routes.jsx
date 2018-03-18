@@ -25,7 +25,7 @@ const routes = [
     },
     {
         path: '/hashtag',
-        exact: true,
+        exact: false,
         strict: false,
         component: RootPage,
     },
