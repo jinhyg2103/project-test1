@@ -5,6 +5,22 @@ body {
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-size: 14px;
 }
+/*button*/
+.btn47Black {
+    height: 47px;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #232323;
+    color: #ffffff;
+}
+.btn47White {
+    height: 47px;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: solid 1px #d6d6d6;
+    color: #505050;
+}
 /*Category Title*/
 .sectionTitle {
     font-family: 'Apple SD Gothic Neo';

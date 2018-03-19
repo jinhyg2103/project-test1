@@ -1,3 +1,17 @@
+/*Common*/
+.redCircle {
+    width: 17px;
+    height: 17px;
+    background-image: url(/Sellev/assets/img/ic_web_icon.png);
+    background-position: -160px 61px;
+}
+.likeImage {
+    background-image: url(/Sellev/assets/img/ic_common.png);
+    width: 20px;
+    height: 20px;
+    background-position: 0 85px;
+    margin-top: -2px;
+}
 /* Banner */
 .fundingMarketSection {
     margin-top: 100px;
@@ -90,7 +104,150 @@
     float: left;
     margin-right: 11px;
 }
-
+/***********funding Detail*************/
+.fundingContainer {
+    width: 1100px;
+    margin: 100px auto 0;
+}
+.fundingHeader {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.fundingNameBox {
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-flex;
+    margin-bottom: 11px;
+}
+.fundingNameBox .profile {
+    width: 34px;
+    height: 34px;
+    background-position: center;
+    background-size: cover;
+}
+.fundingNameBox span {
+    line-height: 36px;
+}
+.fundingTitileBox {
+    font-size: 30px;
+    font-weight: bold;
+}
+.fundingBody {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.35);
+}
+.fundingBody .bgImage {
+    width: 664px;
+    height: 467px;
+    float: left;
+}
+.fundingBox {
+    width: 307px;
+    float: right;
+    font-weight: bold;
+    height: 467px;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.35);
+    border-top: 1px solid rgba(151, 151, 151, 0.35);
+    padding-top: 39px;
+}
+.fundingBox .priceTitle {
+    font-size: 18px;
+}
+.fundingBox .price {
+    font-size: 18px;
+    margin: 15px 0 9px;
+}
+.fundingBox .price span{
+    font-size: 37px;
+}
+.fundingBox .percentage {
+    font-size: 18px;
+}
+.fundingOthers {
+    overflow: hidden;
+}
+.fundingOthers li {
+    float: left;
+    margin-right: 30px;
+}
+.fundingOthers li div:first-child {
+    font-size: 13px;
+}
+.fundingOthers li div:last-child {
+    font-size: 29px;
+    font-weight: bold;
+}
+.fundingBtnBox {
+    margin: 37px 0 32px;
+}
+.fundingBtnBox .fundingBtn {
+    padding: 16px 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.fundingBtnBox  .likeBtn {
+    padding: 16px 37%;
+    display: inline-flex;
+}
+/*progress bar*/
+.progressBox {
+    position: relative;
+    margin: 22px 0 24px;
+}
+.progressBox .progress {
+    background-color: #ebeaeb;
+    height: 4px;
+    margin: 13px auto;
+}
+.progressBox .progress .progressBar {
+    height: 4px;
+    background-color: #fd0a0a;
+}
+.progressNum {
+    position: absolute;
+    font-size: 12px;
+    width: 41px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #191919;
+    color: #ffffff;
+    bottom: -10px;
+    /*right: 40%;*/
+    text-align: center;
+    padding-top: 6px;
+}
+/*detail content 펀딩설명 개요 상세정보 .. */
+.detailContentList {
+    width: 100%;
+}
+.detailContentList li {
+    width: 664px;
+    padding: 15px 0;
+}
+.detailContentList li div {
+    line-height: 2em;
+}
+.detailContentList li .contentTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+.detailContentList .notificationTitle {
+    font-size: 24px;
+    font-weight: bold;
+}
+.detailContentList .notificationTitle span {
+    color: #fd0a0a;
+}
+.detailContentList li .goalBox li {
+    font-size: 14px;
+    font-weight: bold;
+}
+.detailContentList li .goalBox li span:first-child {
+    color: #b6b6b6;
+}
 
 @media screen and (max-width: 1100px){
     .fundingMarketBody {

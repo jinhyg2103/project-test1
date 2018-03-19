@@ -23,7 +23,7 @@ class Detail extends React.Component {
                 {
                     this.state.type === 1 ? <DetailFunding /> : <DetailMarket />
                 }
-                <DetailRanking/>
+                {/*<DetailRanking />*/}
             </div>
         );
     }
