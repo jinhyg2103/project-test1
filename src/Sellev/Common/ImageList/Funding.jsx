@@ -20,7 +20,19 @@ class FundingMarket extends React.Component {
             <div className={styles.fundingMarketBody}>
                 <div className={styles.fundingMarketArtist}>{this.props.listItem.name}</div>
                 <div className={styles.fundingMarketTitle}>{this.props.listItem.title}</div>
-                <div className={styles.fundSlidBar}>{this.props.listItem.percentOfFund}%</div>
+                <div className={styles.progressBox}>
+                    <div className={'progress ' + styles.progress}>
+                        <div className={'progress-bar ' + styles.progressBar} style={{ width: this.props.listItem.percentOfFund + '%' }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" />
+                    </div>
+                    <div
+                        className={styles.progressNum}
+                        style={
+                            this.props.listItem.percentOfFund < 25 ? { right: '84%' } : { right: (100 - this.props.listItem.percentOfFund) + '%' }
+                        }
+                    >
+                        {this.props.listItem.percentOfFund}%
+                    </div>
+                </div>
                 <div className={styles.fundBox}>
                     <div className={styles.fundPercent}>
                         <div>{this.props.listItem.percentOfFund}%</div>

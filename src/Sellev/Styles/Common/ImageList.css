@@ -1,10 +1,43 @@
 /**************ImageList*************/
-/*video*/
+/*funding market*/
+.listContainer {
+    position: relative;
+    overflow: hidden;
+}
 .imageBox {
     background-size: cover;
     background-position: center;
     margin-bottom: 10px;
 }
+.profileBox {
+    background-size: cover;
+    background-position: center;
+    width: 33px;
+    height: 33px;
+    border: 1.5px solid #ffffff;
+    border-radius: 17px;
+    position: absolute;
+    right: 10px;
+    top: 110px;
+}
+.fundingMarketBody {
+    font-weight: bold;
+    width: 264px;
+    margin-bottom: 30px;
+    height: 160px;
+}
+.fundingMarketBody .fundingMarketArtist {
+    font-size: 13px;
+    color: #979797;
+    line-height: 2em;
+}
+.fundingMarketBody .fundingMarketTitle {
+    font-size: 15px;
+    line-height: 2em;
+}
+
+
+/*video*/
 .videoList {
     width: 100%;
 }
@@ -30,29 +63,11 @@
     height: 20px;
     background-position: 0 85px;
 }
-/*funding market*/
-.fundingMarketBody {
-    font-weight: bold;
-    width: 264px;
-    margin-bottom: 30px;
-    height: 160px;
-}
-.fundingMarketBody .fundingMarketArtist {
-    font-size: 13px;
-    color: #979797;
-    line-height: 2em;
-}
-.fundingMarketBody .fundingMarketTitle {
-    font-size: 15px;
-    line-height: 1.5em;
-}
 
 /*funding*/
 .fundBox {
+    margin-top: 25px;
     overflow: hidden;
-    font-weight: bold;
-    height: 40px;
-    margin-top: 10px;
 }
 .fundPercent {
     float: left;
@@ -75,9 +90,10 @@
 .left div:first-child {
     color: #fd0a0a;
     font-size: 18px;
+    font-weight: bold;
 }
 .goal div:first-child {
-    color: rgba(22,22,22, 0.5);
+    color: #161616;
     line-height: 18px;
 }
 .goal div:first-child span {
@@ -92,6 +108,33 @@
     color: #979797;
     line-height: 2em;
 }
+/*progress bar*/
+.progressBox {
+    position: relative;
+}
+.progressBox .progress {
+    background-color: #ebeaeb;
+    height: 4px;
+    margin: 13px auto;
+}
+.progressBox .progress .progressBar {
+    height: 4px;
+    background-color: #fd0a0a;
+}
+.progressNum {
+    position: absolute;
+    font-size: 12px;
+    width: 41px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #191919;
+    color: #ffffff;
+    bottom: -10px;
+    /*right: 40%;*/
+    text-align: center;
+    padding-top: 6px;
+}
+
 
 /*market*/
 
@@ -104,7 +147,7 @@
     background-image: url('/Sellev/assets/img/ic_web_icon.png');
     width: 20px;
     height: 20px;
-    background-position: -122px 74px;
+    background-position: -122px 75px;
     float: left;
     margin-top: -2px;
 }
@@ -119,6 +162,7 @@
 }
 .marketOption span:first-child {
     color: #979797;
+    margin: 0 10px;
 }
 .marketOption span:last-child {
     color: #fd0a0a;
@@ -127,9 +171,32 @@
 @media screen and (max-width: 768px){
     .imageBox {
         min-width: 100%;
-        min-height: 100%;
-        display: block;
-        border-radius: 12px;
+        min-height: 242px;
+        border-radius: 7px;
+    }
+    .profileBox {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 1.5px solid #ffffff;
+        top: 210px;
+    }
+    .fundingMarketBody {
+        width: 100%;
+    }
+    .fundingMarketBody .fundingMarketTitle,
+    .marketPrice,
+    .fundPercent div:first-child,
+    .fundAttendant div:first-child,
+    .left div:first-child,
+    .goal div:first-child {
+        font-size: 25px;
+    }
+    .goal {
+        float: right;
+    }
+    .fundBox {
+        padding: 10px 0;
     }
     .videoList .listTitle {
         font-size: 23px;

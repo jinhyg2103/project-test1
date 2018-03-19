@@ -20,9 +20,9 @@ import styles from '../../Styles/Common/ImageList.css';
 class ImageList extends React.Component {
     render() {
         return (
-            <div>
+            <div className={styles.listContainer}>
                 <div className={styles.imageBox} style={{ width: '264px', height: '132px', backgroundImage: 'url("' + this.props.listItem.bgImage + '")' }}></div>
-                { this.props.type == 'fundingmarket' ? <div style={{ backgroundImage: 'url("' + this.props.listItem.profile + '")' }}></div> : null}
+                { this.props.type == 'fundingmarket' ? <div className={styles.profileBox} style={{ backgroundImage: 'url("' + this.props.listItem.profile + '")' }}></div> : null}
                 { this.props.type == 'fundingmarket' ?
                     (
                         this.props.listItem.type == 'funding' ? <Funding listItem={this.props.listItem} /> : <Market listItem={this.props.listItem} />

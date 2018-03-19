@@ -38,7 +38,7 @@ class FundingMarketList extends React.Component {
         return (
             <div className={stylesHome.FundingMarketListBox}>
                 <div className={stylesHome.listTItle}>{this.props.title}</div>
-                <div className={stylesHome.listImg} style={{width: '352px', height: '172px', backgroundImage: 'url("' + this.props.listItem[0].bgImage + '")'}}></div>
+                <div className={stylesHome.listImg} style={{width: '100%', height: '172px', backgroundImage: 'url("' + this.props.listItem[0].bgImage + '")'}}></div>
                 <ul className={stylesHome.itemListBox}>
                     {listItem}
                 </ul>

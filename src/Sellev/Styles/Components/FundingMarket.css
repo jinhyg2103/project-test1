@@ -84,8 +84,32 @@
 }
 .fundingMarketBody .productBody {
     overflow: hidden;
+    margin: 30px auto;
 }
 .fundingMarketBody .productBody .productBox {
     float: left;
     margin-right: 11px;
+}
+
+
+@media screen and (max-width: 1100px){
+    .fundingMarketBody {
+        width: 830px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .bannerBody {
+        width: 100%;
+    }
+    .fundingMarketBody {
+        max-width: 768px;
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .fundingMarketBody .productBody .productBox {
+        margin-right: 0;
+        float: none;
+    }
 }

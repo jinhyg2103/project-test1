@@ -63,9 +63,9 @@
 
 /* Funding Market */
 .fundingMarketSection {
-     width: 1100px;
-     margin: 120px auto 50px;
- }
+    width: 1100px;
+    margin: 120px auto 50px;
+}
 .fundingMarketHeader {
     width: 100%;
     margin-bottom: 22px;
@@ -154,17 +154,36 @@
 }
 
 @media screen and (max-width: 1100px){
+    /*펀딩&마켓*/
+    .fundingMarketBody {
+        margin: 0 3%;
+    }
+    .fundingMarketSection {
+        width: 100%;
+    }
+    .FundingMarketListBox {
+        width: 30%;
+    }
+    .FundingMarketListBox .listImg {
+        width: 100%;
+        border-radius: 7px;
+    }
     .videoSection {
         width: 825px;
     }
 }
-@media screen and (max-width: 850px){
-    .videoSection {
-        width: 550px;
-    }
-}
 /*모바일 반응형*/
 @media screen and (max-width: 768px){
+    .fundingMarketBody {
+        margin: 0;
+    }
+    .FundingMarketListBox {
+        width: 100%;
+    }
+    .FundingMarketListBox .listImg {
+        width: 100%;
+        border-radius: 7px;
+    }
     /*오늘의 동영상 */
     .videoSection {
         max-width: 768px;

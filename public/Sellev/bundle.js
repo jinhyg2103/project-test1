@@ -2573,7 +2573,7 @@ module.exports = {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(745);
+var content = __webpack_require__(746);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -5619,23 +5619,23 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(actionTypes, 'actionTypes', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+    __REACT_HOT_LOADER__.register(actionTypes, 'actionTypes', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actions.js');
 
-    __REACT_HOT_LOADER__.register(getVerificationCode, 'getVerificationCode', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+    __REACT_HOT_LOADER__.register(getVerificationCode, 'getVerificationCode', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actions.js');
 
-    __REACT_HOT_LOADER__.register(isIdDuplicated, 'isIdDuplicated', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+    __REACT_HOT_LOADER__.register(isIdDuplicated, 'isIdDuplicated', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actions.js');
 
-    __REACT_HOT_LOADER__.register(session, 'session', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+    __REACT_HOT_LOADER__.register(session, 'session', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actions.js');
 
-    __REACT_HOT_LOADER__.register(login, 'login', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+    __REACT_HOT_LOADER__.register(login, 'login', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actions.js');
 
-    __REACT_HOT_LOADER__.register(signup, 'signup', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+    __REACT_HOT_LOADER__.register(signup, 'signup', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actions.js');
 
-    __REACT_HOT_LOADER__.register(logout, 'logout', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+    __REACT_HOT_LOADER__.register(logout, 'logout', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actions.js');
 
-    __REACT_HOT_LOADER__.register(changePassword, 'changePassword', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+    __REACT_HOT_LOADER__.register(changePassword, 'changePassword', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actions.js');
 
-    __REACT_HOT_LOADER__.register(findIdText, 'findIdText', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actions.js');
+    __REACT_HOT_LOADER__.register(findIdText, 'findIdText', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actions.js');
 }();
 
 ;
@@ -5744,7 +5744,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(764);
+var content = __webpack_require__(765);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -6579,9 +6579,9 @@ var ImageList = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: _ImageList2.default.listContainer },
                 _react2.default.createElement('div', { className: _ImageList2.default.imageBox, style: { width: '264px', height: '132px', backgroundImage: 'url("' + this.props.listItem.bgImage + '")' } }),
-                this.props.type == 'fundingmarket' ? _react2.default.createElement('div', { style: { backgroundImage: 'url("' + this.props.listItem.profile + '")' } }) : null,
+                this.props.type == 'fundingmarket' ? _react2.default.createElement('div', { className: _ImageList2.default.profileBox, style: { backgroundImage: 'url("' + this.props.listItem.profile + '")' } }) : null,
                 this.props.type == 'fundingmarket' ? this.props.listItem.type == 'funding' ? _react2.default.createElement(_Funding2.default, { listItem: this.props.listItem }) : _react2.default.createElement(_Market2.default, { listItem: this.props.listItem }) : null,
                 this.props.type == 'video' ? _react2.default.createElement(_Video2.default, { listItem: this.props.listItem }) : null
             );
@@ -6601,9 +6601,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(ImageList, 'ImageList', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/ImageList/index.jsx');
+    __REACT_HOT_LOADER__.register(ImageList, 'ImageList', 'C:/recordFarm/project-test1/src/Sellev/Common/ImageList/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/ImageList/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Common/ImageList/index.jsx');
 }();
 
 ;
@@ -6628,7 +6628,7 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(numberWithCommas, 'numberWithCommas', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Utils/parseNumber.js');
+    __REACT_HOT_LOADER__.register(numberWithCommas, 'numberWithCommas', 'C:/recordFarm/project-test1/src/Sellev/Lib/Utils/parseNumber.js');
 }();
 
 ;
@@ -12216,15 +12216,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(appReducer, 'appReducer', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/store.jsx');
+    __REACT_HOT_LOADER__.register(appReducer, 'appReducer', 'C:/recordFarm/project-test1/src/Sellev/store.jsx');
 
-    __REACT_HOT_LOADER__.register(enhancer, 'enhancer', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/store.jsx');
+    __REACT_HOT_LOADER__.register(enhancer, 'enhancer', 'C:/recordFarm/project-test1/src/Sellev/store.jsx');
 
-    __REACT_HOT_LOADER__.register(store, 'store', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/store.jsx');
+    __REACT_HOT_LOADER__.register(store, 'store', 'C:/recordFarm/project-test1/src/Sellev/store.jsx');
 
-    __REACT_HOT_LOADER__.register(newStore, 'newStore', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/store.jsx');
+    __REACT_HOT_LOADER__.register(newStore, 'newStore', 'C:/recordFarm/project-test1/src/Sellev/store.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/store.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/store.jsx');
 }();
 
 ;
@@ -12571,9 +12571,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(SwipeBanner, 'SwipeBanner', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/SwipeBanner/index.jsx');
+    __REACT_HOT_LOADER__.register(SwipeBanner, 'SwipeBanner', 'C:/recordFarm/project-test1/src/Sellev/Common/SwipeBanner/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/SwipeBanner/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Common/SwipeBanner/index.jsx');
 }();
 
 ;
@@ -20034,9 +20034,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(LOGIN, 'LOGIN', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actionTypes.js');
+  __REACT_HOT_LOADER__.register(LOGIN, 'LOGIN', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actionTypes.js');
 
-  __REACT_HOT_LOADER__.register(LOGOUT, 'LOGOUT', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/actionTypes.js');
+  __REACT_HOT_LOADER__.register(LOGOUT, 'LOGOUT', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/actionTypes.js');
 }();
 
 ;
@@ -20544,9 +20544,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(routes, 'routes', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/routes.jsx');
+    __REACT_HOT_LOADER__.register(routes, 'routes', 'C:/recordFarm/project-test1/src/Sellev/routes.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/routes.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/routes.jsx');
 }();
 
 ;
@@ -20626,9 +20626,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(userBox, 'userBox', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/UserBox.jsx');
+    __REACT_HOT_LOADER__.register(userBox, 'userBox', 'C:/recordFarm/project-test1/src/Sellev/Common/UserBox.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/UserBox.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Common/UserBox.jsx');
 }();
 
 ;
@@ -21332,9 +21332,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(SignupFooter, 'SignupFooter', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/SignupFooter.jsx');
+    __REACT_HOT_LOADER__.register(SignupFooter, 'SignupFooter', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/SignupFooter.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/SignupFooter.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/SignupFooter.jsx');
 }();
 
 ;
@@ -21362,7 +21362,7 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _DetailContentSide = __webpack_require__(738);
+var _DetailContentSide = __webpack_require__(739);
 
 var _DetailContentSide2 = _interopRequireDefault(_DetailContentSide);
 
@@ -21553,9 +21553,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailContent, 'DetailContent', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContent.jsx');
+    __REACT_HOT_LOADER__.register(DetailContent, 'DetailContent', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailContent.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContent.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailContent.jsx');
 }();
 
 ;
@@ -21669,9 +21669,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(VideoListItem, 'VideoListItem', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/VideoListItem.jsx');
+    __REACT_HOT_LOADER__.register(VideoListItem, 'VideoListItem', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/VideoListItem.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/VideoListItem.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/VideoListItem.jsx');
 }();
 
 ;
@@ -26852,11 +26852,11 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(773).polyfill();
+__webpack_require__(774).polyfill();
 
 // Components
 
-__webpack_require__(775);
+__webpack_require__(776);
 __webpack_require__(124);
 
 (0, _reactDom.render)(_react2.default.createElement(
@@ -41285,7 +41285,7 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(reducer, 'reducer', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/reducer.js');
+    __REACT_HOT_LOADER__.register(reducer, 'reducer', 'C:/recordFarm/project-test1/src/Sellev/Data/reducer.js');
 }();
 
 ;
@@ -41334,9 +41334,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(initialState, 'initialState', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/reducer.js');
+    __REACT_HOT_LOADER__.register(initialState, 'initialState', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/reducer.js');
 
-    __REACT_HOT_LOADER__.register(authReducer, 'authReducer', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Data/Authentification/reducer.js');
+    __REACT_HOT_LOADER__.register(authReducer, 'authReducer', 'C:/recordFarm/project-test1/src/Sellev/Data/Authentification/reducer.js');
 }();
 
 ;
@@ -42165,9 +42165,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(App, 'App', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/App.jsx');
+    __REACT_HOT_LOADER__.register(App, 'App', 'C:/recordFarm/project-test1/src/Sellev/App.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/App.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/App.jsx');
 }();
 
 ;
@@ -42211,27 +42211,27 @@ var _FundingMarket = __webpack_require__(730);
 
 var _FundingMarket2 = _interopRequireDefault(_FundingMarket);
 
-var _HashTag = __webpack_require__(742);
+var _HashTag = __webpack_require__(743);
 
 var _HashTag2 = _interopRequireDefault(_HashTag);
 
-var _MyPage = __webpack_require__(756);
+var _MyPage = __webpack_require__(757);
 
 var _MyPage2 = _interopRequireDefault(_MyPage);
 
-var _Payment = __webpack_require__(757);
+var _Payment = __webpack_require__(758);
 
 var _Payment2 = _interopRequireDefault(_Payment);
 
-var _Search = __webpack_require__(758);
+var _Search = __webpack_require__(759);
 
 var _Search2 = _interopRequireDefault(_Search);
 
-var _Sellever = __webpack_require__(759);
+var _Sellever = __webpack_require__(760);
 
 var _Sellever2 = _interopRequireDefault(_Sellever);
 
-var _Video = __webpack_require__(760);
+var _Video = __webpack_require__(761);
 
 var _Video2 = _interopRequireDefault(_Video);
 
@@ -42320,9 +42320,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(RootView, 'RootView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Root.jsx');
+    __REACT_HOT_LOADER__.register(RootView, 'RootView', 'C:/recordFarm/project-test1/src/Sellev/Containers/Root.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Root.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/Root.jsx');
 }();
 
 ;
@@ -42575,11 +42575,11 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(mql, 'mql', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Header/index.jsx');
+    __REACT_HOT_LOADER__.register(mql, 'mql', 'C:/recordFarm/project-test1/src/Sellev/Components/Header/index.jsx');
 
-    __REACT_HOT_LOADER__.register(Header, 'Header', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Header/index.jsx');
+    __REACT_HOT_LOADER__.register(Header, 'Header', 'C:/recordFarm/project-test1/src/Sellev/Components/Header/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Header/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Header/index.jsx');
 }();
 
 ;
@@ -42745,9 +42745,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(globalMenu, 'globalMenu', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Header/GlobalMenu.jsx');
+    __REACT_HOT_LOADER__.register(globalMenu, 'globalMenu', 'C:/recordFarm/project-test1/src/Sellev/Components/Header/GlobalMenu.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Header/GlobalMenu.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Header/GlobalMenu.jsx');
 }();
 
 ;
@@ -42761,35 +42761,35 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, "* {padding:0px; margin:0px; line-height:100%;}\n/*span { line-height: 0; }\nspan:after { display: inline-block; height: 1.5em; }*/\nbody {\n    font-family: RobotoRegular,'Noto Sans','Apple SD Gothic Neo',Helvetica,Arial,sans-serif;\n}\n\n.Header__hide___Td6mq {\n    visibility: hidden;\n    display: none;\n}\n\na:link, a:hover {\n    text-decoration: none;\n}\n\nli {\n    list-style: none;\n}\ndl, ol, ul {\n    margin: 0;\n    padding: 0;\n}\n\n/* Common */\n\n\n/* Component */\n/*globalMenu*/\n.Header__globalMenuContainer___3e0QG {\n    position: fixed;\n    top: 65px;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: #fff;\n    -webkit-transition-property: all;\n    transition-property: all;\n    -webkit-transition-duration: .3s;\n    transition-duration: .3s;\n    -webkit-transition-delay: 0s;\n    transition-delay: 0s;\n    transition-timing-function: ease-out;\n    z-index: 1000;\n    -webkit-overflow-scrolling: touch;\n    padding-left: 20%;\n    padding-right: 20%;\n}\n.Header__globalMenuHeader___LORtw {\n    margin-top: 58px;\n    padding-bottom: 25px;\n    border-bottom: 1px solid #979797;\n}\n.Header__globalMenuHeader___LORtw .Header__redPoint___15wos{\n    width: 24px;\n    height: 24px;\n    background-image: url('/Sellev/assets/img/ic_common.png');\n    background-position: 83px 24px;\n}\n.Header__globalMenuHeader___LORtw .Header__menuTitle___3Z6ef{\n    font-size: 30px;\n    font-weight: bold;\n    width: 180px;\n}\n.Header__globalMenuList___1aRK6{\n    padding: 16px 0 22px 0;\n    border-bottom: 1px solid #979797;\n}\n.Header__globalMenuList___1aRK6 li{\n    line-height: 2em;\n    font-size: 24px;\n    font-weight: bold;\n}\n.Header__globalMenuList___1aRK6 li a {\n    color: #000000;\n}\n.Header__othersList___2aT-6 {\n    padding-top: 21px;\n}\n.Header__othersList___2aT-6 li {\n    line-height: 2em;\n    font-size: 24px;\n    font-weight: bold;\n}\n.Header__othersList___2aT-6 li a {\n    color: #000000;\n}\n\n/**********************************************/\n/*globalUserMenu*/\n.Header__userInfo___18xV4 span:nth-child(2),\n.Header__userInfo___18xV4 span:nth-child(4) {\n    font-size: 18px;\n    color: #fd0a0a;\n}\n.Header__userInfo___18xV4 span:nth-child(3),\n.Header__userInfo___18xV4 span:nth-child(5) {\n    font-size: 18px;\n    color: #383838;\n}\n.Header__userInfo___18xV4 div {\n    font-size: 24px;\n    font-weight: bold;\n}\n.Header__userInfo___18xV4 {\n    display: inline-table;\n    line-height: 2em;\n}\n\n/**********************************************/\n/* Header */\n/*header*/\n.Header__leftList___bR9f_{\n    float: left;\n}\n.Header__leftList___bR9f_ li a{\n    text-decoration: none;\n    color: #a0a0a0;\n    padding: 10px 2px;\n    border-bottom: solid 3px transparent;\n}\n.Header__leftList___bR9f_ li a:hover{\n    border-bottom: solid 3px #fd0a0a;\n    text-decoration: none;\n    color: #ffffff;\n    padding: 10px 2px;\n}\n.Header__leftList___bR9f_ li{\n    float: left;\n    font-size: 15px;\n    line-height: 65px;\n    margin-right: 30px;\n}\n\n.Header__headerContainer___18zjo{\n    width: 100%;\n    min-height: 65px;\n    height: auto;\n    background-color: black;\n    position: fixed;\n    top: 0;\n    z-index: 10;\n}\n.Header__headerBox___1rm_j{\n    width: 1100px;\n    margin: 0 auto;\n    color: #FFFFFF;\n    height: 100%;\n}\n.Header__headerLogo___QgGJr{\n    float: left;\n    margin-right: 40px;\n    width: 90px;\n    height: 65px;\n    background-position: center;\n    background-repeat: no-repeat;\n}\n.Header__headerLogo___QgGJr.Header__logoWhite___22XXQ {\n    background-image: url(/Sellev/assets/img/logo_sellev_white.png);\n}\n.Header__headerLogo___QgGJr.Header__logoBlack___13672 {\n    background-image: url(/Sellev/assets/img/logo_sellev_black.png);\n}\n.Header__leftBox___WMHOY{\n    float: left;\n    height: 100%;\n    position: relative;\n}\n.Header__rightBox___nIA8z{\n    float: right;\n    line-height: 65px;\n    height: 100%;\n}\n/*.rightList {*/\n/*float: left;*/\n/*}*/\n.Header__searchWhite___j34TU {\n    width: 22px;\n    height: 22px;\n    background-image: url('/Sellev/assets/img/ic_home.png');\n    background-position: 104px -1px;\n}\n.Header__searchBlack___X2UWx {\n    width: 25px;\n    height: 26px;\n    background-image: url(/Sellev/assets/img/ic_home.png);\n    background-position: 105px 58px;\n}\n.Header__notifyWhite___2g9nN {\n    width: 22px;\n    height: 22px;\n    background-image: url('/Sellev/assets/img/ic_home.png');\n    background-position: 179px -1px;\n}\n.Header__notifyBlack___VUZhO {\n    width: 22px;\n    height: 26px;\n    background-image: url(/Sellev/assets/img/ic_home.png);\n    background-position: 179px 58px;\n}\n\n.Header__rightList___2gRi4 li {\n    margin-right: 22px;\n    float: left;\n    color: #ffffff;\n    line-height: 65px;\n    font-size: 15px;\n    padding: 19px 0;\n    height: 65px;\n}\n.Header__iconBox___xJqr9{\n    float: left;\n    line-height: 65px;\n    position: relative;\n}\n.Header__iconBox___xJqr9 div {\n    height: 65px;\n    line-height: 65px;\n}\n.Header__userMenu___1KIbD {\n    overflow: hidden;\n    position: absolute;\n    top: 70px;\n    right: -70px;\n}\n\n.Header__toggleMenu___30JmB{\n    color: white;\n    overflow: hidden;\n    position: absolute;\n    top: 70px;\n    right: -70px;\n}\n.Header__toggleMenu___30JmB li{\n    float: none;\n}\n.Header__toggleIcon___sOQR6{\n    float: left;\n    line-height: 65px;\n    height: 65px;\n    padding: 24px 0;\n}\n.Header__toggleIcon___sOQR6 div{\n    width: 16px;\n    height: 15px;\n    background-image: url('/Sellev/assets/img/ic_home.png');\n    background-position: 360px 301px;\n}\n\n/*반응형*/\n@media screen and (max-width: 1100px){\n    .Header__headerBox___1rm_j{\n        width: 100%;\n    }\n    .Header__leftBox___WMHOY{\n        margin-left: 30px;\n    }\n    .Header__rightBox___nIA8z{\n        margin-right: 30px;\n    }\n}\n\n/*모바일 반응형*/\n@media screen and (min-width: 768px){\n    .Header__leftList___bR9f_{\n        display: block;\n    }\n    .Header__toggleIcon___sOQR6{\n        display: none;\n    }\n}\n@media screen and (max-width: 768px){\n    .Header__headerLogo___QgGJr{\n        padding: 17px 0;\n        margin-right: 0;\n    }\n    .Header__leftList___bR9f_{\n        display: none;\n    }\n\n    .Header__toggleIcon___sOQR6{\n        display: block;\n    }\n\n    .Header__toggleMenu___30JmB {\n        display: block;\n    }\n\n    .Header__headerContainer___18zjo {\n        background-color: #FFFFFF;\n    }\n}\n", ""]);
+exports.push([module.i, "* {padding:0px; margin:0px; line-height:100%;}\r\n/*span { line-height: 0; }\r\nspan:after { display: inline-block; height: 1.5em; }*/\r\nbody {\r\n    font-family: RobotoRegular,'Noto Sans','Apple SD Gothic Neo',Helvetica,Arial,sans-serif;\r\n}\r\n\r\n.Header__hide___38Lml {\r\n    visibility: hidden;\r\n    display: none;\r\n}\r\n\r\na:link, a:hover {\r\n    text-decoration: none;\r\n}\r\n\r\nli {\r\n    list-style: none;\r\n}\r\ndl, ol, ul {\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n/* Common */\r\n\r\n\r\n/* Component */\r\n/*globalMenu*/\r\n.Header__globalMenuContainer___1yfaT {\r\n    position: fixed;\r\n    top: 65px;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: #fff;\r\n    -webkit-transition-property: all;\r\n    transition-property: all;\r\n    -webkit-transition-duration: .3s;\r\n    transition-duration: .3s;\r\n    -webkit-transition-delay: 0s;\r\n    transition-delay: 0s;\r\n    transition-timing-function: ease-out;\r\n    z-index: 1000;\r\n    -webkit-overflow-scrolling: touch;\r\n    padding-left: 20%;\r\n    padding-right: 20%;\r\n}\r\n.Header__globalMenuHeader___10Xj6 {\r\n    margin-top: 58px;\r\n    padding-bottom: 25px;\r\n    border-bottom: 1px solid #979797;\r\n}\r\n.Header__globalMenuHeader___10Xj6 .Header__redPoint___3ZObZ{\r\n    width: 24px;\r\n    height: 24px;\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    background-position: 83px 24px;\r\n}\r\n.Header__globalMenuHeader___10Xj6 .Header__menuTitle___83O95{\r\n    font-size: 30px;\r\n    font-weight: bold;\r\n    width: 180px;\r\n}\r\n.Header__globalMenuList___1V6iN{\r\n    padding: 16px 0 22px 0;\r\n    border-bottom: 1px solid #979797;\r\n}\r\n.Header__globalMenuList___1V6iN li{\r\n    line-height: 2em;\r\n    font-size: 24px;\r\n    font-weight: bold;\r\n}\r\n.Header__globalMenuList___1V6iN li a {\r\n    color: #000000;\r\n}\r\n.Header__othersList___LtQAC {\r\n    padding-top: 21px;\r\n}\r\n.Header__othersList___LtQAC li {\r\n    line-height: 2em;\r\n    font-size: 24px;\r\n    font-weight: bold;\r\n}\r\n.Header__othersList___LtQAC li a {\r\n    color: #000000;\r\n}\r\n\r\n/**********************************************/\r\n/*globalUserMenu*/\r\n.Header__userInfo___1WXNX span:nth-child(2),\r\n.Header__userInfo___1WXNX span:nth-child(4) {\r\n    font-size: 18px;\r\n    color: #fd0a0a;\r\n}\r\n.Header__userInfo___1WXNX span:nth-child(3),\r\n.Header__userInfo___1WXNX span:nth-child(5) {\r\n    font-size: 18px;\r\n    color: #383838;\r\n}\r\n.Header__userInfo___1WXNX div {\r\n    font-size: 24px;\r\n    font-weight: bold;\r\n}\r\n.Header__userInfo___1WXNX {\r\n    display: inline-table;\r\n    line-height: 2em;\r\n}\r\n\r\n/**********************************************/\r\n/* Header */\r\n/*header*/\r\n.Header__leftList___2n37Z{\r\n    float: left;\r\n}\r\n.Header__leftList___2n37Z li a{\r\n    text-decoration: none;\r\n    color: #a0a0a0;\r\n    padding: 10px 2px;\r\n    border-bottom: solid 3px transparent;\r\n}\r\n.Header__leftList___2n37Z li a:hover{\r\n    border-bottom: solid 3px #fd0a0a;\r\n    text-decoration: none;\r\n    color: #ffffff;\r\n    padding: 10px 2px;\r\n}\r\n.Header__leftList___2n37Z li{\r\n    float: left;\r\n    font-size: 15px;\r\n    line-height: 65px;\r\n    margin-right: 30px;\r\n}\r\n\r\n.Header__headerContainer___2Blr7{\r\n    width: 100%;\r\n    min-height: 65px;\r\n    height: auto;\r\n    background-color: black;\r\n    position: fixed;\r\n    top: 0;\r\n    z-index: 10;\r\n}\r\n.Header__headerBox___3GqPq{\r\n    width: 1100px;\r\n    margin: 0 auto;\r\n    color: #FFFFFF;\r\n    height: 100%;\r\n}\r\n.Header__headerLogo___Qe2x5{\r\n    float: left;\r\n    margin-right: 40px;\r\n    width: 90px;\r\n    height: 65px;\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n}\r\n.Header__headerLogo___Qe2x5.Header__logoWhite___1G3EB {\r\n    background-image: url(/Sellev/assets/img/logo_sellev_white.png);\r\n}\r\n.Header__headerLogo___Qe2x5.Header__logoBlack___3wCqs {\r\n    background-image: url(/Sellev/assets/img/logo_sellev_black.png);\r\n}\r\n.Header__leftBox___2s3t7{\r\n    float: left;\r\n    height: 100%;\r\n    position: relative;\r\n}\r\n.Header__rightBox___1zi-v{\r\n    float: right;\r\n    line-height: 65px;\r\n    height: 100%;\r\n}\r\n/*.rightList {*/\r\n/*float: left;*/\r\n/*}*/\r\n.Header__searchWhite___2C7fd {\r\n    width: 22px;\r\n    height: 22px;\r\n    background-image: url('/Sellev/assets/img/ic_home.png');\r\n    background-position: 104px -1px;\r\n}\r\n.Header__searchBlack___27dFj {\r\n    width: 25px;\r\n    height: 26px;\r\n    background-image: url(/Sellev/assets/img/ic_home.png);\r\n    background-position: 105px 58px;\r\n}\r\n.Header__notifyWhite___1pT-T {\r\n    width: 22px;\r\n    height: 22px;\r\n    background-image: url('/Sellev/assets/img/ic_home.png');\r\n    background-position: 179px -1px;\r\n}\r\n.Header__notifyBlack___fWFdY {\r\n    width: 22px;\r\n    height: 26px;\r\n    background-image: url(/Sellev/assets/img/ic_home.png);\r\n    background-position: 179px 58px;\r\n}\r\n\r\n.Header__rightList___1fCMz li {\r\n    margin-right: 22px;\r\n    float: left;\r\n    color: #ffffff;\r\n    line-height: 65px;\r\n    font-size: 15px;\r\n    padding: 19px 0;\r\n    height: 65px;\r\n}\r\n.Header__iconBox___QhSXq{\r\n    float: left;\r\n    line-height: 65px;\r\n    position: relative;\r\n}\r\n.Header__iconBox___QhSXq div {\r\n    height: 65px;\r\n    line-height: 65px;\r\n}\r\n.Header__userMenu___2U54y {\r\n    overflow: hidden;\r\n    position: absolute;\r\n    top: 70px;\r\n    right: -70px;\r\n}\r\n\r\n.Header__toggleMenu___2qPps{\r\n    color: white;\r\n    overflow: hidden;\r\n    position: absolute;\r\n    top: 70px;\r\n    right: -70px;\r\n}\r\n.Header__toggleMenu___2qPps li{\r\n    float: none;\r\n}\r\n.Header__toggleIcon___32eNH{\r\n    float: left;\r\n    line-height: 65px;\r\n    height: 65px;\r\n    padding: 24px 0;\r\n}\r\n.Header__toggleIcon___32eNH div{\r\n    width: 16px;\r\n    height: 15px;\r\n    background-image: url('/Sellev/assets/img/ic_home.png');\r\n    background-position: 360px 301px;\r\n}\r\n\r\n/*반응형*/\r\n@media screen and (max-width: 1100px){\r\n    .Header__headerBox___3GqPq{\r\n        width: 100%;\r\n    }\r\n    .Header__leftBox___2s3t7{\r\n        margin-left: 30px;\r\n    }\r\n    .Header__rightBox___1zi-v{\r\n        margin-right: 30px;\r\n    }\r\n}\r\n\r\n/*모바일 반응형*/\r\n@media screen and (min-width: 768px){\r\n    .Header__leftList___2n37Z{\r\n        display: block;\r\n    }\r\n    .Header__toggleIcon___32eNH{\r\n        display: none;\r\n    }\r\n}\r\n@media screen and (max-width: 768px){\r\n    .Header__headerLogo___Qe2x5{\r\n        padding: 17px 0;\r\n        margin-right: 0;\r\n    }\r\n    .Header__leftList___2n37Z{\r\n        display: none;\r\n    }\r\n\r\n    .Header__toggleIcon___32eNH{\r\n        display: block;\r\n    }\r\n\r\n    .Header__toggleMenu___2qPps {\r\n        display: block;\r\n    }\r\n\r\n    .Header__headerContainer___2Blr7 {\r\n        background-color: #FFFFFF;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 exports.locals = {
-	"hide": "Header__hide___Td6mq",
-	"globalMenuContainer": "Header__globalMenuContainer___3e0QG",
-	"globalMenuHeader": "Header__globalMenuHeader___LORtw",
-	"redPoint": "Header__redPoint___15wos",
-	"menuTitle": "Header__menuTitle___3Z6ef",
-	"globalMenuList": "Header__globalMenuList___1aRK6",
-	"othersList": "Header__othersList___2aT-6",
-	"userInfo": "Header__userInfo___18xV4",
-	"leftList": "Header__leftList___bR9f_",
-	"headerContainer": "Header__headerContainer___18zjo",
-	"headerBox": "Header__headerBox___1rm_j",
-	"headerLogo": "Header__headerLogo___QgGJr",
-	"logoWhite": "Header__logoWhite___22XXQ",
-	"logoBlack": "Header__logoBlack___13672",
-	"leftBox": "Header__leftBox___WMHOY",
-	"rightBox": "Header__rightBox___nIA8z",
-	"searchWhite": "Header__searchWhite___j34TU",
-	"searchBlack": "Header__searchBlack___X2UWx",
-	"notifyWhite": "Header__notifyWhite___2g9nN",
-	"notifyBlack": "Header__notifyBlack___VUZhO",
-	"rightList": "Header__rightList___2gRi4",
-	"iconBox": "Header__iconBox___xJqr9",
-	"userMenu": "Header__userMenu___1KIbD",
-	"toggleMenu": "Header__toggleMenu___30JmB",
-	"toggleIcon": "Header__toggleIcon___sOQR6"
+	"hide": "Header__hide___38Lml",
+	"globalMenuContainer": "Header__globalMenuContainer___1yfaT",
+	"globalMenuHeader": "Header__globalMenuHeader___10Xj6",
+	"redPoint": "Header__redPoint___3ZObZ",
+	"menuTitle": "Header__menuTitle___83O95",
+	"globalMenuList": "Header__globalMenuList___1V6iN",
+	"othersList": "Header__othersList___LtQAC",
+	"userInfo": "Header__userInfo___1WXNX",
+	"leftList": "Header__leftList___2n37Z",
+	"headerContainer": "Header__headerContainer___2Blr7",
+	"headerBox": "Header__headerBox___3GqPq",
+	"headerLogo": "Header__headerLogo___Qe2x5",
+	"logoWhite": "Header__logoWhite___1G3EB",
+	"logoBlack": "Header__logoBlack___3wCqs",
+	"leftBox": "Header__leftBox___2s3t7",
+	"rightBox": "Header__rightBox___1zi-v",
+	"searchWhite": "Header__searchWhite___2C7fd",
+	"searchBlack": "Header__searchBlack___27dFj",
+	"notifyWhite": "Header__notifyWhite___1pT-T",
+	"notifyBlack": "Header__notifyBlack___fWFdY",
+	"rightList": "Header__rightList___1fCMz",
+	"iconBox": "Header__iconBox___QhSXq",
+	"userMenu": "Header__userMenu___2U54y",
+	"toggleMenu": "Header__toggleMenu___2qPps",
+	"toggleIcon": "Header__toggleIcon___32eNH"
 };
 
 /***/ }),
@@ -43070,9 +43070,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(globalUserMenu, 'globalUserMenu', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Header/GlobalUserMenu.jsx');
+    __REACT_HOT_LOADER__.register(globalUserMenu, 'globalUserMenu', 'C:/recordFarm/project-test1/src/Sellev/Components/Header/GlobalUserMenu.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Header/GlobalUserMenu.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Header/GlobalUserMenu.jsx');
 }();
 
 ;
@@ -43117,11 +43117,11 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, ".UserBox__userBox___1d6xu {\n    margin-top: -5px;\n}\n.UserBox__userBox___1d6xu img {\n    width: 30px;\n    height: 30px;\n    border-radius: 15px;\n}\n", ""]);
+exports.push([module.i, ".UserBox__userBox___1vwoC {\r\n    margin-top: -5px;\r\n}\r\n.UserBox__userBox___1vwoC img {\r\n    width: 30px;\r\n    height: 30px;\r\n    border-radius: 15px;\r\n}\r\n", ""]);
 
 // exports
 exports.locals = {
-	"userBox": "UserBox__userBox___1d6xu"
+	"userBox": "UserBox__userBox___1vwoC"
 };
 
 /***/ }),
@@ -43203,11 +43203,11 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(get, 'get', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Api/index.js');
+    __REACT_HOT_LOADER__.register(get, 'get', 'C:/recordFarm/project-test1/src/Sellev/Lib/Api/index.js');
 
-    __REACT_HOT_LOADER__.register(post, 'post', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Api/index.js');
+    __REACT_HOT_LOADER__.register(post, 'post', 'C:/recordFarm/project-test1/src/Sellev/Lib/Api/index.js');
 
-    __REACT_HOT_LOADER__.register(upload, 'upload', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Api/index.js');
+    __REACT_HOT_LOADER__.register(upload, 'upload', 'C:/recordFarm/project-test1/src/Sellev/Lib/Api/index.js');
 }();
 
 ;
@@ -44135,7 +44135,7 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Api/config.js');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Lib/Api/config.js');
 }();
 
 ;
@@ -44242,9 +44242,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(HomeContainer, 'HomeContainer', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Home/index.jsx');
+    __REACT_HOT_LOADER__.register(HomeContainer, 'HomeContainer', 'C:/recordFarm/project-test1/src/Sellev/Containers/Home/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Home/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/Home/index.jsx');
 }();
 
 ;
@@ -44351,9 +44351,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Banner, 'Banner', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/Banner.jsx');
+    __REACT_HOT_LOADER__.register(Banner, 'Banner', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/Banner.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/Banner.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/Banner.jsx');
 }();
 
 ;
@@ -44469,9 +44469,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(BannerBody, 'BannerBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/BannerBody.jsx');
+    __REACT_HOT_LOADER__.register(BannerBody, 'BannerBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/BannerBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/BannerBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/BannerBody.jsx');
 }();
 
 ;
@@ -46330,11 +46330,11 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, ".SwipeBanner__swipeBanner___1W3nB {\n    display: block;\n    float: none;\n    position: relative;\n    top: auto;\n    right: auto;\n    bottom: auto;\n    left: auto;\n    z-index: auto;\n    width: 100%;\n    margin: 0 !important;\n    padding: 0 !important;\n    overflow: hidden;\n    width: 100%;\n}", ""]);
+exports.push([module.i, ".SwipeBanner__swipeBanner___1GYM_ {\r\n    display: block;\r\n    float: none;\r\n    position: relative;\r\n    top: auto;\r\n    right: auto;\r\n    bottom: auto;\r\n    left: auto;\r\n    z-index: auto;\r\n    width: 100%;\r\n    margin: 0 !important;\r\n    padding: 0 !important;\r\n    overflow: hidden;\r\n    width: 100%;\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"swipeBanner": "SwipeBanner__swipeBanner___1W3nB"
+	"swipeBanner": "SwipeBanner__swipeBanner___1GYM_"
 };
 
 /***/ }),
@@ -46346,31 +46346,31 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, "/* Common */\n\n/* Banner */\n.Home__bannerBody___Nt8bm{\n    overflow: hidden;\n}\n@media screen and (min-width: 768px) {\n    .Home__bannerBody___Nt8bm {\n        min-width: 1100px;\n    }\n}\n.Home__bannerSection___fB-Cd {\n    width: 100%;\n    height: 385px;\n    background-color: black;\n    padding-top: 60px;\n    margin-top: 65px;\n}\n.Home__BannerHeader___195jT {\n    width: 1100px;\n    margin: 0px auto 20px;\n}\n.Home__BannerHeader___195jT .Home__sectionTitle___2QZAt{\n    color: #FFFFFF;\n}\n\n.Home__listBox___2fsSS {\n    position: relative;\n    width: 323px;\n    height: 321.5px;\n    padding: 2px 4.5px;\n    float: left;\n}\n\n.Home__listBox___2fsSS .Home__bgImage___1rDo7 {\n    width: 100%;\n    height: 100%;\n    border-radius: 12px;\n    background-repeat: no-repeat;\n    background-position: center center;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: cover;\n}\n\n.Home__titleBox___1kAp4{\n    position: relative;\n    width: 170px;\n    bottom: 80px;\n    left: 30px;\n    color: #ffffff;\n}\n\n.Home__titleBox___1kAp4 div:first-child{\n    font-size: 16px;\n}\n\n.Home__titleBox___1kAp4 div:last-child{\n    font-size: 22px;\n}\n\n\n/* Funding Market */\n.Home__fundingMarketSection___ooxc1 {\n     width: 1100px;\n     margin: 120px auto 50px;\n }\n.Home__fundingMarketHeader___1vDOd {\n    width: 100%;\n    margin-bottom: 22px;\n}\n.Home__fundingMarketBody___2GOso {\n    width: 100%;\n}\n.Home__FundingMarketListBox___1v3pp {\n    width: 352px;\n    display: inline-block;\n    margin-right: 20px;\n}\n.Home__FundingMarketListBox___1v3pp:last-child {\n    margin-right: 0;\n}\n.Home__FundingMarketListBox___1v3pp .Home__listTItle___2Xm22 {\n    font-size: 19px;\n    font-weight: bold;\n    margin-top: 15px;\n    margin-bottom: 15px;\n}\n.Home__FundingMarketListBox___1v3pp .Home__listImg___apv2c {\n    background-size: cover;\n    background-position: center;\n}\n.Home__FundingMarketListBox___1v3pp .Home__itemListBox___1MeEv {\n    margin: 11px 11px 0 11px;\n}\n.Home__FundingMarketListBox___1v3pp .Home__itemListBox___1MeEv .Home__item___a0kCf {\n    height: 83px;\n    padding: 18px 0 18px 0;\n    border-bottom: 1px solid #e7e7e7;\n}\n.Home__FundingMarketListBox___1v3pp .Home__itemListBox___1MeEv .Home__item___a0kCf div:first-child {\n    width: 28px;\n    height: 28px;\n    background-color: #fd0a0a;\n    border-radius: 24px;\n    padding: 7px 5px;\n    text-align: center;\n    color: #ffffff;\n    float: left;\n    margin-top: 6px;\n}\n.Home__FundingMarketListBox___1v3pp .Home__itemListBox___1MeEv .Home__item___a0kCf div:nth-child(2) {\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 1.5em;\n    overflow: hidden;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n.Home__FundingMarketListBox___1v3pp .Home__itemListBox___1MeEv .Home__item___a0kCf div:last-child {\n    font-size: 14px;\n    font-weight: bold;\n    color: #fd0a0a;\n    line-height: 1.5em;\n}\n\n/* HashTag */\n.Home__hashTagSection___3X8L8 {\n    width: 1100px;\n    margin: 120px auto 50px;\n}\n.Home__hashTagHeader___2eOvY {\n    width: 100%;\n    margin-bottom: 22px;\n}\n\n/* Video */\n.Home__videoSection___2Xbmv {\n    width: 1100px;\n    margin: 120px auto 50px;\n}\n.Home__videoHeader___2WQI1 {\n    width: 100%;\n    margin-bottom: 22px;\n}\n.Home__videoBody___2g40j {\n    width: 100%;\n}\n.Home__videoBox___3RSRY {\n    width: 264px;\n    display: inline-block;\n    margin-right: 10px;\n}\n\n@media screen and (max-width: 1100px){\n    .Home__videoSection___2Xbmv {\n        width: 825px;\n    }\n}\n@media screen and (max-width: 850px){\n    .Home__videoSection___2Xbmv {\n        width: 550px;\n    }\n}\n/*모바일 반응형*/\n@media screen and (max-width: 768px){\n    /*오늘의 동영상 */\n    .Home__videoSection___2Xbmv {\n        max-width: 768px;\n        width: auto;\n        margin-left: 30px;\n        margin-right: 30px;\n    }\n    .Home__videoBox___3RSRY {\n        width: 100%;\n        margin-right: 0;\n    }\n}", ""]);
+exports.push([module.i, "/* Common */\r\n\r\n/* Banner */\r\n.Home__bannerBody___2CqX-{\r\n    overflow: hidden;\r\n}\r\n@media screen and (min-width: 768px) {\r\n    .Home__bannerBody___2CqX- {\r\n        min-width: 1100px;\r\n    }\r\n}\r\n.Home__bannerSection___20VGJ {\r\n    width: 100%;\r\n    height: 385px;\r\n    background-color: black;\r\n    padding-top: 60px;\r\n    margin-top: 65px;\r\n}\r\n.Home__BannerHeader___H8waY {\r\n    width: 1100px;\r\n    margin: 0px auto 20px;\r\n}\r\n.Home__BannerHeader___H8waY .Home__sectionTitle___3woZq{\r\n    color: #FFFFFF;\r\n}\r\n\r\n.Home__listBox___p3wiw {\r\n    position: relative;\r\n    width: 323px;\r\n    height: 321.5px;\r\n    padding: 2px 4.5px;\r\n    float: left;\r\n}\r\n\r\n.Home__listBox___p3wiw .Home__bgImage___1xvRI {\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 12px;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    -webkit-background-size: cover;\r\n    -moz-background-size: cover;\r\n    -o-background-size: cover;\r\n    background-size: cover;\r\n}\r\n\r\n.Home__titleBox___zAY6c{\r\n    position: relative;\r\n    width: 170px;\r\n    bottom: 80px;\r\n    left: 30px;\r\n    color: #ffffff;\r\n}\r\n\r\n.Home__titleBox___zAY6c div:first-child{\r\n    font-size: 16px;\r\n}\r\n\r\n.Home__titleBox___zAY6c div:last-child{\r\n    font-size: 22px;\r\n}\r\n\r\n\r\n/* Funding Market */\r\n.Home__fundingMarketSection___3gQ9A {\r\n    width: 1100px;\r\n    margin: 120px auto 50px;\r\n}\r\n.Home__fundingMarketHeader___1bHgl {\r\n    width: 100%;\r\n    margin-bottom: 22px;\r\n}\r\n.Home__fundingMarketBody___3Z2x8 {\r\n    width: 100%;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 {\r\n    width: 352px;\r\n    display: inline-block;\r\n    margin-right: 20px;\r\n}\r\n.Home__FundingMarketListBox___3Yul1:last-child {\r\n    margin-right: 0;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__listTItle___1fXjN {\r\n    font-size: 19px;\r\n    font-weight: bold;\r\n    margin-top: 15px;\r\n    margin-bottom: 15px;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__listImg___1vKpe {\r\n    background-size: cover;\r\n    background-position: center;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S {\r\n    margin: 11px 11px 0 11px;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S .Home__item___YFgZL {\r\n    height: 83px;\r\n    padding: 18px 0 18px 0;\r\n    border-bottom: 1px solid #e7e7e7;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S .Home__item___YFgZL div:first-child {\r\n    width: 28px;\r\n    height: 28px;\r\n    background-color: #fd0a0a;\r\n    border-radius: 24px;\r\n    padding: 7px 5px;\r\n    text-align: center;\r\n    color: #ffffff;\r\n    float: left;\r\n    margin-top: 6px;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S .Home__item___YFgZL div:nth-child(2) {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    line-height: 1.5em;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n.Home__FundingMarketListBox___3Yul1 .Home__itemListBox___3F69S .Home__item___YFgZL div:last-child {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    color: #fd0a0a;\r\n    line-height: 1.5em;\r\n}\r\n\r\n/* HashTag */\r\n.Home__hashTagSection___341kM {\r\n    width: 1100px;\r\n    margin: 120px auto 50px;\r\n}\r\n.Home__hashTagHeader___1SSPQ {\r\n    width: 100%;\r\n    margin-bottom: 22px;\r\n}\r\n\r\n/* Video */\r\n.Home__videoSection___3_9ga {\r\n    width: 1100px;\r\n    margin: 120px auto 50px;\r\n}\r\n.Home__videoHeader___3Z4ay {\r\n    width: 100%;\r\n    margin-bottom: 22px;\r\n}\r\n.Home__videoBody___2Shf3 {\r\n    width: 100%;\r\n}\r\n.Home__videoBox___y-rdm {\r\n    width: 264px;\r\n    display: inline-block;\r\n    margin-right: 10px;\r\n}\r\n\r\n@media screen and (max-width: 1100px){\r\n    /*펀딩&마켓*/\r\n    .Home__fundingMarketBody___3Z2x8 {\r\n        margin: 0 3%;\r\n    }\r\n    .Home__fundingMarketSection___3gQ9A {\r\n        width: 100%;\r\n    }\r\n    .Home__FundingMarketListBox___3Yul1 {\r\n        width: 30%;\r\n    }\r\n    .Home__FundingMarketListBox___3Yul1 .Home__listImg___1vKpe {\r\n        width: 100%;\r\n        border-radius: 7px;\r\n    }\r\n    .Home__videoSection___3_9ga {\r\n        width: 825px;\r\n    }\r\n}\r\n/*모바일 반응형*/\r\n@media screen and (max-width: 768px){\r\n    .Home__fundingMarketBody___3Z2x8 {\r\n        margin: 0;\r\n    }\r\n    .Home__FundingMarketListBox___3Yul1 {\r\n        width: 100%;\r\n    }\r\n    .Home__FundingMarketListBox___3Yul1 .Home__listImg___1vKpe {\r\n        width: 100%;\r\n        border-radius: 7px;\r\n    }\r\n    /*오늘의 동영상 */\r\n    .Home__videoSection___3_9ga {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin-left: 30px;\r\n        margin-right: 30px;\r\n    }\r\n    .Home__videoBox___y-rdm {\r\n        width: 100%;\r\n        margin-right: 0;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"bannerBody": "Home__bannerBody___Nt8bm",
-	"bannerSection": "Home__bannerSection___fB-Cd",
-	"BannerHeader": "Home__BannerHeader___195jT",
-	"sectionTitle": "Home__sectionTitle___2QZAt",
-	"listBox": "Home__listBox___2fsSS",
-	"bgImage": "Home__bgImage___1rDo7",
-	"titleBox": "Home__titleBox___1kAp4",
-	"fundingMarketSection": "Home__fundingMarketSection___ooxc1",
-	"fundingMarketHeader": "Home__fundingMarketHeader___1vDOd",
-	"fundingMarketBody": "Home__fundingMarketBody___2GOso",
-	"FundingMarketListBox": "Home__FundingMarketListBox___1v3pp",
-	"listTItle": "Home__listTItle___2Xm22",
-	"listImg": "Home__listImg___apv2c",
-	"itemListBox": "Home__itemListBox___1MeEv",
-	"item": "Home__item___a0kCf",
-	"hashTagSection": "Home__hashTagSection___3X8L8",
-	"hashTagHeader": "Home__hashTagHeader___2eOvY",
-	"videoSection": "Home__videoSection___2Xbmv",
-	"videoHeader": "Home__videoHeader___2WQI1",
-	"videoBody": "Home__videoBody___2g40j",
-	"videoBox": "Home__videoBox___3RSRY"
+	"bannerBody": "Home__bannerBody___2CqX-",
+	"bannerSection": "Home__bannerSection___20VGJ",
+	"BannerHeader": "Home__BannerHeader___H8waY",
+	"sectionTitle": "Home__sectionTitle___3woZq",
+	"listBox": "Home__listBox___p3wiw",
+	"bgImage": "Home__bgImage___1xvRI",
+	"titleBox": "Home__titleBox___zAY6c",
+	"fundingMarketSection": "Home__fundingMarketSection___3gQ9A",
+	"fundingMarketHeader": "Home__fundingMarketHeader___1bHgl",
+	"fundingMarketBody": "Home__fundingMarketBody___3Z2x8",
+	"FundingMarketListBox": "Home__FundingMarketListBox___3Yul1",
+	"listTItle": "Home__listTItle___1fXjN",
+	"listImg": "Home__listImg___1vKpe",
+	"itemListBox": "Home__itemListBox___3F69S",
+	"item": "Home__item___YFgZL",
+	"hashTagSection": "Home__hashTagSection___341kM",
+	"hashTagHeader": "Home__hashTagHeader___1SSPQ",
+	"videoSection": "Home__videoSection___3_9ga",
+	"videoHeader": "Home__videoHeader___3Z4ay",
+	"videoBody": "Home__videoBody___2Shf3",
+	"videoBox": "Home__videoBox___y-rdm"
 };
 
 /***/ }),
@@ -46382,32 +46382,32 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n    margin: 0;\n    padding: 0;\n}\n::-webkit-input-placeholder { /* Chrome/Opera/Safari */\n    font-size: 14px;\n}\n/*Category Title*/\n.App__sectionTitle___1RMnl {\n    font-family: 'Apple SD Gothic Neo';\n    font-size: 34px;\n    font-weight: bold;\n    letter-spacing: -1.2px;\n    color: #161616;\n}\n.App__sectionTitle___1RMnl div {\n    background-image: url(\"/Sellev/assets/img/ic_common.png\");\n    width: 20px;\n    height: 11px;\n    background-position: 161px -44px;\n    display: inline-block;\n    margin-bottom: 7px;\n}\n.App__sectionWhiteTitle___3H4xR {\n    font-family: 'Apple SD Gothic Neo';\n    font-size: 34px;\n    font-weight: bold;\n    letter-spacing: -1.2px;\n    color: #ffffff;\n}\n\n.App__sectionSmallTitle___3Bt3i {\n    font-family: 'Product Sans';\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 19px;\n    color: #a0a0a0;\n    letter-spacing: -0.5px;\n}\n.App__titleBox___1Oo19 {\n    overflow: hidden;\n}\n.App__titleBox___1Oo19 .App__sectionTitle___1RMnl {\n    float: left;\n}\n.App__titleBox___1Oo19 .App__more___1DhcP {\n    color: #fd0a0a;\n    font-size: 16px;\n    float: right;\n    padding-top: 11px;\n}\n.App__titleBox___1Oo19 .App__filter___3H_tv {\n    color: #a8a8a8;\n    font-size: 16px;\n    float: right;\n    padding-top: 11px;\n}\n.App__filter___3H_tv div {\n    background-image: url(\"/Sellev/assets/img/ic_home.png\");\n    width: 15px;\n    height: 11px;\n    background-position: 150px -35px;\n    display: inline-block;\n}\n\n/*Autentication form */\n.App__formGroup___3S4_L {\n    width: 407px;\n    margin: 23px auto;\n}\n.App__formGroup___3S4_L .App__formRow___w-4kw {\n    width: 100%;\n    height: 59px;\n    line-height: 59px;\n    display: inline-flex;\n}\n.App__formGroup___3S4_L .App__formRow___w-4kw.App__disabled___11Wcr {\n    background-color: #f8f8f8;\n}\n.App__formGroup___3S4_L .App__formRow___w-4kw {\n    border-top: 1px solid #e0e0e0;\n}\n.App__formGroup___3S4_L .App__formRow___w-4kw:last-child {\n    border-top: 1px solid #e0e0e0;\n    border-bottom: 1px solid #e0e0e0;\n}\n.App__formRow___w-4kw .App__formInputName___zU7MW {\n    font-size: 15px;\n    width: 30%;\n    line-height: 59px;\n    font-weight: bold;\n    padding-left: 5px;\n}\n.App__formRow___w-4kw.App__disabled___11Wcr .App__formInputName___zU7MW {\n    color: #dcdcdc;\n    background-color: #f8f8f8;\n}\n.App__formInputName___zU7MW.App__newPasswordName___q8YRe {\n    display: none;\n    text-align: center;\n    padding: 17px 7px 17px 5px;\n    line-height: 1.5em;\n}\n.App__formRow___w-4kw .App__inputWithVerify___3wTIV {\n    width: 55%;\n    height: 50px;\n    margin: 5px 0;\n    border: 0;\n}\n.App__formRow___w-4kw .App__formInputWithVerify___x5SQO {\n    width: 70%;\n    height: 50px;\n    margin: 5px 0;\n    border: 0;\n}\n/*auth button*/\n.App__formRow___w-4kw .App__inputVerifyBox___3hNkB {\n    width: 15%;\n    height: 100%;\n    padding-top: 20px;\n    padding-bottom: 20px;\n    text-align: center;\n    font-size: 14px;\n}\n.App__formRow___w-4kw .App__inputVerifyBox___3hNkB.App__disabled___11Wcr {\n    background-color: #dcdcdc;\n    cursor: default;\n    color: #ffffff;\n}\n.App__formRow___w-4kw .App__inputVerifyBox___3hNkB.App__activeBlack___uGEnU {\n    background-color: #292929;\n    cursor: pointer;\n    color: #ffffff;\n}\n.App__formRow___w-4kw .App__inputVerifyBox___3hNkB.App__activeWhite___1qNR0 {\n    background-color: #ffffff;\n    border: 1px solid #e0e0e0;\n    cursor: pointer;\n}\n\n.App__formRow___w-4kw .App__formInput___2CUTw {\n    /*width: 65%;*/\n    height: 50px;\n    margin: 5px 0;\n    border: 0;\n}\n.App__formRow___w-4kw input.App__formInput___2CUTw:disabled {\n    cursor: default;\n    background-color: #f8f8f8;\n}\n.App__formRow___w-4kw input.App__formInput___2CUTw:disabled::-webkit-input-placeholder { /* Chrome/Opera/Safari */\n    background-color: #f8f8f8;\n    color: #dcdcdc;\n}\n\n.App__formRow___w-4kw .App__agreeLabel___1-xmb {\n    height: 59px;\n    line-height: 59px;\n    position: relative;\n}\n\n/*warning message*/\n.App__formInputWarn___2GYg7 {\n    font-size: 14px;\n    color: #ff0000;\n    padding-top: 13px;\n    border-top: 1px solid #e0e0e0;\n    margin-bottom: 13px;\n}\n.App__formInputAlert___3ZdhP {\n    color: #979797;\n    padding-top: 13px;\n    border-top: 1px solid #e0e0e0;\n    margin-bottom: 13px;\n    font-size: 14px;\n}\n.App__red___260fV {\n    color: #ff0000;\n}\n.App__bold___1fOvp {\n    font-weight: bold;\n}\n\n\n@media screen and (max-width: 768px){\n    .App__formGroup___3S4_L {\n        width: 100%;\n    }\n    .App__formInputName___zU7MW.App__newPasswordName___q8YRe {\n        display: block;\n    }\n}", ""]);
+exports.push([module.i, "body {\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n::-webkit-input-placeholder { /* Chrome/Opera/Safari */\r\n    font-size: 14px;\r\n}\r\n/*Category Title*/\r\n.App__sectionTitle___1zn5N {\r\n    font-family: 'Apple SD Gothic Neo';\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #161616;\r\n}\r\n.App__sectionTitle___1zn5N div {\r\n    background-image: url(\"/Sellev/assets/img/ic_common.png\");\r\n    width: 20px;\r\n    height: 11px;\r\n    background-position: 161px -44px;\r\n    display: inline-block;\r\n    margin-bottom: 7px;\r\n}\r\n.App__sectionWhiteTitle___3N3dc {\r\n    font-family: 'Apple SD Gothic Neo';\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #ffffff;\r\n}\r\n\r\n.App__sectionSmallTitle___1v1vg {\r\n    font-family: 'Product Sans';\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    line-height: 19px;\r\n    color: #a0a0a0;\r\n    letter-spacing: -0.5px;\r\n}\r\n.App__titleBox___1aVyr {\r\n    overflow: hidden;\r\n}\r\n.App__titleBox___1aVyr .App__sectionTitle___1zn5N {\r\n    float: left;\r\n}\r\n.App__titleBox___1aVyr .App__more___2ZUJ_ {\r\n    color: #fd0a0a;\r\n    font-size: 16px;\r\n    float: right;\r\n    padding-top: 11px;\r\n}\r\n.App__titleBox___1aVyr .App__filter___UXQwH {\r\n    color: #a8a8a8;\r\n    font-size: 16px;\r\n    float: right;\r\n    padding-top: 11px;\r\n}\r\n.App__filter___UXQwH div {\r\n    background-image: url(\"/Sellev/assets/img/ic_home.png\");\r\n    width: 15px;\r\n    height: 11px;\r\n    background-position: 150px -35px;\r\n    display: inline-block;\r\n}\r\n\r\n/*Autentication form */\r\n.App__formGroup___1BP6j {\r\n    width: 407px;\r\n    margin: 23px auto;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL {\r\n    width: 100%;\r\n    height: 59px;\r\n    line-height: 59px;\r\n    display: inline-flex;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL.App__disabled___3f14q {\r\n    background-color: #f8f8f8;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL {\r\n    border-top: 1px solid #e0e0e0;\r\n}\r\n.App__formGroup___1BP6j .App__formRow___3NsSL:last-child {\r\n    border-top: 1px solid #e0e0e0;\r\n    border-bottom: 1px solid #e0e0e0;\r\n}\r\n.App__formRow___3NsSL .App__formInputName___3-EU2 {\r\n    font-size: 15px;\r\n    width: 30%;\r\n    line-height: 59px;\r\n    font-weight: bold;\r\n    padding-left: 5px;\r\n}\r\n.App__formRow___3NsSL.App__disabled___3f14q .App__formInputName___3-EU2 {\r\n    color: #dcdcdc;\r\n    background-color: #f8f8f8;\r\n}\r\n.App__formInputName___3-EU2.App__newPasswordName___1ZGLb {\r\n    display: none;\r\n    text-align: center;\r\n    padding: 17px 7px 17px 5px;\r\n    line-height: 1.5em;\r\n}\r\n.App__formRow___3NsSL .App__inputWithVerify___2vFq4 {\r\n    width: 55%;\r\n    height: 50px;\r\n    margin: 5px 0;\r\n    border: 0;\r\n}\r\n.App__formRow___3NsSL .App__formInputWithVerify___rH_bd {\r\n    width: 70%;\r\n    height: 50px;\r\n    margin: 5px 0;\r\n    border: 0;\r\n}\r\n/*auth button*/\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk {\r\n    width: 15%;\r\n    height: 100%;\r\n    padding-top: 20px;\r\n    padding-bottom: 20px;\r\n    text-align: center;\r\n    font-size: 14px;\r\n}\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk.App__disabled___3f14q {\r\n    background-color: #dcdcdc;\r\n    cursor: default;\r\n    color: #ffffff;\r\n}\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk.App__activeBlack___148nZ {\r\n    background-color: #292929;\r\n    cursor: pointer;\r\n    color: #ffffff;\r\n}\r\n.App__formRow___3NsSL .App__inputVerifyBox___2UsCk.App__activeWhite___1HeEV {\r\n    background-color: #ffffff;\r\n    border: 1px solid #e0e0e0;\r\n    cursor: pointer;\r\n}\r\n\r\n.App__formRow___3NsSL .App__formInput___2ReLg {\r\n    /*width: 65%;*/\r\n    height: 50px;\r\n    margin: 5px 0;\r\n    border: 0;\r\n}\r\n.App__formRow___3NsSL input.App__formInput___2ReLg:disabled {\r\n    cursor: default;\r\n    background-color: #f8f8f8;\r\n}\r\n.App__formRow___3NsSL input.App__formInput___2ReLg:disabled::-webkit-input-placeholder { /* Chrome/Opera/Safari */\r\n    background-color: #f8f8f8;\r\n    color: #dcdcdc;\r\n}\r\n\r\n.App__formRow___3NsSL .App__agreeLabel___P91D8 {\r\n    height: 59px;\r\n    line-height: 59px;\r\n    position: relative;\r\n}\r\n\r\n/*warning message*/\r\n.App__formInputWarn___w0aWf {\r\n    font-size: 14px;\r\n    color: #ff0000;\r\n    padding-top: 13px;\r\n    border-top: 1px solid #e0e0e0;\r\n    margin-bottom: 13px;\r\n}\r\n.App__formInputAlert___3nkXi {\r\n    color: #979797;\r\n    padding-top: 13px;\r\n    border-top: 1px solid #e0e0e0;\r\n    margin-bottom: 13px;\r\n    font-size: 14px;\r\n}\r\n.App__red___2btzW {\r\n    color: #ff0000;\r\n}\r\n.App__bold___qn3Ei {\r\n    font-weight: bold;\r\n}\r\n\r\n\r\n@media screen and (max-width: 768px){\r\n    .App__formGroup___1BP6j {\r\n        width: 100%;\r\n    }\r\n    .App__formInputName___3-EU2.App__newPasswordName___1ZGLb {\r\n        display: block;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"sectionTitle": "App__sectionTitle___1RMnl",
-	"sectionWhiteTitle": "App__sectionWhiteTitle___3H4xR",
-	"sectionSmallTitle": "App__sectionSmallTitle___3Bt3i",
-	"titleBox": "App__titleBox___1Oo19",
-	"more": "App__more___1DhcP",
-	"filter": "App__filter___3H_tv",
-	"formGroup": "App__formGroup___3S4_L",
-	"formRow": "App__formRow___w-4kw",
-	"disabled": "App__disabled___11Wcr",
-	"formInputName": "App__formInputName___zU7MW",
-	"newPasswordName": "App__newPasswordName___q8YRe",
-	"inputWithVerify": "App__inputWithVerify___3wTIV",
-	"formInputWithVerify": "App__formInputWithVerify___x5SQO",
-	"inputVerifyBox": "App__inputVerifyBox___3hNkB",
-	"activeBlack": "App__activeBlack___uGEnU",
-	"activeWhite": "App__activeWhite___1qNR0",
-	"formInput": "App__formInput___2CUTw",
-	"agreeLabel": "App__agreeLabel___1-xmb",
-	"formInputWarn": "App__formInputWarn___2GYg7",
-	"formInputAlert": "App__formInputAlert___3ZdhP",
-	"red": "App__red___260fV",
-	"bold": "App__bold___1fOvp"
+	"sectionTitle": "App__sectionTitle___1zn5N",
+	"sectionWhiteTitle": "App__sectionWhiteTitle___3N3dc",
+	"sectionSmallTitle": "App__sectionSmallTitle___1v1vg",
+	"titleBox": "App__titleBox___1aVyr",
+	"more": "App__more___2ZUJ_",
+	"filter": "App__filter___UXQwH",
+	"formGroup": "App__formGroup___1BP6j",
+	"formRow": "App__formRow___3NsSL",
+	"disabled": "App__disabled___3f14q",
+	"formInputName": "App__formInputName___3-EU2",
+	"newPasswordName": "App__newPasswordName___1ZGLb",
+	"inputWithVerify": "App__inputWithVerify___2vFq4",
+	"formInputWithVerify": "App__formInputWithVerify___rH_bd",
+	"inputVerifyBox": "App__inputVerifyBox___2UsCk",
+	"activeBlack": "App__activeBlack___148nZ",
+	"activeWhite": "App__activeWhite___1HeEV",
+	"formInput": "App__formInput___2ReLg",
+	"agreeLabel": "App__agreeLabel___P91D8",
+	"formInputWarn": "App__formInputWarn___w0aWf",
+	"formInputAlert": "App__formInputAlert___3nkXi",
+	"red": "App__red___2btzW",
+	"bold": "App__bold___qn3Ei"
 };
 
 /***/ }),
@@ -46512,9 +46512,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingMarket, 'FundingMarket', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarket.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarket, 'FundingMarket', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarket.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarket.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarket.jsx');
 }();
 
 ;
@@ -46675,9 +46675,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingMarketBody, 'FundingMarketBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarketBody.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketBody, 'FundingMarketBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarketBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarketBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarketBody.jsx');
 }();
 
 ;
@@ -46771,7 +46771,7 @@ var FundingMarketList = function (_React$Component) {
                     { className: _Home2.default.listTItle },
                     this.props.title
                 ),
-                _react2.default.createElement('div', { className: _Home2.default.listImg, style: { width: '352px', height: '172px', backgroundImage: 'url("' + this.props.listItem[0].bgImage + '")' } }),
+                _react2.default.createElement('div', { className: _Home2.default.listImg, style: { width: '100%', height: '172px', backgroundImage: 'url("' + this.props.listItem[0].bgImage + '")' } }),
                 _react2.default.createElement(
                     'ul',
                     { className: _Home2.default.itemListBox },
@@ -46798,9 +46798,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingMarketList, 'FundingMarketList', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarketList.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketList, 'FundingMarketList', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarketList.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/FundingMarketList.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/FundingMarketList.jsx');
 }();
 
 ;
@@ -46916,9 +46916,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(HashTag, 'HashTag', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/HashTag.jsx');
+    __REACT_HOT_LOADER__.register(HashTag, 'HashTag', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/HashTag.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/HashTag.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/HashTag.jsx');
 }();
 
 ;
@@ -47007,9 +47007,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(HashTagBody, 'HashTagBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/HashTagBody.jsx');
+    __REACT_HOT_LOADER__.register(HashTagBody, 'HashTagBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/HashTagBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/HashTagBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/HashTagBody.jsx');
 }();
 
 ;
@@ -47085,9 +47085,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(BubbleBox, 'BubbleBox', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/BubbleBox/index.jsx');
+    __REACT_HOT_LOADER__.register(BubbleBox, 'BubbleBox', 'C:/recordFarm/project-test1/src/Sellev/Common/BubbleBox/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/BubbleBox/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Common/BubbleBox/index.jsx');
 }();
 
 ;
@@ -47132,11 +47132,11 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, ".BubbleBox__sectionWhiteTitle___1uPeZ {\n    font-family: 'Apple SD Gothic Neo';\n    font-size: 34px;\n    font-weight: bold;\n    letter-spacing: -1.2px;\n    color: #ffffff;\n}", ""]);
+exports.push([module.i, ".BubbleBox__sectionWhiteTitle___20TUB {\r\n    font-family: 'Apple SD Gothic Neo';\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #ffffff;\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"sectionWhiteTitle": "BubbleBox__sectionWhiteTitle___1uPeZ"
+	"sectionWhiteTitle": "BubbleBox__sectionWhiteTitle___20TUB"
 };
 
 /***/ }),
@@ -47250,9 +47250,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Video, 'Video', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/Video.jsx');
+    __REACT_HOT_LOADER__.register(Video, 'Video', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/Video.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/Video.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/Video.jsx');
 }();
 
 ;
@@ -47395,9 +47395,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(VideoBody, 'VideoBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/VideoBody.jsx');
+    __REACT_HOT_LOADER__.register(VideoBody, 'VideoBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/VideoBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Home/VideoBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Home/VideoBody.jsx');
 }();
 
 ;
@@ -47479,9 +47479,21 @@ var FundingMarket = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: _ImageList2.default.fundSlidBar },
-                    this.props.listItem.percentOfFund,
-                    '%'
+                    { className: _ImageList2.default.progressBox },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'progress ' + _ImageList2.default.progress },
+                        _react2.default.createElement('div', { className: 'progress-bar ' + _ImageList2.default.progressBar, style: { width: this.props.listItem.percentOfFund + '%' }, 'aria-valuenow': '25', 'aria-valuemin': '0', 'aria-valuemax': '100' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        {
+                            className: _ImageList2.default.progressNum,
+                            style: this.props.listItem.percentOfFund < 25 ? { right: '84%' } : { right: 100 - this.props.listItem.percentOfFund + '%' }
+                        },
+                        this.props.listItem.percentOfFund,
+                        '%'
+                    )
                 ),
                 _react2.default.createElement(
                     'div',
@@ -47566,9 +47578,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingMarket, 'FundingMarket', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/ImageList/Funding.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarket, 'FundingMarket', 'C:/recordFarm/project-test1/src/Sellev/Common/ImageList/Funding.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/ImageList/Funding.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Common/ImageList/Funding.jsx');
 }();
 
 ;
@@ -47582,26 +47594,32 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, "/**************ImageList*************/\n/*video*/\n.ImageList__imageBox___25XKu {\n    background-size: cover;\n    background-position: center;\n    margin-bottom: 10px;\n}\n.ImageList__videoList___3sFd2 {\n    width: 100%;\n}\n.ImageList__videoList___3sFd2 .ImageList__listTitle___3QahK {\n    font-size: 15px;\n    font-weight: bold;\n    overflow: hidden;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    line-height: 19px;\n}\n.ImageList__videoList___3sFd2 .ImageList__listBody___12E1z {\n    font-size: 13px;\n    color: #979797;\n    line-height: 30px;\n}\n.ImageList__videoList___3sFd2 .ImageList__listBody___12E1z div {\n    display: inline-block;\n}\n.ImageList__videoList___3sFd2 .ImageList__listBody___12E1z .ImageList__likeImg___zMXP1{\n    background-image: url('/Sellev/assets/img/ic_common.png');\n    width: 20px;\n    height: 20px;\n    background-position: 0 85px;\n}\n/*funding market*/\n.ImageList__fundingMarketBody___ua1R5 {\n    font-weight: bold;\n    width: 264px;\n    margin-bottom: 30px;\n    height: 160px;\n}\n.ImageList__fundingMarketBody___ua1R5 .ImageList__fundingMarketArtist___nnCN2 {\n    font-size: 13px;\n    color: #979797;\n    line-height: 2em;\n}\n.ImageList__fundingMarketBody___ua1R5 .ImageList__fundingMarketTitle___1IpLs {\n    font-size: 15px;\n    line-height: 1.5em;\n}\n\n/*funding*/\n.ImageList__fundBox___2JX1P {\n    overflow: hidden;\n    font-weight: bold;\n    height: 40px;\n    margin-top: 10px;\n}\n.ImageList__fundPercent___32qqS {\n    float: left;\n    margin-right: 20px;\n}\n\n.ImageList__fundAttendant___1Dog7 {\n    float: left;\n    margin-right: 20px;\n}\n.ImageList__left___2VYyM {\n    float: left;\n    margin-right: 20px;\n}\n.ImageList__goal___Yo-IM {\n    float: left;\n}\n.ImageList__fundPercent___32qqS div:first-child,\n.ImageList__fundAttendant___1Dog7 div:first-child,\n.ImageList__left___2VYyM div:first-child {\n    color: #fd0a0a;\n    font-size: 18px;\n}\n.ImageList__goal___Yo-IM div:first-child {\n    color: rgba(22,22,22, 0.5);\n    line-height: 18px;\n}\n.ImageList__goal___Yo-IM div:first-child span {\n    font-size: 13px;\n}\n\n.ImageList__fundPercent___32qqS div:last-child,\n.ImageList__fundAttendant___1Dog7 div:last-child,\n.ImageList__left___2VYyM div:last-child,\n.ImageList__goal___Yo-IM div:last-child {\n    font-size: 12px;\n    color: #979797;\n    line-height: 2em;\n}\n\n/*market*/\n\n.ImageList__marketPrice___3ushD {\n    font-size: 18px;\n    color: #fd0a0a;\n    float: left;\n}\n.ImageList__marketPrice___3ushD div {\n    background-image: url('/Sellev/assets/img/ic_web_icon.png');\n    width: 20px;\n    height: 20px;\n    background-position: -122px 74px;\n    float: left;\n    margin-top: -2px;\n}\n.ImageList__marketBox___1Mbr7 {\n    line-height: 1.5em;\n    overflow: hidden;\n}\n.ImageList__marketOption___qXrAW {\n    float: left;\n    font-size: 12px;\n    line-height: 18px;\n}\n.ImageList__marketOption___qXrAW span:first-child {\n    color: #979797;\n}\n.ImageList__marketOption___qXrAW span:last-child {\n    color: #fd0a0a;\n}\n\n@media screen and (max-width: 768px){\n    .ImageList__imageBox___25XKu {\n        min-width: 100%;\n        min-height: 100%;\n        display: block;\n        border-radius: 12px;\n    }\n    .ImageList__videoList___3sFd2 .ImageList__listTitle___3QahK {\n        font-size: 23px;\n        line-height: 35px;\n    }\n    .ImageList__videoList___3sFd2 .ImageList__listBody___12E1z {\n        font-size: 17px;\n        line-height: 38px;\n    }\n}", ""]);
+exports.push([module.i, "/**************ImageList*************/\r\n/*funding market*/\r\n.ImageList__listContainer___2zPi9 {\r\n    position: relative;\r\n    overflow: hidden;\r\n}\r\n.ImageList__imageBox___x5aMH {\r\n    background-size: cover;\r\n    background-position: center;\r\n    margin-bottom: 10px;\r\n}\r\n.ImageList__profileBox___2EFsw {\r\n    background-size: cover;\r\n    background-position: center;\r\n    width: 33px;\r\n    height: 33px;\r\n    border: 1.5px solid #ffffff;\r\n    border-radius: 17px;\r\n    position: absolute;\r\n    right: 10px;\r\n    top: 110px;\r\n}\r\n.ImageList__fundingMarketBody___1d1BN {\r\n    font-weight: bold;\r\n    width: 264px;\r\n    margin-bottom: 30px;\r\n    height: 160px;\r\n}\r\n.ImageList__fundingMarketBody___1d1BN .ImageList__fundingMarketArtist___24u5G {\r\n    font-size: 13px;\r\n    color: #979797;\r\n    line-height: 2em;\r\n}\r\n.ImageList__fundingMarketBody___1d1BN .ImageList__fundingMarketTitle___2TBgT {\r\n    font-size: 15px;\r\n    line-height: 2em;\r\n}\r\n\r\n\r\n/*video*/\r\n.ImageList__videoList___2FIPI {\r\n    width: 100%;\r\n}\r\n.ImageList__videoList___2FIPI .ImageList__listTitle___21z09 {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    line-height: 19px;\r\n}\r\n.ImageList__videoList___2FIPI .ImageList__listBody___3ioFq {\r\n    font-size: 13px;\r\n    color: #979797;\r\n    line-height: 30px;\r\n}\r\n.ImageList__videoList___2FIPI .ImageList__listBody___3ioFq div {\r\n    display: inline-block;\r\n}\r\n.ImageList__videoList___2FIPI .ImageList__listBody___3ioFq .ImageList__likeImg___1GZSZ{\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 20px;\r\n    height: 20px;\r\n    background-position: 0 85px;\r\n}\r\n\r\n/*funding*/\r\n.ImageList__fundBox___6-0YZ {\r\n    margin-top: 25px;\r\n    overflow: hidden;\r\n}\r\n.ImageList__fundPercent___hKtkk {\r\n    float: left;\r\n    margin-right: 20px;\r\n}\r\n\r\n.ImageList__fundAttendant___3H2S7 {\r\n    float: left;\r\n    margin-right: 20px;\r\n}\r\n.ImageList__left___iZpH4 {\r\n    float: left;\r\n    margin-right: 20px;\r\n}\r\n.ImageList__goal___2sBZK {\r\n    float: left;\r\n}\r\n.ImageList__fundPercent___hKtkk div:first-child,\r\n.ImageList__fundAttendant___3H2S7 div:first-child,\r\n.ImageList__left___iZpH4 div:first-child {\r\n    color: #fd0a0a;\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n}\r\n.ImageList__goal___2sBZK div:first-child {\r\n    color: #161616;\r\n    line-height: 18px;\r\n}\r\n.ImageList__goal___2sBZK div:first-child span {\r\n    font-size: 13px;\r\n}\r\n\r\n.ImageList__fundPercent___hKtkk div:last-child,\r\n.ImageList__fundAttendant___3H2S7 div:last-child,\r\n.ImageList__left___iZpH4 div:last-child,\r\n.ImageList__goal___2sBZK div:last-child {\r\n    font-size: 12px;\r\n    color: #979797;\r\n    line-height: 2em;\r\n}\r\n/*progress bar*/\r\n.ImageList__progressBox___3PJZg {\r\n    position: relative;\r\n}\r\n.ImageList__progressBox___3PJZg .ImageList__progress___1sIHt {\r\n    background-color: #ebeaeb;\r\n    height: 4px;\r\n    margin: 13px auto;\r\n}\r\n.ImageList__progressBox___3PJZg .ImageList__progress___1sIHt .ImageList__progressBar___3tc3w {\r\n    height: 4px;\r\n    background-color: #fd0a0a;\r\n}\r\n.ImageList__progressNum___1Vse_ {\r\n    position: absolute;\r\n    font-size: 12px;\r\n    width: 41px;\r\n    height: 20px;\r\n    border-radius: 100px;\r\n    background-color: #191919;\r\n    color: #ffffff;\r\n    bottom: -10px;\r\n    /*right: 40%;*/\r\n    text-align: center;\r\n    padding-top: 6px;\r\n}\r\n\r\n\r\n/*market*/\r\n\r\n.ImageList__marketPrice___fBBxg {\r\n    font-size: 18px;\r\n    color: #fd0a0a;\r\n    float: left;\r\n}\r\n.ImageList__marketPrice___fBBxg div {\r\n    background-image: url('/Sellev/assets/img/ic_web_icon.png');\r\n    width: 20px;\r\n    height: 20px;\r\n    background-position: -122px 75px;\r\n    float: left;\r\n    margin-top: -2px;\r\n}\r\n.ImageList__marketBox___3kK3W {\r\n    line-height: 1.5em;\r\n    overflow: hidden;\r\n}\r\n.ImageList__marketOption___13Zc2 {\r\n    float: left;\r\n    font-size: 12px;\r\n    line-height: 18px;\r\n}\r\n.ImageList__marketOption___13Zc2 span:first-child {\r\n    color: #979797;\r\n    margin: 0 10px;\r\n}\r\n.ImageList__marketOption___13Zc2 span:last-child {\r\n    color: #fd0a0a;\r\n}\r\n\r\n@media screen and (max-width: 768px){\r\n    .ImageList__imageBox___x5aMH {\r\n        min-width: 100%;\r\n        min-height: 242px;\r\n        border-radius: 7px;\r\n    }\r\n    .ImageList__profileBox___2EFsw {\r\n        width: 55px;\r\n        height: 55px;\r\n        border-radius: 30px;\r\n        border: 1.5px solid #ffffff;\r\n        top: 210px;\r\n    }\r\n    .ImageList__fundingMarketBody___1d1BN {\r\n        width: 100%;\r\n    }\r\n    .ImageList__fundingMarketBody___1d1BN .ImageList__fundingMarketTitle___2TBgT,\r\n    .ImageList__marketPrice___fBBxg,\r\n    .ImageList__fundPercent___hKtkk div:first-child,\r\n    .ImageList__fundAttendant___3H2S7 div:first-child,\r\n    .ImageList__left___iZpH4 div:first-child,\r\n    .ImageList__goal___2sBZK div:first-child {\r\n        font-size: 25px;\r\n    }\r\n    .ImageList__goal___2sBZK {\r\n        float: right;\r\n    }\r\n    .ImageList__fundBox___6-0YZ {\r\n        padding: 10px 0;\r\n    }\r\n    .ImageList__videoList___2FIPI .ImageList__listTitle___21z09 {\r\n        font-size: 23px;\r\n        line-height: 35px;\r\n    }\r\n    .ImageList__videoList___2FIPI .ImageList__listBody___3ioFq {\r\n        font-size: 17px;\r\n        line-height: 38px;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"imageBox": "ImageList__imageBox___25XKu",
-	"videoList": "ImageList__videoList___3sFd2",
-	"listTitle": "ImageList__listTitle___3QahK",
-	"listBody": "ImageList__listBody___12E1z",
-	"likeImg": "ImageList__likeImg___zMXP1",
-	"fundingMarketBody": "ImageList__fundingMarketBody___ua1R5",
-	"fundingMarketArtist": "ImageList__fundingMarketArtist___nnCN2",
-	"fundingMarketTitle": "ImageList__fundingMarketTitle___1IpLs",
-	"fundBox": "ImageList__fundBox___2JX1P",
-	"fundPercent": "ImageList__fundPercent___32qqS",
-	"fundAttendant": "ImageList__fundAttendant___1Dog7",
-	"left": "ImageList__left___2VYyM",
-	"goal": "ImageList__goal___Yo-IM",
-	"marketPrice": "ImageList__marketPrice___3ushD",
-	"marketBox": "ImageList__marketBox___1Mbr7",
-	"marketOption": "ImageList__marketOption___qXrAW"
+	"listContainer": "ImageList__listContainer___2zPi9",
+	"imageBox": "ImageList__imageBox___x5aMH",
+	"profileBox": "ImageList__profileBox___2EFsw",
+	"fundingMarketBody": "ImageList__fundingMarketBody___1d1BN",
+	"fundingMarketArtist": "ImageList__fundingMarketArtist___24u5G",
+	"fundingMarketTitle": "ImageList__fundingMarketTitle___2TBgT",
+	"videoList": "ImageList__videoList___2FIPI",
+	"listTitle": "ImageList__listTitle___21z09",
+	"listBody": "ImageList__listBody___3ioFq",
+	"likeImg": "ImageList__likeImg___1GZSZ",
+	"fundBox": "ImageList__fundBox___6-0YZ",
+	"fundPercent": "ImageList__fundPercent___hKtkk",
+	"fundAttendant": "ImageList__fundAttendant___3H2S7",
+	"left": "ImageList__left___iZpH4",
+	"goal": "ImageList__goal___2sBZK",
+	"progressBox": "ImageList__progressBox___3PJZg",
+	"progress": "ImageList__progress___1sIHt",
+	"progressBar": "ImageList__progressBar___3tc3w",
+	"progressNum": "ImageList__progressNum___1Vse_",
+	"marketPrice": "ImageList__marketPrice___fBBxg",
+	"marketBox": "ImageList__marketBox___3kK3W",
+	"marketOption": "ImageList__marketOption___13Zc2"
 };
 
 /***/ }),
@@ -47681,13 +47699,13 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(convertNumber2Won, 'convertNumber2Won', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Utils/converter.js');
+    __REACT_HOT_LOADER__.register(convertNumber2Won, 'convertNumber2Won', 'C:/recordFarm/project-test1/src/Sellev/Lib/Utils/converter.js');
 
-    __REACT_HOT_LOADER__.register(convertm2ToPyeong, 'convertm2ToPyeong', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Utils/converter.js');
+    __REACT_HOT_LOADER__.register(convertm2ToPyeong, 'convertm2ToPyeong', 'C:/recordFarm/project-test1/src/Sellev/Lib/Utils/converter.js');
 
-    __REACT_HOT_LOADER__.register(convertPyeongTom2, 'convertPyeongTom2', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Utils/converter.js');
+    __REACT_HOT_LOADER__.register(convertPyeongTom2, 'convertPyeongTom2', 'C:/recordFarm/project-test1/src/Sellev/Lib/Utils/converter.js');
 
-    __REACT_HOT_LOADER__.register(convertKmToWgs84Range, 'convertKmToWgs84Range', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Utils/converter.js');
+    __REACT_HOT_LOADER__.register(convertKmToWgs84Range, 'convertKmToWgs84Range', 'C:/recordFarm/project-test1/src/Sellev/Lib/Utils/converter.js');
 }();
 
 ;
@@ -47801,9 +47819,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Market, 'Market', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/ImageList/Market.jsx');
+    __REACT_HOT_LOADER__.register(Market, 'Market', 'C:/recordFarm/project-test1/src/Sellev/Common/ImageList/Market.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/ImageList/Market.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Common/ImageList/Market.jsx');
 }();
 
 ;
@@ -47912,9 +47930,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Video, 'Video', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/ImageList/Video.jsx');
+    __REACT_HOT_LOADER__.register(Video, 'Video', 'C:/recordFarm/project-test1/src/Sellev/Common/ImageList/Video.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Common/ImageList/Video.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Common/ImageList/Video.jsx');
 }();
 
 ;
@@ -47959,11 +47977,11 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, ".Home__homeContainer___1nSiY {\n    width: 100%;\n    overflow: hidden;\n}", ""]);
+exports.push([module.i, ".Home__homeContainer___BZFju {\r\n    width: 100%;\r\n    overflow: hidden;\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"homeContainer": "Home__homeContainer___1nSiY"
+	"homeContainer": "Home__homeContainer___BZFju"
 };
 
 /***/ }),
@@ -48054,9 +48072,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Authentication/index.jsx');
+    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', 'C:/recordFarm/project-test1/src/Sellev/Containers/Authentication/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Authentication/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/Authentication/index.jsx');
 }();
 
 ;
@@ -48148,9 +48166,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/Login.jsx');
+    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/Login.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/Login.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/Login.jsx');
 }();
 
 ;
@@ -48434,9 +48452,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(LoginBody, 'LoginBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/LoginBody.jsx');
+    __REACT_HOT_LOADER__.register(LoginBody, 'LoginBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/LoginBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/LoginBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/LoginBody.jsx');
 }();
 
 ;
@@ -48450,41 +48468,41 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, ".Authentication__loginContainer___3BZX_ {\n    width: 460px;\n    margin: 121px auto 0;\n}\n\n.Authentication__loginContainer___3BZX_ .Authentication__loginBody___1sNAR {\n    width: 100%;\n    text-align: center;\n}\n.Authentication__loginLogo___1JhnA {\n    margin: 10px auto;\n}\n.Authentication__loginBox___2sCoE {\n    width: 100%;\n    height: 545px;\n    padding: 30px 35px;\n    border-radius: 12px;\n    background-color: #ffffff;\n    box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);\n}\n\n/*or*/\n.Authentication__border___3oA1S {\n    color: #e0e0e0;\n    margin: 18px 0;\n    text-align: center;\n}\n/*form*/\n.Authentication__loginForm___2DQ6B {\n    width: 100%;\n}\n.Authentication__loginForm___2DQ6B label {\n    height: 59px;\n    line-height: 59px;\n    width: 100%;\n}\n.Authentication__loginForm___2DQ6B input {\n    margin-left: 20px;\n    border: 0;\n    width: 75%;\n    height: 90%;\n}\n.Authentication__loginForm___2DQ6B label:first-child {\n    border-top: solid 1px #e0e0e0;\n    border-bottom: solid 1px #e0e0e0;\n}\n.Authentication__loginForm___2DQ6B label:last-child {\n    border-bottom: solid 1px #e0e0e0;\n}\n/*link to signup*/\n.Authentication__boxFooter___2qXu5 {\n    margin-top: 32px;\n}\n\n.Authentication__boxFooter___2qXu5 a {\n    color: #fd0a0a;\n}\n/*footer*/\n.Authentication__loginFooter___1P8bj {\n    margin-top: 54px;\n    text-align: center;\n}\n.Authentication__loginFooter___1P8bj a {\n    color: #272727;\n}\n.Authentication__loginFooter___1P8bj .Authentication__logoBox___3t_Bc {\n    font-size: 12px;\n    color: #272727;\n    line-height: 23px;\n    width: 50%;\n    margin: 12px auto;\n    text-align: center;\n}\n\n.Authentication__loginFooter___1P8bj .Authentication__logoBox___3t_Bc div {\n    background-image: url('/Sellev/assets/img/ic_common.png');\n    width: 55px;\n    height: 20px;\n    background-position: 112px 128px;\n    float: left;\n}\n.Authentication__signupFooter___1Gj__ {\n    margin-top: 54px;\n    text-align: center;\n}\n.Authentication__signupFooter___1Gj__ a {\n    color: #272727;\n}\n.Authentication__signupFooter___1Gj__ .Authentication__logoBox___3t_Bc {\n    font-size: 12px;\n    color: #272727;\n    line-height: 23px;\n    width: 50%;\n    margin: 12px auto;\n}\n\n.Authentication__signupFooter___1Gj__ .Authentication__logoBox___3t_Bc div {\n    background-image: url('/Sellev/assets/img/ic_common.png');\n    width: 55px;\n    height: 20px;\n    background-position: 112px 128px;\n    float: left;\n}\n\n/* logo btn */\n\n.Authentication__loginBtn___1ahGc {\n    margin-bottom: 10px;\n}\n/*button Common*/\n.Authentication__authBtn___3btRI {\n    height: 56px;\n    width: 371px;\n    margin: 8px auto;\n    border-radius: 4px;\n}\n/* kakao button */\n\n.Authentication__kakao___51EHj {\n    background-color: #feea02;\n}\n.Authentication__kakaoBody____leNE {\n    overflow: hidden;\n    padding: 18px 36px;\n}\n.Authentication__kakaoBody____leNE div:first-child {\n    background-image: url('/Sellev/assets/img/ic_common.png');\n    width: 22px;\n    height: 19px;\n    background-position:  113px -63px;\n    float: left;\n}\n.Authentication__kakaoBody____leNE span:nth-child(2) {\n    opacity: 0.5;\n    float: left;\n    margin: 0 30px;\n}\n.Authentication__kakaoBody____leNE div:last-child {\n    color: #4c2c10;\n    font-size: 16px;\n    float: left;\n    line-height: 21px;\n}\n\n/* naver button */\n\n.Authentication__naver___1cSMA {\n    background-color: #1dc800;\n}\n.Authentication__naverBody___3Ctm- {\n    overflow: hidden;\n    padding: 18px 36px;\n}\n.Authentication__naverBody___3Ctm- div:first-child {\n    background-image: url('/Sellev/assets/img/ic_common.png');\n    width: 22px;\n    height: 19px;\n    background-position:  113px 40px;\n    float: left;\n}\n.Authentication__naverBody___3Ctm- span:nth-child(2) {\n    opacity: 0.5;\n    float: left;\n    margin: 0 30px;\n}\n.Authentication__naverBody___3Ctm- div:last-child {\n    color: #ffffff;\n    font-size: 16px;\n    float: left;\n    line-height: 21px;\n}\n\n/* facebook button */\n\n.Authentication__facebook___3SCds {\n    background-color: #395a90;\n}\n.Authentication__facebookBody___2Gd56 {\n    overflow: hidden;\n    padding: 18px 36px;\n}\n.Authentication__facebookBody___2Gd56 div:first-child {\n    background-image: url('/Sellev/assets/img/ic_common.png');\n    width: 22px;\n    height: 18px;\n    background-position:  113px 19px;\n    float: left;\n}\n.Authentication__facebookBody___2Gd56 span:nth-child(2) {\n    opacity: 0.5;\n    float: left;\n    margin: 0 30px;\n}\n.Authentication__facebookBody___2Gd56 div:last-child {\n    color: #ffffff;\n    font-size: 16px;\n    float: left;\n    line-height: 21px;\n}\n\n/* login button : red button */\n\n.Authentication__loginBtn___1ahGc {\n    background-color: #fd0a0a;\n    overflow: hidden;\n    padding: 20px 36px;\n    color: #ffffff;\n    text-align: center;\n}\n\n/* sellev button */\n\n.Authentication__sellevBtn___2Iolb {\n    height: 56px;\n    width: 371px;\n    margin: 0 auto;\n    background-color: #ffffff;\n    border-radius: 4px;\n    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);\n    border: solid 1px #e5e5e5;\n}\n.Authentication__sellevBody___3ZOWF {\n    overflow: hidden;\n    padding: 18px 36px;\n}\n.Authentication__sellevBody___3ZOWF div:first-child {\n    background-image: url('/Sellev/assets/img/ic_common.png');\n    width: 55px;\n    height: 20px;\n    background-position: 112px 128px;\n    float: left;\n}\n.Authentication__sellevBody___3ZOWF span:nth-child(2) {\n    opacity: 0.5;\n    float: left;\n    margin: 0 30px;\n}\n.Authentication__sellevBody___3ZOWF div:last-child {\n    font-size: 16px;\n    float: left;\n    line-height: 21px;\n}\n/*Find Password*/\n.Authentication__findPasswordContainer___pJhY6 {\n    width: 460px;\n    margin: 100px auto 50px;\n}\n\n/* signup */\n.Authentication__signupContainer___nySPr {\n    width: 460px;\n    margin: 100px auto 50px;\n}\ninput[type=checkbox].Authentication__signupCheckbox___25Zci:checked + label.Authentication__ckeckboxBlackIcon___2kInA {\n    width: 24px;\n    height: 24px;\n    background-image: url(\"/Sellev/assets/img/ic_web_icon.png\");\n    background-position: -30px 75px;\n    position: relative;\n    top: 15px;\n}\ninput[type=checkbox].Authentication__signupCheckbox___25Zci + label.Authentication__ckeckboxBlackIcon___2kInA{\n    width: 24px;\n    height: 24px;\n    display: inline-block;\n    background-image: url(\"/Sellev/assets/img/ic_web_icon.png\");\n    background-position: -30px -54px;\n    position: relative;\n    top: 15px;\n}\ninput[type=checkbox].Authentication__signupCheckbox___25Zci {\n    display: none;\n    position: relative;\n}\n.Authentication__ckeckboxLabel___2CQic {\n    display: inline-block;\n}\n\n/*Common */\n.Authentication__authBody___25Iyr {\n    width: 100%;\n}\n.Authentication__authLogo___1w79N {\n    width: 163px;\n    height: 49px;\n    background-image: url(\"/Sellev/assets/img/logo_sellev_auth.png\");\n    background-position: center;\n    background-repeat: no-repeat;\n    margin: 0 auto;\n}\n.Authentication__authLogoMobile___2KdZf {\n    display: none;\n    width: 24px;\n    height: 24px;\n    background-image: url(\"/Sellev/assets/img/ic_common.png\");\n    background-position: 84px 24px;\n}\n.Authentication__authBox___SEJh8 {\n    min-height: 328px;\n    margin: 0 auto;\n    border-radius: 12px;\n    background-color: #ffffff;\n    box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);\n    padding: 32px 26px;\n}\n.Authentication__authTitle___3r_a0 {\n    font-size: 24px;\n    font-weight: bold;\n    width: 407px;\n    margin: 0 auto;\n    line-height: 1.5em;\n}\n\n/*Responsive */\n@media screen and (max-width: 768px) {\n    .Authentication__signupContainer___nySPr {\n        max-width: 768px;\n        width: auto;\n        margin: 100px 30px 50px;\n    }\n    .Authentication__authLogo___1w79N {\n        display: none;\n    }\n    .Authentication__authLogoMobile___2KdZf {\n        display: block;\n    }\n    .Authentication__authBox___SEJh8 {\n        padding: 0;\n        border: 0;\n        box-shadow: none;\n    }\n    .Authentication__authTitle___3r_a0 {\n        font-size: 35px;\n        width: 100%;\n    }\n    .Authentication__authBtn___3btRI.Authentication__loginBtn___1ahGc {\n        width: 100%;\n        border-radius: 0;\n        position: fixed;\n        bottom: 0;\n        right: 0;\n        margin: 0;\n    }\n    .Authentication__signupFooter___1Gj__ {\n        display: none;\n    }\n    /*비밀번호찾기*/\n    .Authentication__findPasswordContainer___pJhY6 {\n        max-width: 768px;\n        width: auto;\n        margin: 100px 30px 50px;\n    }\n    .Authentication__authTitle___3r_a0.Authentication__findPasswordTitle___1rx9w {\n        width: 211px;\n        text-align: left;\n        margin: 0;\n    }\n    .Authentication__loginFooter___1P8bj {\n        display: none;\n    }\n    /*로그인*/\n    .Authentication__loginContainer___3BZX_ {\n        max-width: 768px;\n        width: auto;\n        margin: 100px 30px 50px;\n    }\n}", ""]);
+exports.push([module.i, ".Authentication__loginContainer___30btQ {\r\n    width: 460px;\r\n    margin: 121px auto 0;\r\n}\r\n\r\n.Authentication__loginContainer___30btQ .Authentication__loginBody___2rLB1 {\r\n    width: 100%;\r\n    text-align: center;\r\n}\r\n.Authentication__loginLogo___743SL {\r\n    margin: 10px auto;\r\n}\r\n.Authentication__loginBox___1eItI {\r\n    width: 100%;\r\n    height: 545px;\r\n    padding: 30px 35px;\r\n    border-radius: 12px;\r\n    background-color: #ffffff;\r\n    box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);\r\n}\r\n\r\n/*or*/\r\n.Authentication__border___2w57t {\r\n    color: #e0e0e0;\r\n    margin: 18px 0;\r\n    text-align: center;\r\n}\r\n/*form*/\r\n.Authentication__loginForm___3eJ4P {\r\n    width: 100%;\r\n}\r\n.Authentication__loginForm___3eJ4P label {\r\n    height: 59px;\r\n    line-height: 59px;\r\n    width: 100%;\r\n}\r\n.Authentication__loginForm___3eJ4P input {\r\n    margin-left: 20px;\r\n    border: 0;\r\n    width: 75%;\r\n    height: 90%;\r\n}\r\n.Authentication__loginForm___3eJ4P label:first-child {\r\n    border-top: solid 1px #e0e0e0;\r\n    border-bottom: solid 1px #e0e0e0;\r\n}\r\n.Authentication__loginForm___3eJ4P label:last-child {\r\n    border-bottom: solid 1px #e0e0e0;\r\n}\r\n/*link to signup*/\r\n.Authentication__boxFooter___jANjm {\r\n    margin-top: 32px;\r\n}\r\n\r\n.Authentication__boxFooter___jANjm a {\r\n    color: #fd0a0a;\r\n}\r\n/*footer*/\r\n.Authentication__loginFooter___kRQxJ {\r\n    margin-top: 54px;\r\n    text-align: center;\r\n}\r\n.Authentication__loginFooter___kRQxJ a {\r\n    color: #272727;\r\n}\r\n.Authentication__loginFooter___kRQxJ .Authentication__logoBox___2gXEk {\r\n    font-size: 12px;\r\n    color: #272727;\r\n    line-height: 23px;\r\n    width: 50%;\r\n    margin: 12px auto;\r\n    text-align: center;\r\n}\r\n\r\n.Authentication__loginFooter___kRQxJ .Authentication__logoBox___2gXEk div {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 55px;\r\n    height: 20px;\r\n    background-position: 112px 128px;\r\n    float: left;\r\n}\r\n.Authentication__signupFooter___2-CYF {\r\n    margin-top: 54px;\r\n    text-align: center;\r\n}\r\n.Authentication__signupFooter___2-CYF a {\r\n    color: #272727;\r\n}\r\n.Authentication__signupFooter___2-CYF .Authentication__logoBox___2gXEk {\r\n    font-size: 12px;\r\n    color: #272727;\r\n    line-height: 23px;\r\n    width: 50%;\r\n    margin: 12px auto;\r\n}\r\n\r\n.Authentication__signupFooter___2-CYF .Authentication__logoBox___2gXEk div {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 55px;\r\n    height: 20px;\r\n    background-position: 112px 128px;\r\n    float: left;\r\n}\r\n\r\n/* logo btn */\r\n\r\n.Authentication__loginBtn___t13VB {\r\n    margin-bottom: 10px;\r\n}\r\n/*button Common*/\r\n.Authentication__authBtn___2L_OZ {\r\n    height: 56px;\r\n    width: 371px;\r\n    margin: 8px auto;\r\n    border-radius: 4px;\r\n}\r\n/* kakao button */\r\n\r\n.Authentication__kakao___S56T1 {\r\n    background-color: #feea02;\r\n}\r\n.Authentication__kakaoBody___2Ya08 {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__kakaoBody___2Ya08 div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 22px;\r\n    height: 19px;\r\n    background-position:  113px -63px;\r\n    float: left;\r\n}\r\n.Authentication__kakaoBody___2Ya08 span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__kakaoBody___2Ya08 div:last-child {\r\n    color: #4c2c10;\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n\r\n/* naver button */\r\n\r\n.Authentication__naver___1kJAM {\r\n    background-color: #1dc800;\r\n}\r\n.Authentication__naverBody___8MYn5 {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__naverBody___8MYn5 div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 22px;\r\n    height: 19px;\r\n    background-position:  113px 40px;\r\n    float: left;\r\n}\r\n.Authentication__naverBody___8MYn5 span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__naverBody___8MYn5 div:last-child {\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n\r\n/* facebook button */\r\n\r\n.Authentication__facebook___3vCKh {\r\n    background-color: #395a90;\r\n}\r\n.Authentication__facebookBody___mlPEd {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__facebookBody___mlPEd div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 22px;\r\n    height: 18px;\r\n    background-position:  113px 19px;\r\n    float: left;\r\n}\r\n.Authentication__facebookBody___mlPEd span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__facebookBody___mlPEd div:last-child {\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n\r\n/* login button : red button */\r\n\r\n.Authentication__loginBtn___t13VB {\r\n    background-color: #fd0a0a;\r\n    overflow: hidden;\r\n    padding: 20px 36px;\r\n    color: #ffffff;\r\n    text-align: center;\r\n}\r\n\r\n/* sellev button */\r\n\r\n.Authentication__sellevBtn___3ADXA {\r\n    height: 56px;\r\n    width: 371px;\r\n    margin: 0 auto;\r\n    background-color: #ffffff;\r\n    border-radius: 4px;\r\n    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);\r\n    border: solid 1px #e5e5e5;\r\n}\r\n.Authentication__sellevBody___aIjHA {\r\n    overflow: hidden;\r\n    padding: 18px 36px;\r\n}\r\n.Authentication__sellevBody___aIjHA div:first-child {\r\n    background-image: url('/Sellev/assets/img/ic_common.png');\r\n    width: 55px;\r\n    height: 20px;\r\n    background-position: 112px 128px;\r\n    float: left;\r\n}\r\n.Authentication__sellevBody___aIjHA span:nth-child(2) {\r\n    opacity: 0.5;\r\n    float: left;\r\n    margin: 0 30px;\r\n}\r\n.Authentication__sellevBody___aIjHA div:last-child {\r\n    font-size: 16px;\r\n    float: left;\r\n    line-height: 21px;\r\n}\r\n/*Find Password*/\r\n.Authentication__findPasswordContainer___1ANW- {\r\n    width: 460px;\r\n    margin: 100px auto 50px;\r\n}\r\n\r\n/* signup */\r\n.Authentication__signupContainer___qzlBQ {\r\n    width: 460px;\r\n    margin: 100px auto 50px;\r\n}\r\ninput[type=checkbox].Authentication__signupCheckbox___3LXzS:checked + label.Authentication__ckeckboxBlackIcon___1-NzR {\r\n    width: 24px;\r\n    height: 24px;\r\n    background-image: url(\"/Sellev/assets/img/ic_web_icon.png\");\r\n    background-position: -30px 75px;\r\n    position: relative;\r\n    top: 15px;\r\n}\r\ninput[type=checkbox].Authentication__signupCheckbox___3LXzS + label.Authentication__ckeckboxBlackIcon___1-NzR{\r\n    width: 24px;\r\n    height: 24px;\r\n    display: inline-block;\r\n    background-image: url(\"/Sellev/assets/img/ic_web_icon.png\");\r\n    background-position: -30px -54px;\r\n    position: relative;\r\n    top: 15px;\r\n}\r\ninput[type=checkbox].Authentication__signupCheckbox___3LXzS {\r\n    display: none;\r\n    position: relative;\r\n}\r\n.Authentication__ckeckboxLabel___8C7eL {\r\n    display: inline-block;\r\n}\r\n\r\n/*Common */\r\n.Authentication__authBody___14bFw {\r\n    width: 100%;\r\n}\r\n.Authentication__authLogo___72gXa {\r\n    width: 163px;\r\n    height: 49px;\r\n    background-image: url(\"/Sellev/assets/img/logo_sellev_auth.png\");\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    margin: 0 auto;\r\n}\r\n.Authentication__authLogoMobile___36ypb {\r\n    display: none;\r\n    width: 24px;\r\n    height: 24px;\r\n    background-image: url(\"/Sellev/assets/img/ic_common.png\");\r\n    background-position: 84px 24px;\r\n}\r\n.Authentication__authBox___oxc28 {\r\n    min-height: 328px;\r\n    margin: 0 auto;\r\n    border-radius: 12px;\r\n    background-color: #ffffff;\r\n    box-shadow: 18px 62px 58px 0 rgba(0, 0, 0, 0.09);\r\n    padding: 32px 26px;\r\n}\r\n.Authentication__authTitle___2qR1O {\r\n    font-size: 24px;\r\n    font-weight: bold;\r\n    width: 407px;\r\n    margin: 0 auto;\r\n    line-height: 1.5em;\r\n}\r\n\r\n/*Responsive */\r\n@media screen and (max-width: 768px) {\r\n    .Authentication__signupContainer___qzlBQ {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin: 100px 30px 50px;\r\n    }\r\n    .Authentication__authLogo___72gXa {\r\n        display: none;\r\n    }\r\n    .Authentication__authLogoMobile___36ypb {\r\n        display: block;\r\n    }\r\n    .Authentication__authBox___oxc28 {\r\n        padding: 0;\r\n        border: 0;\r\n        box-shadow: none;\r\n    }\r\n    .Authentication__authTitle___2qR1O {\r\n        font-size: 35px;\r\n        width: 100%;\r\n    }\r\n    .Authentication__authBtn___2L_OZ.Authentication__loginBtn___t13VB {\r\n        width: 100%;\r\n        border-radius: 0;\r\n        position: fixed;\r\n        bottom: 0;\r\n        right: 0;\r\n        margin: 0;\r\n    }\r\n    .Authentication__signupFooter___2-CYF {\r\n        display: none;\r\n    }\r\n    /*비밀번호찾기*/\r\n    .Authentication__findPasswordContainer___1ANW- {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin: 100px 30px 50px;\r\n    }\r\n    .Authentication__authTitle___2qR1O.Authentication__findPasswordTitle___2Ptgw {\r\n        width: 211px;\r\n        text-align: left;\r\n        margin: 0;\r\n    }\r\n    .Authentication__loginFooter___kRQxJ {\r\n        display: none;\r\n    }\r\n    /*로그인*/\r\n    .Authentication__loginContainer___30btQ {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin: 100px 30px 50px;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"loginContainer": "Authentication__loginContainer___3BZX_",
-	"loginBody": "Authentication__loginBody___1sNAR",
-	"loginLogo": "Authentication__loginLogo___1JhnA",
-	"loginBox": "Authentication__loginBox___2sCoE",
-	"border": "Authentication__border___3oA1S",
-	"loginForm": "Authentication__loginForm___2DQ6B",
-	"boxFooter": "Authentication__boxFooter___2qXu5",
-	"loginFooter": "Authentication__loginFooter___1P8bj",
-	"logoBox": "Authentication__logoBox___3t_Bc",
-	"signupFooter": "Authentication__signupFooter___1Gj__",
-	"loginBtn": "Authentication__loginBtn___1ahGc",
-	"authBtn": "Authentication__authBtn___3btRI",
-	"kakao": "Authentication__kakao___51EHj",
-	"kakaoBody": "Authentication__kakaoBody____leNE",
-	"naver": "Authentication__naver___1cSMA",
-	"naverBody": "Authentication__naverBody___3Ctm-",
-	"facebook": "Authentication__facebook___3SCds",
-	"facebookBody": "Authentication__facebookBody___2Gd56",
-	"sellevBtn": "Authentication__sellevBtn___2Iolb",
-	"sellevBody": "Authentication__sellevBody___3ZOWF",
-	"findPasswordContainer": "Authentication__findPasswordContainer___pJhY6",
-	"signupContainer": "Authentication__signupContainer___nySPr",
-	"signupCheckbox": "Authentication__signupCheckbox___25Zci",
-	"ckeckboxBlackIcon": "Authentication__ckeckboxBlackIcon___2kInA",
-	"ckeckboxLabel": "Authentication__ckeckboxLabel___2CQic",
-	"authBody": "Authentication__authBody___25Iyr",
-	"authLogo": "Authentication__authLogo___1w79N",
-	"authLogoMobile": "Authentication__authLogoMobile___2KdZf",
-	"authBox": "Authentication__authBox___SEJh8",
-	"authTitle": "Authentication__authTitle___3r_a0",
-	"findPasswordTitle": "Authentication__findPasswordTitle___1rx9w"
+	"loginContainer": "Authentication__loginContainer___30btQ",
+	"loginBody": "Authentication__loginBody___2rLB1",
+	"loginLogo": "Authentication__loginLogo___743SL",
+	"loginBox": "Authentication__loginBox___1eItI",
+	"border": "Authentication__border___2w57t",
+	"loginForm": "Authentication__loginForm___3eJ4P",
+	"boxFooter": "Authentication__boxFooter___jANjm",
+	"loginFooter": "Authentication__loginFooter___kRQxJ",
+	"logoBox": "Authentication__logoBox___2gXEk",
+	"signupFooter": "Authentication__signupFooter___2-CYF",
+	"loginBtn": "Authentication__loginBtn___t13VB",
+	"authBtn": "Authentication__authBtn___2L_OZ",
+	"kakao": "Authentication__kakao___S56T1",
+	"kakaoBody": "Authentication__kakaoBody___2Ya08",
+	"naver": "Authentication__naver___1kJAM",
+	"naverBody": "Authentication__naverBody___8MYn5",
+	"facebook": "Authentication__facebook___3vCKh",
+	"facebookBody": "Authentication__facebookBody___mlPEd",
+	"sellevBtn": "Authentication__sellevBtn___3ADXA",
+	"sellevBody": "Authentication__sellevBody___aIjHA",
+	"findPasswordContainer": "Authentication__findPasswordContainer___1ANW-",
+	"signupContainer": "Authentication__signupContainer___qzlBQ",
+	"signupCheckbox": "Authentication__signupCheckbox___3LXzS",
+	"ckeckboxBlackIcon": "Authentication__ckeckboxBlackIcon___1-NzR",
+	"ckeckboxLabel": "Authentication__ckeckboxLabel___8C7eL",
+	"authBody": "Authentication__authBody___14bFw",
+	"authLogo": "Authentication__authLogo___72gXa",
+	"authLogoMobile": "Authentication__authLogoMobile___36ypb",
+	"authBox": "Authentication__authBox___oxc28",
+	"authTitle": "Authentication__authTitle___2qR1O",
+	"findPasswordTitle": "Authentication__findPasswordTitle___2Ptgw"
 };
 
 /***/ }),
@@ -48592,9 +48610,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(AuthFooter, 'AuthFooter', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/Footer.jsx');
+    __REACT_HOT_LOADER__.register(AuthFooter, 'AuthFooter', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/Footer.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/Footer.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/Footer.jsx');
 }();
 
 ;
@@ -48638,7 +48656,7 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(parse, 'parse', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Lib/Utils/parseUrlParameter.js');
+    __REACT_HOT_LOADER__.register(parse, 'parse', 'C:/recordFarm/project-test1/src/Sellev/Lib/Utils/parseUrlParameter.js');
 }();
 
 ;
@@ -48730,9 +48748,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(SingupView, 'SingupView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/Signup.jsx');
+    __REACT_HOT_LOADER__.register(SingupView, 'SingupView', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/Signup.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/Signup.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/Signup.jsx');
 }();
 
 ;
@@ -49132,9 +49150,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(SignupBody, 'SignupBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/SignupBody.jsx');
+    __REACT_HOT_LOADER__.register(SignupBody, 'SignupBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/SignupBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/SignupBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/SignupBody.jsx');
 }();
 
 ;
@@ -49248,9 +49266,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/FindPassword.jsx');
+    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/FindPassword.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/FindPassword.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/FindPassword.jsx');
 }();
 
 ;
@@ -49544,9 +49562,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/FindPasswordVerifyBody.jsx');
+    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/FindPasswordVerifyBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/FindPasswordVerifyBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/FindPasswordVerifyBody.jsx');
 }();
 
 ;
@@ -49743,9 +49761,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/FindPasswordChangeBody.jsx');
+    __REACT_HOT_LOADER__.register(LoginView, 'LoginView', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/FindPasswordChangeBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Authentication/FindPasswordChangeBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Authentication/FindPasswordChangeBody.jsx');
 }();
 
 ;
@@ -49777,7 +49795,7 @@ var _FundingMarket = __webpack_require__(731);
 
 var _FundingMarket2 = _interopRequireDefault(_FundingMarket);
 
-var _Detail = __webpack_require__(736);
+var _Detail = __webpack_require__(737);
 
 var _Detail2 = _interopRequireDefault(_Detail);
 
@@ -49830,9 +49848,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingMarketView, 'FundingMarketView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/FundingMarket/index.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketView, 'FundingMarketView', 'C:/recordFarm/project-test1/src/Sellev/Containers/FundingMarket/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/FundingMarket/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/FundingMarket/index.jsx');
 }();
 
 ;
@@ -49917,9 +49935,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingMarketHome, 'FundingMarketHome', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/index.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketHome, 'FundingMarketHome', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/index.jsx');
 }();
 
 ;
@@ -50026,9 +50044,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Banner, 'Banner', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/Banner.jsx');
+    __REACT_HOT_LOADER__.register(Banner, 'Banner', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/Banner.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/Banner.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/Banner.jsx');
 }();
 
 ;
@@ -50169,9 +50187,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(BannerBody, 'BannerBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/BannerBody.jsx');
+    __REACT_HOT_LOADER__.register(BannerBody, 'BannerBody', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/BannerBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/BannerBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/BannerBody.jsx');
 }();
 
 ;
@@ -50185,21 +50203,21 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, "/* Banner */\n.FundingMarket__fundingMarketSection___2CUHf {\n    margin-top: 100px;\n    width: 100%;\n}\n.FundingMarket__fundingMarketHeader___2sYs2 {\n    width: 1100px;\n    margin: 0 auto 20px;\n}\n.FundingMarket__bannerBody___29k-c{\n    overflow: hidden;\n}\n.FundingMarket__listBox___2cnOH {\n    position: relative;\n    width: 323px;\n    height: 400px;\n    padding: 2px 4.5px;\n    float: left;\n}\n\n.FundingMarket__listBox___2cnOH .FundingMarket__bgImage___2-Kj_ {\n    width: 100%;\n    height: 229px;\n    border-top-left-radius: 12px;\n    border-top-right-radius: 12px;\n    background-repeat: no-repeat;\n    background-position: center center;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: cover;\n}\n.FundingMarket__listBox___2cnOH .FundingMarket__bgFooter___8WeTe {\n    width: 100%;\n    height: 121px;\n    background: black;\n    border-bottom-left-radius: 12px;\n    border-bottom-right-radius: 12px;\n    position: relative;\n}\n\n.FundingMarket__titleBox___2wAtI{\n    position: relative;\n    width: 170px;\n    bottom: 107px;\n    left: 30px;\n    color: #ffffff;\n}\n.FundingMarket__titleBox___2wAtI div:first-child{\n    font-size: 11px;\n    line-height: 1.5em;\n}\n.FundingMarket__titleBox___2wAtI div:nth-child(2){\n    font-size: 17px;\n    line-height: 1.5em;\n}\n.FundingMarket__titleBox___2wAtI div:last-child{\n    font-size: 13px;\n    line-height: 1.5em;\n    color: #ff2b2b;\n}\n.FundingMarket__fundSymbole___15RA5 {\n    width: 62px;\n    height: 62px;\n    background-color: #f40000;\n    border-radius: 31px;\n    color: #ffffff;\n    right: 10px;\n    top: -44px;\n    position: absolute;\n    padding-top: 10px;\n    text-align: center;\n}\n.FundingMarket__fundSymbole___15RA5 span:first-child {\n    font-size: 11px;\n}\n.FundingMarket__fundSymbole___15RA5 span:last-child {\n    font-size: 19px;\n}\n/*Funding Market */\n.FundingMarket__fundingMarketBody___3aMsa {\n    width: 1100px;\n    margin: 50px auto 0;\n}\n.FundingMarket__fundingMarketBody___3aMsa .FundingMarket__productBody___16PwQ {\n    overflow: hidden;\n}\n.FundingMarket__fundingMarketBody___3aMsa .FundingMarket__productBody___16PwQ .FundingMarket__productBox___2Bq3A {\n    float: left;\n    margin-right: 11px;\n}", ""]);
+exports.push([module.i, "/* Banner */\r\n.FundingMarket__fundingMarketSection___2cm9r {\r\n    margin-top: 100px;\r\n    width: 100%;\r\n}\r\n.FundingMarket__fundingMarketHeader___2mC6o {\r\n    width: 1100px;\r\n    margin: 0 auto 20px;\r\n}\r\n.FundingMarket__bannerBody___2ehwm{\r\n    overflow: hidden;\r\n}\r\n.FundingMarket__listBox___3-pk1 {\r\n    position: relative;\r\n    width: 323px;\r\n    height: 400px;\r\n    padding: 2px 4.5px;\r\n    float: left;\r\n}\r\n\r\n.FundingMarket__listBox___3-pk1 .FundingMarket__bgImage___3Emvd {\r\n    width: 100%;\r\n    height: 229px;\r\n    border-top-left-radius: 12px;\r\n    border-top-right-radius: 12px;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    -webkit-background-size: cover;\r\n    -moz-background-size: cover;\r\n    -o-background-size: cover;\r\n    background-size: cover;\r\n}\r\n.FundingMarket__listBox___3-pk1 .FundingMarket__bgFooter___RLES4 {\r\n    width: 100%;\r\n    height: 121px;\r\n    background: black;\r\n    border-bottom-left-radius: 12px;\r\n    border-bottom-right-radius: 12px;\r\n    position: relative;\r\n}\r\n\r\n.FundingMarket__titleBox___lHZD3{\r\n    position: relative;\r\n    width: 170px;\r\n    bottom: 107px;\r\n    left: 30px;\r\n    color: #ffffff;\r\n}\r\n.FundingMarket__titleBox___lHZD3 div:first-child{\r\n    font-size: 11px;\r\n    line-height: 1.5em;\r\n}\r\n.FundingMarket__titleBox___lHZD3 div:nth-child(2){\r\n    font-size: 17px;\r\n    line-height: 1.5em;\r\n}\r\n.FundingMarket__titleBox___lHZD3 div:last-child{\r\n    font-size: 13px;\r\n    line-height: 1.5em;\r\n    color: #ff2b2b;\r\n}\r\n.FundingMarket__fundSymbole___-_Hoo {\r\n    width: 62px;\r\n    height: 62px;\r\n    background-color: #f40000;\r\n    border-radius: 31px;\r\n    color: #ffffff;\r\n    right: 10px;\r\n    top: -44px;\r\n    position: absolute;\r\n    padding-top: 10px;\r\n    text-align: center;\r\n}\r\n.FundingMarket__fundSymbole___-_Hoo span:first-child {\r\n    font-size: 11px;\r\n}\r\n.FundingMarket__fundSymbole___-_Hoo span:last-child {\r\n    font-size: 19px;\r\n}\r\n/*Funding Market */\r\n.FundingMarket__fundingMarketBody___1uNJ4 {\r\n    width: 1100px;\r\n    margin: 50px auto 0;\r\n}\r\n.FundingMarket__fundingMarketBody___1uNJ4 .FundingMarket__productBody___3zkOX {\r\n    overflow: hidden;\r\n    margin: 30px auto;\r\n}\r\n.FundingMarket__fundingMarketBody___1uNJ4 .FundingMarket__productBody___3zkOX .FundingMarket__productBox___38t7B {\r\n    float: left;\r\n    margin-right: 11px;\r\n}\r\n\r\n\r\n@media screen and (max-width: 1100px){\r\n    .FundingMarket__fundingMarketBody___1uNJ4 {\r\n        width: 830px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 768px){\r\n    .FundingMarket__bannerBody___2ehwm {\r\n        width: 100%;\r\n    }\r\n    .FundingMarket__fundingMarketBody___1uNJ4 {\r\n        max-width: 768px;\r\n        width: auto;\r\n        margin-left: 30px;\r\n        margin-right: 30px;\r\n    }\r\n    .FundingMarket__fundingMarketBody___1uNJ4 .FundingMarket__productBody___3zkOX .FundingMarket__productBox___38t7B {\r\n        margin-right: 0;\r\n        float: none;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"fundingMarketSection": "FundingMarket__fundingMarketSection___2CUHf",
-	"fundingMarketHeader": "FundingMarket__fundingMarketHeader___2sYs2",
-	"bannerBody": "FundingMarket__bannerBody___29k-c",
-	"listBox": "FundingMarket__listBox___2cnOH",
-	"bgImage": "FundingMarket__bgImage___2-Kj_",
-	"bgFooter": "FundingMarket__bgFooter___8WeTe",
-	"titleBox": "FundingMarket__titleBox___2wAtI",
-	"fundSymbole": "FundingMarket__fundSymbole___15RA5",
-	"fundingMarketBody": "FundingMarket__fundingMarketBody___3aMsa",
-	"productBody": "FundingMarket__productBody___16PwQ",
-	"productBox": "FundingMarket__productBox___2Bq3A"
+	"fundingMarketSection": "FundingMarket__fundingMarketSection___2cm9r",
+	"fundingMarketHeader": "FundingMarket__fundingMarketHeader___2mC6o",
+	"bannerBody": "FundingMarket__bannerBody___2ehwm",
+	"listBox": "FundingMarket__listBox___3-pk1",
+	"bgImage": "FundingMarket__bgImage___3Emvd",
+	"bgFooter": "FundingMarket__bgFooter___RLES4",
+	"titleBox": "FundingMarket__titleBox___lHZD3",
+	"fundSymbole": "FundingMarket__fundSymbole___-_Hoo",
+	"fundingMarketBody": "FundingMarket__fundingMarketBody___1uNJ4",
+	"productBody": "FundingMarket__productBody___3zkOX",
+	"productBox": "FundingMarket__productBox___38t7B"
 };
 
 /***/ }),
@@ -50237,6 +50255,12 @@ var _App = __webpack_require__(14);
 
 var _App2 = _interopRequireDefault(_App);
 
+var _action = __webpack_require__(736);
+
+var ActionList = _interopRequireWildcard(_action);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50250,8 +50274,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 // Styles
 
-
 // Actions
+
 
 var FundingMarketList = function (_React$Component) {
     _inherits(FundingMarketList, _React$Component);
@@ -50259,94 +50283,17 @@ var FundingMarketList = function (_React$Component) {
     function FundingMarketList(props) {
         _classCallCheck(this, FundingMarketList);
 
-        var _this = _possibleConstructorReturn(this, (FundingMarketList.__proto__ || Object.getPrototypeOf(FundingMarketList)).call(this, props));
-
-        _this.state = {
-            list: [{
-                bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
-                profile: '/Sellev/assets/img/img_sellever_profile.png',
-                title: '이 인터뷰는 유명해지지 않았으면 해',
-                name: '자이언티',
-                price: 25900,
-                left: 5,
-                type: 'market'
-            }, {
-                bgImage: '/Sellev/assets/img/img_funding_2.png',
-                profile: '/Sellev/assets/img/img_sellever_profile.png',
-                title: '이 인터뷰는 유명해지지 않았으면 해',
-                name: '자이언티',
-                percentOfFund: 60,
-                attendant: 145,
-                left: 5,
-                goal: 1200,
-                type: 'funding'
-            }, {
-                bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
-                profile: '/Sellev/assets/img/img_sellever_profile.png',
-                title: '이 인터뷰는 유명해지지 않았으면 해',
-                name: '자이언티',
-                price: 25900,
-                left: 50,
-                type: 'market'
-            }, {
-                bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
-                profile: '/Sellev/assets/img/img_sellever_profile.png',
-                title: '이 인터뷰는 유명해지지 않았으면 해',
-                name: '자이언티',
-                percentOfFund: 60,
-                attendant: 145,
-                left: 22,
-                goal: 1200,
-                type: 'funding'
-            }, {
-                bgImage: '/Sellev/assets/img/img_today_funding_1.png',
-                profile: '/Sellev/assets/img/img_sellever_profile.png',
-                title: '이 인터뷰는 유명해지지 않았으면 해',
-                name: '자이언티',
-                percentOfFund: 60,
-                attendant: 145,
-                left: 22,
-                goal: 1200,
-                type: 'funding'
-            }, {
-                bgImage: '/Sellev/assets/img/img_today_funding_2.png',
-                profile: '/Sellev/assets/img/img_sellever_profile.png',
-                title: '이 인터뷰는 유명해지지 않았으면 해',
-                name: '자이언티',
-                price: 25900,
-                left: 5,
-                type: 'market'
-            }, {
-                bgImage: '/Sellev/assets/img/img_today_funding_3.png',
-                profile: '/Sellev/assets/img/img_user.png',
-                title: '이 인터뷰는 유명해지지 않았으면 해',
-                name: '자이언티',
-                percentOfFund: 60,
-                attendant: 145,
-                left: 22,
-                goal: 1200,
-                type: 'funding'
-            }, {
-                bgImage: '/Sellev/assets/img/img_today_funding_4.png',
-                profile: '/Sellev/assets/img/img_user.png',
-                title: '이 인터뷰는 유명해지지 않았으면 해',
-                name: '자이언티',
-                price: 25900,
-                left: 12,
-                type: 'market'
-            }]
-        };
-        return _this;
+        return _possibleConstructorReturn(this, (FundingMarketList.__proto__ || Object.getPrototypeOf(FundingMarketList)).call(this, props));
     }
 
     _createClass(FundingMarketList, [{
         key: 'render',
         value: function render() {
-            var fundingMarketList = this.state.list.map(function (item, index) {
+            var fundingMarketList = ActionList.FUNDING_MARKET_LIST.map(function (item, index) {
                 return _react2.default.createElement(
                     'div',
-                    { className: _FundingMarket2.default.productBox },
-                    _react2.default.createElement(_ImageList2.default, { key: index, type: 'fundingmarket', listItem: item })
+                    { className: _FundingMarket2.default.productBox, key: index },
+                    _react2.default.createElement(_ImageList2.default, { type: 'fundingmarket', listItem: item })
                 );
             });
             return _react2.default.createElement(
@@ -50403,15 +50350,110 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(FundingMarketList, 'FundingMarketList', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/List.jsx');
+    __REACT_HOT_LOADER__.register(FundingMarketList, 'FundingMarketList', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/List.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/List.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/List.jsx');
 }();
 
 ;
 
 /***/ }),
 /* 736 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var FUNDING_MARKET_LIST = exports.FUNDING_MARKET_LIST = [{
+    bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
+    profile: '/Sellev/assets/img/img_sellever_profile.png',
+    title: '이 인터뷰는 유명해지지 않았으면 해',
+    name: '자이언티',
+    price: 25900,
+    left: 5,
+    type: 'market'
+}, {
+    bgImage: '/Sellev/assets/img/img_funding_2.png',
+    profile: '/Sellev/assets/img/img_sellever_profile.png',
+    title: '이 인터뷰는 유명해지지 않았으면 해',
+    name: '자이언티',
+    percentOfFund: 30,
+    attendant: 145,
+    left: 5,
+    goal: 1200,
+    type: 'funding'
+}, {
+    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
+    profile: '/Sellev/assets/img/img_sellever_profile.png',
+    title: '이 인터뷰는 유명해지지 않았으면 해',
+    name: '자이언티',
+    price: 25900,
+    left: 50,
+    type: 'market'
+}, {
+    bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
+    profile: '/Sellev/assets/img/img_sellever_profile.png',
+    title: '이 인터뷰는 유명해지지 않았으면 해',
+    name: '자이언티',
+    percentOfFund: 10,
+    attendant: 145,
+    left: 22,
+    goal: 1200,
+    type: 'funding'
+}, {
+    bgImage: '/Sellev/assets/img/img_today_funding_1.png',
+    profile: '/Sellev/assets/img/img_sellever_profile.png',
+    title: '이 인터뷰는 유명해지지 않았으면 해',
+    name: '자이언티',
+    percentOfFund: 70,
+    attendant: 145,
+    left: 22,
+    goal: 1200,
+    type: 'funding'
+}, {
+    bgImage: '/Sellev/assets/img/img_today_funding_2.png',
+    profile: '/Sellev/assets/img/img_sellever_profile.png',
+    title: '이 인터뷰는 유명해지지 않았으면 해',
+    name: '자이언티',
+    price: 25900,
+    left: 5,
+    type: 'market'
+}, {
+    bgImage: '/Sellev/assets/img/img_today_funding_3.png',
+    profile: '/Sellev/assets/img/img_user.png',
+    title: '이 인터뷰는 유명해지지 않았으면 해',
+    name: '자이언티',
+    percentOfFund: 5,
+    attendant: 145,
+    left: 22,
+    goal: 1200,
+    type: 'funding'
+}, {
+    bgImage: '/Sellev/assets/img/img_today_funding_4.png',
+    profile: '/Sellev/assets/img/img_user.png',
+    title: '이 인터뷰는 유명해지지 않았으면 해',
+    name: '자이언티',
+    price: 25900,
+    left: 12,
+    type: 'market'
+}];
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(FUNDING_MARKET_LIST, 'FUNDING_MARKET_LIST', 'C:/recordFarm/project-test1/src/Sellev/Data/FundingMarket/action.js');
+}();
+
+;
+
+/***/ }),
+/* 737 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50433,15 +50475,15 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _DetailFunding = __webpack_require__(737);
+var _DetailFunding = __webpack_require__(738);
 
 var _DetailFunding2 = _interopRequireDefault(_DetailFunding);
 
-var _DetailMarket = __webpack_require__(739);
+var _DetailMarket = __webpack_require__(740);
 
 var _DetailMarket2 = _interopRequireDefault(_DetailMarket);
 
-var _DetailRanking = __webpack_require__(740);
+var _DetailRanking = __webpack_require__(741);
 
 var _DetailRanking2 = _interopRequireDefault(_DetailRanking);
 
@@ -50499,15 +50541,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Detail, 'Detail', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/Detail.jsx');
+    __REACT_HOT_LOADER__.register(Detail, 'Detail', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/Detail.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/Detail.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/Detail.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 737 */
+/* 738 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50670,15 +50712,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailFunding, 'DetailFunding', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailFunding.jsx');
+    __REACT_HOT_LOADER__.register(DetailFunding, 'DetailFunding', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailFunding.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailFunding.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailFunding.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 738 */
+/* 739 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50970,15 +51012,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailContentSide, 'DetailContentSide', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContentSide.jsx');
+    __REACT_HOT_LOADER__.register(DetailContentSide, 'DetailContentSide', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailContentSide.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailContentSide.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailContentSide.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 739 */
+/* 740 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51145,15 +51187,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailMarket, 'DetailMarket', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailMarket.jsx');
+    __REACT_HOT_LOADER__.register(DetailMarket, 'DetailMarket', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailMarket.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailMarket.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailMarket.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 740 */
+/* 741 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51175,7 +51217,7 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _RankingList = __webpack_require__(741);
+var _RankingList = __webpack_require__(742);
 
 var _RankingList2 = _interopRequireDefault(_RankingList);
 
@@ -51310,15 +51352,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailRanking, 'DetailRanking', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailRanking.jsx');
+    __REACT_HOT_LOADER__.register(DetailRanking, 'DetailRanking', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailRanking.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/DetailRanking.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/DetailRanking.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 741 */
+/* 742 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51432,15 +51474,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(RankingList, 'RankingList', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/RankingList.jsx');
+    __REACT_HOT_LOADER__.register(RankingList, 'RankingList', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/RankingList.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/FundingMarket/RankingList.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/FundingMarket/RankingList.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 742 */
+/* 743 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51462,11 +51504,11 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _Detail = __webpack_require__(743);
+var _Detail = __webpack_require__(744);
 
 var _Detail2 = _interopRequireDefault(_Detail);
 
-var _HashTag = __webpack_require__(751);
+var _HashTag = __webpack_require__(752);
 
 var _HashTag2 = _interopRequireDefault(_HashTag);
 
@@ -51516,15 +51558,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(HashTagView, 'HashTagView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/HashTag/index.jsx');
+    __REACT_HOT_LOADER__.register(HashTagView, 'HashTagView', 'C:/recordFarm/project-test1/src/Sellev/Containers/HashTag/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/HashTag/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/HashTag/index.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 743 */
+/* 744 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51546,11 +51588,11 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _DetailHeader = __webpack_require__(744);
+var _DetailHeader = __webpack_require__(745);
 
 var _DetailHeader2 = _interopRequireDefault(_DetailHeader);
 
-var _DetailBody = __webpack_require__(746);
+var _DetailBody = __webpack_require__(747);
 
 var _DetailBody2 = _interopRequireDefault(_DetailBody);
 
@@ -51614,15 +51656,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(HashTagDetail, 'HashTagDetail', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/Detail.jsx');
+    __REACT_HOT_LOADER__.register(HashTagDetail, 'HashTagDetail', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/Detail.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/Detail.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/Detail.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 744 */
+/* 745 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51741,15 +51783,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailHeader, 'DetailHeader', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailHeader.jsx');
+    __REACT_HOT_LOADER__.register(DetailHeader, 'DetailHeader', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailHeader.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailHeader.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailHeader.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 745 */
+/* 746 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(30)(undefined);
@@ -51757,50 +51799,50 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, ".HashTag__hashTagContainer___3YaC8 {\n    width: 100%;\n    overflow: hidden;\n}\n\n/* Common */\n\n.HashTag__detailSectionTitle___2Nn_1 {\n    height: 19px;\n    line-height: 19px;\n    width: 100%;\n    max-width: 1100px;\n    width: 100%;\n    margin: 0 auto;\n}\n\n.HashTag__detailSectionTitle___2Nn_1 .HashTag__title___2rS9S{\n    color: #212121;\n    letter-spacing: -0.7px;\n    font-size: 19px;\n    font-weight: 700;\n    float: left;\n}\n\n.HashTag__detailSectionTitle___2Nn_1 .HashTag__viewAll___1CSu7 {\n    color: #fd0a0a;\n    font-size: 16px;\n    letter-spacing: -0.6px;\n    float: right;\n}\n\n.HashTag__hashTagItem___Nqbq5 {\n    width: 100px;\n    height: 100px;\n    position: relative;\n    margin-right: 18px;\n    display: inline-block;\n    border-radius: 100%;\n    background: #fc2222;\n}\n\n.HashTag__hashTagItem___Nqbq5 .HashTag__profile___3daOR {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    border-radius: 100%;\n    opacity: 0.5;\n    mix-blend-mode: multiply;\n    background-repeat: no-repeat;\n    background-position: center center;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: cover;\n}\n\n.HashTag__hashTagItem___Nqbq5 .HashTag__name___1ZJZl {\n    text-align: center;\n    color: #ffffff;\n    position: absolute;\n    width: 90%;\n    top: 43px;\n    left: 5%;\n    font-size: 16px;\n    height: 19px;\n    line-height: 19px;\n    letter-spacing: -0.6px;\n    overflow: hidden;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n\n.HashTag__hashTagItem___Nqbq5:last-child {\n    margin-right: 0;\n}\n\n.HashTag__profileItem___2tuRs {\n    display: inline-block;\n    margin-right: 18px;\n    text-align: center;\n}\n\n.HashTag__profileItem___2tuRs .HashTag__profile___3daOR {\n    width: 100px;\n    height: 100px;\n    border-radius: 100%;\n    background-repeat: no-repeat;\n    background-position: center center;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: cover;\n}\n\n.HashTag__profileItem___2tuRs .HashTag__name___1ZJZl {\n    margin-top: 10px;\n}\n\n.HashTag__profileItem___2tuRs:last-child {\n    margin-right: 0;\n}\n\n\n/* HashTag Main Page */\n\n.HashTag__hashTagHomeContainer___31bEB {\n    overflow: hidden;\n}\n\n.HashTag__recommendedSection___1EL6y {\n    margin-top: 133px;\n    width: 100%;\n    display: block;\n    position: relative;\n}\n\n.HashTag__recommendedSection___1EL6y .HashTag__recommendedHeader___3ro_n {\n    width: 1100px;\n    margin: 0 auto 20px;\n}\n\nrecommendedSection .HashTag__recommendedBody___ZxPQW {\n    padding-top: 15px;\n    padding-bottom: 108px;\n}\n\n.HashTag__newSection___2-3Df {\n\n}\n\n.HashTag__newSection___2-3Df .HashTag__newHeader___2c_RQ {\n    max-width: 1100px;\n    margin: 0 auto 20px;\n}\n\n.HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 {\n    padding-top: 32px;\n    padding-bottom: 90px;\n}\n\n.HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM {\n    max-width: 1100px;\n    margin: 0 auto;\n}\n\n.HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B {\n    width: 49.5%;\n    height: 89px;\n    float: left;\n    border-radius: 4px;\n    border: 1px solid #e6e6e6;\n    border-bottom: none;\n    background-color: #FFFFFF;\n    position: relative;\n}\n\n.HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B .HashTag__title___2rS9S {\n    position: absolute;\n    line-height: 21px;\n    width: 57%;\n    font-size: 18px;\n    top: 34px;\n    left: 27px;\n    color: #0d0d0d;\n    overflow: hidden;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n\n.HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B .HashTag__timeslot___2blhk {\n    position: absolute;\n    line-height: 19px;\n    font-size: 17px;\n    width: 30%;\n    text-align: right;\n    top: 35px;\n    right: 26px;\n    color: #313131;\n    opacity: 0.6;\n}\n\n.HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B .HashTag__timeslot___2blhk.HashTag__today___3QG9f {\n    font-size: 16px;\n    font-family: \"Product Sans\";\n    color: #ff0000;\n}\n\n.HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B:nth-child(2n) {\n    margin-left: 1%;\n}\n\n.HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B:nth-child(11), .HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B:nth-child(12) {\n    border-bottom: 1px solid #e6e6e6;\n}\n\n@media screen and (max-width: 768px) {\n    .HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B:nth-child(11) {\n        border-bottom: none;\n    }\n    .HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B {\n        width: 100%;\n        border-radius: 0px;\n        border-left: none;\n        border-right: none;\n    }\n    .HashTag__newSection___2-3Df .HashTag__newBody___KPxe3 .HashTag__list___3GfCM .HashTag__item___M8Y_B:nth-child(2n) {\n        margin: 0;\n    }\n}\n\n/* HashTag Detail Page */\n\n.HashTag__hashTagDetailContainer___2zl9W {\n\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__detailHeader___1XJA7 {\n    padding-top: 103px;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__detailHeader___1XJA7 .HashTag__bgBox___mm80U {\n    position: absolute;\n    width: 100%;\n    height: 263px;\n    top: 0;\n    left: 0;\n    background-color: #ff0000;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__detailHeader___1XJA7 .HashTag__bgImage___3p97x {\n    position: absolute;\n    width: 100%;\n    height: 263px;\n    top: 0;\n    left: 0;\n    opacity: 0.25;\n    background-repeat: no-repeat;\n    background-position: center center;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: cover;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__detailHeader___1XJA7 .HashTag__profileBox___3KN-d {\n    width: 100%;\n    position: relative;\n    text-align: center;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__detailHeader___1XJA7 .HashTag__profileBox___3KN-d .HashTag__name___1ZJZl {\n    height: 40px;\n    font-size: 33px;\n    font-weight: 700;\n    color: #ffffff;\n    letter-spacing: -1.6px;\n    line-height: 40px;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__detailHeader___1XJA7 .HashTag__profileBox___3KN-d .HashTag__like___3lv-f {\n    height: 36px;\n    line-height: 36px;\n    color: #ffffff;\n    font-size: 15px;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__detailHeader___1XJA7 .HashTag__profileBox___3KN-d .HashTag__icon___1Hu6b {\n    background-image: url('/Sellev/assets/img/ic_web_icon.png');\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__detailHeader___1XJA7 .HashTag__profileBox___3KN-d .HashTag__profile___3daOR {\n    width: 130px;\n    height: 130px;\n    margin: 8px auto 0;\n    border-radius: 100%;\n    background-color: #fa2828;\n    box-shadow: 12px 10px 27px 0 rgba(250, 40, 40, 0.56);\n    background-repeat: no-repeat;\n    background-position: center center;\n    -webkit-background-size: cover;\n    -moz-background-size: cover;\n    -o-background-size: cover;\n    background-size: cover;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__detailBody___1mt3c {\n    overflow: hidden;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__relatedHashTagSection___1MEcZ {\n\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__relatedHashTagSection___1MEcZ .HashTag__content___2m7ka {\n    padding-top: 20px;\n    padding-bottom: 57px;\n    width: 100%;\n    max-width: 1100px;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__relatedSelleverSection___30ckL {\n\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__relatedSelleverSection___30ckL .HashTag__content___2m7ka {\n    padding-top: 20px;\n    padding-bottom: 80px;\n    width: 100%;\n    max-width: 1100px;\n}\n\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__fundingMarketSection___14UkP {\n    width: 1100px;\n    margin: 0px auto;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__fundingMarketSection___14UkP .HashTag__productBody___2sU2P {\n    overflow: hidden;\n    width: 1100px;\n    margin-top: 20px;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__fundingMarketSection___14UkP .HashTag__productBody___2sU2P .HashTag__productBox___1HIrH {\n    float: left;\n    margin-right: 11px;\n}\n\n@media screen and (max-width: 768px) {\n    .HashTag__hashTagDetailContainer___2zl9W .HashTag__fundingMarketSection___14UkP .HashTag__productBody___2sU2P .HashTag__productBox___1HIrH {\n        width: 100%;\n    }\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__videoSection___22c8v {\n    width: 1100px;\n    margin: 0px auto 50px;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__videoSection___22c8v .HashTag__videoBody___2TZ23 {\n    width: 100%;\n    margin-top: 20px;\n}\n\n.HashTag__hashTagDetailContainer___2zl9W .HashTag__videoSection___22c8v .HashTag__videoBody___2TZ23 .HashTag__videoBox___J-lBf {\n    width: 264px;\n    display: inline-block;\n    margin-right: 10px;\n}\n\n@media screen and (max-width: 1100px){\n    .HashTag__hashTagDetailContainer___2zl9W .HashTag__videoSection___22c8v {\n        width: 825px;\n    }\n}\n\n@media screen and (max-width: 850px){\n    .HashTag__hashTagDetailContainer___2zl9W .HashTag__videoSection___22c8v {\n        width: 550px;\n    }\n}\n\n/*모바일 반응형*/\n\n@media screen and (max-width: 768px){\n\n    /*오늘의 동영상 */\n\n    .HashTag__hashTagDetailContainer___2zl9W .HashTag__videoSection___22c8v {\n        max-width: 768px;\n        width: auto;\n    }\n\n    .HashTag__hashTagDetailContainer___2zl9W .HashTag__videoSection___22c8v .HashTag__videoBody___2TZ23 .HashTag__videoBox___J-lBf {\n        width: 100%;\n    }\n\n}", ""]);
+exports.push([module.i, ".HashTag__hashTagContainer___1PRjq {\r\n    width: 100%;\r\n    overflow: hidden;\r\n}\r\n\r\n/* Common */\r\n\r\n.HashTag__detailSectionTitle___106Kd {\r\n    height: 19px;\r\n    line-height: 19px;\r\n    width: 100%;\r\n    max-width: 1100px;\r\n    width: 100%;\r\n    margin: 0 auto;\r\n}\r\n\r\n.HashTag__detailSectionTitle___106Kd .HashTag__title___feJm9{\r\n    color: #212121;\r\n    letter-spacing: -0.7px;\r\n    font-size: 19px;\r\n    font-weight: 700;\r\n    float: left;\r\n}\r\n\r\n.HashTag__detailSectionTitle___106Kd .HashTag__viewAll___GnkLX {\r\n    color: #fd0a0a;\r\n    font-size: 16px;\r\n    letter-spacing: -0.6px;\r\n    float: right;\r\n}\r\n\r\n.HashTag__hashTagItem___2Ouur {\r\n    width: 100px;\r\n    height: 100px;\r\n    position: relative;\r\n    margin-right: 18px;\r\n    display: inline-block;\r\n    border-radius: 100%;\r\n    background: #fc2222;\r\n}\r\n\r\n.HashTag__hashTagItem___2Ouur .HashTag__profile___3AEFd {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 100%;\r\n    opacity: 0.5;\r\n    mix-blend-mode: multiply;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    -webkit-background-size: cover;\r\n    -moz-background-size: cover;\r\n    -o-background-size: cover;\r\n    background-size: cover;\r\n}\r\n\r\n.HashTag__hashTagItem___2Ouur .HashTag__name___3VFIC {\r\n    text-align: center;\r\n    color: #ffffff;\r\n    position: absolute;\r\n    width: 90%;\r\n    top: 43px;\r\n    left: 5%;\r\n    font-size: 16px;\r\n    height: 19px;\r\n    line-height: 19px;\r\n    letter-spacing: -0.6px;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.HashTag__hashTagItem___2Ouur:last-child {\r\n    margin-right: 0;\r\n}\r\n\r\n.HashTag__profileItem___oSmuT {\r\n    display: inline-block;\r\n    margin-right: 18px;\r\n    text-align: center;\r\n}\r\n\r\n.HashTag__profileItem___oSmuT .HashTag__profile___3AEFd {\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    -webkit-background-size: cover;\r\n    -moz-background-size: cover;\r\n    -o-background-size: cover;\r\n    background-size: cover;\r\n}\r\n\r\n.HashTag__profileItem___oSmuT .HashTag__name___3VFIC {\r\n    margin-top: 10px;\r\n}\r\n\r\n.HashTag__profileItem___oSmuT:last-child {\r\n    margin-right: 0;\r\n}\r\n\r\n\r\n/* HashTag Main Page */\r\n\r\n.HashTag__hashTagHomeContainer___BdbT7 {\r\n    overflow: hidden;\r\n}\r\n\r\n.HashTag__recommendedSection___aZaxA {\r\n    margin-top: 133px;\r\n    width: 100%;\r\n    display: block;\r\n    position: relative;\r\n}\r\n\r\n.HashTag__recommendedSection___aZaxA .HashTag__recommendedHeader___2dTzD {\r\n    width: 1100px;\r\n    margin: 0 auto 20px;\r\n}\r\n\r\nrecommendedSection .HashTag__recommendedBody___2sXnS {\r\n    padding-top: 15px;\r\n    padding-bottom: 108px;\r\n}\r\n\r\n.HashTag__newSection___13m2Q {\r\n\r\n}\r\n\r\n.HashTag__newSection___13m2Q .HashTag__newHeader___1WD7F {\r\n    max-width: 1100px;\r\n    margin: 0 auto 20px;\r\n}\r\n\r\n.HashTag__newSection___13m2Q .HashTag__newBody___2WdWe {\r\n    padding-top: 32px;\r\n    padding-bottom: 90px;\r\n}\r\n\r\n.HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 {\r\n    max-width: 1100px;\r\n    margin: 0 auto;\r\n}\r\n\r\n.HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4 {\r\n    width: 49.5%;\r\n    height: 89px;\r\n    float: left;\r\n    border-radius: 4px;\r\n    border: 1px solid #e6e6e6;\r\n    border-bottom: none;\r\n    background-color: #FFFFFF;\r\n    position: relative;\r\n}\r\n\r\n.HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4 .HashTag__title___feJm9 {\r\n    position: absolute;\r\n    line-height: 21px;\r\n    width: 57%;\r\n    font-size: 18px;\r\n    top: 34px;\r\n    left: 27px;\r\n    color: #0d0d0d;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n\r\n.HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4 .HashTag__timeslot___2702t {\r\n    position: absolute;\r\n    line-height: 19px;\r\n    font-size: 17px;\r\n    width: 30%;\r\n    text-align: right;\r\n    top: 35px;\r\n    right: 26px;\r\n    color: #313131;\r\n    opacity: 0.6;\r\n}\r\n\r\n.HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4 .HashTag__timeslot___2702t.HashTag__today___30z_L {\r\n    font-size: 16px;\r\n    font-family: \"Product Sans\";\r\n    color: #ff0000;\r\n}\r\n\r\n.HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4:nth-child(2n) {\r\n    margin-left: 1%;\r\n}\r\n\r\n.HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4:nth-child(11), .HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4:nth-child(12) {\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n    .HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4:nth-child(11) {\r\n        border-bottom: none;\r\n    }\r\n    .HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4 {\r\n        width: 100%;\r\n        border-radius: 0px;\r\n        border-left: none;\r\n        border-right: none;\r\n    }\r\n    .HashTag__newSection___13m2Q .HashTag__newBody___2WdWe .HashTag__list___28ST9 .HashTag__item___3PcM4:nth-child(2n) {\r\n        margin: 0;\r\n    }\r\n}\r\n\r\n/* HashTag Detail Page */\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 {\r\n\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__detailHeader___3mMyI {\r\n    padding-top: 103px;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__detailHeader___3mMyI .HashTag__bgBox___2YTEX {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 263px;\r\n    top: 0;\r\n    left: 0;\r\n    background-color: #ff0000;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__detailHeader___3mMyI .HashTag__bgImage___3fFnt {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 263px;\r\n    top: 0;\r\n    left: 0;\r\n    opacity: 0.4;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    -webkit-background-size: cover;\r\n    -moz-background-size: cover;\r\n    -o-background-size: cover;\r\n    background-size: cover;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__detailHeader___3mMyI .HashTag__profileBox___2pwH4 {\r\n    width: 100%;\r\n    position: relative;\r\n    text-align: center;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__detailHeader___3mMyI .HashTag__profileBox___2pwH4 .HashTag__name___3VFIC {\r\n    height: 40px;\r\n    font-size: 33px;\r\n    font-weight: 700;\r\n    color: #ffffff;\r\n    letter-spacing: -1.6px;\r\n    line-height: 40px;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__detailHeader___3mMyI .HashTag__profileBox___2pwH4 .HashTag__like___3lM24 {\r\n    height: 36px;\r\n    line-height: 36px;\r\n    color: #ffffff;\r\n    font-size: 15px;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__detailHeader___3mMyI .HashTag__profileBox___2pwH4 .HashTag__icon___3sUH7 {\r\n    background-image: url('/Sellev/assets/img/ic_web_icon.png');\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__detailHeader___3mMyI .HashTag__profileBox___2pwH4 .HashTag__profile___3AEFd {\r\n    width: 130px;\r\n    height: 130px;\r\n    margin: 8px auto 0;\r\n    border-radius: 100%;\r\n    background-color: #fa2828;\r\n    box-shadow: 12px 10px 27px 0 rgba(250, 40, 40, 0.56);\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    -webkit-background-size: cover;\r\n    -moz-background-size: cover;\r\n    -o-background-size: cover;\r\n    background-size: cover;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__detailBody___3YkU- {\r\n    overflow: hidden;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__relatedHashTagSection___7CDam {\r\n\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__relatedHashTagSection___7CDam .HashTag__content___1rZ7B {\r\n    padding-top: 20px;\r\n    padding-bottom: 57px;\r\n    width: 100%;\r\n    max-width: 1100px;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__relatedSelleverSection___1MOOg {\r\n\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__relatedSelleverSection___1MOOg .HashTag__content___1rZ7B {\r\n    padding-top: 20px;\r\n    padding-bottom: 80px;\r\n    width: 100%;\r\n    max-width: 1100px;\r\n}\r\n\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__fundingMarketSection___2zcxD {\r\n    width: 1100px;\r\n    margin: 0px auto;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__fundingMarketSection___2zcxD .HashTag__productBody___ooe4o {\r\n    overflow: hidden;\r\n    width: 1100px;\r\n    margin-top: 20px;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__fundingMarketSection___2zcxD .HashTag__productBody___ooe4o .HashTag__productBox___2V3Q9 {\r\n    float: left;\r\n    margin-right: 11px;\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n    .HashTag__hashTagDetailContainer___3bqo0 .HashTag__fundingMarketSection___2zcxD .HashTag__productBody___ooe4o .HashTag__productBox___2V3Q9 {\r\n        width: 100%;\r\n    }\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__videoSection___3_SdO {\r\n    width: 1100px;\r\n    margin: 0px auto 50px;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__videoSection___3_SdO .HashTag__videoBody___1Rs5S {\r\n    width: 100%;\r\n    margin-top: 20px;\r\n}\r\n\r\n.HashTag__hashTagDetailContainer___3bqo0 .HashTag__videoSection___3_SdO .HashTag__videoBody___1Rs5S .HashTag__videoBox___1KHEZ {\r\n    width: 264px;\r\n    display: inline-block;\r\n    margin-right: 10px;\r\n}\r\n\r\n@media screen and (max-width: 1100px){\r\n    .HashTag__hashTagDetailContainer___3bqo0 .HashTag__videoSection___3_SdO {\r\n        width: 825px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 850px){\r\n    .HashTag__hashTagDetailContainer___3bqo0 .HashTag__videoSection___3_SdO {\r\n        width: 550px;\r\n    }\r\n}\r\n\r\n/*모바일 반응형*/\r\n\r\n@media screen and (max-width: 768px){\r\n\r\n    /*오늘의 동영상 */\r\n\r\n    .HashTag__hashTagDetailContainer___3bqo0 .HashTag__videoSection___3_SdO {\r\n        max-width: 768px;\r\n        width: auto;\r\n    }\r\n\r\n    .HashTag__hashTagDetailContainer___3bqo0 .HashTag__videoSection___3_SdO .HashTag__videoBody___1Rs5S .HashTag__videoBox___1KHEZ {\r\n        width: 100%;\r\n    }\r\n\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"hashTagContainer": "HashTag__hashTagContainer___3YaC8",
-	"detailSectionTitle": "HashTag__detailSectionTitle___2Nn_1",
-	"title": "HashTag__title___2rS9S",
-	"viewAll": "HashTag__viewAll___1CSu7",
-	"hashTagItem": "HashTag__hashTagItem___Nqbq5",
-	"profile": "HashTag__profile___3daOR",
-	"name": "HashTag__name___1ZJZl",
-	"profileItem": "HashTag__profileItem___2tuRs",
-	"hashTagHomeContainer": "HashTag__hashTagHomeContainer___31bEB",
-	"recommendedSection": "HashTag__recommendedSection___1EL6y",
-	"recommendedHeader": "HashTag__recommendedHeader___3ro_n",
-	"recommendedBody": "HashTag__recommendedBody___ZxPQW",
-	"newSection": "HashTag__newSection___2-3Df",
-	"newHeader": "HashTag__newHeader___2c_RQ",
-	"newBody": "HashTag__newBody___KPxe3",
-	"list": "HashTag__list___3GfCM",
-	"item": "HashTag__item___M8Y_B",
-	"timeslot": "HashTag__timeslot___2blhk",
-	"today": "HashTag__today___3QG9f",
-	"hashTagDetailContainer": "HashTag__hashTagDetailContainer___2zl9W",
-	"detailHeader": "HashTag__detailHeader___1XJA7",
-	"bgBox": "HashTag__bgBox___mm80U",
-	"bgImage": "HashTag__bgImage___3p97x",
-	"profileBox": "HashTag__profileBox___3KN-d",
-	"like": "HashTag__like___3lv-f",
-	"icon": "HashTag__icon___1Hu6b",
-	"detailBody": "HashTag__detailBody___1mt3c",
-	"relatedHashTagSection": "HashTag__relatedHashTagSection___1MEcZ",
-	"content": "HashTag__content___2m7ka",
-	"relatedSelleverSection": "HashTag__relatedSelleverSection___30ckL",
-	"fundingMarketSection": "HashTag__fundingMarketSection___14UkP",
-	"productBody": "HashTag__productBody___2sU2P",
-	"productBox": "HashTag__productBox___1HIrH",
-	"videoSection": "HashTag__videoSection___22c8v",
-	"videoBody": "HashTag__videoBody___2TZ23",
-	"videoBox": "HashTag__videoBox___J-lBf"
+	"hashTagContainer": "HashTag__hashTagContainer___1PRjq",
+	"detailSectionTitle": "HashTag__detailSectionTitle___106Kd",
+	"title": "HashTag__title___feJm9",
+	"viewAll": "HashTag__viewAll___GnkLX",
+	"hashTagItem": "HashTag__hashTagItem___2Ouur",
+	"profile": "HashTag__profile___3AEFd",
+	"name": "HashTag__name___3VFIC",
+	"profileItem": "HashTag__profileItem___oSmuT",
+	"hashTagHomeContainer": "HashTag__hashTagHomeContainer___BdbT7",
+	"recommendedSection": "HashTag__recommendedSection___aZaxA",
+	"recommendedHeader": "HashTag__recommendedHeader___2dTzD",
+	"recommendedBody": "HashTag__recommendedBody___2sXnS",
+	"newSection": "HashTag__newSection___13m2Q",
+	"newHeader": "HashTag__newHeader___1WD7F",
+	"newBody": "HashTag__newBody___2WdWe",
+	"list": "HashTag__list___28ST9",
+	"item": "HashTag__item___3PcM4",
+	"timeslot": "HashTag__timeslot___2702t",
+	"today": "HashTag__today___30z_L",
+	"hashTagDetailContainer": "HashTag__hashTagDetailContainer___3bqo0",
+	"detailHeader": "HashTag__detailHeader___3mMyI",
+	"bgBox": "HashTag__bgBox___2YTEX",
+	"bgImage": "HashTag__bgImage___3fFnt",
+	"profileBox": "HashTag__profileBox___2pwH4",
+	"like": "HashTag__like___3lM24",
+	"icon": "HashTag__icon___3sUH7",
+	"detailBody": "HashTag__detailBody___3YkU-",
+	"relatedHashTagSection": "HashTag__relatedHashTagSection___7CDam",
+	"content": "HashTag__content___1rZ7B",
+	"relatedSelleverSection": "HashTag__relatedSelleverSection___1MOOg",
+	"fundingMarketSection": "HashTag__fundingMarketSection___2zcxD",
+	"productBody": "HashTag__productBody___ooe4o",
+	"productBox": "HashTag__productBox___2V3Q9",
+	"videoSection": "HashTag__videoSection___3_SdO",
+	"videoBody": "HashTag__videoBody___1Rs5S",
+	"videoBox": "HashTag__videoBox___1KHEZ"
 };
 
 /***/ }),
-/* 746 */
+/* 747 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51822,19 +51864,19 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _DetailRelatedHashTag = __webpack_require__(747);
+var _DetailRelatedHashTag = __webpack_require__(748);
 
 var _DetailRelatedHashTag2 = _interopRequireDefault(_DetailRelatedHashTag);
 
-var _DetailRelatedSellever = __webpack_require__(748);
+var _DetailRelatedSellever = __webpack_require__(749);
 
 var _DetailRelatedSellever2 = _interopRequireDefault(_DetailRelatedSellever);
 
-var _DetailFundingMarket = __webpack_require__(749);
+var _DetailFundingMarket = __webpack_require__(750);
 
 var _DetailFundingMarket2 = _interopRequireDefault(_DetailFundingMarket);
 
-var _DetailVideo = __webpack_require__(750);
+var _DetailVideo = __webpack_require__(751);
 
 var _DetailVideo2 = _interopRequireDefault(_DetailVideo);
 
@@ -51900,15 +51942,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailBody, 'DetailBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailBody.jsx');
+    __REACT_HOT_LOADER__.register(DetailBody, 'DetailBody', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailBody.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 747 */
+/* 748 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52018,15 +52060,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailRelatedHashTag, 'DetailRelatedHashTag', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailRelatedHashTag.jsx');
+    __REACT_HOT_LOADER__.register(DetailRelatedHashTag, 'DetailRelatedHashTag', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailRelatedHashTag.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailRelatedHashTag.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailRelatedHashTag.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 748 */
+/* 749 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52136,15 +52178,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailRelatedSellever, 'DetailRelatedSellever', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailRelatedSellever.jsx');
+    __REACT_HOT_LOADER__.register(DetailRelatedSellever, 'DetailRelatedSellever', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailRelatedSellever.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailRelatedSellever.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailRelatedSellever.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 749 */
+/* 750 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52295,15 +52337,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailFundingMarket, 'DetailFundingMarket', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailFundingMarket.jsx');
+    __REACT_HOT_LOADER__.register(DetailFundingMarket, 'DetailFundingMarket', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailFundingMarket.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailFundingMarket.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailFundingMarket.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 750 */
+/* 751 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52438,15 +52480,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailVideo, 'DetailVideo', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailVideo.jsx');
+    __REACT_HOT_LOADER__.register(DetailVideo, 'DetailVideo', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailVideo.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/DetailVideo.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/DetailVideo.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 751 */
+/* 752 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52468,11 +52510,11 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _Recommended = __webpack_require__(752);
+var _Recommended = __webpack_require__(753);
 
 var _Recommended2 = _interopRequireDefault(_Recommended);
 
-var _New = __webpack_require__(754);
+var _New = __webpack_require__(755);
 
 var _New2 = _interopRequireDefault(_New);
 
@@ -52536,15 +52578,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(HashTagHome, 'HashTagHome', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/index.jsx');
+    __REACT_HOT_LOADER__.register(HashTagHome, 'HashTagHome', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/index.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 752 */
+/* 753 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52566,7 +52608,7 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _RecommendedBody = __webpack_require__(753);
+var _RecommendedBody = __webpack_require__(754);
 
 var _RecommendedBody2 = _interopRequireDefault(_RecommendedBody);
 
@@ -52647,15 +52689,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(HashTagRecommended, 'HashTagRecommended', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/Recommended.jsx');
+    __REACT_HOT_LOADER__.register(HashTagRecommended, 'HashTagRecommended', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/Recommended.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/Recommended.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/Recommended.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 753 */
+/* 754 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52735,15 +52777,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(RecommendedBody, 'RecommendedBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/RecommendedBody.jsx');
+    __REACT_HOT_LOADER__.register(RecommendedBody, 'RecommendedBody', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/RecommendedBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/RecommendedBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/RecommendedBody.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 754 */
+/* 755 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52765,7 +52807,7 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _NewBody = __webpack_require__(755);
+var _NewBody = __webpack_require__(756);
 
 var _NewBody2 = _interopRequireDefault(_NewBody);
 
@@ -52851,15 +52893,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(HashTagNew, 'HashTagNew', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/New.jsx');
+    __REACT_HOT_LOADER__.register(HashTagNew, 'HashTagNew', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/New.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/New.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/New.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 755 */
+/* 756 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52964,15 +53006,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(NewBody, 'NewBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/NewBody.jsx');
+    __REACT_HOT_LOADER__.register(NewBody, 'NewBody', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/NewBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/HashTag/NewBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/HashTag/NewBody.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 756 */
+/* 757 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53035,15 +53077,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(HomeView, 'HomeView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/MyPage/index.jsx');
+    __REACT_HOT_LOADER__.register(HomeView, 'HomeView', 'C:/recordFarm/project-test1/src/Sellev/Containers/MyPage/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/MyPage/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/MyPage/index.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 757 */
+/* 758 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53106,15 +53148,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(PaymentView, 'PaymentView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Payment/index.jsx');
+    __REACT_HOT_LOADER__.register(PaymentView, 'PaymentView', 'C:/recordFarm/project-test1/src/Sellev/Containers/Payment/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Payment/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/Payment/index.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 758 */
+/* 759 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53177,15 +53219,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(SearchView, 'SearchView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Search/index.jsx');
+    __REACT_HOT_LOADER__.register(SearchView, 'SearchView', 'C:/recordFarm/project-test1/src/Sellev/Containers/Search/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Search/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/Search/index.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 759 */
+/* 760 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53248,15 +53290,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(SelleverView, 'SelleverView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Sellever/index.jsx');
+    __REACT_HOT_LOADER__.register(SelleverView, 'SelleverView', 'C:/recordFarm/project-test1/src/Sellev/Containers/Sellever/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Sellever/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/Sellever/index.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 760 */
+/* 761 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53278,15 +53320,15 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _Video = __webpack_require__(761);
+var _Video = __webpack_require__(762);
 
 var _Video2 = _interopRequireDefault(_Video);
 
-var _Detail = __webpack_require__(766);
+var _Detail = __webpack_require__(767);
 
 var _Detail2 = _interopRequireDefault(_Detail);
 
-var _Video3 = __webpack_require__(771);
+var _Video3 = __webpack_require__(772);
 
 var _Video4 = _interopRequireDefault(_Video3);
 
@@ -53344,15 +53386,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(VideoView, 'VideoView', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Video/index.jsx');
+    __REACT_HOT_LOADER__.register(VideoView, 'VideoView', 'C:/recordFarm/project-test1/src/Sellev/Containers/Video/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Containers/Video/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Containers/Video/index.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 761 */
+/* 762 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53374,11 +53416,11 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _Banner = __webpack_require__(762);
+var _Banner = __webpack_require__(763);
 
 var _Banner2 = _interopRequireDefault(_Banner);
 
-var _VideoBody = __webpack_require__(765);
+var _VideoBody = __webpack_require__(766);
 
 var _VideoBody2 = _interopRequireDefault(_VideoBody);
 
@@ -53431,15 +53473,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(VideoHome, 'VideoHome', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/index.jsx');
+    __REACT_HOT_LOADER__.register(VideoHome, 'VideoHome', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/index.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/index.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/index.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 762 */
+/* 763 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53459,7 +53501,7 @@ var _reactRouterDom = __webpack_require__(3);
 
 var _reactRedux = __webpack_require__(4);
 
-var _BannerBody = __webpack_require__(763);
+var _BannerBody = __webpack_require__(764);
 
 var _BannerBody2 = _interopRequireDefault(_BannerBody);
 
@@ -53534,15 +53576,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Banner, 'Banner', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/Banner.jsx');
+    __REACT_HOT_LOADER__.register(Banner, 'Banner', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/Banner.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/Banner.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/Banner.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 763 */
+/* 764 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53657,15 +53699,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(BannerBody, 'BannerBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/BannerBody.jsx');
+    __REACT_HOT_LOADER__.register(BannerBody, 'BannerBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/BannerBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/BannerBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/BannerBody.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 764 */
+/* 765 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(30)(undefined);
@@ -53673,22 +53715,22 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, "/* Common */\n\n.Video__sectionTitle___20CRP {\n    font-size: 34px;\n    font-weight: bold;\n    letter-spacing: -1.2px;\n    color: #161616;\n}\n\n.Video__sectionSmallTitle___1YcdV {\n    font-family: 'Product Sans';\n    font-size: 15px;\n    font-weight: bold;\n    line-height: 19px;\n    color: #a0a0a0;\n    letter-spacing: -0.5px;\n}\n\n/* Banner */\n\n.Video__bannerSection___2R6HO {\n    width: 100%;\n    background-color: transparent;\n    margin-top: 3px;\n}\n\n.Video__BannerHeader___1ZqkD {\n    width: 1100px;\n    margin: 0px auto 20px;\n}\n\n/* Video List */\n\n.Video__videoSection___3Ojg8 {\n    width: 1100px;\n    margin: 120px auto 50px;\n}\n.Video__videoHeader___1z7KD {\n    width: 100%;\n    margin-bottom: 22px;\n}\n.Video__videoBody___29RPa {\n    width: 100%;\n}\n.Video__videoBox___3AMVe {\n    width: 264px;\n    display: inline-block;\n    margin-right: 10px;\n}\n\n@media screen and (max-width: 1100px){\n    .Video__videoSection___3Ojg8 {\n        width: 825px;\n    }\n}\n@media screen and (max-width: 850px){\n    .Video__videoSection___3Ojg8 {\n        width: 550px;\n    }\n}\n/*모바일 반응형*/\n@media screen and (max-width: 768px){\n    /*오늘의 동영상 */\n    .Video__videoSection___3Ojg8 {\n        max-width: 768px;\n        width: auto;\n    }\n    .Video__videoBox___3AMVe {\n        width: 100%;\n    }\n}", ""]);
+exports.push([module.i, "/* Common */\r\n\r\n.Video__sectionTitle___Tv3qN {\r\n    font-size: 34px;\r\n    font-weight: bold;\r\n    letter-spacing: -1.2px;\r\n    color: #161616;\r\n}\r\n\r\n.Video__sectionSmallTitle___1N3T8 {\r\n    font-family: 'Product Sans';\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    line-height: 19px;\r\n    color: #a0a0a0;\r\n    letter-spacing: -0.5px;\r\n}\r\n\r\n/* Banner */\r\n\r\n.Video__bannerSection___3vXRa {\r\n    width: 100%;\r\n    background-color: transparent;\r\n    margin-top: 3px;\r\n}\r\n\r\n.Video__BannerHeader___3n7_O {\r\n    width: 1100px;\r\n    margin: 0px auto 20px;\r\n}\r\n\r\n/* Video List */\r\n\r\n.Video__videoSection___9T7qK {\r\n    width: 1100px;\r\n    margin: 120px auto 50px;\r\n}\r\n.Video__videoHeader___2L4n1 {\r\n    width: 100%;\r\n    margin-bottom: 22px;\r\n}\r\n.Video__videoBody___butYr {\r\n    width: 100%;\r\n}\r\n.Video__videoBox___10B1e {\r\n    width: 264px;\r\n    display: inline-block;\r\n    margin-right: 10px;\r\n}\r\n\r\n@media screen and (max-width: 1100px){\r\n    .Video__videoSection___9T7qK {\r\n        width: 825px;\r\n    }\r\n}\r\n@media screen and (max-width: 850px){\r\n    .Video__videoSection___9T7qK {\r\n        width: 550px;\r\n    }\r\n}\r\n/*모바일 반응형*/\r\n@media screen and (max-width: 768px){\r\n    /*오늘의 동영상 */\r\n    .Video__videoSection___9T7qK {\r\n        max-width: 768px;\r\n        width: auto;\r\n    }\r\n    .Video__videoBox___10B1e {\r\n        width: 100%;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"sectionTitle": "Video__sectionTitle___20CRP",
-	"sectionSmallTitle": "Video__sectionSmallTitle___1YcdV",
-	"bannerSection": "Video__bannerSection___2R6HO",
-	"BannerHeader": "Video__BannerHeader___1ZqkD",
-	"videoSection": "Video__videoSection___3Ojg8",
-	"videoHeader": "Video__videoHeader___1z7KD",
-	"videoBody": "Video__videoBody___29RPa",
-	"videoBox": "Video__videoBox___3AMVe"
+	"sectionTitle": "Video__sectionTitle___Tv3qN",
+	"sectionSmallTitle": "Video__sectionSmallTitle___1N3T8",
+	"bannerSection": "Video__bannerSection___3vXRa",
+	"BannerHeader": "Video__BannerHeader___3n7_O",
+	"videoSection": "Video__videoSection___9T7qK",
+	"videoHeader": "Video__videoHeader___2L4n1",
+	"videoBody": "Video__videoBody___butYr",
+	"videoBox": "Video__videoBox___10B1e"
 };
 
 /***/ }),
-/* 765 */
+/* 766 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53852,15 +53894,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(VideoBody, 'VideoBody', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/VideoBody.jsx');
+    __REACT_HOT_LOADER__.register(VideoBody, 'VideoBody', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/VideoBody.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/VideoBody.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/VideoBody.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 766 */
+/* 767 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53882,11 +53924,11 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _DetailHeader = __webpack_require__(767);
+var _DetailHeader = __webpack_require__(768);
 
 var _DetailHeader2 = _interopRequireDefault(_DetailHeader);
 
-var _DetailContent = __webpack_require__(768);
+var _DetailContent = __webpack_require__(769);
 
 var _DetailContent2 = _interopRequireDefault(_DetailContent);
 
@@ -53939,15 +53981,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(Detail, 'Detail', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/Detail.jsx');
+    __REACT_HOT_LOADER__.register(Detail, 'Detail', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/Detail.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/Detail.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/Detail.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 767 */
+/* 768 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54115,15 +54157,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailHeader, 'DetailHeader', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/DetailHeader.jsx');
+    __REACT_HOT_LOADER__.register(DetailHeader, 'DetailHeader', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/DetailHeader.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/DetailHeader.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/DetailHeader.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 768 */
+/* 769 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54145,11 +54187,11 @@ var _reactRedux = __webpack_require__(4);
 
 var _reactRouter = __webpack_require__(5);
 
-var _DetailContentSide = __webpack_require__(769);
+var _DetailContentSide = __webpack_require__(770);
 
 var _DetailContentSide2 = _interopRequireDefault(_DetailContentSide);
 
-var _DetailComments = __webpack_require__(770);
+var _DetailComments = __webpack_require__(771);
 
 var _DetailComments2 = _interopRequireDefault(_DetailComments);
 
@@ -54273,15 +54315,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailContent, 'DetailContent', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/DetailContent.jsx');
+    __REACT_HOT_LOADER__.register(DetailContent, 'DetailContent', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/DetailContent.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/DetailContent.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/DetailContent.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 769 */
+/* 770 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54412,15 +54454,15 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailContentSide, 'DetailContentSide', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/DetailContentSide.jsx');
+    __REACT_HOT_LOADER__.register(DetailContentSide, 'DetailContentSide', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/DetailContentSide.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/DetailContentSide.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/DetailContentSide.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 770 */
+/* 771 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54558,21 +54600,21 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(DetailComments, 'DetailComments', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/DetailComments.jsx');
+    __REACT_HOT_LOADER__.register(DetailComments, 'DetailComments', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/DetailComments.jsx');
 
-    __REACT_HOT_LOADER__.register(_default, 'default', '/Users/got1000/WebstormProjects/codecrain/sellev-test/src/Sellev/Components/Video/DetailComments.jsx');
+    __REACT_HOT_LOADER__.register(_default, 'default', 'C:/recordFarm/project-test1/src/Sellev/Components/Video/DetailComments.jsx');
 }();
 
 ;
 
 /***/ }),
-/* 771 */
+/* 772 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(772);
+var content = __webpack_require__(773);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -54597,7 +54639,7 @@ if(false) {
 }
 
 /***/ }),
-/* 772 */
+/* 773 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(30)(undefined);
@@ -54605,15 +54647,15 @@ exports = module.exports = __webpack_require__(30)(undefined);
 
 
 // module
-exports.push([module.i, ".Video__videoContainer___2S7_V {\n    margin-top: 126px;\n    width: 100%;\n    overflow: hidden;\n}", ""]);
+exports.push([module.i, ".Video__videoContainer___1JtK3 {\r\n    margin-top: 126px;\r\n    width: 100%;\r\n    overflow: hidden;\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"videoContainer": "Video__videoContainer___2S7_V"
+	"videoContainer": "Video__videoContainer___1JtK3"
 };
 
 /***/ }),
-/* 773 */
+/* 774 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {var require;/*!
@@ -54753,7 +54795,7 @@ function flush() {
 function attemptVertx() {
   try {
     var r = require;
-    var vertx = __webpack_require__(774);
+    var vertx = __webpack_require__(775);
     vertxNext = vertx.runOnLoop || vertx.runOnContext;
     return useVertxTimer();
   } catch (e) {
@@ -55777,13 +55819,13 @@ return Promise$2;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(83)))
 
 /***/ }),
-/* 774 */
+/* 775 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 775 */
+/* 776 */
 /***/ (function(module, exports) {
 
 // Console-polyfill. MIT license.

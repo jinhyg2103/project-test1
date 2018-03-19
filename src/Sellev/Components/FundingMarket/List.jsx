@@ -13,103 +13,20 @@ import ImageList from '../../Common/ImageList';
 import stylesFundingMarket from '../../Styles/Components/FundingMarket.css';
 import styles from '../../Styles/App.css';
 // Actions
+import * as ActionList from '../../Data/FundingMarket/action';
 
 class FundingMarketList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            list: [
-                {
-                    bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
-                    profile: '/Sellev/assets/img/img_sellever_profile.png',
-                    title: '이 인터뷰는 유명해지지 않았으면 해',
-                    name: '자이언티',
-                    price: 25900,
-                    left: 5,
-                    type: 'market',
-                },
-                {
-                    bgImage: '/Sellev/assets/img/img_funding_2.png',
-                    profile: '/Sellev/assets/img/img_sellever_profile.png',
-                    title: '이 인터뷰는 유명해지지 않았으면 해',
-                    name: '자이언티',
-                    percentOfFund: 60,
-                    attendant: 145,
-                    left: 5,
-                    goal: 1200,
-                    type: 'funding',
-                },
-                {
-                    bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
-                    profile: '/Sellev/assets/img/img_sellever_profile.png',
-                    title: '이 인터뷰는 유명해지지 않았으면 해',
-                    name: '자이언티',
-                    price: 25900,
-                    left: 50,
-                    type: 'market',
-                },
-                {
-                    bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
-                    profile: '/Sellev/assets/img/img_sellever_profile.png',
-                    title: '이 인터뷰는 유명해지지 않았으면 해',
-                    name: '자이언티',
-                    percentOfFund: 60,
-                    attendant: 145,
-                    left: 22,
-                    goal: 1200,
-                    type: 'funding',
-                },
-                {
-                    bgImage: '/Sellev/assets/img/img_today_funding_1.png',
-                    profile: '/Sellev/assets/img/img_sellever_profile.png',
-                    title: '이 인터뷰는 유명해지지 않았으면 해',
-                    name: '자이언티',
-                    percentOfFund: 60,
-                    attendant: 145,
-                    left: 22,
-                    goal: 1200,
-                    type: 'funding',
-                },
-                {
-                    bgImage: '/Sellev/assets/img/img_today_funding_2.png',
-                    profile: '/Sellev/assets/img/img_sellever_profile.png',
-                    title: '이 인터뷰는 유명해지지 않았으면 해',
-                    name: '자이언티',
-                    price: 25900,
-                    left: 5,
-                    type: 'market',
-                },
-                {
-                    bgImage: '/Sellev/assets/img/img_today_funding_3.png',
-                    profile: '/Sellev/assets/img/img_user.png',
-                    title: '이 인터뷰는 유명해지지 않았으면 해',
-                    name: '자이언티',
-                    percentOfFund: 60,
-                    attendant: 145,
-                    left: 22,
-                    goal: 1200,
-                    type: 'funding',
-                },
-                {
-                    bgImage: '/Sellev/assets/img/img_today_funding_4.png',
-                    profile: '/Sellev/assets/img/img_user.png',
-                    title: '이 인터뷰는 유명해지지 않았으면 해',
-                    name: '자이언티',
-                    price: 25900,
-                    left: 12,
-                    type: 'market',
-                },
-            ],
-        };
     }
     render() {
-        let fundingMarketList = this.state.list.map((item, index) => {
+        let fundingMarketList = ActionList.FUNDING_MARKET_LIST.map((item, index) => {
             return (
-                <div className={stylesFundingMarket.productBox}>
-                    <ImageList key={index} type={'fundingmarket'} listItem={item} />
+                <div className={stylesFundingMarket.productBox} key={index}>
+                    <ImageList type={'fundingmarket'} listItem={item} />
                 </div>
             );
-        })
+        });
         return (
             <div className={stylesFundingMarket.fundingMarketBody}>
                 <div className={stylesFundingMarket.listHeader}>
@@ -126,7 +43,7 @@ class FundingMarketList extends React.Component {
                     </div>
                 </div>
                 <div className={stylesFundingMarket.productBody}>
-                {fundingMarketList}
+                    {fundingMarketList}
                 </div>
             </div>
         );
