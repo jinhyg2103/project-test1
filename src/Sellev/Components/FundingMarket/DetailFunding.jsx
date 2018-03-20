@@ -7,6 +7,8 @@ import { withRouter } from 'react-router';
 
 // Components
 import DetailContent from './DetailContent';
+import DetailComments from './DetailComments';
+
 
 //Style
 import stylesDetail from '../../Styles/Components/FundingMarket.css';
@@ -71,7 +73,10 @@ class DetailFunding extends React.Component {
                         </div>
                     </div>
                 </div>
-                <DetailContent />
+                <div className={stylesDetail.detailContentBody}>
+                    <DetailContent />
+                </div>
+                <DetailComments />
             </div>
         );
     }
