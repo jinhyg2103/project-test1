@@ -73,58 +73,9 @@
 .fundingMarketBody {
     width: 100%;
 }
-.FundingMarketListBox {
-    width: 352px;
-    display: inline-block;
-    margin-right: 20px;
-}
-.FundingMarketListBox:last-child {
-    margin-right: 0;
-}
-.FundingMarketListBox .listTItle {
-    font-size: 19px;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.FundingMarketListBox .listImg {
-    background-size: cover;
-    background-position: center;
-}
-.FundingMarketListBox .itemListBox {
-    margin: 11px 11px 0 11px;
-}
-.FundingMarketListBox .itemListBox .item {
-    height: 83px;
-    padding: 18px 0 18px 0;
-    border-bottom: 1px solid #e7e7e7;
-}
-.FundingMarketListBox .itemListBox .item div:first-child {
-    width: 28px;
-    height: 28px;
-    background-color: #fd0a0a;
-    border-radius: 24px;
-    padding: 7px 5px;
-    text-align: center;
-    color: #ffffff;
-    float: left;
-    margin-top: 6px;
-}
-.FundingMarketListBox .itemListBox .item div:nth-child(2) {
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1.5em;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.FundingMarketListBox .itemListBox .item div:last-child {
-    font-size: 14px;
-    font-weight: bold;
-    color: #fd0a0a;
-    line-height: 1.5em;
-}
-
+/**/
+/*funding market list box*/
+/**/
 /* HashTag */
 .hashTagSection {
     width: 1100px;
@@ -161,28 +112,15 @@
     .fundingMarketSection {
         width: 100%;
     }
-    .FundingMarketListBox {
-        width: 30%;
-    }
-    .FundingMarketListBox .listImg {
-        width: 100%;
-        border-radius: 7px;
-    }
     .videoSection {
         width: 825px;
     }
 }
 /*모바일 반응형*/
 @media screen and (max-width: 768px){
+    /*펀딩 마켓*/
     .fundingMarketBody {
         margin: 0;
-    }
-    .FundingMarketListBox {
-        width: 100%;
-    }
-    .FundingMarketListBox .listImg {
-        width: 100%;
-        border-radius: 7px;
     }
     /*오늘의 동영상 */
     .videoSection {

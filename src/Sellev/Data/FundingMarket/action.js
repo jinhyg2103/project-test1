@@ -84,3 +84,87 @@ export const FUNDING_MARKET_LIST = [
         type: 'market',
     },
 ];
+
+export const LIST_RAKING_FUNDING_MARKET = {
+    fundingList: [
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_price.png',
+        },
+    ],
+    hitList: [
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_hits.png',
+        },
+    ],
+    newList: [
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
+        },
+        {
+            title: '엑소, 2018년 새 앨범 화이트 굿즈 시리즈',
+            name: '엑소',
+            bgImage: '/Sellev/assets/img/img_fundmarket_new.png',
+        },
+    ],
+}

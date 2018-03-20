@@ -12,6 +12,7 @@ body {
     border-radius: 6px;
     background-color: #232323;
     color: #ffffff;
+    cursor: pointer;
 }
 .btn47White {
     height: 47px;
@@ -20,6 +21,7 @@ body {
     background-color: #ffffff;
     border: solid 1px #d6d6d6;
     color: #505050;
+    cursor: pointer;
 }
 /*Category Title*/
 .sectionTitle {
